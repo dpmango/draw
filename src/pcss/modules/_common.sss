@@ -1,0 +1,189 @@
+// THIS MIGHT INCLUDE HEADER, FOOTER AND OTHER
+// COMMON ELEMENTS ACROSS THE SITE
+
+// HEADER
+.header
+  position: absolute
+  background: white
+  left: 0
+  right: 0
+  z-index: 10
+  padding-top: 10px
+  padding-bottom: 30px
+  transition: transform $transitionSpeed $ease
+  &__wrapper
+    display: flex
+
+  &--transformed
+    position: fixed
+    opacity: 0
+    padding-bottom: 5px
+    padding-top: 5px
+    box-shadow: 0px 5px 10px color($fontColor a(10%))
+    transform: translate3d(0, -100%, 0)
+  &--fixed
+    opacity: 1
+    transform: translate3d(0, 0px, 0)
+
+    .header__logo
+      margin-top: 10px
+
+  &__logo
+    flex: 0 0 177px
+    margin-top: 15px
+    img
+      max-width: 100%
+  &__menu
+    margin: 20px 0 0 0
+    flex: 1 1 auto
+    font-size: 14px
+    padding: 0 8% 0 30px
+    letter-spacing: -.22px
+    display: flex
+    justify-content: space-between
+    li
+      position: relative
+      flex: 1 0 auto
+      a
+        display: inline-block
+        padding: 10px
+        transition: all $transitionSpeed $ease
+        &::after
+          display: block
+          content: ' '
+          position: absolute
+          top: -13px
+          left: 50%
+          margin-left: -5px
+          background: $fontColor
+          size: 10px
+          border-radius: 50%
+          transform: translate3d(-50%, -20px,0)
+          opacity: 0
+          transition: all $transitionSpeed $ease
+        &:hover
+          &::after
+            opacity: 1
+            transform: translate3d(-50%, 0px,0)
+      &.active
+        a
+          &::after
+            opacity: 1
+            transform: translate3d(-50%, 0px,0)
+
+  &__user
+    flex: 0 1 auto
+    margin-left: auto
+    display: flex
+    align-items: center
+    &__avatar
+      position: relative
+      flex: 0 0 70px
+      font-size: 0
+      &::before
+        display: block
+        content: ' '
+        position: absolute
+        top: -2px
+        left: -3px
+        z-index: 2
+        background: url('../images/el/headerBlot@2x.png') no-repeat center
+        size: 80px 76px
+        background-size: cover
+    &__image
+      position: relative
+      z-index: 3
+      overflow: hidden
+      border: 10px solid $colorPrimary
+      border-radius: 50%
+      size: 70px
+      img
+        max-width: 100%
+        transition: transform $transitionSpeed $ease
+      &:hover
+        img
+          transform: scale(1.15) rotate(7deg)
+    &__name
+      flex: 0 1 auto
+      font-size: 14px
+      font-weight: 500
+      margin-left: 17px
+      letter-spacing: -.22px
+      transition: color $transitionSpeed $ease
+      &:hover
+        color: $colorPrimary
+    &__logout
+      font-size: 12px
+      font-weight: 500
+      margin-left: 30px
+      transition: color $transitionSpeed $ease
+      &:hover
+        color: $colorPrimary
+
+
+// FOOTER
+.footer
+  flex: 0 0 auto
+  margin-top: auto
+  background: white
+  margin-top: 30px
+  padding-top: 25px
+  padding-bottom: 45px
+  &__wrapper
+    display: flex
+    align-items: flex-end
+    font-size: 14px
+    font-family: 'Core45'
+    letter-spacing: -.22px
+  &__copy
+    margin-right: 55px
+  &__links
+    a
+      display: inline-block
+      margin-right: 25px
+      border-bottom: 1px solid $borderColor
+      transition: all $transitionSpeed $ease
+      &:last-child
+        margin-right: 0
+      &:hover
+        border-color: transparent
+  &__authors
+    flex: 0 0 auto
+    margin-left: auto
+    display: flex
+    align-items: center
+    span
+      display: inline-block
+      margin-right: 25px
+    a
+      transition: all $transitionSpeed $ease
+      &:hover
+        opacity: .75
+
+
+// COMMON
+.heading-gray
+  font-family: 'Core65'
+  font-size: 24px
+  letter-spacing: 4px
+  text-transform: uppercase
+  color: color($fontColor a(15%))
+  text-align: center
+  &--mega
+    font-size: 60px
+    letter-spacing: 10px
+
+
+.hover-link
+  font-size: 21px
+  letter-spacing: -.33px
+  line-height: 1.35
+  transition: color $transitionSpeed $ease
+  span
+    display: inline-block
+    border-bottom: 1px solid $colorPrimary
+    transition: all $transitionSpeed $ease
+  &:hover
+    color: $colorPrimary
+    span
+      border-color: transparent

@@ -1,0 +1,73 @@
+*
+  box-sizing: border-box
+  outline: none
+
+a
+  color: inherit
+  text-decoration: none
+  &:hover, &:focus, &:visited
+    text-decoration: none
+
+ul
+  list-style: none
+  li
+    display: inline-block
+
+
+body, html
+  background: white
+  color: $fontColor
+  font-family: "Roboto", 'Helvetica Neue', Helvetica, Arial, sans-serif
+  font-size: 16px
+  min-width: 320px
+  max-width: 100%
+  margin: 0
+  overflow-x: hidden
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+.container
+  max-width: 1200px
+  margin-left: auto
+  margin-right: auto
+  padding-left: 20px
+  padding-right: 20px
+  &--fluid
+    max-width: 100%
+  &--1100
+    max-width: 1100px
+  &--900
+    max-width: 900px
+
+::selection
+  background: transparent
+
+.page
+  padding-top: 120px
+  display: flex
+  flex-direction: column
+  min-height: 100vh
+  &__content
+    flex: 1 0 auto
+  ::selection
+    background: color($colorPrimary a(99%))
+    color: white
+
+
+// .wow
+//   visibility: visible !important
+
+.fadeIn
+  &.animated
+    animation-name: simpleFadeIn
+    animation-duration: .4s
+    animation-timing-function: linear
+
+@keyframes simpleFadeIn
+
+  0%
+    opacity: .7
+    transform: translate3d(0,50px,0)
+  100%
+    opacity: 1
+    transition: translate3d(0,0,0)

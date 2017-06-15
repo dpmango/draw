@@ -1,0 +1,379 @@
+// INDEX PAGE
+.welcome
+  padding-top: 15vh
+  padding-bottom: 15vh
+  &__wrapper
+    max-width: 720px
+    margin-left: auto
+    margin-right: auto
+    text-align: center
+
+  &__title
+    font-family: 'Core65'
+    font-size: 44px
+    line-height: 1.65
+    text-transform: uppercase
+
+
+// VIDEO
+.video
+  &__wrapper
+    position: relative
+    max-width: 1040px
+    margin-left: auto
+    margin-right: auto
+    &::after
+      position: absolute
+      left: 0
+      right: 0
+      top: 0
+      z-index: 1
+      bottom: 0
+      display: block
+      content: ' '
+      background: url('../images/el/videoBlot@2x.png') no-repeat center
+      background-size: contain
+  &__content
+    position: relative
+    z-index: 2
+    padding-top: 45px
+    padding-bottom: 150px
+    max-width: 850px
+    margin-left: auto
+    margin-right: auto
+    &::after
+      display: block
+      content: ' '
+      position: absolute
+      left: 60px
+      right: 60px
+      bottom: 125px
+      height: 200px
+      border-radius: 6px
+      filter: blur(26px)
+      background: $fontColor
+  &__player
+    position: relative
+    font-size: 0
+    &::after
+      display: block
+      content: ' '
+      background: color($fontColor a(20%))
+      position: absolute 0
+      z-index: 3
+      transition: opacity $transitionSpeed $ease
+    img
+      position: relative
+      z-index: 2
+      opacity: 1
+      transition: opacity $transitionSpeed $ease
+    iframe
+      position: absolute 0
+      z-index: 1
+      opacity: 0
+      transition: opacity $transitionSpeed $ease
+    .icon
+      cursor: pointer
+      font-size: 30px
+      position: absolute
+      top: 50%
+      left: 50%
+      z-index: 4
+      transform: translate(-50%, -50%)
+      color: white
+      transition: all $transitionSpeed $ease
+      &.icon-play
+        top: 55%
+        left: 53%
+    .icon-circle
+      &:hover
+        background: white
+        .icon-play
+          font-size: 40px
+          color: $colorPrimary
+    &:hover
+      &::after
+        opacity: 0
+    &.playing
+      img
+        z-index: 1
+        opacity: 0
+      iframe
+        z-index: 2
+        opacity: 1
+      .icon
+        opacity: 0
+      &::after
+        opacity: 0
+
+
+.home-about
+  padding-top: 40px
+  padding-bottom: 150px
+  &__text
+    position: relative
+    margin-top: 50px
+    max-width: 630px
+    margin-left: auto
+    margin-right: auto
+    text-align: center
+    p
+      font-size: 21px
+      line-height: 1.7
+      letter-spacing: -.33px
+  &__bg
+    position: absolute
+    left: -60px
+    right: -150px
+    top: -20px
+    pointer-events: none
+    img
+      max-width: 100%
+
+
+// COURSES
+.home-courses
+  padding-top: 50px
+  &__wrapper
+    display: flex
+    flex-wrap: wrap
+    margin-left: -15px
+    margin-right: -15px
+    .course-card
+      flex: 0 1 calc(50% - 30px)
+
+
+// COURSE CARD
+.course-card
+  position: relative
+  overflow: hidden
+  border-radius: 4px
+  font-size: 0
+  margin: 15px
+  &__image
+    img
+      position: relative
+      max-width: 100%
+      z-index: 1
+    &::after
+      display: block
+      content: ' '
+      position: absolute 0
+      z-index: 2
+      background: color($fontColor a(20%))
+  &__content
+    position: absolute 0
+    z-index: 3
+    text-align: center
+    display: flex
+    flex-direction: column
+    color: white
+    padding: 30px 20px
+  &__name
+    margin-top: auto
+    font-size: 30px
+    font-family: 'Core65'
+    letter-spacing: -.47px
+  &__desc
+    margin-top: 10px
+    font-size: 14px
+    line-height: 2
+    font-family: 'Core45'
+    letter-spacing: -.22px
+  &__price
+    margin-top: auto
+    font-family: 'Core75'
+    font-size: 20px
+    letter-spacing: -.3px
+  &__cta
+    margin-top: 30px
+
+
+// TESTIMONIALS
+.testimonials
+  padding-top: 80px
+  &__slider
+    opacity: 1
+
+  &__slide
+    position: relative
+    overflow: hidden
+    &__bg
+      img
+        width: 100%
+    &__content
+      position: absolute 0
+      display: flex
+      flex-direction: column
+      padding: 100px 20px 50px 20px
+      max-width: 1200px
+      margin-right: auto
+      margin-left: auto
+    &__author
+      font-family: 'Core65'
+      font-size: 18px
+      text-transform: uppercase
+      span
+        margin-top: 1em
+        display: block
+        font-family: 'Roboto'
+        font-size: 12px
+        text-transform: none
+        color: color($fontColor a(40%))
+    &__text
+      padding: 20px 0
+      margin: auto 0
+      max-width: 365px
+      p
+        font-size: 21px
+        letter-spacing: -.33px
+        line-height: 1.7
+    &__cta
+      padding-top: 10px
+    &__nav
+      padding-top: 30px
+      margin-top: auto
+      .icon
+        cursor: pointer
+        transition: all $transitionSpeed $ease
+        &:hover
+          opacity: .7
+
+
+// BENEFITS
+.benefits
+  padding-top: 90px
+  &__wrapper
+    margin-top: 30px
+    display: flex
+    flex-wrap: wrap
+    margin-left: -15px
+    margin-right: -15px
+
+  &__card
+    flex: 0 1 calc(33.3% - 30px)
+    margin: 20px 15px
+    text-align: center
+    &__image
+      min-height: 55px
+      img
+        max-width: 100%
+    &__name
+      margin-top: 30px
+      font-size: 24px
+      font-family: 'Core65'
+      text-transform: uppercase
+    &__desc
+      margin-top: 50px
+      font-size: 14px
+      line-height: 1.5
+      letter-spacing: -.27px
+
+
+// BLOG
+.blog-summ
+  padding-top: 100px
+  &__wrapper
+    margin-top: 30px
+    display: flex
+    flex-wrap: wrap
+    margin-left: -10px
+    margin-right: -10px
+  .blog-card
+    margin: 10px
+    flex: 0 1 calc(50% - 30px)
+
+.blog-card
+  position: relative
+  overflow: hidden
+  border-radius: 4px
+  font-size: 0
+  margin: 15px
+  &__image
+    border-radius: 4px
+    overflow: hidden
+    img
+      position: relative
+      max-width: 100%
+      z-index: 1
+      transition: all $transitionSpeed $ease
+    &::after
+      display: block
+      content: ' '
+      position: absolute 0
+      z-index: 2
+      background: linear-gradient(to bottom, color(white a(0%)) 0%, color(black a(50%)) 100%)
+  &__content
+    position: absolute 0
+    z-index: 3
+    display: flex
+    flex-direction: column
+    color: white
+    padding: 20px 25px
+  &__name
+    margin-top: auto
+    font-size: 32px
+    line-height: 0.9
+    font-family: 'Core65'
+    letter-spacing: -.5px
+    min-height: 60px
+  &__date
+    font-size: 10px
+    font-size: 14px
+    margin-top: 10px
+    color: color(white a(40%))
+
+// INSTAGRAM
+.instagram
+  padding-top: 100px
+  &__wrapper
+    margin-top: 40px
+    display: flex
+    flex-wrap: wrap
+    margin-left: -15px
+    margin-right: -15px
+    img
+      flex: 0 1 calc(33.3% - 30px)
+      margin: 10px 15px
+      max-width: 100%
+
+
+// GIFT SECTIOn
+.gift
+  padding-top: 100px
+  &__title
+    position: relative
+    font-size: 32px
+    font-family: 'Core65'
+    letter-spacing: 4px
+    line-height: 1.25
+    text-align: center
+    text-transform: uppercase
+    padding: 30px 0
+    &__text
+      position: relative
+      z-index: 2
+    &__bg
+      position: absolute
+      left: 0
+      right: 0
+      top: 0
+      z-index: 1
+      img
+        max-width: 100%
+  &__wrapper
+    margin-top: 40px
+    display: flex
+    align-items: center
+  &__banner
+    flex: 0 1 600px
+    img
+      max-width: 100%
+  &__text
+    flex: 0 1 350px
+    margin-left: 40px
+    p
+      font-size: 17px
+      line-height: 1.4
+    .btn
+      margin-top: 20px
