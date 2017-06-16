@@ -5,7 +5,7 @@
   <!-- MADE WITH LOVE BY <> SERGEY KHMELEVSKOY </>-->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Site name</title>
+  <title>Draw & Go Online</title>
   <!--build:css css/styles.css-->
   <link rel="stylesheet" href="components/normalize-css/normalize.css" type="text/css">
   <link rel="stylesheet" href="components/slick-carousel/slick/slick.css" type="text/css">
@@ -33,7 +33,7 @@
       </div>
     </div>
   </header>
-  <div class="page">
+  <div class="page header-static">
     <div class="page__content">
       <!-- SALEPAGE :: START-->
       <div class="container wow fadeIn">
@@ -50,7 +50,7 @@
         </div>
       </div>
       <!-- COURSE AUTHOR :: START      -->
-      <div class="course-author">
+      <div class="course-author wow fadeIn">
         <div class="container container--1100">
           <div class="course-author__wrapper">
             <div class="course-author__content">
@@ -78,99 +78,181 @@
         </div>
       </div>
       <!-- COURSE PROGRAMM-->
-      <div class="course-program">
+      <div class="course-program wow fadeIn">
         <div class="container">
           <div class="heading-gray heading-gray--mega">программа</div>
           <div class="course-program__wrapper">
-            <div class="course-program__item visible">
+            <!-- item-->
+            <div class="course-program__item visible" data-visible="1">
               <div class="course-program__item__name">урок 1</div>
               <div class="course-program__item__content">Охват аудитории традиционно экономит анализ рыночных цен, учитывая современные тенденции. Привлечение аудитории, согласно Ф.Котлеру, допускает SWOT-анализ. </div>
             </div>
-            <div class="course-program__item visible">
+            <!-- item-->
+            <div class="course-program__item visible" data-visible="1">
               <div class="course-program__item__name">урок 2</div>
               <div class="course-program__item__tag"><img src="images/el/tag_interesting.png" srcset="images/el/tag_interesting@2x.png 2x"></div>
               <div class="course-program__item__content">Охват аудитории традиционно экономит анализ рыночных цен, учитывая современные тенденции. Привлечение аудитории, согласно Ф.Котлеру, допускает SWOT-анализ. </div>
             </div>
+            <!-- item-->
+            <div class="course-program__item" data-visible="0">
+              <div class="course-program__item__name">урок 3</div>
+              <div class="course-program__item__content">Охват аудитории традиционно экономит анализ рыночных цен, учитывая современные тенденции. Привлечение аудитории, согласно Ф.Котлеру, допускает SWOT-анализ. </div>
+            </div>
+            <!-- item-->
+            <div class="course-program__item" data-visible="0">
+              <div class="course-program__item__name">урок 4</div>
+              <div class="course-program__item__content">Охват аудитории традиционно экономит анализ рыночных цен, учитывая современные тенденции. Привлечение аудитории, согласно Ф.Котлеру, допускает SWOT-анализ. </div>
+            </div>
+            <!-- toggle-->
+            <div class="course-program__toggler">
+              <div class="dashed-link js-toggleProgramCourses" data-action="open"><span>развернуть всю программу</span></div>
+            </div>
           </div>
         </div>
       </div>
-      <!-- TESTIMONIALS-->
-      <div class="testimonials wow fadeIn">
-        <div class="testimonials__slider">
-          <!-- slide-->
-          <div class="testimonials__slide">
-            <div class="testimonials__slide__bg"><img src="images/tmp/testimonials.png" srcset="images/tmp/testimonials@2x.png 2x"></div>
-            <div class="testimonials__slide__content">
-              <div class="testimonials__slide__author">Эдвард сноуден<span>преступник США</span></div>
-              <div class="testimonials__slide__text">
-                <p>Я застрял в России и мне не остается ничего, кроме как рисовать дома. Но я считаю эту возможность совершенно прекрасной и всем советую поступить также.</p>
-              </div>
-              <div class="testimonials__slide__cta"><a class="hover-link" href="#"> <span>выбрать курс</span></a></div>
-              <div class="testimonials__slide__nav"><i class="icon icon-slide-prev"></i><i class="icon icon-slide-next"></i></div>
-            </div>
+      <!-- COMPARE-->
+      <div class="compare wow fadeIn">
+        <div class="compare__wrapper">
+          <div class="compare__col">
+            <div class="compare__name">до</div>
+            <div class="compare__desc">смотришь сериал, не видишь краски <br> скучно, депрессия</div>
+            <div class="compare__image"><img src="images/courses/compare_1.png" srcset="images/courses/compare_1@2x.png 2x"></div>
           </div>
-          <!-- slide-->
-          <div class="testimonials__slide">
-            <div class="testimonials__slide__bg"><img src="images/tmp/testimonials.png" srcset="images/tmp/testimonials@2x.png 2x"></div>
-            <div class="testimonials__slide__content">
-              <div class="testimonials__slide__author">Эдвард сноуден<span>преступник США</span></div>
-              <div class="testimonials__slide__text">
-                <p>Я застрял в России и мне не остается ничего. тчк</p>
-              </div>
-              <div class="testimonials__slide__cta"><a class="hover-link" href="#"> <span>не выбирать курс</span></a></div>
-              <div class="testimonials__slide__nav"><i class="icon icon-slide-prev"></i><i class="icon icon-slide-next">   </i></div>
-            </div>
+          <div class="compare__col">
+            <div class="compare__name">после</div>
+            <div class="compare__desc">классно рисуешь, видишь мир в новых красках <br> новые друзья, отличное настроение</div>
+            <div class="compare__image"><img src="images/courses/compare_2.png" srcset="images/courses/compare_2@2x.png 2x"></div>
           </div>
         </div>
       </div>
       <!-- BENEFITS-->
       <div class="benefits wow fadeIn">
-        <div class="container">
-          <div class="heading-gray heading-gray--mega">как это устроено?</div>
-          <div class="benefits__wrapper">
-            <div class="benefits__card">
-              <div class="benefits__card__image"><img src="images/el/icon-time.png" srcset="images/el/icon-time@2x.png 2x"></div>
-              <div class="benefits__card__name">Один урок — 2 часа</div>
-              <div class="benefits__card__desc">Ценовая стратегия, вопреки мнению П.Друкера, решительно масштабирует медиамикс</div>
-            </div>
-            <div class="benefits__card">
-              <div class="benefits__card__image"><img src="images/el/icon-practise.png" srcset="images/el/icon-practise@2x.png 2x"></div>
-              <div class="benefits__card__name">практика</div>
-              <div class="benefits__card__desc">Выставочный стенд, конечно, отражает инвестиционный продукт, полагаясь на инсайдерскую информацию</div>
-            </div>
-            <div class="benefits__card">
-              <div class="benefits__card__image"><img src="images/el/icon-letter.png" srcset="images/el/icon-letter@2x.png 2x"></div>
-              <div class="benefits__card__name">шаг к новому себе</div>
-              <div class="benefits__card__desc">Селекция бренда спонтанно позиционирует мониторинг активности. Селекция бренда нетривиально.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- BLOG-->
-      <div class="blog-summ wow fadeIn">
-        <div class="container container--1100">
-          <div class="heading-gray heading-gray--mega">наш блог</div>
-          <div class="blog-summ__wrapper">
-            <!-- card--><a class="blog-card" href="#">
-              <div class="blog-card__image"><img src="images/blog/blogCard_1.png" srcset="images/blog/blogCard_1@2x.png 2x"></div>
-              <div class="blog-card__content">
-                <div class="blog-card__name">Как научиться рисовать живопись</div>
-                <div class="blog-card__date">22.01.2017, 18:01</div>
-              </div></a>
-            <!-- card--><a class="blog-card" href="#">
-              <div class="blog-card__image"><img src="images/blog/blogCard_2.png" srcset="images/blog/blogCard_2@2x.png 2x"></div>
-              <div class="blog-card__content">
-                <div class="blog-card__name">Что такое пейзаж</div>
-                <div class="blog-card__date">22.01.2017, 18:01</div>
-              </div></a>
-          </div>
-        </div>
-      </div>
-      <!-- INSTAGRAM-->
-      <div class="instagram wow fadeIn">
         <div class="container container--900">
-          <div class="heading-gray heading-gray--mega">@drawandgoonline</div>
-          <div class="instagram__wrapper"><img src="images/tmp/insta_1.png" srcset="images/tmp/insta_1@2x.png 2x"><img src="images/tmp/insta_2.png" srcset="images/tmp/insta_2@2x.png 2x"><img src="images/tmp/insta_3.png" srcset="images/tmp/insta_3@2x.png 2x"></div>
+          <div class="heading-gray heading-gray--mega">возможности</div>
+          <div class="benefits__wrapper benefits__wrapper--2col">
+            <div class="benefits__card">
+              <div class="benefits__card__image"><img src="images/el/icon-eye.png" srcset="images/el/icon-eye@2x.png 2x"></div>
+              <div class="benefits__card__name">Личный контакт</div>
+              <div class="benefits__card__desc">В рамках любого занятия вас ждет выбор референса (примера), краткий теоретический экскурс, создание эскиза и работа с цветом.</div>
+            </div>
+            <div class="benefits__card">
+              <div class="benefits__card__image"><img src="images/el/icon-chat.png" srcset="images/el/icon-chat@2x.png 2x"></div>
+              <div class="benefits__card__name">Закрытая FB-группа</div>
+              <div class="benefits__card__desc">В рамках любого занятия вас ждет выбор референса (примера), краткий теоретический экскурс, создание эскиза и работа с цветом.</div>
+            </div>
+          </div>
+          <div class="course-price">
+            <div class="course-price__value">4 560 Р</div>
+            <div class="course-price__cta"><a class="btn btn--primary btn--pink" href="#"> <span>добавить к заказу</span></a></div>
+          </div>
+        </div>
+      </div>
+      <!-- SUPPLEMENTARY GOOD-->
+      <div class="supp wow fadeIn">
+        <div class="supp__arrow"><img src="images/el/supp_arrow.png" srcset="images/el/supp_arrow@2x.png 2x"></div>
+        <div class="container container--1366">
+          <div class="supp__wrapper">
+            <div class="supp__image supp__image--kraski"><img src="images/el/supp_kraski.png" srcset="images/el/supp_kraski@2x.png 2x"></div>
+            <div class="supp__image supp__image--list"><img src="images/el/supp_list.png" srcset="images/el/supp_list@2x.png 2x"></div>
+            <div class="supp__image supp__image--kara"><img src="images/el/supp_kara.png" srcset="images/el/supp_kara@2x.png 2x"></div>
+            <div class="supp__title">Готовый набор красок именно для вас</div>
+            <div class="supp__text">В рамках любого занятия вас ждет выбор референса (примера), краткий теоретический экскурс, создание эскиза и работа с цветом. В дальнейшем, вы сможете развивать свои навыки, выбирая в качестве примеров все более и более сложные работы, сориентироваться в которых вам помогут наши преподаватели. </div>
+          </div>
+          <div class="course-price">
+            <div class="course-price__value">4 560 Р</div>
+            <div class="course-price__cta"><a class="btn btn--primary btn--pink" href="#"> <span>добавить к заказу</span></a></div>
+          </div>
+        </div>
+      </div>
+      <!-- TESTIMONIALS-->
+      <div class="testimonials wow fadeIn">
+        <div class="container">
+          <div class="testimonials__box">
+            <div class="heading-gray heading-gray--mega">отзывы</div>
+            <div class="testimonials__slider">
+              <!-- slide-->
+              <div class="testimonials__slide">
+                <div class="testimonials__box__wrapper">
+                  <div class="testimonials__box__image"><img src="images/tmp/testimonialsBox.png" srctset="images/tmp/testimonialsBox@2x.png 2x"><span>Работа Марата</span></div>
+                  <div class="testimonials__box__content">
+                    <div class="testimonials__box__text">Не факт, что производство концентрирует презентационный материал. Направленный маркетинг развивает медиаплан. Стоит отметить, что маркетингово-ориентированное издание поддерживает product placement</div>
+                    <div class="testimonials__box__author">
+                      <div class="testimonials__box__author__avatar"><img src="images/tmp/TestimonialsAvatar.png" srctset="images/tmp/TestimonialsAvatar@2x.png 2x"></div>
+                      <div class="testimonials__box__author__name">Марат, 24 года <span> Архитектор</span></div>
+                    </div>
+                  </div>
+                  <div class="testimonials__slide__nav testimonials__slide__nav--single"><span>Следующий отзыв</span><i class="icon icon-slide-next"></i></div>
+                </div>
+              </div>
+              <!-- slide-->
+              <div class="testimonials__slide">
+                <div class="testimonials__box__wrapper">
+                  <div class="testimonials__box__image"><img src="images/tmp/testimonialsBox.png" srctset="images/tmp/testimonialsBox@2x.png 2x"><span>Работа Марата</span></div>
+                  <div class="testimonials__box__content">
+                    <div class="testimonials__box__text">Не факт, что производство концентрирует презентационный материал. Направленный маркетинг развивает медиаплан. Стоит отметить, что маркетингово-ориентированное издание поддерживает product placement</div>
+                    <div class="testimonials__box__author">
+                      <div class="testimonials__box__author__avatar"><img src="images/tmp/TestimonialsAvatar.png" srctset="images/tmp/TestimonialsAvatar@2x.png 2x"></div>
+                      <div class="testimonials__box__author__name">Марат, 24 года <span> Архитектор</span></div>
+                    </div>
+                  </div>
+                  <div class="testimonials__slide__nav testimonials__slide__nav--single"><span>Следующий отзыв</span><i class="icon icon-slide-next"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- COURSE CTA-->
+      <div class="course-cta wow fadeIn">
+        <div class="container container--1100">
+          <div class="heading-gray heading-gray--mega">пришло время  <br> покупать</div>
+          <div class="course-cta__wrapper">
+            <form class="course-cta__form js-form-courseCta" action="#">
+              <div class="course-cta__col">
+                <div class="ui-group">
+                  <input class="ui-input" type="text" name="name" placeholder="Ваше имя">
+                </div>
+                <div class="ui-group">
+                  <input class="ui-input" type="tel" name="phone" placeholder="+7 (___) ___-__-__">
+                </div>
+                <div class="ui-group">
+                  <input class="ui-input" type="text" name="city" placeholder="Город">
+                </div>
+                <div class="ui-group">
+                  <input class="ui-input" type="text" name="adress" placeholder="Улица и номер дома">
+                </div>
+                <div class="ui-group">
+                  <textarea class="ui-input" placeholder="Дополнительные сведения" rows="5"> </textarea>
+                </div>
+              </div>
+              <div class="course-cta__col">
+                <div class="course-cta__checkboxes">
+                  <div class="ui-checkbox">
+                    <input type="checkbox" id="checkbox_1">
+                    <label for="checkbox_1">Я покупаю в подарок</label>
+                  </div>
+                  <div class="ui-checkbox">
+                    <input type="checkbox" id="checkbox_2">
+                    <label for="checkbox_2">
+                       Активируйте VIP-пакет <span>(+5000₽)</span>
+                      <div class="ui-checkbox__sublabel">Личный контакт + закрытая группа</div>
+                    </label>
+                  </div>
+                  <div class="ui-checkbox">
+                    <input type="checkbox" id="checkbox_3">
+                    <label for="checkbox_3">
+                       Да, привезите мне коробку! <span>(+2500₽)</span>
+                      <div class="ui-checkbox__sublabel">Прямо до вашему дома</div>
+                    </label>
+                  </div>
+                </div>
+                <div class="course-cta__cta">
+                  <div class="course-price__value">28 560 Р</div>
+                  <button class="btn btn--primary btn--pink btn--block" type="submit"> <span>ПЕРЕЙТИ К ОПЛАТЕ      </span></button>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
       <!-- GIFT-->
@@ -187,6 +269,36 @@
               <p>Стоит отметить, что маркетингово-ориентированное издание поддерживает product  </p><a class="btn btn--primary btn--pink" href="#"> <span>Выбрать курс</span></a>
             </div>
           </div>
+        </div>
+      </div>
+      <!-- COURSE QUESTIONS-->
+      <div class="course-questions">
+        <div class="container container--900">
+          <div class="heading-mega wow fadeIn">остались вопросы?</div>
+          <div class="course-questions__wrapper">
+            <div class="course-questions__item course-questions__item--left wow fadeIn">
+              <div class="course-questions__item__name">Что делать, если мне не понравится курс?</div>
+              <div class="course-questions__item__text">Не факт, что производство концентрирует презентационный материал. Направленный маркетинг развивает медиаплан. Стоит отметить, что маркетингово-ориентированное издание поддерживает product placement</div>
+            </div>
+            <div class="course-questions__item course-questions__item--right wow fadeIn">
+              <div class="course-questions__item__name">А если понравился, но я хочу вернуть деньги обратно?</div>
+              <div class="course-questions__item__text">Не факт, что производство концентрирует презентационный материал. Направленный маркетинг развивает медиаплан. Стоит отметить, что маркетингово-ориентированное издание поддерживает product placement</div>
+            </div>
+            <div class="course-questions__item course-questions__item--async wow fadeIn">
+              <div class="course-questions__item__name">А если понравился, но я хочу вернуть деньги обратно?</div><img src="images/courses/courseQuestionImg.png" srcset="images/courses/courseQuestionImg@2x.png 2x">
+              <div class="course-questions__item__text">Не факт, что производство концентрирует презентационный материал. Направленный маркетинг развивает медиаплан. Стоит отметить, что маркетингово-ориентированное издание поддерживает product placement</div>
+            </div>
+            <div class="course-questions__item course-questions__item--left wow fadeIn">
+              <div class="course-questions__item__name">Что делать, если мне не понравится курс?</div>
+              <div class="course-questions__item__text">Не факт, что производство концентрирует презентационный материал. Направленный маркетинг развивает медиаплан. Стоит отметить, что маркетингово-ориентированное издание поддерживает product placement</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- BACKPAGE-->
+      <div class="backpage">
+        <div class="container container--1000">
+          <div class="backpage__wrapper"><img src="images/el/backpage.png" srcset="images/el/backpage@2x.png 2x"><a href="#"> <span>Верните меня обратно к покупке, пожалуйста.</span></a></div>
         </div>
       </div>
     </div>

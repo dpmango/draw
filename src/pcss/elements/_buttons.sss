@@ -58,3 +58,10 @@ button
     background: $colorPrimary
     &::after
       background: $colorBlue
+
+  &--block
+    display: block
+    width: 100%
+    &:hover
+      &::after
+        transform: translate3d(-50%,-50%,0) scale(20)

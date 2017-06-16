@@ -103,11 +103,15 @@ $(document).ready(function(){
 
   // slick pagination
   $('.testimonials__slide__nav .icon-slide-next').on('click', function(){
-    console.log('hello');
     $('.testimonials__slider').slick('slickNext');
   });
   $('.testimonials__slide__nav .icon-slide-prev').on('click', function(){
     $('.testimonials__slider').slick('slickPrev');
+  });
+
+  // simulate click
+  $('.testimonials__slide__nav--single').on('click', function(){
+    $(this).find('.icon').click();
   });
 
 
@@ -190,6 +194,24 @@ $(document).ready(function(){
 	// 		tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
 	// 	}
 	// });
+
+  ////////////
+  // SALES PAGE
+  ////////////
+  $('.js-toggleProgramCourses').on('click', function(){
+    var toggableObjects = $(this).closest('.course-program__wrapper').find('.course-program__item[data-visible="0"]');
+    if ( $(this).data('action') == "open" ){
+      toggableObjects.slideDown();
+      $(this).data('action', 'close');
+      $(this).find('span').text('показать краткую программу')
+    } else {
+      toggableObjects.slideUp();
+      $(this).data('action', 'open');
+      $(this).find('span').text('развернуть всю программу')
+    }
+
+
+  });
 
 
   ////////////
@@ -377,6 +399,6 @@ $(document).ready(function(){
 
 
 //SCROLL TO TOP ON PAGE REFRESH
-$(window).on('beforeunload', function() {
-    $(window).scrollTop(0);
-});
+// $(window).on('beforeunload', function() {
+//     $(window).scrollTop(0);
+// });

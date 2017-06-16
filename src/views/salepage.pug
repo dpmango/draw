@@ -7,7 +7,7 @@ doctype html
   body
     include shared/header.pug
     
-    .page
+    .page.header-static
       .page__content
         // SALEPAGE :: START
         .container.wow.fadeIn
@@ -26,7 +26,7 @@ doctype html
                   span.icon-rub ₽
                 
         // COURSE AUTHOR :: START      
-        .course-author
+        .course-author.wow.fadeIn
           .container.container--1100
             .course-author__wrapper
               .course-author__content
@@ -38,8 +38,7 @@ doctype html
                   p Узнаваемость марки, как следует из вышесказанного, восстанавливает опрос. В общем, имидж слабо притягивает анализ рыночных цен. 
               .course-author__image
                 img(src='images/courses/courseAuthor.png' srctset='images/courses/courseAuthor@2x.png 2x')
-                  
-                  
+                    
         // VIDEO :: START
         .video.wow.fadeIn
           .container
@@ -53,108 +52,168 @@ doctype html
                   iframe(src='https://player.vimeo.com/video/72874423?autoplay=0', width='100%', height='100%', frameborder='0', webkitallowfullscreen='', mozallowfullscreen='', allowfullscreen='')
 
         // COURSE PROGRAMM
-        .course-program
+        .course-program.wow.fadeIn
           .container
             .heading-gray.heading-gray--mega программа
             .course-program__wrapper
-              .course-program__item.visible
+              // item
+              .course-program__item.visible(data-visible='1')
                 .course-program__item__name урок 1
                 .course-program__item__content Охват аудитории традиционно экономит анализ рыночных цен, учитывая современные тенденции. Привлечение аудитории, согласно Ф.Котлеру, допускает SWOT-анализ. 
-              .course-program__item.visible
+              // item
+              .course-program__item.visible(data-visible='1')
                 .course-program__item__name урок 2
                 .course-program__item__tag
                   img(src='images/el/tag_interesting.png' srcset='images/el/tag_interesting@2x.png 2x')
                 .course-program__item__content Охват аудитории традиционно экономит анализ рыночных цен, учитывая современные тенденции. Привлечение аудитории, согласно Ф.Котлеру, допускает SWOT-анализ. 
-              
-
-
-        // TESTIMONIALS
-        .testimonials.wow.fadeIn
-          .testimonials__slider
-            // slide
-            .testimonials__slide
-              .testimonials__slide__bg
-                img(src='images/tmp/testimonials.png' srcset='images/tmp/testimonials@2x.png 2x')
-              .testimonials__slide__content
-                .testimonials__slide__author
-                  | Эдвард сноуден
-                  span преступник США
-                .testimonials__slide__text
-                  p Я застрял в России и мне не остается ничего, кроме как рисовать дома. Но я считаю эту возможность совершенно прекрасной и всем советую поступить также.
-                .testimonials__slide__cta
-                  a(href='#').hover-link 
-                    span выбрать курс
-                .testimonials__slide__nav
-                  i.icon.icon-slide-prev
-                  i.icon.icon-slide-next
-            // slide
-            .testimonials__slide
-              .testimonials__slide__bg
-                img(src='images/tmp/testimonials.png' srcset='images/tmp/testimonials@2x.png 2x')
-              .testimonials__slide__content
-                .testimonials__slide__author
-                  | Эдвард сноуден
-                  span преступник США
-                .testimonials__slide__text
-                  p Я застрял в России и мне не остается ничего. тчк
-                .testimonials__slide__cta
-                  a(href='#').hover-link 
-                    span не выбирать курс
-                .testimonials__slide__nav
-                  i.icon.icon-slide-prev
-                  i.icon.icon-slide-next    
+              // item
+              .course-program__item(data-visible='0')
+                .course-program__item__name урок 3
+                .course-program__item__content Охват аудитории традиционно экономит анализ рыночных цен, учитывая современные тенденции. Привлечение аудитории, согласно Ф.Котлеру, допускает SWOT-анализ. 
+              // item
+              .course-program__item(data-visible='0')
+                .course-program__item__name урок 4
+                .course-program__item__content Охват аудитории традиционно экономит анализ рыночных цен, учитывая современные тенденции. Привлечение аудитории, согласно Ф.Котлеру, допускает SWOT-анализ. 
+                
+              // toggle
+              .course-program__toggler
+                .dashed-link.js-toggleProgramCourses(data-action='open')
+                  span развернуть всю программу
+                  
+        // COMPARE
+        .compare.wow.fadeIn
+          .compare__wrapper
+            .compare__col
+              .compare__name до
+              .compare__desc смотришь сериал, не видишь краски <br> скучно, депрессия
+              .compare__image
+                img(src='images/courses/compare_1.png' srcset='images/courses/compare_1@2x.png 2x')
+            .compare__col
+              .compare__name после
+              .compare__desc классно рисуешь, видишь мир в новых красках <br> новые друзья, отличное настроение
+              .compare__image
+                img(src='images/courses/compare_2.png' srcset='images/courses/compare_2@2x.png 2x')
                 
         // BENEFITS
         .benefits.wow.fadeIn
-          .container
-            .heading-gray.heading-gray--mega как это устроено?
-            .benefits__wrapper
-              .benefits__card
-                .benefits__card__image
-                  img(src='images/el/icon-time.png' srcset='images/el/icon-time@2x.png 2x')
-                .benefits__card__name Один урок — 2 часа
-                .benefits__card__desc Ценовая стратегия, вопреки мнению П.Друкера, решительно масштабирует медиамикс
-              .benefits__card
-                .benefits__card__image
-                  img(src='images/el/icon-practise.png' srcset='images/el/icon-practise@2x.png 2x')
-                .benefits__card__name практика
-                .benefits__card__desc Выставочный стенд, конечно, отражает инвестиционный продукт, полагаясь на инсайдерскую информацию
-              .benefits__card
-                .benefits__card__image
-                  img(src='images/el/icon-letter.png' srcset='images/el/icon-letter@2x.png 2x')
-                .benefits__card__name шаг к новому себе
-                .benefits__card__desc Селекция бренда спонтанно позиционирует мониторинг активности. Селекция бренда нетривиально.
-        
-        // BLOG
-        .blog-summ.wow.fadeIn
-          .container.container--1100
-            .heading-gray.heading-gray--mega наш блог
-            .blog-summ__wrapper
-              // card
-              a(href='#').blog-card
-                .blog-card__image
-                  img(src='images/blog/blogCard_1.png' srcset='images/blog/blogCard_1@2x.png 2x')
-                .blog-card__content
-                  .blog-card__name Как научиться рисовать живопись
-                  .blog-card__date 22.01.2017, 18:01
-              // card
-              a(href='#').blog-card
-                .blog-card__image
-                  img(src='images/blog/blogCard_2.png' srcset='images/blog/blogCard_2@2x.png 2x')
-                .blog-card__content
-                  .blog-card__name Что такое пейзаж
-                  .blog-card__date 22.01.2017, 18:01
-                  
-        // INSTAGRAM
-        .instagram.wow.fadeIn
           .container.container--900
-            .heading-gray.heading-gray--mega @drawandgoonline
-            .instagram__wrapper
-              img(src='images/tmp/insta_1.png' srcset='images/tmp/insta_1@2x.png 2x')
-              img(src='images/tmp/insta_2.png' srcset='images/tmp/insta_2@2x.png 2x')
-              img(src='images/tmp/insta_3.png' srcset='images/tmp/insta_3@2x.png 2x')
+            .heading-gray.heading-gray--mega возможности
+            .benefits__wrapper.benefits__wrapper--2col
+              .benefits__card
+                .benefits__card__image
+                  img(src='images/el/icon-eye.png' srcset='images/el/icon-eye@2x.png 2x')
+                .benefits__card__name Личный контакт
+                .benefits__card__desc В рамках любого занятия вас ждет выбор референса (примера), краткий теоретический экскурс, создание эскиза и работа с цветом.
+              .benefits__card
+                .benefits__card__image
+                  img(src='images/el/icon-chat.png' srcset='images/el/icon-chat@2x.png 2x')
+                .benefits__card__name Закрытая FB-группа
+                .benefits__card__desc В рамках любого занятия вас ждет выбор референса (примера), краткий теоретический экскурс, создание эскиза и работа с цветом.
+            .course-price
+              .course-price__value 4 560 Р
+              .course-price__cta
+                a(href='#').btn.btn--primary.btn--pink 
+                  span добавить к заказу
                 
+        // SUPPLEMENTARY GOOD
+        .supp.wow.fadeIn
+          .supp__arrow
+            img(src='images/el/supp_arrow.png' srcset='images/el/supp_arrow@2x.png 2x')
+          .container.container--1366
+            .supp__wrapper
+              .supp__image.supp__image--kraski
+                img(src='images/el/supp_kraski.png' srcset='images/el/supp_kraski@2x.png 2x')
+              .supp__image.supp__image--list
+                img(src='images/el/supp_list.png' srcset='images/el/supp_list@2x.png 2x')
+              .supp__image.supp__image--kara
+                img(src='images/el/supp_kara.png' srcset='images/el/supp_kara@2x.png 2x')
+              .supp__title Готовый набор красок именно для вас
+              .supp__text В рамках любого занятия вас ждет выбор референса (примера), краткий теоретический экскурс, создание эскиза и работа с цветом. В дальнейшем, вы сможете развивать свои навыки, выбирая в качестве примеров все более и более сложные работы, сориентироваться в которых вам помогут наши преподаватели. 
+            .course-price
+              .course-price__value 4 560 Р
+              .course-price__cta
+                a(href='#').btn.btn--primary.btn--pink 
+                  span добавить к заказу
+      
+        // TESTIMONIALS
+        .testimonials.wow.fadeIn
+          .container
+            .testimonials__box
+              .heading-gray.heading-gray--mega отзывы
+              .testimonials__slider
+                // slide
+                .testimonials__slide
+                  .testimonials__box__wrapper
+                    .testimonials__box__image
+                      img(src='images/tmp/testimonialsBox.png' srctset='images/tmp/testimonialsBox@2x.png 2x')
+                      span Работа Марата
+                    .testimonials__box__content
+                      .testimonials__box__text Не факт, что производство концентрирует презентационный материал. Направленный маркетинг развивает медиаплан. Стоит отметить, что маркетингово-ориентированное издание поддерживает product placement
+                      .testimonials__box__author
+                        .testimonials__box__author__avatar
+                          img(src='images/tmp/TestimonialsAvatar.png' srctset='images/tmp/TestimonialsAvatar@2x.png 2x')
+                        .testimonials__box__author__name Марат, 24 года <span> Архитектор</span>
+                        
+                    .testimonials__slide__nav.testimonials__slide__nav--single
+                      span Следующий отзыв
+                      i.icon.icon-slide-next
+
+                // slide
+                .testimonials__slide
+                  .testimonials__box__wrapper
+                    .testimonials__box__image
+                      img(src='images/tmp/testimonialsBox.png' srctset='images/tmp/testimonialsBox@2x.png 2x')
+                      span Работа Марата
+                    .testimonials__box__content
+                      .testimonials__box__text Не факт, что производство концентрирует презентационный материал. Направленный маркетинг развивает медиаплан. Стоит отметить, что маркетингово-ориентированное издание поддерживает product placement
+                      .testimonials__box__author
+                        .testimonials__box__author__avatar
+                          img(src='images/tmp/TestimonialsAvatar.png' srctset='images/tmp/TestimonialsAvatar@2x.png 2x')
+                        .testimonials__box__author__name Марат, 24 года <span> Архитектор</span>
+                        
+                    .testimonials__slide__nav.testimonials__slide__nav--single
+                      span Следующий отзыв
+                      i.icon.icon-slide-next
+
         
+        // COURSE CTA
+        .course-cta.wow.fadeIn
+          .container.container--1100
+            .heading-gray.heading-gray--mega пришло время  <br> покупать
+            .course-cta__wrapper
+              form(action='#').course-cta__form.js-form-courseCta
+                .course-cta__col
+                  .ui-group
+                    input(type='text' name='name' placeholder='Ваше имя').ui-input
+                  .ui-group
+                    input(type='tel' name='phone' placeholder='+7 (___) ___-__-__').ui-input
+                  .ui-group
+                    input(type='text' name='city' placeholder='Город').ui-input
+                  .ui-group
+                    input(type='text' name='adress' placeholder='Улица и номер дома').ui-input  
+                  .ui-group
+                    textarea(placeholder='Дополнительные сведения' rows='5').ui-input  
+                
+                .course-cta__col
+                  .course-cta__checkboxes
+                    .ui-checkbox
+                      input(type='checkbox' id='checkbox_1')
+                      label(for='checkbox_1') Я покупаю в подарок
+                    .ui-checkbox
+                      input(type='checkbox' id='checkbox_2')
+                      label(for='checkbox_2') 
+                        | Активируйте VIP-пакет <span>(+5000₽)</span>
+                        .ui-checkbox__sublabel Личный контакт + закрытая группа
+                    .ui-checkbox
+                      input(type='checkbox' id='checkbox_3')
+                      label(for='checkbox_3') 
+                        | Да, привезите мне коробку! <span>(+2500₽)</span>
+                        .ui-checkbox__sublabel Прямо до вашему дома
+                  .course-cta__cta
+                    .course-price__value 28 560 Р
+                    button(type='submit').btn.btn--primary.btn--pink.btn--block 
+                      span ПЕРЕЙТИ К ОПЛАТЕ      
+                    
         // GIFT
         .gift.wow.fadeIn
           .container.container--1100
@@ -170,7 +229,33 @@ doctype html
                 p Стоит отметить, что маркетингово-ориентированное издание поддерживает product  
                 a(href='#').btn.btn--primary.btn--pink 
                   span Выбрать курс
-              
+        
+        // COURSE QUESTIONS
+        .course-questions
+          .container.container--900
+            .heading-mega.wow.fadeIn остались вопросы?
+            .course-questions__wrapper
+              .course-questions__item.course-questions__item--left.wow.fadeIn
+                .course-questions__item__name Что делать, если мне не понравится курс?
+                .course-questions__item__text Не факт, что производство концентрирует презентационный материал. Направленный маркетинг развивает медиаплан. Стоит отметить, что маркетингово-ориентированное издание поддерживает product placement
+              .course-questions__item.course-questions__item--right.wow.fadeIn
+                .course-questions__item__name А если понравился, но я хочу вернуть деньги обратно?
+                .course-questions__item__text Не факт, что производство концентрирует презентационный материал. Направленный маркетинг развивает медиаплан. Стоит отметить, что маркетингово-ориентированное издание поддерживает product placement
+              .course-questions__item.course-questions__item--async.wow.fadeIn
+                .course-questions__item__name А если понравился, но я хочу вернуть деньги обратно?
+                img(src='images/courses/courseQuestionImg.png' srcset='images/courses/courseQuestionImg@2x.png 2x')
+                .course-questions__item__text Не факт, что производство концентрирует презентационный материал. Направленный маркетинг развивает медиаплан. Стоит отметить, что маркетингово-ориентированное издание поддерживает product placement
+              .course-questions__item.course-questions__item--left.wow.fadeIn
+                .course-questions__item__name Что делать, если мне не понравится курс?
+                .course-questions__item__text Не факт, что производство концентрирует презентационный материал. Направленный маркетинг развивает медиаплан. Стоит отметить, что маркетингово-ориентированное издание поддерживает product placement
+                  
+        // BACKPAGE
+        .backpage
+          .container.container--1000
+            .backpage__wrapper
+              img(src='images/el/backpage.png' srcset='images/el/backpage@2x.png 2x')
+              a(href='#') 
+                span Верните меня обратно к покупке, пожалуйста.
 
       include shared/footer.pug
       

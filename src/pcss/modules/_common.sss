@@ -160,6 +160,32 @@
       &:hover
         opacity: .75
 
+// BACKPAGE
+.backpage
+  margin-top: 50px
+  margin-bottom: 35px
+  &__wrapper
+    text-align: center
+    position: relative
+    img
+      max-width: 100%
+    a
+      display: block
+      position: absolute
+      text-align: center
+      top: 50%
+      left: 0
+      right: 0
+      transform: translateY(-50%)
+      font-size: 17px
+      font-weight: 500
+      color: white
+      span
+        border-bottom: 1px solid white
+        transition: all $transitionSpeed $ease
+      &:hover
+        span
+          border-color: transparent
 
 // COMMON
 .heading-gray
@@ -173,6 +199,14 @@
     font-size: 60px
     letter-spacing: 10px
 
+.heading-mega
+  font-family: 'Core65'
+  text-transform: uppercase
+  font-size: 60px
+  letter-spacing: 10px
+  text-align: center
+  color: $fontColor
+
 
 .hover-link
   font-size: 21px
@@ -185,5 +219,18 @@
     transition: all $transitionSpeed $ease
   &:hover
     color: $colorPrimary
+    span
+      border-color: transparent
+
+.dashed-link
+  color: $colorPrimary
+  font-size: 17px
+  letter-spacing: -.33px
+  cursor: pointer
+  span
+    border-bottom: 1px dashed $colorPrimary
+    transition: all $transitionSpeed $ease
+  &:hover
+    color: $colorBlue
     span
       border-color: transparent

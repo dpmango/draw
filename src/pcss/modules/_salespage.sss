@@ -115,8 +115,11 @@
     display: flex
     flex-direction: column
   &__item
+    display: none
     padding: 35px
     text-align: center
+    &.visible
+      display: block
     &__name
       font-family: 'Core65'
       font-size: 24px
@@ -136,3 +139,165 @@
       img
         max-width: 100%
         transform: translate3d(15px,0,0)
+  &__toggler
+    text-align: center
+
+// SIDE BY SIDE
+.compare
+  margin-top: 80px
+  background: black
+  padding-top: 50px
+  font-size: 0
+  &__wrapper
+    display: flex
+  &__col
+    flex: 0 1 50%
+    &:first-child
+      color: #685338
+      .compare__desc, .compare__name
+        padding-left: 60px
+    &:last-child
+      color: #9B00D2
+  &__name
+    font-family: 'Core65'
+    font-size: 24px
+    text-transform: uppercase
+    margin-bottom: 12px
+    padding-right: 20px
+  &__desc
+    font-family: 'Core45'
+    font-size: 19px
+    line-height: 1.1
+    padding-bottom: 50px
+    padding-right: 20px
+  &__image
+    img
+      width: 100%
+
+
+.course-price
+  position: relative
+  z-index: 5
+  padding-top: 15px
+  display: flex
+  align-items: center
+  justify-content: center
+  &__value
+    font-size: 60px
+    font-family: 'Core65'
+    color: $colorPrimary
+    letter-spacing: -5.5px
+  &__cta
+    margin-left: 35px
+
+
+// SUPPLEMENTARY
+.supp
+  margin-top: 60px
+  position: relative
+  &__arrow
+    text-align: center
+    margin-bottom: 65px
+  &__wrapper
+    position: relative
+    z-index: 2
+    text-align: center
+  &__title
+    font-size: 48px
+    line-height: 1.25
+    font-family: 'Core65'
+    max-width: 520px
+    margin-left: auto
+    margin-right: auto
+    letter-spacing: -.75px
+  &__text
+    max-width: 490px
+    margin: 40px auto
+    font-size: 17px
+    font-family: 'Roboto'
+    line-height: 1.7
+  &__image
+    position: absolute
+    z-index: -1
+    img
+      max-width: 100%
+    &--kraski
+      left: 6%
+      top: 20%
+      width: 23%
+    &--list
+      right: 15%
+      top: -5%
+      width: 9%
+    &--kara
+      right: 0
+      bottom: -40%
+      width: 29%
+
+
+.course-cta
+  margin-top: 100px
+  &__wrapper
+    margin-top: 60px
+    position: relative
+    padding-top: 45px
+    padding-bottom: 75px
+    &::before
+      position: absolute 0
+      display: block
+      content: ' '
+      background: url('../images/el/buyFormRose@2x.png') no-repeat left center
+      background-size: contain
+      z-index: 1
+  &__form
+    position: relative
+    z-index: 2
+    display: flex
+    background: white
+    padding: 45px 40px 15px 40px
+    border-radius: 3px
+    margin-left: 60px
+    box-shadow: 0 12px 15px color(black a(24%))
+  &__col
+    flex: 0 1 50%
+    margin: 0 30px
+    display: flex
+    flex-direction: column
+    &:first-child
+      margin-right: 30px
+    &:last-child
+      margin-left: 30px
+  &__checkboxes
+    margin-top: 15px
+    margin-bottom: auto
+
+  &__cta
+    margin-bottom: 15px
+
+
+
+// QUETIONS
+.course-questions
+  margin-top: 60px
+  &__wrapper
+    margin-top: 40px
+    padding: 0 10px
+  &__item
+    padding: 50px 0
+    max-width: 470px
+    &--left
+      margin-right: auto
+    &--right
+      margin-left: auto
+    &--async
+      margin-left: 17%
+    &__name
+      font-size: 17px
+      line-height: 1.4
+      font-weight: 500
+      margin-bottom: 20px
+    img
+      margin-bottom: 20px
+    &__text
+      font-size: 17px
+      line-height: 1.4
