@@ -209,10 +209,21 @@ $(document).ready(function(){
       $(this).data('action', 'open');
       $(this).find('span').text('развернуть всю программу')
     }
-
-
   });
 
+
+  if ( $('.course-fixed').length > 0 ){
+    _window.scrolled(10, function() { // scrolled is a constructor for scroll delay listener
+      var vScroll = _window.scrollTop();
+      var el = $('.course-fixed');
+
+      if ( vScroll > 700 ){
+        el.addClass('visible');
+      } else {
+        el.removeClass('visible');
+      }
+    });
+  }
 
   ////////////
   // UI

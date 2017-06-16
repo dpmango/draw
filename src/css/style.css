@@ -405,7 +405,7 @@ button:focus {
     position: absolute;
     right: 0;
     left: 0;
-    z-index: 10;
+    z-index: 9;
     padding-top: 10px;
     padding-bottom: 30px;
     background: white;
@@ -1806,6 +1806,66 @@ button:focus {
 .course-questions__item__text {
     font-size: 17px;
     line-height: 1.4;
+}
+/* COURSE FIXED */
+.course-fixed {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 9;
+    opacity: 0;
+    -webkit-transition: -webkit-transform .25s ease-in-out;
+    transition: -webkit-transform .25s ease-in-out;
+    transition: transform .25s ease-in-out;
+    transition: transform .25s ease-in-out, -webkit-transform .25s ease-in-out;
+    -webkit-transform: translate3d(0,-100%,0);
+            transform: translate3d(0,-100%,0);
+}
+.course-fixed.visible {
+    opacity: 1;
+    -webkit-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+}
+.course-fixed__wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+            align-items: center;
+    -webkit-justify-content: space-between;
+            justify-content: space-between;
+    padding: 10px 20px;
+    height: 80px;
+    background: #000000;
+    color: white;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+}
+.course-fixed__name {
+    letter-spacing: -.75px;
+    font-size: 48px;
+    font-family: 'Core65';
+}
+.course-fixed__cta {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+            align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+}
+.course-fixed__cta > span {
+    display: inline-block;
+    margin-left: 25px;
+    letter-spacing: -.5px;
+    font-size: 32px;
+    font-family: 'Core65';
 }
 
 /*# sourceMappingURL=style.css.map */

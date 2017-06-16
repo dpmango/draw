@@ -301,3 +301,40 @@
     &__text
       font-size: 17px
       line-height: 1.4
+
+
+// COURSE FIXED
+.course-fixed
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  z-index: 9
+  transition: transform $transitionSpeed $ease
+  transform: translate3d(0,-100%,0)
+  opacity: 0
+  &.visible
+    opacity: 1
+    transform: translate3d(0,0,0)
+  &__wrapper
+    display: flex
+    align-items: center
+    justify-content: space-between
+    color: white
+    height: 80px
+    padding: 10px 20px
+    background: $fontColor
+  &__name
+    font-size: 48px
+    font-family: 'Core65'
+    letter-spacing: -.75px
+
+  &__cta
+    display: flex
+    align-items: center
+    > span
+      display: inline-block
+      margin-left: 25px
+      font-size: 32px
+      font-family: 'Core65'
+      letter-spacing: -.5px

@@ -256,7 +256,18 @@ doctype html
               img(src='images/el/backPage.png' srcset='images/el/backPage@2x.png 2x')
               a(href='#') 
                 span Верните меня обратно к покупке, пожалуйста.
-
+                
+        // FIXED CTA
+        .course-fixed
+          .course-fixed__wrapper
+            .course-fixed__name Живопись дома
+              
+            .course-fixed__cta
+              a(href='#').btn.btn--primary.btn--pink
+                span Купить
+              span от 18 500 ₽
+            
+        
       include shared/footer.pug
       
     include shared/scripts.pug
