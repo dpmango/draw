@@ -1,0 +1,177 @@
+doctype html
+<!--[if IE 8]>         <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9 oldie"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class=""> <!--<![endif]-->
+  include shared/head.pug
+
+  body
+    include shared/header.pug
+    
+    .page
+      .page__content
+        // SALEPAGE :: START
+        .container.wow.fadeIn
+          .course-card.course-card--hero
+            .course-card__image
+              img(src='images/courses/courseArt.png' srcset='images/courses/courseArt@2x.png 2x')
+            .course-card__content
+              .course-card__name Живопись дома
+              .course-card__desc 2 часа 45 минут  •  18 уроков  •  12 практических заданий
+              
+              .course-card__cta
+                a(href='#').btn.btn--primary.btn--pink
+                  span купить
+                .course-card__price 
+                  | от 18 500
+                  span.icon-rub ₽
+                
+        // COURSE AUTHOR :: START      
+        .course-author
+          .container.container--1100
+            .course-author__wrapper
+              .course-author__content
+                .course-author__author
+                  | виктория кошелева
+                  span Автор курса
+                .course-author__text
+                  p Охват аудитории традиционно экономит анализ рыночных цен, учитывая современные тенденции. Привлечение аудитории, согласно Ф.Котлеру, допускает SWOT-анализ. Конкурент создает эмпирический комплексный анализ ситуации. 
+                  p Узнаваемость марки, как следует из вышесказанного, восстанавливает опрос. В общем, имидж слабо притягивает анализ рыночных цен. 
+              .course-author__image
+                img(src='images/courses/courseAuthor.png' srctset='images/courses/courseAuthor@2x.png 2x')
+                  
+                  
+        // VIDEO :: START
+        .video.wow.fadeIn
+          .container
+            .video__wrapper
+              .video__content
+                .video__player.video__player--dark
+                  i.icon.icon-circle
+                    i.icon.icon-play
+                  img(src='images/tmp/video2.png' srcset='images/tmp/video2@2x.png 2x')
+                  // place iframe with ?autoplay=0 param, don't forget about 100% width and height
+                  iframe(src='https://player.vimeo.com/video/72874423?autoplay=0', width='100%', height='100%', frameborder='0', webkitallowfullscreen='', mozallowfullscreen='', allowfullscreen='')
+
+        // COURSE PROGRAMM
+        .course-program
+          .container
+            .heading-gray.heading-gray--mega программа
+            .course-program__wrapper
+              .course-program__item.visible
+                .course-program__item__name урок 1
+                .course-program__item__content Охват аудитории традиционно экономит анализ рыночных цен, учитывая современные тенденции. Привлечение аудитории, согласно Ф.Котлеру, допускает SWOT-анализ. 
+              .course-program__item.visible
+                .course-program__item__name урок 2
+                .course-program__item__tag
+                  img(src='images/el/tag_interesting.png' srcset='images/el/tag_interesting@2x.png 2x')
+                .course-program__item__content Охват аудитории традиционно экономит анализ рыночных цен, учитывая современные тенденции. Привлечение аудитории, согласно Ф.Котлеру, допускает SWOT-анализ. 
+              
+
+
+        // TESTIMONIALS
+        .testimonials.wow.fadeIn
+          .testimonials__slider
+            // slide
+            .testimonials__slide
+              .testimonials__slide__bg
+                img(src='images/tmp/testimonials.png' srcset='images/tmp/testimonials@2x.png 2x')
+              .testimonials__slide__content
+                .testimonials__slide__author
+                  | Эдвард сноуден
+                  span преступник США
+                .testimonials__slide__text
+                  p Я застрял в России и мне не остается ничего, кроме как рисовать дома. Но я считаю эту возможность совершенно прекрасной и всем советую поступить также.
+                .testimonials__slide__cta
+                  a(href='#').hover-link 
+                    span выбрать курс
+                .testimonials__slide__nav
+                  i.icon.icon-slide-prev
+                  i.icon.icon-slide-next
+            // slide
+            .testimonials__slide
+              .testimonials__slide__bg
+                img(src='images/tmp/testimonials.png' srcset='images/tmp/testimonials@2x.png 2x')
+              .testimonials__slide__content
+                .testimonials__slide__author
+                  | Эдвард сноуден
+                  span преступник США
+                .testimonials__slide__text
+                  p Я застрял в России и мне не остается ничего. тчк
+                .testimonials__slide__cta
+                  a(href='#').hover-link 
+                    span не выбирать курс
+                .testimonials__slide__nav
+                  i.icon.icon-slide-prev
+                  i.icon.icon-slide-next    
+                
+        // BENEFITS
+        .benefits.wow.fadeIn
+          .container
+            .heading-gray.heading-gray--mega как это устроено?
+            .benefits__wrapper
+              .benefits__card
+                .benefits__card__image
+                  img(src='images/el/icon-time.png' srcset='images/el/icon-time@2x.png 2x')
+                .benefits__card__name Один урок — 2 часа
+                .benefits__card__desc Ценовая стратегия, вопреки мнению П.Друкера, решительно масштабирует медиамикс
+              .benefits__card
+                .benefits__card__image
+                  img(src='images/el/icon-practise.png' srcset='images/el/icon-practise@2x.png 2x')
+                .benefits__card__name практика
+                .benefits__card__desc Выставочный стенд, конечно, отражает инвестиционный продукт, полагаясь на инсайдерскую информацию
+              .benefits__card
+                .benefits__card__image
+                  img(src='images/el/icon-letter.png' srcset='images/el/icon-letter@2x.png 2x')
+                .benefits__card__name шаг к новому себе
+                .benefits__card__desc Селекция бренда спонтанно позиционирует мониторинг активности. Селекция бренда нетривиально.
+        
+        // BLOG
+        .blog-summ.wow.fadeIn
+          .container.container--1100
+            .heading-gray.heading-gray--mega наш блог
+            .blog-summ__wrapper
+              // card
+              a(href='#').blog-card
+                .blog-card__image
+                  img(src='images/blog/blogCard_1.png' srcset='images/blog/blogCard_1@2x.png 2x')
+                .blog-card__content
+                  .blog-card__name Как научиться рисовать живопись
+                  .blog-card__date 22.01.2017, 18:01
+              // card
+              a(href='#').blog-card
+                .blog-card__image
+                  img(src='images/blog/blogCard_2.png' srcset='images/blog/blogCard_2@2x.png 2x')
+                .blog-card__content
+                  .blog-card__name Что такое пейзаж
+                  .blog-card__date 22.01.2017, 18:01
+                  
+        // INSTAGRAM
+        .instagram.wow.fadeIn
+          .container.container--900
+            .heading-gray.heading-gray--mega @drawandgoonline
+            .instagram__wrapper
+              img(src='images/tmp/insta_1.png' srcset='images/tmp/insta_1@2x.png 2x')
+              img(src='images/tmp/insta_2.png' srcset='images/tmp/insta_2@2x.png 2x')
+              img(src='images/tmp/insta_3.png' srcset='images/tmp/insta_3@2x.png 2x')
+                
+        
+        // GIFT
+        .gift.wow.fadeIn
+          .container.container--1100
+            .gift__title 
+              .gift__title__text купи курс и мы подарим <br> еще один тому, кто не <br> может его себе позволить
+              .gift__title__bg 
+                img(src='images/el/giftBg.png' srcset='images/el/giftBg@2x.png 2x')
+            .gift__wrapper
+              .gift__banner
+                img(src='images/el/giftPlus.png' srcset='images/el/giftPlus@2x.png 2x')
+              .gift__text
+                p Не факт, что производство концентрирует презентационный материал. Направленный маркетинг развивает медиаплан. 
+                p Стоит отметить, что маркетингово-ориентированное издание поддерживает product  
+                a(href='#').btn.btn--primary.btn--pink 
+                  span Выбрать курс
+              
+
+      include shared/footer.pug
+      
+    include shared/scripts.pug

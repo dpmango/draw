@@ -25,7 +25,8 @@ doctype html
                   i.icon.icon-circle
                     i.icon.icon-play
                   img(src='images/tmp/video.png' srcset='images/tmp/video@2x.png 2x')
-                  iframe(width='100%', height='100%', src='https://www.youtube.com/embed/MAO90ITcbSk?autoplay=0', frameborder='0', allowfullscreen='')
+                  // place iframe with ?autoplay=0 param, don't forget about 100% width and height
+                  iframe(src='https://player.vimeo.com/video/72874423?autoplay=0', width='100%', height='100%', frameborder='0', webkitallowfullscreen='', mozallowfullscreen='', allowfullscreen='')
 
         // HOME ABOUT :: START
         .home-about.wow.fadeIn
@@ -138,7 +139,7 @@ doctype html
                   .blog-card__name Как научиться рисовать живопись
                   .blog-card__date 22.01.2017, 18:01
               // card
-              .blog-card
+              a(href='#').blog-card
                 .blog-card__image
                   img(src='images/blog/blogCard_2.png' srcset='images/blog/blogCard_2@2x.png 2x')
                 .blog-card__content
@@ -155,22 +156,7 @@ doctype html
               img(src='images/tmp/insta_3.png' srcset='images/tmp/insta_3@2x.png 2x')
                 
         
-        // GIFT
-        .gift.wow.fadeIn
-          .container.container--1100
-            .gift__title 
-              .gift__title__text купи курс и мы подарим <br> еще один тому, кто не <br> может его себе позволить
-              .gift__title__bg 
-                img(src='images/el/giftBg.png' srcset='images/el/giftBg@2x.png 2x')
-            .gift__wrapper
-              .gift__banner
-                img(src='images/el/giftPlus.png' srcset='images/el/giftPlus@2x.png 2x')
-              .gift__text
-                p Не факт, что производство концентрирует презентационный материал. Направленный маркетинг развивает медиаплан. 
-                p Стоит отметить, что маркетингово-ориентированное издание поддерживает product  
-                a(href='#').btn.btn--primary.btn--pink 
-                  span Выбрать курс
-              
+        include components/gift.pug    
 
       include shared/footer.pug
       

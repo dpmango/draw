@@ -37,7 +37,7 @@ $(document).ready(function(){
   // add .header-static for .page or body
   // to disable sticky header
   if ( $('.header-static').length == 0 ){
-    _window.scrolled(10, function() { // scrolled is a constructor for scroll delay listener
+    _window.scrolled(0, function() { // scrolled is a constructor for scroll delay listener
       var vScroll = _window.scrollTop();
       var header = $('.header').not('.header--static');
       var headerHeight = header.height();
