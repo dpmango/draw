@@ -1,0 +1,130 @@
+doctype html
+<!--[if IE 8]>         <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9 oldie"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class=""> <!--<![endif]-->
+  include shared/head.pug
+
+  body
+    include shared/header.pug
+    
+    .page
+      .page__content
+        // PROFILE HEADING::START
+        .profile-heading
+          .container
+            .heading-mega ваши курсы
+            
+            
+        // COURSES
+        .profile-courses
+          .container
+            .profile-courses__list
+              // single course 
+              .profile-course.profile-course--purple
+                .profile-course__content
+                  .profile-course__name Живопись дома
+                  .profile-course__author
+                    .profile-course__author__avatar
+                      img(src='images/tmp/courseAvatar.png' srctset='images/tmp/courseAvatar@2x.png 2x')
+                    .profile-course__author__name Наталья Овечкина <span> Автор курса</span>
+                  .profile-course__cta
+                    a(href='#').btn.btn--primary.btn--pink 
+                      span продолжить обучение
+                .profile-course__cover
+                  img(src='images/courses/profileCourse_1.png' srcset='images/courses/profileCourse_1@2x.png 2x')
+                  //- svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
+                  //-   defs
+                  //-     filter#backdrop-filter-blur(x='0', y='0', width='100%', height='100%')
+                  //-       feimage(x='0', y='0', width='100%', height='100%', xlink:href='images/courses/profileCourse_1.png')
+                  //-         fegaussianblur(stddeviation='3')
+                  //-           fecomponenttransfer(result='blur')
+                  //-             fefunca(type='discrete', tablevalues='1 1')
+                  //-           fecomponenttransfer(in='SourceGraphic', result='source')
+                  //-             fefunca(type='linear', slope='2', intercept='0')
+                  //-           fecomposite(operator='in', in='blur', in2='source')
+                  //-             femerge
+                  //-               femergenode
+                  //-                 femergenode(in='SourceGraphic')
+                  //-     image#image(xlink:href='images/courses/profileCourse_1.png', x='0', y='0', height='100%', width='100%')
+                  //- svg.box
+                  //-   use(xlink:href='#image')
+                .profile-course__progress
+                  .profile-course__progressbar
+                    .profile-course__progressbar__fill(style='width: 20%')
+                  .profile-course__progress__status Пройдено 8/24 уроков
+                  
+              // single course 
+              .profile-course.profile-course--green
+                .profile-course__content
+                  .profile-course__name Концепция  <br> зеленого<br>  мира
+                  .profile-course__author
+                    .profile-course__author__avatar
+                      img(src='images/tmp/courseAvatar.png' srctset='images/tmp/courseAvatar@2x.png 2x')
+                    .profile-course__author__name Наталья Овечкина <span> Автор курса</span>
+                  .profile-course__cta
+                    a(href='#').btn.btn--primary.btn--green 
+                      span Перейти в курс
+
+                .profile-course__cover
+                  img(src='images/courses/profileCourse_3.png' srcset='images/courses/profileCourse_3@2x.png 2x')
+                
+                .profile-course__done
+                  img(src='images/el/courseCompleated.png' srcset='images/el/courseCompleated@2x.png 2x')
+                  
+            // separator
+            .profile-courses__separtor
+              img(src='images/el/headingDownArrow.png' srcset='images/el/headingDownArrow@2x.png 2x')
+              span НЕ ЗАБУДЬТЕ КУПИТЬ:
+          
+            .profile-courses__list    
+              // single course 
+              .profile-course.profile-course--gray
+                .profile-course__content
+                  .profile-course__name Скетч: основы
+                  .profile-course__author
+                    .profile-course__author__avatar
+                      img(src='images/tmp/courseAvatar.png' srctset='images/tmp/courseAvatar@2x.png 2x')
+                    .profile-course__author__name Наталья Овечкина <span> Автор курса</span>
+                  .profile-course__scope
+                    span — 3 часа 45 минут
+                    span — 12 уроков
+                    span — 5 практических заданий
+                  .profile-course__cta
+                    a(href='#').btn.btn--primary.btn--white 
+                      span купить
+                    .profile-course__cta__price от 22 000 ₽
+                  .profile-course__details
+                    a(href='#')
+                      span подробно о курсе
+                .profile-course__cover
+                  img(src='images/courses/profileCourse_4.png' srcset='images/courses/profileCourse_4@2x.png 2x')
+                      
+                    
+              // single course 
+              .profile-course.profile-course--blue
+                .profile-course__content
+                  .profile-course__name Научись рисовать как Пикассо
+                  .profile-course__author
+                    .profile-course__author__avatar
+                      img(src='images/tmp/courseAvatar.png' srctset='images/tmp/courseAvatar@2x.png 2x')
+                    .profile-course__author__name Наталья Овечкина <span> Автор курса</span>
+                  .profile-course__scope
+                    span — 3 часа 45 минут
+                    span — 12 уроков
+                    span — 5 практических заданий
+                  .profile-course__cta
+                    a(href='#').btn.btn--primary.btn--aqua 
+                      span купить
+                    .profile-course__cta__price от 14 500 ₽
+                  .profile-course__details
+                    a(href='#')
+                      span подробно о курсе
+                .profile-course__cover
+                  img(src='images/courses/profileCourse_2.png' srcset='images/courses/profileCourse_2@2x.png 2x')
+                  
+                          
+                  
+
+      include shared/footer.pug
+      
+    include shared/scripts.pug

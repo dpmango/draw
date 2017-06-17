@@ -1,0 +1,223 @@
+doctype html
+<!--[if IE 8]>         <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9 oldie"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class=""> <!--<![endif]-->
+  include shared/head.pug
+
+  body
+    include shared/header.pug
+    
+    .page
+      .page__content
+        
+        .kit
+          // section
+          .kit__section
+            .container
+              .kit__head
+                .kit__head__name Общее
+                .kit__head__desc
+              .kit__info
+                i.icon.icon-warn
+                span На страницах используется глобальный класс (.page) для отступа от фиксированной шапки. Весь контент кроме .footer должен находиться внутри .page__content для толкания подвала вниз страницы
+              .kit__info
+                span Смешивание классов не применимо, вынесены общие компоненты которые повторяются многократно. В большинстве случаев возможны повторы стилей внутри компонентов для гибкости и читаемости
+                    
+          // section
+          .kit__section
+            .container
+              .kit__head
+                .kit__head__name Сетка
+                .kit__head__desc Типы контейнеров
+            
+            .container
+              div(style='padding: 15px 25px; background-color: #F2F2F2')
+                span .container (ширина 1260px)
+                
+            .kit__name-sep модификаторы 
+            
+            .container.container--fluid.container--no-pad
+              div(style='margin-top: 10px; padding: 15px 25px; background-color: #F2F2F2')
+                span .container.container--fluid.container--no-pad (ширина 100%, без отступов)
+            .container.container--fluid
+              div(style='margin-top: 10px; padding: 15px 25px; background-color: #F2F2F2')
+                span .container.container--fluid (ширина 100%)
+            .container.container--1366
+              div(style='margin-top: 10px; padding: 15px 25px; background-color: #F2F2F2')
+                span .container.container--1366 (ширина 1366px)      
+            .container.container--1100
+              div(style='margin-top: 10px; padding: 15px 25px; background-color: #F2F2F2')
+                span .container.container--1100 (ширина 1100px)    
+            .container.container--900
+              div(style='margin-top: 10px; padding: 15px 25px; background-color: #F2F2F2')
+                span .container.container--900 (ширина 900px)    
+          
+          // section
+          .kit__section
+            .container
+              .kit__head
+                .kit__head__name Типографика
+                .kit__head__desc Общие элементы для заголовоков и текста
+              
+              .heading-gray 
+                span .heading-gray
+              
+              .heading-gray.heading-gray--mega(style='margin-top: 35px;')
+                span .heading-gray.heading-gray--mega
+              
+              .heading-mega(style='margin-top: 35px;')
+                span .heading-mega
+                
+              .t-head(style='margin-top: 35px;')
+                span .t-head
+              
+              .t-regular(style='margin-top: 35px;')
+                span (.t-regular) В рамках любого занятия вас ждет выбор референса (примера), краткий теоретический экскурс, создание эскиза и работа с цветом. В дальнейшем, вы сможете развивать свои навыки, выбирая в качестве примеров все более и более сложные работы, сориентироваться в которых вам помогут наши преподаватели. 
+              .t-regular.t-center(style='margin-top: 35px;')
+                span (.t-regular.t-center) - Центрирование В рамках любого занятия вас ждет выбор референса (примера), краткий теоретический экскурс, создание эскиза и работа с цветом. В дальнейшем, вы сможете развивать свои навыки, выбирая в качестве примеров все более и более сложные работы, сориентироваться в которых вам помогут наши преподаватели. 
+                    
+          // section
+          .kit__section
+            .container
+              .kit__head
+                .kit__head__name Кнопки
+                .kit__head__desc Классы применимы как на ссылки (a), так и на кнопки (button). Текст кнопки должен быть обернут в span из-за анимации на hover
+              
+              a(href='#').btn
+                span .btn
+              
+              div(style='margin-top: 20px; font-size: 14px;') Пустой класс не работает. Модификаторы обязательны
+              
+              a(href='#' style='margin-top: 20px;').btn.btn--primary
+                span .btn.btn--primary
+                  
+              .kit__name-sep модификаторы 
+              
+              
+              a(href='#' style='margin-top: 20px;').btn.btn--primary.btn--blue
+                span .btn.btn--primary.btn--blue
+              a(href='#' style='margin-top: 20px; margin-left: 25px;').btn.btn--primary.btn--yellow
+                span .btn.btn--primary.btn--yellow
+              div(style='max-width: 500px;')
+                a(href='#' style='margin-top: 20px;').btn.btn--primary.btn--block
+                  span .btn.btn--primary.btn--block
+          
+          // section
+          .kit__section
+            .container
+              .kit__head
+                .kit__head__name Компоненты
+                .kit__head__desc 
+            
+            .container
+              // VIDEO :: START
+              .video__wrapper
+                .video__content
+                  .video__player
+                    i.icon.icon-circle
+                      i.icon.icon-play
+                    img(src='images/tmp/video.png' srcset='images/tmp/video@2x.png 2x')
+                    // place iframe with ?autoplay=0 param, don't forget about 100% width and height
+                    iframe(src='https://player.vimeo.com/video/72874423?autoplay=0', width='100%', height='100%', frameborder='0', webkitallowfullscreen='', mozallowfullscreen='', allowfullscreen='')
+
+              
+              .home-courses__wrapper(style='justify-content: center;')
+                // COURSE CARD
+                .course-card
+                  .course-card__image
+                    img(src='images/courses/courseCard_1.png' srcset='images/courses/courseCard_1@2x.png 2x')
+                  .course-card__content
+                    .course-card__name Живопись дома
+                    .course-card__desc 2 часа 45 минут  •  18 уроков  •  12 практических заданий
+                    .course-card__price 
+                      | от 18 500
+                      span.icon-rub ₽
+                    .course-card__cta
+                      a(href='#').btn.btn--primary.btn--blue
+                        span подробнее о курсе
+              .blog-summ__wrapper(style='justify-content: center;')
+                // card
+                a(href='#').blog-card
+                  .blog-card__image
+                    img(src='images/blog/blogCard_1.png' srcset='images/blog/blogCard_1@2x.png 2x')
+                  .blog-card__content
+                    .blog-card__name Как научиться рисовать живопись
+                    .blog-card__date 22.01.2017, 18:01
+              
+              // single course 
+              .profile-course.profile-course--blue(style='margin-top: 100px;')
+                .profile-course__content
+                  .profile-course__name Научись рисовать как Пикассо
+                  .profile-course__author
+                    .profile-course__author__avatar
+                      img(src='images/tmp/courseAvatar.png' srctset='images/tmp/courseAvatar@2x.png 2x')
+                    .profile-course__author__name Наталья Овечкина <span> Автор курса</span>
+                  .profile-course__scope
+                    span — 3 часа 45 минут
+                    span — 12 уроков
+                    span — 5 практических заданий
+                  .profile-course__cta
+                    a(href='#').btn.btn--primary.btn--pink 
+                      span купить
+                    .profile-course__cta__price от 14 500 ₽
+                  .profile-course__details
+                    a(href='#')
+                      span подробно о курсе
+                .profile-course__cover
+                  img(src='images/courses/profileCourse_2.png' srcset='images/courses/profileCourse_2@2x.png 2x')
+                  
+                  
+              // COURSE CTA
+              .course-cta__wrapper
+                form(action='#').course-cta__form.js-form-courseCta
+                  .course-cta__col
+                    .ui-group
+                      input(type='text' name='name' placeholder='Ваше имя').ui-input
+                    .ui-group
+                      input(type='tel' name='phone' placeholder='+7 (___) ___-__-__').ui-input
+                    .ui-group
+                      input(type='text' name='city' placeholder='Город').ui-input
+                    .ui-group
+                      input(type='text' name='adress' placeholder='Улица и номер дома').ui-input  
+                    .ui-group
+                      textarea(placeholder='Дополнительные сведения' rows='5').ui-input  
+                  
+                  .course-cta__col
+                    .course-cta__checkboxes
+                      .ui-checkbox
+                        input(type='checkbox' id='checkbox_1')
+                        label(for='checkbox_1') Я покупаю в подарок
+                      .ui-checkbox
+                        input(type='checkbox' id='checkbox_2')
+                        label(for='checkbox_2') 
+                          | Активируйте VIP-пакет <span>(+5000₽)</span>
+                          .ui-checkbox__sublabel Личный контакт + закрытая группа
+                      .ui-checkbox
+                        input(type='checkbox' id='checkbox_3')
+                        label(for='checkbox_3') 
+                          | Да, привезите мне коробку! <span>(+2500₽)</span>
+                          .ui-checkbox__sublabel Прямо до вашему дома
+                    .course-cta__cta
+                      .course-price__value 28 560 Р
+                      button(type='submit').btn.btn--primary.btn--pink.btn--block 
+                        span ПЕРЕЙТИ К ОПЛАТЕ      
+                          
+              // GIFT
+              div(style='margin-top: 100px;')
+                .gift__title 
+                  .gift__title__text купи курс и мы подарим <br> еще один тому, кто не <br> может его себе позволить
+                  .gift__title__bg 
+                    img(src='images/el/giftBg.png' srcset='images/el/giftBg@2x.png 2x')
+                .gift__wrapper
+                  .gift__banner
+                    img(src='images/el/giftPlus.png' srcset='images/el/giftPlus@2x.png 2x')
+                  .gift__text
+                    p Не факт, что производство концентрирует презентационный материал. Направленный маркетинг развивает медиаплан. 
+                    p Стоит отметить, что маркетингово-ориентированное издание поддерживает product  
+                    a(href='#').btn.btn--primary.btn--pink 
+                      span Выбрать курс
+                          
+                        
+      include shared/footer.pug
+      
+    include shared/scripts.pug

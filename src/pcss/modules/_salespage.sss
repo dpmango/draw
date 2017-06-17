@@ -187,6 +187,8 @@
     font-family: 'Core65'
     color: $colorPrimary
     letter-spacing: -5.5px
+    &--aqua
+      color: $colorAqua
   &__cta
     margin-left: 35px
 
@@ -249,6 +251,9 @@
       background: url('../images/el/buyformRose@2x.png') no-repeat left center
       background-size: contain
       z-index: 1
+    &--aqua
+      &::before
+        background-image: url('../images/el/buyformBlue@2x.png')
   &__form
     position: relative
     z-index: 2

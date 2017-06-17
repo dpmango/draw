@@ -1,0 +1,119 @@
+doctype html
+<!--[if IE 8]>         <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9 oldie"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class=""> <!--<![endif]-->
+  include shared/head.pug
+
+  body
+    include shared/header.pug
+    
+    .page.header-static
+      .page__content
+        
+        // HEADING
+        .profile-heading.profile-heading--back.wow.fadeIn
+          .container
+            .profile-heading__crumb КУПИТЬ КУРС
+            a(href='#').profile-heading__back
+              img(src='images/el/backIco.png' srcset='images/el/backIco@2x.png 2x')
+              span назад
+              
+            .heading-mega НАУЧИСЬ РИСОВАТЬ КАК ПИКАССО
+
+        // VIDEO :: START
+        .video.wow.fadeIn
+          .container
+            .video__wrapper
+              .video__content
+                .video__player.video__player--dark
+                  i.icon.icon-circle
+                    i.icon.icon-play
+                  img(src='images/tmp/video2.png' srcset='images/tmp/video2@2x.png 2x')
+                  // place iframe with ?autoplay=0 param, don't forget about 100% width and height
+                  iframe(src='https://player.vimeo.com/video/72874423?autoplay=0', width='100%', height='100%', frameborder='0', webkitallowfullscreen='', mozallowfullscreen='', allowfullscreen='')
+
+
+        // BENEFITS
+        .benefits.wow.fadeIn
+          .container.container--900
+            .heading-gray.heading-gray--mega возможности
+            .benefits__wrapper.benefits__wrapper--2col
+              .benefits__card
+                .benefits__card__image
+                  img(src='images/el/icon-eye-aqua.png' srcset='images/el/icon-eye-aqua@2x.png 2x').f-aqua
+                .benefits__card__name Личный контакт
+                .benefits__card__desc В рамках любого занятия вас ждет выбор референса (примера), краткий теоретический экскурс, создание эскиза и работа с цветом.
+              .benefits__card
+                .benefits__card__image
+                  img(src='images/el/icon-chat-aqua.png' srcset='images/el/icon-chat-aqua@2x.png 2x').f-aqua
+                .benefits__card__name Закрытая FB-группа
+                .benefits__card__desc В рамках любого занятия вас ждет выбор референса (примера), краткий теоретический экскурс, создание эскиза и работа с цветом.
+            .course-price
+              .course-price__value.course-price__value--aqua 4 560 Р
+              .course-price__cta
+                a(href='#').btn.btn--primary.btn--aqua 
+                  span добавить к заказу
+                
+        // SUPPLEMENTARY GOOD
+        .supp.wow.fadeIn
+          .supp__arrow
+            img(src='images/el/supp_arrow.png' srcset='images/el/supp_arrow@2x.png 2x')
+          .container.container--1366
+            .supp__wrapper
+              .supp__image.supp__image--kraski
+                img(src='images/el/supp_kraski.png' srcset='images/el/supp_kraski@2x.png 2x')
+              .supp__image.supp__image--list
+                img(src='images/el/supp_list.png' srcset='images/el/supp_list@2x.png 2x')
+              .supp__image.supp__image--kara
+                img(src='images/el/supp_kara.png' srcset='images/el/supp_kara@2x.png 2x')
+              .supp__title Готовый набор красок именно для вас
+              .supp__text В рамках любого занятия вас ждет выбор референса (примера), краткий теоретический экскурс, создание эскиза и работа с цветом. В дальнейшем, вы сможете развивать свои навыки, выбирая в качестве примеров все более и более сложные работы, сориентироваться в которых вам помогут наши преподаватели. 
+            .course-price
+              .course-price__value.course-price__value--aqua 4 560 Р
+              .course-price__cta
+                a(href='#').btn.btn--primary.btn--aqua 
+                  span добавить к заказу
+
+        
+        // COURSE CTA
+        .course-cta.wow.fadeIn
+          .container.container--1100
+            .heading-gray.heading-gray--mega итак
+            .course-cta__wrapper.course-cta__wrapper--aqua
+              form(action='#').course-cta__form.js-form-courseCta
+                .course-cta__col
+                  .ui-group
+                    input(type='text' name='name' placeholder='Ваше имя').ui-input
+                  .ui-group
+                    input(type='tel' name='phone' placeholder='+7 (___) ___-__-__').ui-input
+                  .ui-group
+                    input(type='text' name='city' placeholder='Город').ui-input
+                  .ui-group
+                    input(type='text' name='adress' placeholder='Улица и номер дома').ui-input  
+                  .ui-group
+                    textarea(placeholder='Дополнительные сведения' rows='5').ui-input  
+                
+                .course-cta__col
+                  .course-cta__checkboxes
+                    .ui-checkbox.ui-checkbox--aqua
+                      input(type='checkbox' id='checkbox_1')
+                      label(for='checkbox_1') Я покупаю в подарок
+                    .ui-checkbox.ui-checkbox--aqua
+                      input(type='checkbox' id='checkbox_2')
+                      label(for='checkbox_2') 
+                        | Активируйте VIP-пакет <span>(+5000₽)</span>
+                        .ui-checkbox__sublabel Личный контакт + закрытая группа
+                    .ui-checkbox.ui-checkbox--aqua
+                      input(type='checkbox' id='checkbox_3')
+                      label(for='checkbox_3') 
+                        | Да, привезите мне коробку! <span>(+2500₽)</span>
+                        .ui-checkbox__sublabel Прямо до вашему дома
+                  .course-cta__cta
+                    .course-price__value.course-price__value--aqua  28 560 Р
+                    button(type='submit').btn.btn--primary.btn--aqua.btn--block 
+                      span ПЕРЕЙТИ К ОПЛАТЕ      
+
+        
+      include shared/footer.pug
+      
+    include shared/scripts.pug

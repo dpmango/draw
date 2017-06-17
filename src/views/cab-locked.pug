@@ -1,0 +1,74 @@
+doctype html
+<!--[if IE 8]>         <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9 oldie"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class=""> <!--<![endif]-->
+  include shared/head.pug
+
+  body
+    include shared/header.pug
+    
+    .page
+      .page__content
+        // PROFILE HEADING::START
+        .profile-heading.profile-heading--warning
+          .container
+            .profile-heading__empty
+              i.icon.icon-warn
+              .profile-heading__empty__text Чтобы чему-то научиться, нужно сначала чего-нибудь купить
+            .heading-mega Ваш кабинет
+            
+            
+        // COURSES
+        .profile-courses
+          .container
+            .profile-courses__list
+              // single course 
+              .profile-course.profile-course--purple
+                .profile-course__content
+                  .profile-course__name Живопись дома
+                  .profile-course__author
+                    .profile-course__author__avatar
+                      img(src='images/tmp/courseAvatar.png' srctset='images/tmp/courseAvatar@2x.png 2x')
+                    .profile-course__author__name Наталья Овечкина <span> Автор курса</span>
+                  .profile-course__scope
+                    span — 2 часа 45 минут
+                    span — 18 уроков
+                    span — 12 практических заданий
+                  .profile-course__cta
+                    a(href='#').btn.btn--primary.btn--pink 
+                      span купить
+                    .profile-course__cta__price от 18 500 ₽
+                  .profile-course__details
+                    a(href='#')
+                      span подробно о курсе
+                .profile-course__cover
+                  img(src='images/courses/profileCourse_1.png' srcset='images/courses/profileCourse_1@2x.png 2x')
+                  
+              // single course 
+              .profile-course.profile-course--blue
+                .profile-course__content
+                  .profile-course__name Научись рисовать как Пикассо
+                  .profile-course__author
+                    .profile-course__author__avatar
+                      img(src='images/tmp/courseAvatar.png' srctset='images/tmp/courseAvatar@2x.png 2x')
+                    .profile-course__author__name Наталья Овечкина <span> Автор курса</span>
+                  .profile-course__scope
+                    span — 3 часа 45 минут
+                    span — 12 уроков
+                    span — 5 практических заданий
+                  .profile-course__cta
+                    a(href='#').btn.btn--primary.btn--aqua 
+                      span купить
+                    .profile-course__cta__price от 14 500 ₽
+                  .profile-course__details
+                    a(href='#')
+                      span подробно о курсе
+                .profile-course__cover
+                  img(src='images/courses/profileCourse_2.png' srcset='images/courses/profileCourse_2@2x.png 2x')
+                  
+                          
+                  
+
+      include shared/footer.pug
+      
+    include shared/scripts.pug

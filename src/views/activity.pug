@@ -1,0 +1,72 @@
+doctype html
+<!--[if IE 8]>         <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9 oldie"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class=""> <!--<![endif]-->
+  include shared/head.pug
+
+  body
+    include shared/header.pug
+    
+    .page
+      .page__content
+        
+        .container.container--900
+          // PROFILE HEADING::START
+          .profile-heading
+            .t-head Активность
+              
+              
+          // ACTIVITY
+          .activity
+            .activity__list
+              // item
+              .activity__item
+                .activity__item__type новое сообщение!
+                .activity__item__icon
+                  i.icon.ico-message
+                .activity__item__content Вам ответил куратор в практическом задании «Как нарисовать верблюда»
+              // item
+              .activity__item
+                .activity__item__type новый комментарий
+                .activity__item__icon
+                  i.icon.ico-comment
+                .activity__item__content Вам ответил куратор в практическом задании «Как нарисовать верблюда»
+              // item
+              .activity__item
+                .activity__item__type акция!
+                .activity__item__icon
+                  i.icon.ico-discount
+                .activity__item__content 
+                  span Купите наш новый курс. Пожалуйста.
+                  a(href='#').feed-course
+                    .feed-course__image
+                      img(src='images/tmp/activityFeed.png' srcset='images/tmp/activityFeed@2x.png 2x')
+                    .feed-course__content
+                      .feed-course__name Живопись — всем!
+                      .feed-course__price 5 990 ₽
+              // item
+              .activity__item
+                .activity__item__type системное сообщение
+                .activity__item__icon
+                  i.icon.ico-message
+                .activity__item__content Срок подписки на специальные условия истекает через несколько дней
+              // item
+              .activity__item
+                .activity__item__type новое сообщение!
+                .activity__item__icon
+                  i.icon.ico-message
+                .activity__item__content Вам ответил куратор в практическом задании «Как нарисовать верблюда»
+              // item
+              .activity__item
+                .activity__item__type новый комментарий
+                .activity__item__icon
+                  i.icon.ico-message
+                .activity__item__content Вам ответил куратор в практическом задании «Как нарисовать верблюда»
+              
+              
+            
+        
+        
+      include shared/footer.pug
+      
+    include shared/scripts.pug

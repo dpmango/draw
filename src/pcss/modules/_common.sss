@@ -7,7 +7,6 @@
   background: white
   left: 0
   right: 0
-  z-index: 9
   padding-top: 10px
   padding-bottom: 30px
   &__wrapper
@@ -23,6 +22,7 @@
     transition: transform $transitionSpeed $ease
   &--fixed
     opacity: 1
+    z-index: 9
     transform: translate3d(0, 0px, 0)
 
     .header__logo
@@ -42,9 +42,9 @@
     display: flex
     justify-content: space-between
     li
-      position: relative
       flex: 1 0 auto
       a
+        position: relative
         display: inline-block
         padding: 10px
         transition: all $transitionSpeed $ease
@@ -54,7 +54,6 @@
           position: absolute
           top: -13px
           left: 50%
-          margin-left: -5px
           background: $fontColor
           size: 10px
           border-radius: 50%
@@ -187,7 +186,8 @@
         span
           border-color: transparent
 
-// COMMON
+
+// COMMON - TYPOGRAPHY
 .heading-gray
   font-family: 'Core65'
   font-size: 24px
@@ -206,6 +206,19 @@
   letter-spacing: 10px
   text-align: center
   color: $fontColor
+
+.t-head
+  font-family: 'Core65'
+  font-size: 32px
+  letter-spacing: -.5px
+
+.t-regular
+  font-size: 17px
+  line-height: 1.8
+  font-family: 'Roboto'
+
+.t-center
+  text-align: center
 
 
 .hover-link

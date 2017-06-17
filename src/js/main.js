@@ -73,7 +73,7 @@ $(document).ready(function () {
   // SET ACTIVE CLASS IN HEADER
   // * could be removed in production and server side rendering
   // user .active for li instead
-  $('.header__navi li').each(function (i, val) {
+  $('.header__menu li').each(function (i, val) {
     if ($(val).find('a').attr('href') == window.location.pathname.split('/').pop()) {
       $(val).addClass('active');
     } else {

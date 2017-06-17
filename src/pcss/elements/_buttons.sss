@@ -37,12 +37,15 @@ button
     border-radius: 6px
     padding: 17px 30px
     color: white
+    background: $colorPrimary
     font-family: 'Core65'
     text-transform: uppercase
     &:hover
       &::after
         opacity: 1
-        transform: translate3d(-50%,-50%,0) scale(8)
+        transform: translate3d(-50%,-50%,0) scale(10)
+    &::after
+      background: $colorBlue
 
   &--blue
     background: $colorBlue
@@ -58,6 +61,24 @@ button
     background: $colorPrimary
     &::after
       background: $colorBlue
+
+  &--white
+    background: white
+    color: $fontColor
+    &::after
+      background: $colorPrimary
+    &:hover
+      color: white
+
+  &--green
+    background: #5DC800
+    &::after
+      background: $colorYellow
+
+  &--aqua
+    background: #00B6DD
+    &::after
+      background: $colorYellow
 
   &--block
     display: block

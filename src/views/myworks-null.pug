@@ -1,0 +1,26 @@
+doctype html
+<!--[if IE 8]>         <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9 oldie"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class=""> <!--<![endif]-->
+  include shared/head.pug
+
+  body
+    include shared/header.pug
+    
+    .page
+      .page__content
+        
+        .container.container--1366
+          // PROFILE NULL::START
+          .profile__null
+            .profile__null__description
+              .t-head Ваши работы
+              .profile__null__text Здесь будет отображаться ваша активность в нашей космической системе. Заглядывайте почаще!
+            .profile__null__image
+              img(src='images/el/myworksNull.png' srctset='images/el/myworksNull@2x.png 2x')
+            
+      
+        
+      include shared/footer.pug
+      
+    include shared/scripts.pug
