@@ -71,39 +71,41 @@ doctype html
 
         // TESTIMONIALS
         .testimonials.wow.fadeIn
+          .testimonials__slide__nav
+            .container.container--1100
+              i.icon.icon-slide-prev
+              i.icon.icon-slide-next
           .testimonials__slider
             // slide
             .testimonials__slide
-              .testimonials__slide__bg
-                img(src='images/tmp/testimonials.jpg' srcset='images/tmp/testimonials@2x.jpg 2x')
-              .testimonials__slide__content
-                .testimonials__slide__author
-                  | Эдвард сноуден
-                  span преступник США
-                .testimonials__slide__text
-                  p Я застрял в России и мне не остается ничего, кроме как рисовать дома. Но я считаю эту возможность совершенно прекрасной и всем советую поступить также.
-                .testimonials__slide__cta
-                  a(href='#').hover-link 
-                    span выбрать курс
-                .testimonials__slide__nav
-                  i.icon.icon-slide-prev
-                  i.icon.icon-slide-next
+              .container.container--1100
+                .testimonials__slide__wrapper
+                  .testimonials__slide__content
+                    .testimonials__slide__author
+                      | Эдвард сноуден
+                      span преступник США
+                    .testimonials__slide__text
+                      p Я застрял в России и мне не остается ничего, кроме как рисовать дома. Но я считаю эту возможность совершенно прекрасной и всем советую поступить также.
+                    .testimonials__slide__cta
+                      a(href='#').hover-link 
+                        span не выбирать курс
+                  .testimonials__slide__image
+                    img(src='images/tmp/testimonials.png' srcset='images/tmp/testimonials@2x.png 2x')
             // slide
             .testimonials__slide
-              .testimonials__slide__bg
-                img(src='images/tmp/testimonials.jpg' srcset='images/tmp/testimonials@2x.jpg 2x')
-              .testimonials__slide__content
-                .testimonials__slide__author
-                  | Эдвард сноуден
-                  span преступник США
-                .testimonials__slide__text
-                  p Я застрял в России и мне не остается ничего. тчк
-                .testimonials__slide__cta
-                  a(href='#').hover-link 
-                    span не выбирать курс
-                .testimonials__slide__nav
-                  i.icon.icon-slide-prev
-                  i.icon.icon-slide-next    
+              .container.container--1100
+                .testimonials__slide__wrapper
+                  .testimonials__slide__content
+                    .testimonials__slide__author
+                      | Эдвард сноуден
+                      span преступник США
+                    .testimonials__slide__text
+                      p Я застрял в России и мне не остается ничего. тчк
+                    .testimonials__slide__cta
+                      a(href='#').hover-link 
+                        span не выбирать курс
+                  .testimonials__slide__image
+                    img(src='images/tmp/testimonials.png' srcset='images/tmp/testimonials@2x.png 2x')
                 
         // BENEFITS
         .benefits.wow.fadeIn

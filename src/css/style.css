@@ -64,6 +64,7 @@ body, html {
     padding-right: 20px;
     padding-left: 20px;
     max-width: 1260px;
+    width: 100%;
 }
 .container--fluid {
     max-width: 100%;
@@ -1075,6 +1076,7 @@ button:focus {
 }
 /* TESTIMONIALS */
 .testimonials {
+    position: relative;
     margin-top: 80px;
 }
 .testimonials__slider {
@@ -1158,29 +1160,39 @@ button:focus {
 .testimonials__slide {
     position: relative;
     overflow: hidden;
+    background: #E0E0DF;
 }
-.testimonials__slide__bg img {
-    width: 100%;
-}
-.testimonials__slide__content {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+.testimonials__slide__wrapper {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+}
+.testimonials__slide__content {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex: 0 1 45%;
+        -ms-flex: 0 1 45%;
+            flex: 0 1 45%;
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-right: auto;
-    margin-left: auto;
-    padding: 100px 20px 50px 20px;
+    padding: 100px 20px 200px 20px;
     max-width: 1200px;
+    -webkit-box-flex: 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
+}
+.testimonials__slide__image {
+    -webkit-flex: 0 1 55%;
+        -ms-flex: 0 1 55%;
+            flex: 0 1 55%;
+    -webkit-box-flex: 0;
+}
+.testimonials__slide__image img {
+    max-width: 100%;
 }
 .testimonials__slide__author {
     text-transform: uppercase;
@@ -1209,14 +1221,18 @@ button:focus {
     padding-top: 10px;
 }
 .testimonials__slide__nav {
+    position: absolute;
+    right: 20px;
+    bottom: 45px;
+    left: 20px;
+    z-index: 5;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     -webkit-align-items: center;
             align-items: center;
-    margin-top: auto;
-    padding-top: 30px;
+    width: 100%;
     color: #9B00D2;
     font-size: 12px;
     -webkit-box-align: center;
