@@ -60,6 +60,8 @@ $(document).ready(function(){
   // header hamburger
   $('.header__hamburger').on('click', function(){
     $(this).toggleClass('active');
+    $('.header').toggleClass('header--showing-menu');
+    $('.mobile-navi').toggleClass('active');
   });
 
   // SCROLLBARS

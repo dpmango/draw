@@ -27,4 +27,23 @@ header.header.header--have-animation.wow.fadeIn(data-wow-delay='1s')
         .header__hamburger__closed
           img(src='images/el/hamburgerClosed.png' srctset='images/el/hamburgerClosed@2x.png 2x')
         
-    
+// MOBILE MENU
+.mobile-navi
+  .mobile-navi__wrapper
+    ul.mobile-navi__menu
+      li.active
+        a(href='dashboard.html') dashboard
+      li 
+        a(href='settings.html') настройки
+      li
+        a(href='activity.html') активность
+      li
+        a(href='myworks.html') мои работы
+      li
+        a(href='community.html') коммьюнити
+    .header__user
+      a(href='#').header__user__avatar
+        .header__user__image
+          img(src='images/tmp/avatar.png' srcset='images/tmp/avatar@2x.png 2x')
+      a(href='#').header__user__name Владимир-Долгий-Рапопорт
+      a(href='#').header__user__logout выйти

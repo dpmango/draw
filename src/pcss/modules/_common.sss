@@ -7,6 +7,7 @@
   background: white
   left: 0
   right: 0
+  z-index: 9
   padding-top: 10px
   padding-bottom: 30px
   &__wrapper
@@ -29,11 +30,14 @@
     transition: transform $transitionSpeed $ease
   &--fixed
     opacity: 1
-    z-index: 9
     transform: translate3d(0, 0px, 0)
-
     .header__logo
       margin-top: 10px
+  &--showing-menu
+    position: fixed
+    opacity: 1 !important
+    transform: translate3d(0, 0px, 0)
+
 
   &__logo
     flex: 0 0 177px
@@ -191,6 +195,7 @@
 
 @media($mobile)
   .header
+    padding-bottom: 10px
     &__menu
       display: none
 
@@ -212,6 +217,88 @@
       margin-top: 5px
       flex-basis: 110px
 
+
+// MOBILE NAVI
+.mobile-navi
+  display: none
+  flex-direction: column
+  position: fixed 0
+  max-width: 450px
+  z-index: 8
+  background: #F2F2F2
+  min-height: 400px
+  height: 100vh
+  overflow-y: scroll
+  transform: translate3d(-120%,0,0)
+  box-shadow: 8px 0 10px -2px color($fontColor a(10%))
+  transition: transform $transitionSpeed $ease
+  &.active
+    transform: translate3d(0,0,0)
+  &__wrapper
+    flex: 1 0 auto
+    margin-top: 120px
+    padding: 60px 40px 60px 40px
+    display: flex
+    flex-direction: column
+
+  &__menu
+    margin: 0
+    padding: 0
+    list-style: none
+    li
+      display: block
+      position: relative
+      font-family: 'Core65'
+      font-size: 18px
+      margin-bottom: 25px
+      &::after
+        display: block
+        content: ' '
+        position: absolute
+        top: 50%
+        left: 0
+        background: $fontColor
+        size: 6px
+        border-radius: 50%
+        transform: translate3d(-30px, -50%,0)
+        opacity: 0
+        transition: all $transitionSpeed $ease
+      &.active
+        &::after
+          transform: translate3d(-15px, -50%,0)
+          opacity: 1
+      &:hover
+        &::after
+          transform: translate3d(-15px, -50%,0)
+          opacity: 1
+
+  .header__user
+    margin-top: auto
+    &__avatar
+      display: block
+    &__name
+      display: block
+    &__logout
+      display: block
+
+
+@media(width <= 880px)
+  .mobile-navi
+    display: flex
+
+
+@media($mobile)
+  .mobile-navi
+    &__wrapper
+      margin-top: 100px
+@media($mobile-s)
+  .mobile-navi
+    &__wrapper
+      margin-top: 95px
+@media(width <= 375px)
+  .mobile-navi
+    &__wrapper
+      margin-top: 65px
 
 // FOOTER
 .footer
@@ -312,6 +399,48 @@
 
 .t-center
   text-align: center
+
+@media($desktop)
+  .heading-gray
+    &--mega
+      font-size: 50px
+      letter-spacing: 7px
+  .heading-mega
+    font-size: 45px
+    letter-spacing: 7px
+
+@media($tablet)
+  .heading-gray
+    &--mega
+      font-size: 38px
+      letter-spacing: 5px
+  .heading-mega
+    font-size: 38px
+    letter-spacing: 5px
+
+
+@media($mobile)
+  .heading-gray
+    font-size: 20px
+    letter-spacing: 3.5px
+    &--mega
+      font-size: 22px
+      letter-spacing: 3.5px
+  .heading-mega
+    font-size: 22px
+    letter-spacing: 3.5px
+
+
+@media($mobile-s)
+  .heading-gray
+    font-size: 18px
+    letter-spacing: 3px
+    &--mega
+      font-size: 18px
+      letter-spacing: 3px
+  .heading-mega
+    font-size: 18px
+    letter-spacing: 3px
 
 
 .hover-link

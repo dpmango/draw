@@ -6,10 +6,17 @@
   border-radius: 4px
   font-size: 0
   margin: 15px
+  height: 400px
   &__image
     img
-      position: relative
-      max-width: 100%
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%,-50%)
+      min-width: 100%
+      min-height: 100%
+      width: auto
+      height: auto
       z-index: 1
     &::after
       display: block
@@ -26,7 +33,7 @@
     color: white
     padding: 30px 20px
   &__name
-    margin-top: auto
+    margin-top: 45px
     font-size: 30px
     font-family: 'Core65'
     letter-spacing: -.47px
@@ -69,6 +76,16 @@
         margin-left: 25px
         font-size: 32px
         letter-spacing: -.5px
+
+@media($tablet)
+  .course-card
+    margin-left: 0
+    margin-right: 0
+
+@media($mobile-s)
+  .course-card
+    border-radius: 0
+
 
 
 // COURSE AUTHOR
