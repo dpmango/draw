@@ -1079,8 +1079,15 @@ button:focus {
     position: relative;
     margin-top: 80px;
 }
-.testimonials__slider {
-    opacity: 1;
+.testimonials__slider .slick-track {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: stretch;
+            align-items: stretch;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
 }
 .testimonials__box {
     padding: 40px 20px 50px 20px;
@@ -1159,14 +1166,32 @@ button:focus {
 }
 .testimonials__slide {
     position: relative;
+    display: -webkit-box !important;
+    display: -webkit-flex !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1 1 0%;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     overflow: hidden;
+    min-width: 0;
     background: #E0E0DF;
+    -webkit-box-flex: 1;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
 }
 .testimonials__slide__wrapper {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-flex: 1;
+        -ms-flex: 1;
+            flex: 1 1 0%;
+    -webkit-box-flex: 1;
 }
 .testimonials__slide__content {
     display: -webkit-box;
@@ -1189,7 +1214,10 @@ button:focus {
     -webkit-flex: 0 1 55%;
         -ms-flex: 0 1 55%;
             flex: 0 1 55%;
+    -webkit-align-self: flex-end;
+            align-self: flex-end;
     -webkit-box-flex: 0;
+        -ms-flex-item-align: end;
 }
 .testimonials__slide__image img {
     max-width: 100%;
