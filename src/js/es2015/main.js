@@ -398,13 +398,20 @@ $(document).ready(function(){
 
   // WOW INIT
   var wow = new WOW({
-    boxClass:     'wow',      // default
-    animateClass: 'animated', // default
-    offset:       50,          // default
-    mobile:       true,       // default
-    live:         true        // default
+    boxClass:     'wow',
+    animateClass: 'animated',
+    offset:       20,
+    mobile:       true,
+    live:         true,
+    callback: afterReveal
   });
   wow.init();
+
+  function afterReveal (el) {
+  	el.addEventListener('animationend', function () {
+  		$(el).addClass('animation-end')
+  	});
+  }
 
 });
 

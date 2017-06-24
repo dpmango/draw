@@ -11,7 +11,14 @@
   padding-bottom: 30px
   &__wrapper
     display: flex
-
+  &--have-animation
+    opacity: 0
+    &.animation-end
+      opacity: 1
+      &.header--transformed
+        opacity: 0
+      &.header--fixed
+        opacity: 1
   &--transformed
     position: fixed
     opacity: 0
@@ -59,17 +66,15 @@
           border-radius: 50%
           transform: translate3d(-50%, -20px,0)
           opacity: 0
-          transition: all $transitionSpeed $ease
         &:hover
           &::after
-            opacity: 1
-            transform: translate3d(-50%, 0px,0)
+            animation: HeaderMenuActiveBounce .35s linear
+            animation-fill-mode: forwards
       &.active
         a
           &::after
-            opacity: 1
-            transform: translate3d(-50%, 0px,0)
-
+            animation: HeaderMenuActiveBounce .35s linear
+            animation-fill-mode: forwards
   &__user
     flex: 0 1 auto
     margin-left: auto
