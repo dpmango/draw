@@ -123,6 +123,94 @@
       transition: color $transitionSpeed $ease
       &:hover
         color: $colorPrimary
+  &__hamburger
+    position: relative
+    display: none
+    flex: 0 0 35px
+    margin-left: 25px
+    cursor: pointer
+    transition: opacity .3s ease
+    img
+      max-width: 100%
+    &:hover
+      opacity: .7
+    &__opened
+      position: absolute
+      top: 50%
+      left: 0
+      transform: translateY(-50%)
+      transition: opacity $transitionSpeed $ease
+    &__closed
+      opacity: 0
+      position: absolute
+      top: 50%
+      left: 0
+      transform: translateY(-50%)
+      transition: opacity $transitionSpeed $ease
+    &.active
+      .header__hamburger__opened
+        opacity: 0
+      .header__hamburger__closed
+        opacity: 1
+
+
+@media($desktop)
+  .header
+    &__menu
+      flex-grow: 0
+      padding: 0 20px 0 25px
+    &__user
+      &__name
+        display: none
+
+@media(width <= 880px)
+  .header
+    &__menu
+      li
+        &:nth-child(2)
+          display: none
+    &__user
+      &__logout
+        display: none
+    &__hamburger
+      display: inline-block
+
+@media($tablet)
+  .header
+    &__menu
+      li
+        &:nth-child(1)
+          display: none
+
+@media(width <= 690px)
+  .header
+    &__menu
+      li
+        &:nth-child(5)
+          display: none
+
+@media($mobile)
+  .header
+    &__menu
+      display: none
+
+@media($mobile-s)
+  .header
+    &__logo
+      margin-top: 10px
+    &__wrapper
+      padding-left: 20px
+      padding-right: 20px
+    &__user
+      display: none
+    &__hamburger
+      margin-left: auto
+
+@media(width <= 375px)
+  .header
+    &__logo
+      margin-top: 5px
+      flex-basis: 110px
 
 
 // FOOTER

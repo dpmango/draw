@@ -60,6 +60,11 @@ $(document).ready(function () {
     });
   }
 
+  // header hamburger
+  $('.header__hamburger').on('click', function () {
+    $(this).toggleClass('active');
+  });
+
   // SCROLLBARS
   $('.scrollbar-dynamic').scrollbar();
   $('.scrollbar-macosx').scrollbar();
