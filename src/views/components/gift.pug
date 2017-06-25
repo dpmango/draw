@@ -1,13 +1,15 @@
 // GIFT
-.gift.wow.fadeIn
+.gift
   .container.container--1100
-    .gift__title 
+    .gift__title.wow.transformUp
       .gift__title__text купи курс и мы подарим <br> еще один тому, кто не <br> может его себе позволить
       .gift__title__bg 
         img(src='images/el/giftBg.png' srcset='images/el/giftBg@2x.png 2x')
-    .gift__wrapper
+    .gift__wrapper.wow.transformUp(data-wow-delay='0.2s')
       .gift__banner
         img(src='images/el/giftPlus.png' srcset='images/el/giftPlus@2x.png 2x')
+      .gift__title.gift__title--mobile
+        .gift__title__text купи курс и мы подарим <br> еще один тому, кто не <br> может его себе позволить
       .gift__text
         p Не факт, что производство концентрирует презентационный материал. Направленный маркетинг развивает медиаплан. 
         p Стоит отметить, что маркетингово-ориентированное издание поддерживает product  

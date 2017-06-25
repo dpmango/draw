@@ -93,6 +93,12 @@ $(document).ready(function(){
     $(this).closest('.video__player').find('iframe').attr("src", $("iframe").attr("src").replace("autoplay=0", "autoplay=1"));
   });
 
+  // video reveal
+  setTimeout(function(){
+    $('.video--have-animation').addClass('animation-end');
+  },1700);
+
+
 
   //////////
   // SLIDERS
@@ -105,7 +111,15 @@ $(document).ready(function(){
     arrows: false,
     infinite: true,
     speed: 300,
-    slidesToShow: 1
+    slidesToShow: 1,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          adaptiveHeight: true
+        }
+      }
+    ]
   });
 
   // slick pagination
@@ -407,7 +421,7 @@ $(document).ready(function(){
   var wow = new WOW({
     boxClass:     'wow',
     animateClass: 'animated',
-    offset:       20,
+    offset:       0,
     mobile:       true,
     live:         true,
     callback: afterReveal

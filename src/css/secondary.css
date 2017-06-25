@@ -100,6 +100,18 @@
     height: 63px;
     background-image: url('../images/el/slide-next@2x.png');
 }
+@media(max-width: 768px) {
+    .icon {}
+    .icon-slide-prev {
+        margin-right: 25px;
+        width: 23px;
+        height: 40px;
+    }
+    .icon-slide-next {
+        width: 23px;
+        height: 40px;
+    }
+}
 .ico {}
 .ico-message {
     width: 40px;

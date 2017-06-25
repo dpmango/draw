@@ -10,6 +10,7 @@
   z-index: 9
   padding-top: 10px
   padding-bottom: 30px
+  transform: box-shadow $transitionSpeed $ease
   &__wrapper
     display: flex
   &--have-animation
@@ -35,6 +36,7 @@
       margin-top: 10px
   &--showing-menu
     position: fixed
+    box-shadow: 0px 5px 10px color($fontColor a(10%))
     opacity: 1 !important
     transform: translate3d(0, 0px, 0)
 
@@ -250,6 +252,8 @@
       position: relative
       font-family: 'Core65'
       font-size: 18px
+      text-transform: uppercase
+      letter-spacing: 3px
       margin-bottom: 25px
       &::after
         display: block
@@ -273,6 +277,7 @@
           opacity: 1
 
   .header__user
+    display: flex
     margin-top: auto
     &__avatar
       display: block
@@ -291,10 +296,22 @@
   .mobile-navi
     &__wrapper
       margin-top: 100px
+
 @media($mobile-s)
   .mobile-navi
     &__wrapper
       margin-top: 95px
+    .header__user
+      flex-direction: column
+      align-items: flex-start
+      margin-left: -15px
+      &__name
+        margin-top: 15px
+        margin-left: 15px
+      &__logout
+        margin-top: 10px
+        margin-left: 15px
+
 @media(width <= 375px)
   .mobile-navi
     &__wrapper
@@ -314,18 +331,24 @@
     font-size: 14px
     font-family: 'Core45'
     letter-spacing: -.22px
+  &__left
+    flex: 1
+    display: flex
+    align-items: flex-end
   &__copy
     margin-right: 55px
   &__links
     a
       display: inline-block
       margin-right: 25px
-      border-bottom: 1px solid $borderColor
-      transition: all $transitionSpeed $ease
+      span
+        border-bottom: 1px solid $borderColor
+        transition: all $transitionSpeed $ease
       &:last-child
         margin-right: 0
       &:hover
-        border-color: transparent
+        span
+          border-color: transparent
   &__authors
     flex: 0 0 auto
     margin-left: auto
@@ -338,6 +361,52 @@
       transition: all $transitionSpeed $ease
       &:hover
         opacity: .75
+
+@media($desktop)
+  .footer
+    padding-bottom: 25px
+    &__wrapper
+      align-items: center
+    &__left
+      flex-direction: column
+      align-items: flex-start
+    &__copy
+      margin-bottom: 15px
+    &__links
+      a
+        display: block
+        margin-bottom: 10px
+        &:last-child
+          margin-bottom: 0
+
+@media($mobile)
+  .footer
+    padding-bottom: 50px
+    &__wrapper
+      border-top: 1px solid $fontColor
+      padding-top: 45px
+      flex-direction: column
+      align-items: flex-start
+      margin-left: 20px
+      margin-right: 20px
+    &__left
+      flex: 0 0 auto
+    &__authors
+      flex-wrap: wrap
+      margin-left: 0
+      margin-top: 50px
+
+@media($mobile-s)
+  .footer
+    &__authors
+      span
+        flex: 1 0 100%
+        margin-bottom: 25px
+      a
+        &:last-child
+          flex: 1 0 100%
+          margin-top: 20px
+
 
 // BACKPAGE
 .backpage

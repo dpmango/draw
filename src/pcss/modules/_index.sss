@@ -33,6 +33,7 @@
 
 // VIDEO
 .video
+  transition: opacity $transitionSpeed $ease
   &--have-animation
     opacity: 0
     &.animation-end
@@ -336,7 +337,8 @@
       padding: 100px 20px 200px 20px
       max-width: 1200px
     &__image
-      flex: 0 1 55%
+      position: relative
+      flex: 0 2 55%
       align-self: flex-end
       img
         max-width: 100%
@@ -344,6 +346,8 @@
       font-family: 'Core65'
       font-size: 18px
       text-transform: uppercase
+      &--mobile
+        display: none
       span
         margin-top: 1em
         display: block
@@ -392,6 +396,59 @@
           span
             color: $colorBlue
 
+@media($tablet)
+  .testimonials
+    &__slide
+      background: transparent
+      &__wrapper
+        flex-direction: column
+      &__image
+        flex: 0 0 auto
+        background: #E0E0DF
+        order: 2
+        margin-left: -20px
+        margin-right: -20px
+        padding-right: 20px
+        padding-left: 20px
+        width: calc(100% + 40px)
+        img
+          max-height: 250px
+          margin-left: auto
+      &__content
+        flex: 0 0 auto
+        order: 3
+        padding: 40px 20px 50px 20px
+        .testimonials__slide__author
+          display: none
+      &__author
+        &--mobile
+          display: block
+          order: 1
+          padding-left: 20px
+          padding-right: 20px
+          margin-bottom: 20px
+      &__text
+        padding: 0
+        p
+          font-size: 18px
+      &__nav
+        bottom: auto
+        top: 165px
+
+
+@media($mobile-s)
+  .testimonials
+    &__slide
+      &__content
+        padding: 20px 20px 30px 20px
+      &__image
+        img
+          max-height: 200px
+      &__text
+        p
+          font-size: 13px
+      &__nav
+        top: 140px
 
 // BENEFITS
 .benefits
@@ -606,7 +663,7 @@
     display: flex
     margin-left: -20px
     margin-right: -20px
-    overflow: scroll
+    overflow-x: scroll
   &__image
     display: block
     flex: 0 0 280px
@@ -639,13 +696,16 @@
     text-align: center
     text-transform: uppercase
     padding: 30px 0
+    &--mobile
+      display: none
     &__text
       position: relative
       z-index: 2
     &__bg
       position: absolute
-      left: 0
-      right: 0
+      left: 50%
+      min-width: 1110px
+      transform: translateX(-50%)
       top: 0
       z-index: 1
       img
@@ -666,3 +726,54 @@
       line-height: 1.4
     .btn
       margin-top: 20px
+
+@media($desktop)
+  .gift
+    &__title
+      font-size: 28px
+      padding-top: 20px
+      &__bg
+        min-width: 900px
+    &__text
+      margin-left: 0px
+
+@media($tablet)
+  .gift
+    &__text
+      p
+        font-size: 15px
+
+@media($mobile)
+  .gift
+    &__title
+      display: none
+      font-size: 22px
+      letter-spacing: 1px
+      padding-bottom: 10px
+      &--mobile
+        display: block
+      &__bg
+        display: none
+    &__wrapper
+      flex-direction: column
+      margin-top: 0
+    &__banner
+      flex: 0 0 auto
+      width: 100%
+      margin-left: auto
+      margin-right: auto
+      max-width: 300px
+    &__text
+      flex: 0 0 auto
+      text-align: center
+      .btn
+        margin-top: 10px
+
+@media($mobile-s)
+  .gift
+    &__title
+      font-size: 18px
+      letter-spacing: 0px
+    &__text
+      p
+        font-size: 13px

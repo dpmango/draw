@@ -2,8 +2,8 @@
 .fadeIn
   &.animated
     animation-name: simpleFadeIn
-    animation-duration: .4s
-    animation-timing-function: linear
+    animation-duration: .6s
+    animation-timing-function: ease
 
 @keyframes simpleFadeIn
   0%
@@ -24,6 +24,31 @@
     opacity: 0
   100%
     opacity: 1
+
+.transformUp
+  transform: translate3d(0,50px,0)
+  visibility: visible !important
+  transition: transform .7s ease
+  &.animated
+    animation-name: blank
+    animation-duration: .7s
+    animation-timing-function: linear
+  &.animation-end
+    transform: translate3d(0,0,0)
+
+@keyframes transformUp
+  0%
+    transform: translate3d(0,50px,0)
+  100%
+    transition: translate3d(0,0,0)
+
+@keyframes blank
+  0%
+    opacity: .99
+  100%
+    opacity: 1
+
+
 
 @keyframes HeaderMenuActiveBounce
   0%
