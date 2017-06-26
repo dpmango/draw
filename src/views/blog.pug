@@ -1,0 +1,165 @@
+doctype html
+<!--[if IE 8]>         <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9 oldie"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class=""> <!--<![endif]-->
+  include shared/head.pug
+
+  body
+    include shared/header.pug
+    
+    .page
+      .page__content
+        
+        .container
+          .blog
+            .blog__wrapper
+              .blog__content
+                // PROFILE HEADING::START
+                .profile-heading.profile-heading--smaller
+                  .t-head Наш блог
+                
+                // BLOG
+                // card
+                a(href='#').blog-card.blog-card--huge.wow.transformUp(data-wow-delay='0.2s')
+                  .blog-card__image
+                    img(src='images/blog/blogCard_1.jpg' srcset='images/blog/blogCard_1@2x.jpg 2x')
+                  .blog-card__content
+                    .blog-card__name Как научиться рисовать живопись
+                    .blog-card__date 22.01.2017, 18:01
+                // card
+                a(href='#').blog-card.blog-card--huge.wow.transformUp(data-wow-delay='0.4s')
+                  .blog-card__image
+                    img(src='images/blog/blogCard_2.jpg' srcset='images/blog/blogCard_2@2x.jpg 2x')
+                  .blog-card__content
+                    .blog-card__name Что такое пейзаж
+                    .blog-card__date 22.01.2017, 18:01
+                // card
+                a(href='#').blog-card.blog-card--huge.wow.transformUp(data-wow-delay='0.2s')
+                  .blog-card__image
+                    img(src='images/blog/blogCard_1.jpg' srcset='images/blog/blogCard_1@2x.jpg 2x')
+                  .blog-card__content
+                    .blog-card__name Как научиться рисовать живопись
+                    .blog-card__date 22.01.2017, 18:01
+                        
+              
+              // SIDEBAR
+              .blog__sidebar
+                .ui-select
+                  input(type='hidden')
+                  .ui-select__visible
+                    span Год
+                    .ui-select__visible__icon
+                      i.icon.icon-select
+                  .ui-select__dropdown
+                    span.ui-select__dropdown__placeholder Год
+                    span(data-val='2017') 2017
+                    span(data-val='2016') 2016
+                    span(data-val='2015') 2015
+                    span(data-val='2014') 2014
+                    span(data-val='2013') 2013
+                    span(data-val='2012') 2012
+                    span(data-val='2011') 2011
+                .blog__sidebar__tags
+                  .blog__sidebar__tags__head Теги:
+                  .blog__sidebar__tag
+                    span Рисование
+                    span 81
+                  .blog__sidebar__tag
+                    span Живопись
+                    span 4
+                  .blog__sidebar__tag
+                    span Картошка
+                    span 26
+                  .blog__sidebar__tag
+                    span Баклажан
+                    span 54
+                  .blog__sidebar__tag
+                    span   Кофе
+                    span 1
+                  .blog__sidebar__tag
+                    span Ноутбук
+                    span 92
+                  .blog__sidebar__tag
+                    span Салфетка
+                    span 5
+                  .blog__sidebar__tag
+                    span Умный блок
+                    span 23
+                  .blog__sidebar__tag
+                    span Комьюптер
+                    span 99
+                  .blog__sidebar__tag
+                    span Окно
+                    span 43
+                  .blog__sidebar__tag
+                    span Натюрморт
+                    span 69
+                  .blog__sidebar__tag
+                    span Кубок
+                    span 8
+                  .blog__sidebar__tag
+                    span Погода
+                    span 8
+                  .blog__sidebar__tag
+                    span Небо
+                    span 82
+                  .blog__sidebar__tag
+                    span Солнце
+                    span 33
+                  .blog__sidebar__tag
+                    span Человек
+                    span 49
+                  .blog__sidebar__tag
+                    span Рисование
+                    span 78
+                  .blog__sidebar__tag
+                    span Живопись
+                    span 44
+                  .blog__sidebar__tag
+                    span Картошка
+                    span 52
+                  .blog__sidebar__tag
+                    span Баклажан
+                    span 66
+                  .blog__sidebar__tag
+                    span Кофе
+                    span 22
+                  .blog__sidebar__tag
+                    span Ноутбук
+                    span 222
+                  .blog__sidebar__tag
+                    span Салфетка
+                    span 23
+                  .blog__sidebar__tag
+                    span Умный блок
+                    span 2
+                  .blog__sidebar__tag
+                    span Комьюптер
+                    span 1
+                  .blog__sidebar__tag
+                    span Окно
+                    span 92
+                  .blog__sidebar__tag
+                    span Натюрморт
+                    span 9
+                  .blog__sidebar__tag
+                    span Кубок
+                    span 4
+                  .blog__sidebar__tag
+                    span Погода
+                    span 3
+                  .blog__sidebar__tag
+                    span Небо
+                    span 2
+                  .blog__sidebar__tag
+                    span Солнце
+                    span 31
+                  .blog__sidebar__tag
+                    span Человек
+                    span 82
+                    
+                
+  
+      include shared/footer.pug
+      
+    include shared/scripts.pug

@@ -190,3 +190,77 @@
         size: 20px
       &::after
         left: -4px
+
+
+// SELECT
+.ui-select
+  position: relative
+  font-size: 14px
+  font-family: 'Roboto'
+  &__visible
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding-left: 10px
+    border: 1px solid $fontColor
+    border-radius: 3px
+    cursor: pointer
+    background: white
+    box-shadow: 0px 1px 2px color(#6A899B a(70%))
+    span
+      display: inline-block
+
+    &__icon
+      size: 30px
+      flex: 0 0 30px
+      display: flex
+      justify-content: center
+      align-items: center
+      border-radius: 3px
+      border-left: 1px solid $fontColor
+    .icon-select
+      transition: transform $transitionSpeed $ease
+
+  &__dropdown
+    position: absolute
+    top: 40px
+    left: 0
+    right: 0
+    z-index: 5
+    padding-top: 10px
+    padding-bottom: 10px
+    max-height: 200px
+    overflow-y: scroll
+    background: white
+    border-radius: 4px
+    box-shadow: 0px 0px 10px color(black a(20%))
+    font-size: 14px
+    transform: translate3d(0,25px,0)
+    opacity: 0
+    pointer-events: none
+    transition: all $transitionSpeed $ease
+    span
+      display: block
+      padding: 8px 15px
+      cursor: pointer
+      transition: all $transitionSpeed $ease
+      &:hover:not(.ui-select__dropdown__placeholder)
+        background: color($fontColor a(20%))
+      &.active
+        background: $colorPrimary
+        color: white
+        &:hover
+          background: $colorPrimary
+    &__placeholder
+      color: $fontColor50
+      font-size: 13px
+      margin-top: -8px
+      cursor: default !important
+
+  &.active
+    .icon-select
+      transform: rotate(180deg)
+    .ui-select__dropdown
+      transform: translate3d(0,0px,0)
+      opacity: 1
+      pointer-events: all
