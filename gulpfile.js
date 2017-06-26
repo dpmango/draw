@@ -18,6 +18,7 @@ var mqpacker      = require('css-mqpacker');
 var pixrem        = require('pixrem');
 var rgba_fallback = require('postcss-color-rgba-fallback');
 var opacity       = require('postcss-opacity');
+var postcss_easings = require('postcss-easings');
 var pseudoel      = require('postcss-pseudoelements');
 var vmin          = require('postcss-vmin');
 var will_change   = require('postcss-will-change');
@@ -79,16 +80,13 @@ var processors = [
     short(),
     colorFunction(),
     svginline(),
+    postcss_easings(),
     autoprefixer({browsers: ['last 5 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4']}),
     sorting(),
-    // pixrem(),
     will_change(),
-    // rgba_fallback(),
-    // opacity(),
     pseudoel(),
     vmin(),
     flexbugs()
-    // mqpacker(),
 ];
 
 gulp.task('postcss', function() {

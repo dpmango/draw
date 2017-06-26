@@ -50,6 +50,7 @@
     "sugarss": "^0.2.0"
   },
   "dependencies": {
+    "postcss-easings": "^1.0.0",
     "postcss-use": "^2.3.0"
   }
 }

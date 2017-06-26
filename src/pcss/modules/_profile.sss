@@ -115,7 +115,7 @@
   padding-top: 50px
   &__list
     opacity: 1
-  &__separtor
+  &__separator
     text-align: center
     margin-top: 120px
     margin-bottom: 60px
@@ -126,12 +126,33 @@
       letter-spacing: 3.8px
       font-family: 'Core65'
 
+@media($tablet)
+  .profile-courses
+    &__separator
+      margin-top: 80px
+      margin-bottom: 40px
+      img
+        max-width: 100px
+
+@media($mobile)
+  .profile-courses
+    &__separator
+      img
+        max-width: 75px
+      span
+        font-size: 21px
+        letter-spacing: 3px
 
 @media($mobile-s)
   .profile-courses
     &__list
       margin-left: -15px
       margin-right: -15px
+    &__separator
+      margin-top: 60px
+      margin-bottom: 30px
+      span
+        font-size: 18px
 
 .profile-course
   position: relative
@@ -157,6 +178,8 @@
     flex-direction: column
     flex: 0 1 50%
     padding: 50px 5% 25px 5%
+    &--mobile
+      display: none
 
   &__name
     font-size: 48px
@@ -204,6 +227,8 @@
       font-size: 32px
       letter-spacing: -.5px
       margin-left: 25px
+    &--no-details
+      margin-bottom: 10px
   &__details
     margin-top: 15px
     font-size: 14px
@@ -226,12 +251,17 @@
       position: absolute
       top: 50%
       left: 50%
+      z-index: 1
       transform: translate(-50%,-50%)
       min-width: 100%
       min-height: 100%
       width: auto
       height: auto
-
+    &::after
+      display: block
+      content: ' '
+      position: absolute 0
+      z-index: 2
   &__progress
     position: absolute
     top: 50%
@@ -299,22 +329,53 @@
     flex-direction: column-reverse
     height: auto
     margin-bottom: 45px
+    &__cover
+      flex: 1 1 auto
+      min-height: 200px
+      &::after
+        background: color($fontColor a(40%))
     &__content
       position: relative
-      z-index: 2
+      z-index: 6
       flex: 0 0 auto
       text-align: center
-      margin-top: -250px
-      padding: 35px 15px 30px 15px
-    &__cover
-      flex: 0 0 250px
+      margin-top: -17px
+      padding: 0px 15px 30px 15px
+      &--mobile
+        padding-top: 40px
+        padding-bottom: 50px
+        margin-top: 0
+        display: block
+        z-index: 5
+        .profile-course__name
+          display: block
+        .profile-course__scope
+          display: block
+        .profile-course__done
+          display: block
+          position: static
+          transform: none
+          margin-top: 15px
+          img
+            position: static
+            transform: none
+            max-width: 100px
+            min-width: 0px
+            min-height: 0px
+
+      .profile-course__name
+        display: none
+      .profile-course__scope
+        display: none
     &__author
-      margin-top: 30px
+      margin-top: 0px
       flex-direction: column
       order: 3
     &__name
       order: 1
       margin-bottom: 0
+      br
+        display: none
     &__scope
       order: 2
     &__cta
@@ -323,14 +384,14 @@
       justify-content: center
     &__details
       order: 5
+    &__progress
+      display: none
+    &__done
+      display: none
 
 @media($mobile)
   .profile-course
     margin-bottom: 30px
-    &__content
-      margin-top: -210px
-    &__cover
-      flex: 0 0 210px
     &__scope
       font-size: 18px
     &__cta
@@ -355,6 +416,7 @@
       &__price
         font-size: 20px
 
+// ACTIVITY
 .activity
   margin: 65px 0 50px 0
   &__list
@@ -467,6 +529,7 @@
       font-size: 30px
 
 
+// NULL PROFILE
 .profile__null
   display: flex
   align-items: center

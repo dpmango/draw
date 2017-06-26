@@ -27,27 +27,14 @@ doctype html
                     .profile-course__author__avatar
                       img(src='images/tmp/courseAvatar.png' srctset='images/tmp/courseAvatar@2x.png 2x')
                     .profile-course__author__name Наталья Овечкина <span> Автор курса</span>
-                  .profile-course__cta
+                  .profile-course__cta.profile-course__cta--no-details
                     a(href='#').btn.btn--primary.btn--pink 
                       span продолжить обучение
                 .profile-course__cover
+                  .profile-course__content.profile-course__content--mobile
+                    .profile-course__name Живопись дома
+                    
                   img(src='images/courses/profileCourse_1.jpg' srcset='images/courses/profileCourse_1@2x.jpg 2x')
-                  //- svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink')
-                  //-   defs
-                  //-     filter#backdrop-filter-blur(x='0', y='0', width='100%', height='100%')
-                  //-       feimage(x='0', y='0', width='100%', height='100%', xlink:href='images/courses/profileCourse_1.png')
-                  //-         fegaussianblur(stddeviation='3')
-                  //-           fecomponenttransfer(result='blur')
-                  //-             fefunca(type='discrete', tablevalues='1 1')
-                  //-           fecomponenttransfer(in='SourceGraphic', result='source')
-                  //-             fefunca(type='linear', slope='2', intercept='0')
-                  //-           fecomposite(operator='in', in='blur', in2='source')
-                  //-             femerge
-                  //-               femergenode
-                  //-                 femergenode(in='SourceGraphic')
-                  //-     image#image(xlink:href='images/courses/profileCourse_1.png', x='0', y='0', height='100%', width='100%')
-                  //- svg.box
-                  //-   use(xlink:href='#image')
                 .profile-course__progress
                   .profile-course__progressbar
                     .profile-course__progressbar__fill(style='width: 20%')
@@ -59,20 +46,25 @@ doctype html
                   .profile-course__name Концепция  <br> зеленого<br>  мира
                   .profile-course__author
                     .profile-course__author__avatar
-                      img(src='images/tmp/courseAvatar.jpg' srctset='images/tmp/courseAvatar@2x.jpg 2x')
+                      img(src='images/tmp/courseAvatar.png' srctset='images/tmp/courseAvatar@2x.png 2x')
                     .profile-course__author__name Наталья Овечкина <span> Автор курса</span>
-                  .profile-course__cta
+                  .profile-course__cta.profile-course__cta--no-details
                     a(href='#').btn.btn--primary.btn--green 
                       span Перейти в курс
 
                 .profile-course__cover
+                  .profile-course__content.profile-course__content--mobile
+                    .profile-course__name Концепция  <br> зеленого<br>  мира
+                    .profile-course__done
+                      img(src='images/el/courseCompleated.png' srcset='images/el/courseCompleated@2x.png 2x')
+                      
                   img(src='images/courses/profileCourse_3.jpg' srcset='images/courses/profileCourse_3@2x.jpg 2x')
                 
                 .profile-course__done
                   img(src='images/el/courseCompleated.png' srcset='images/el/courseCompleated@2x.png 2x')
                   
             // separator
-            .profile-courses__separtor
+            .profile-courses__separator
               img(src='images/el/headingDownArrow.png' srcset='images/el/headingDownArrow@2x.png 2x')
               span НЕ ЗАБУДЬТЕ КУПИТЬ:
           
@@ -97,13 +89,19 @@ doctype html
                     a(href='#')
                       span подробно о курсе
                 .profile-course__cover
+                  .profile-course__content.profile-course__content--mobile
+                    .profile-course__name Скетч: основы
+                    .profile-course__scope
+                      span — 3 часа 45 минут
+                      span — 12 уроков
+                      span — 5 практических заданий
                   img(src='images/courses/profileCourse_4.jpg' srcset='images/courses/profileCourse_4@2x.jpg 2x')
                       
                     
               // single course 
               .profile-course.profile-course--blue
                 .profile-course__content
-                  .profile-course__name Научись рисовать как Пикассо
+                  .profile-course__name Научись рисовать  как Пикассо
                   .profile-course__author
                     .profile-course__author__avatar
                       img(src='images/tmp/courseAvatar.png' srctset='images/tmp/courseAvatar@2x.png 2x')
@@ -120,6 +118,12 @@ doctype html
                     a(href='#')
                       span подробно о курсе
                 .profile-course__cover
+                  .profile-course__content.profile-course__content--mobile
+                    .profile-course__name Научись рисовать  как Пикассо
+                    .profile-course__scope
+                      span — 3 часа 45 минут
+                      span — 12 уроков
+                      span — 5 практических заданий
                   img(src='images/courses/profileCourse_2.jpg' srcset='images/courses/profileCourse_2@2x.jpg 2x')
                   
                           

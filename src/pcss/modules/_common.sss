@@ -37,6 +37,7 @@
       margin-top: 10px
   &--showing-menu
     position: fixed
+    z-index: 20
     box-shadow: 0px 5px 10px color($fontColor a(10%))
     opacity: 1 !important
     transform: translate3d(0, 0px, 0)
@@ -227,19 +228,19 @@
   flex-direction: column
   position: fixed 0
   max-width: 450px
-  z-index: 8
+  z-index: 15
   background: #F2F2F2
   min-height: 400px
-  height: 100vh
+  margin-top: 120px
+  height: calc(100vh - 120px)
   overflow-y: scroll
   transform: translate3d(-120%,0,0)
   box-shadow: 8px 0 10px -2px color($fontColor a(10%))
-  transition: transform $transitionSpeed $ease
+  transition: transform .35s easeInOutCubic
   &.active
     transform: translate3d(0,0,0)
   &__wrapper
     flex: 1 0 auto
-    margin-top: 120px
     padding: 60px 40px 60px 40px
     display: flex
     flex-direction: column
@@ -295,13 +296,13 @@
 
 @media($mobile)
   .mobile-navi
-    &__wrapper
-      margin-top: 100px
+    margin-top: 100px
+    height: calc(100vh - 100px)
 
 @media($mobile-s)
   .mobile-navi
-    &__wrapper
-      margin-top: 95px
+    margin-top: 95px
+    height: calc(100vh - 95px)
     .header__user
       flex-direction: column
       align-items: flex-start
@@ -315,8 +316,8 @@
 
 @media(width <= 375px)
   .mobile-navi
-    &__wrapper
-      margin-top: 65px
+    margin-top: 65px
+    height: calc(100vh - 65px)
 
 // FOOTER
 .footer
