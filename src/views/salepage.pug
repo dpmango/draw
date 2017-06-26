@@ -109,7 +109,7 @@ doctype html
                   img(src='images/el/icon-chat.png' srcset='images/el/icon-chat@2x.png 2x')
                 .benefits__card__name Закрытая FB-группа
                 .benefits__card__desc В рамках любого занятия вас ждет выбор референса (примера), краткий теоретический экскурс, создание эскиза и работа с цветом.
-            .course-price
+            .course-price.hidden-mobile
               .course-price__value 4 560 Р
               .course-price__cta
                 a(href='#').btn.btn--primary.btn--pink 
@@ -215,20 +215,7 @@ doctype html
                       span ПЕРЕЙТИ К ОПЛАТЕ      
                     
         // GIFT
-        .gift.wow.fadeIn
-          .container.container--1100
-            .gift__title 
-              .gift__title__text купи курс и мы подарим <br> еще один тому, кто не <br> может его себе позволить
-              .gift__title__bg 
-                img(src='images/el/giftBg.png' srcset='images/el/giftBg@2x.png 2x')
-            .gift__wrapper
-              .gift__banner
-                img(src='images/el/giftPlus.png' srcset='images/el/giftPlus@2x.png 2x')
-              .gift__text
-                p Не факт, что производство концентрирует презентационный материал. Направленный маркетинг развивает медиаплан. 
-                p Стоит отметить, что маркетингово-ориентированное издание поддерживает product  
-                a(href='#').btn.btn--primary.btn--pink 
-                  span Выбрать курс
+        include components/gift.pug 
         
         // COURSE QUESTIONS
         .course-questions
@@ -245,7 +232,7 @@ doctype html
                 .course-questions__item__name А если понравился, но я хочу вернуть деньги обратно?
                 img(src='images/courses/courseQuestionImg.jpg' srcset='images/courses/courseQuestionImg@2x.jpg 2x')
                 .course-questions__item__text Не факт, что производство концентрирует презентационный материал. Направленный маркетинг развивает медиаплан. Стоит отметить, что маркетингово-ориентированное издание поддерживает product placement
-              .course-questions__item.course-questions__item--left.wow.fadeIn
+              .course-questions__item.course-questions__item--left.course-questions__item--right-tablet.wow.fadeIn
                 .course-questions__item__name Что делать, если мне не понравится курс?
                 .course-questions__item__text Не факт, что производство концентрирует презентационный материал. Направленный маркетинг развивает медиаплан. Стоит отметить, что маркетингово-ориентированное издание поддерживает product placement
                   

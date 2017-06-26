@@ -306,6 +306,8 @@
     display: flex
   &__col
     flex: 0 1 50%
+    display: flex
+    flex-direction: column
     &:first-child
       color: #685338
       .compare__desc, .compare__name
@@ -325,10 +327,59 @@
     padding-bottom: 50px
     padding-right: 20px
   &__image
+    margin-top: auto
     img
       width: 100%
 
+@media($desktop)
+  .compare
+    &__col
+      &:first-child
+        .compare__desc, .compare__name
+          padding-left: 40px
+    &__name
+      font-size: 22px
+    &__desc
+      font-size: 17px
 
+@media($tablet)
+  .compare
+    padding-top: 0
+    &__wrapper
+      flex-direction: column
+    &__col
+      flex: 0 0 auto
+      padding: 40px 0 0 0
+    &__desc
+      padding-left: 40px
+      padding-bottom: 40px
+    &__name
+      padding-left: 40px
+    &__image
+      margin-top: 0
+
+@media($mobile)
+  .compare
+    &__col
+      padding-top: 30px
+    &__name
+      font-size: 20px
+      margin-bottom: 10px
+    &__desc
+      padding-bottom: 30px
+      font-size: 15px
+      line-height: 1.3
+
+@media($mobile-s)
+  .compare
+    &__name
+      font-size: 18px
+    &__desc
+      font-size: 13px
+      line-height: 1.5
+
+
+// COURSE PRICES
 .course-price
   position: relative
   z-index: 5
@@ -340,12 +391,18 @@
     font-size: 60px
     font-family: 'Core65'
     color: $colorPrimary
-    letter-spacing: -5.5px
+    letter-spacing: -5.4px
     &--aqua
       color: $colorAqua
   &__cta
     margin-left: 35px
 
+@media($mobile)
+  .course-price
+    flex-direction: column
+    &__cta
+      margin-top: 10px
+      margin-left: 0
 
 // SUPPLEMENTARY
 .supp
@@ -389,6 +446,69 @@
       right: 0
       bottom: -40%
       width: 29%
+
+@media($desktop)
+  .supp
+    &__image
+      &--kraski
+        left: 0
+      &--list
+        display: none
+      &--kara
+        right: -1.5%
+
+@media($tablet)
+  .supp
+    margin-top: 40px
+    &__arrow
+      margin-bottom: 40px
+    &__wrapper
+      display: flex
+      flex-direction: column
+    &__title
+      order: 1
+      font-size: 36px
+      line-height: 1.5
+    &__text
+      order: 2
+      margin: 20px auto
+    &__image
+      order: 3
+      position: static
+      &--kraski
+        display: none
+      &--kara
+        width: auto
+        max-width: 100%
+
+@media($mobile)
+  .supp
+    margin-top: 20px
+    &__arrow
+      margin-bottom: 30px
+      img
+        max-height: 85px
+    &__title
+      font-size: 28px
+      text-transform: uppercase
+      letter-spacing: 0
+      line-height: 1.2
+    &__text
+      margin-bottom: 10px
+      font-size: 15px
+      line-height: 1.4
+
+
+@media($mobile-s)
+  .supp
+    &__arrow
+      img
+        max-height: 75px
+    &__title
+      font-size: 18px
+    &__text
+      font-size: 13px
+
 
 
 .course-cta
@@ -457,10 +577,52 @@
       margin-bottom: 20px
     img
       margin-bottom: 20px
+      max-width: 100%
     &__text
       font-size: 17px
       line-height: 1.4
 
+@media($desktop)
+  .course-questions
+    &__item
+      padding: 35px 0
+
+
+@media($tablet)
+  .course-questions
+    margin-top: 75px
+    &__wrapper
+      padding: 0 20px
+      margin-top: 20px
+    &__item
+      &--async
+        margin-left: 0
+      &--right-tablet
+        margin-left: auto
+        margin-right: 0
+
+@media($mobile)
+  .course-questions
+    margin-top: 90px
+    &__item
+      padding: 20px 0
+      margin-left: 0
+      margin-right: 0
+      &__name
+        font-size: 15px
+        margin-bottom: 15px
+      &__text
+        font-size: 15px
+
+@media($mobile-s)
+  .course-questions
+    &__item
+      padding: 15px 0
+      &__name
+        font-size: 13px
+        margin-bottom: 10px
+      &__text
+        font-size: 13px
 
 // COURSE FIXED
 .course-fixed
@@ -507,6 +669,9 @@
 
 @media($tablet)
   .course-fixed
+    top: auto
+    bottom: 0
+    transform: translate3d(0,100%,0)
     &__name
       font-size: 32px
     &__cta
@@ -515,9 +680,6 @@
 
 @media($mobile)
   .course-fixed
-    top: auto
-    bottom: 0
-    transform: translate3d(0,100%,0)
     &__name
       display: none
     &__wrapper

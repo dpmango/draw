@@ -437,6 +437,23 @@
         span
           border-color: transparent
 
+@media($mobile)
+  .backpage
+    margin-top: 45px
+    margin-bottom: 25px
+    a
+      font-size: 15px
+
+@media($mobile-s)
+  .backpage
+    margin-bottom: 0
+    img
+      margin-left: -50px
+      margin-right: -100px
+      max-width: calc(100% + 150px)
+    a
+      font-size: 13px
+
 
 // COMMON - TYPOGRAPHY
 .heading-gray
@@ -545,6 +562,6 @@
   .dashed-link
     font-size: 15px
 
-@media($mobile)
+@media($mobile-s)
   .dashed-link
     font-size: 13px
