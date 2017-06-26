@@ -38,7 +38,6 @@
     opacity: 0
     &.animation-end
       opacity: 1
-
   &__wrapper
     position: relative
     max-width: 1040px
@@ -147,6 +146,13 @@
         bottom: 80px
         height: 200px
         background-size: contain
+    &__player
+      .icon
+        font-size: 24px
+      .icon-circle
+        &:hover
+          .icon-play
+            font-size: 30px
 
 @media($mobile)
   .video
@@ -156,6 +162,13 @@
       &::after
         height: 150px
         bottom: 40px
+    &__player
+      .icon
+        font-size: 18px
+      .icon-circle
+        &:hover
+          .icon-play
+            font-size: 22px
 
 @media($mobile-s)
   .video
@@ -165,6 +178,13 @@
       &::after
         height: 120px
         bottom: 20px
+    &__player
+      .icon
+        font-size: 15px
+      .icon-circle
+        &:hover
+          .icon-play
+            font-size: 18px
 
 
 .home-about
