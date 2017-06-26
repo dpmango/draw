@@ -920,6 +920,9 @@ button:focus {
 }
 @media(max-width: 880px) {
     .header {}
+    .header--fixed .header__logo {
+        margin-top: 15px;
+    }
     .header__menu li {}
     .header__menu li:nth-child(2) {
         display: none;
@@ -950,12 +953,18 @@ button:focus {
     .header {
         padding-bottom: 10px;
     }
+    .header--fixed {
+        padding-bottom: 10px;
+    }
     .header__menu {
         display: none;
     }
 }
 @media(max-width: 414px) {
     .header {}
+    .header--fixed .header__logo {
+        margin-top: 10px;
+    }
     .header__logo {
         margin-top: 10px;
     }
@@ -972,6 +981,9 @@ button:focus {
 }
 @media(max-width: 375px) {
     .header {}
+    .header--fixed .header__logo {
+        margin-top: 5px;
+    }
     .header__logo {
         -webkit-flex-basis: 110px;
                 flex-basis: 110px;
@@ -1094,12 +1106,22 @@ button:focus {
         display: -ms-flexbox;
         display: flex;
     }
+    .mobile-navi--mind-scroll {
+        margin-top: 90px;
+        height: -webkit-calc(100vh - 90px);
+        height: calc(100vh - 90px);
+    }
 }
 @media(max-width: 568px) {
     .mobile-navi {
         margin-top: 100px;
         height: -webkit-calc(100vh - 100px);
         height: calc(100vh - 100px);
+    }
+    .mobile-navi--mind-scroll {
+        margin-top: 90px;
+        height: -webkit-calc(100vh - 90px);
+        height: calc(100vh - 90px);
     }
 }
 @media(max-width: 414px) {
@@ -1128,12 +1150,22 @@ button:focus {
         margin-top: 10px;
         margin-left: 15px;
     }
+    .mobile-navi--mind-scroll {
+        margin-top: 90px;
+        height: -webkit-calc(100vh - 90px);
+        height: calc(100vh - 90px);
+    }
 }
 @media(max-width: 375px) {
     .mobile-navi {
         margin-top: 65px;
         height: -webkit-calc(100vh - 65px);
         height: calc(100vh - 65px);
+    }
+    .mobile-navi--mind-scroll {
+        margin-top: 60px;
+        height: -webkit-calc(100vh - 60px);
+        height: calc(100vh - 60px);
     }
 }
 /* FOOTER */

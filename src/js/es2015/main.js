@@ -45,8 +45,10 @@ $(document).ready(function(){
 
       if ( vScroll > headerHeight + 100 ){
         header.addClass('header--transformed');
+        $('.mobile-navi').addClass('mobile-navi--mind-scroll')
       } else {
         header.removeClass('header--transformed');
+        $('.mobile-navi').removeClass('mobile-navi--mind-scroll');
       }
 
       if ( vScroll > 700 ){

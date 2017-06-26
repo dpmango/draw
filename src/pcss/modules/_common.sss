@@ -173,6 +173,9 @@
 
 @media(width <= 880px)
   .header
+    &--fixed
+      .header__logo
+        margin-top: 15px
     &__menu
       li
         &:nth-child(2)
@@ -200,11 +203,16 @@
 @media($mobile)
   .header
     padding-bottom: 10px
+    &--fixed
+      padding-bottom: 10px
     &__menu
       display: none
 
 @media($mobile-s)
   .header
+    &--fixed
+      .header__logo
+        margin-top: 10px
     &__logo
       margin-top: 10px
     &__wrapper
@@ -217,6 +225,9 @@
 
 @media(width <= 375px)
   .header
+    &--fixed
+      .header__logo
+        margin-top: 5px
     &__logo
       margin-top: 5px
       flex-basis: 110px
@@ -292,17 +303,27 @@
 @media(width <= 880px)
   .mobile-navi
     display: flex
+    &--mind-scroll
+      margin-top: 90px
+      height: calc(100vh - 90px)
 
 
 @media($mobile)
   .mobile-navi
     margin-top: 100px
     height: calc(100vh - 100px)
+    &--mind-scroll
+      margin-top: 90px
+      height: calc(100vh - 90px)
+
 
 @media($mobile-s)
   .mobile-navi
     margin-top: 95px
     height: calc(100vh - 95px)
+    &--mind-scroll
+      margin-top: 90px
+      height: calc(100vh - 90px)
     .header__user
       flex-direction: column
       align-items: flex-start
@@ -318,6 +339,9 @@
   .mobile-navi
     margin-top: 65px
     height: calc(100vh - 65px)
+    &--mind-scroll
+      margin-top: 60px
+      height: calc(100vh - 60px)
 
 // FOOTER
 .footer
