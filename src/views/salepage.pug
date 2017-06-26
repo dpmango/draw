@@ -26,7 +26,7 @@ doctype html
                   span.icon-rub ₽
                 
         // COURSE AUTHOR :: START      
-        .course-author.wow.fadeIn
+        .course-author.wow.transformUp(data-wow-delay='1s')
           .container.container--1100
             .course-author__wrapper
               .course-author__content
@@ -52,16 +52,16 @@ doctype html
                   iframe(src='https://player.vimeo.com/video/72874423?autoplay=0', width='100%', height='100%', frameborder='0', webkitallowfullscreen='', mozallowfullscreen='', allowfullscreen='')
 
         // COURSE PROGRAMM
-        .course-program.wow.fadeIn
+        .course-program
           .container
-            .heading-gray.heading-gray--mega программа
+            .heading-gray.heading-gray--mega.wow.transformUp программа
             .course-program__wrapper
               // item
-              .course-program__item.visible(data-visible='1')
+              .course-program__item.visible(data-visible='1').wow.transformUp(data-wow-delay='.2s')
                 .course-program__item__name урок 1
                 .course-program__item__content Охват аудитории традиционно экономит анализ рыночных цен, учитывая современные тенденции. Привлечение аудитории, согласно Ф.Котлеру, допускает SWOT-анализ. 
               // item
-              .course-program__item.visible(data-visible='1')
+              .course-program__item.visible(data-visible='1').wow.transformUp(data-wow-delay='.4s')
                 .course-program__item__name урок 2
                 .course-program__item__tag
                   img(src='images/el/tag_interesting.png' srcset='images/el/tag_interesting@2x.png 2x')
@@ -76,7 +76,7 @@ doctype html
                 .course-program__item__content Охват аудитории традиционно экономит анализ рыночных цен, учитывая современные тенденции. Привлечение аудитории, согласно Ф.Котлеру, допускает SWOT-анализ. 
                 
               // toggle
-              .course-program__toggler
+              .course-program__toggler.wow.transformUp(data-wow-delay='.6s')
                 .dashed-link.js-toggleProgramCourses(data-action='open')
                   span развернуть всю программу
                   
@@ -95,41 +95,41 @@ doctype html
                 img(src='images/courses/compare_2.jpg' srcset='images/courses/compare_2@2x.jpg 2x')
                 
         // BENEFITS
-        .benefits.wow.fadeIn
+        .benefits
           .container.container--900
-            .heading-gray.heading-gray--mega возможности
+            .heading-gray.heading-gray--mega.wow.transformUp возможности
             .benefits__wrapper.benefits__wrapper--2col
-              .benefits__card
+              .benefits__card.wow.transformUp(data-wow-delay='.2s')
                 .benefits__card__image
                   img(src='images/el/icon-eye.png' srcset='images/el/icon-eye@2x.png 2x')
                 .benefits__card__name Личный контакт
                 .benefits__card__desc В рамках любого занятия вас ждет выбор референса (примера), краткий теоретический экскурс, создание эскиза и работа с цветом.
-              .benefits__card
+              .benefits__card.wow.transformUp(data-wow-delay='.4s')
                 .benefits__card__image
                   img(src='images/el/icon-chat.png' srcset='images/el/icon-chat@2x.png 2x')
                 .benefits__card__name Закрытая FB-группа
                 .benefits__card__desc В рамках любого занятия вас ждет выбор референса (примера), краткий теоретический экскурс, создание эскиза и работа с цветом.
-            .course-price.hidden-mobile
+            .course-price.hidden-mobile.wow.transformUp(data-wow-delay='.6s')
               .course-price__value 4 560 Р
               .course-price__cta
                 a(href='#').btn.btn--primary.btn--pink 
                   span добавить к заказу
                 
         // SUPPLEMENTARY GOOD
-        .supp.wow.fadeIn
-          .supp__arrow
+        .supp
+          .supp__arrow.wow.transformUp
             img(src='images/el/supp_arrow.png' srcset='images/el/supp_arrow@2x.png 2x')
           .container.container--1366
-            .supp__wrapper
+            .supp__wrapper.wow.transformUp(data-wow-delay='1s')
               .supp__image.supp__image--kraski
                 img(src='images/el/supp_kraski.png' srcset='images/el/supp_kraski@2x.png 2x')
               .supp__image.supp__image--list
                 img(src='images/el/supp_list.png' srcset='images/el/supp_list@2x.png 2x')
               .supp__image.supp__image--kara
                 img(src='images/el/supp_kara.png' srcset='images/el/supp_kara@2x.png 2x')
-              .supp__title Готовый набор красок именно для вас
-              .supp__text В рамках любого занятия вас ждет выбор референса (примера), краткий теоретический экскурс, создание эскиза и работа с цветом. В дальнейшем, вы сможете развивать свои навыки, выбирая в качестве примеров все более и более сложные работы, сориентироваться в которых вам помогут наши преподаватели. 
-            .course-price
+              .supp__title.wow.transformUp(data-wow-delay='.2s') Готовый набор красок именно для вас
+              .supp__text.wow.transformUp(data-wow-delay='.2s') В рамках любого занятия вас ждет выбор референса (примера), краткий теоретический экскурс, создание эскиза и работа с цветом. В дальнейшем, вы сможете развивать свои навыки, выбирая в качестве примеров все более и более сложные работы, сориентироваться в которых вам помогут наши преподаватели. 
+            .course-price.wow.transformUp(data-wow-delay='.4s')
               .course-price__value 4 560 Р
               .course-price__cta
                 a(href='#').btn.btn--primary.btn--pink 
@@ -177,11 +177,11 @@ doctype html
 
         
         // COURSE CTA
-        .course-cta.wow.fadeIn
+        .course-cta
           .container.container--1100
-            .heading-gray.heading-gray--mega пришло время  <br> покупать
+            .heading-gray.heading-gray--mega.wow.transformUp пришло время  <br> покупать
             .course-cta__wrapper
-              form(action='#').course-cta__form.js-form-courseCta
+              form(action='#').course-cta__form.js-form-courseCta.wow.transformUp(data-wow-delay='.2s')
                 .course-cta__col
                   .ui-group
                     input(type='text' name='name' placeholder='Ваше имя').ui-input
@@ -237,7 +237,7 @@ doctype html
                 .course-questions__item__text Не факт, что производство концентрирует презентационный материал. Направленный маркетинг развивает медиаплан. Стоит отметить, что маркетингово-ориентированное издание поддерживает product placement
                   
         // BACKPAGE
-        .backpage
+        .backpage.wow.fadeIn
           .container.container--1000
             .backpage__wrapper
               img(src='images/el/backPage.png' srcset='images/el/backPage@2x.png 2x')

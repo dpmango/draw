@@ -44,6 +44,9 @@
     .ui-input
       border-color: $colorRed
 
+@media($mobile)
+  .ui-group
+    margin-bottom: 10px
 
 // THIS IS REGULAR CLASS MODIFIER FOR THE INPUT IT
 .ui-input
@@ -64,6 +67,15 @@
   &::placeholder
     color: $fontColor
 
+@media($mobile)
+  .ui-input
+    padding: 10px 15px
+    font-size: 15px
+
+@media($mobile-s)
+  .ui-input
+    padding: 10px 10px
+    font-size: 13px
 
 
 
@@ -142,3 +154,39 @@
         background-image: url('../images/el/checkbox-aqua@2x.png')
       &::after
         background-image: url('../images/el/checkbox-checked-aqua@2x.png')
+
+@media($desktop)
+  .ui-checkbox
+    label
+      padding-left: 50px
+      font-size: 16px
+
+@media($mobile)
+  .ui-checkbox
+    margin-bottom: 20px
+    input
+      &:checked
+        + label
+          &::after
+            transform: scale(.8)
+    label
+      font-size: 15px
+      &::before
+        size: 25px 26px
+      &::after
+        left: 0
+
+@media($mobile-s)
+  .ui-checkbox
+    input
+      &:checked
+        + label
+          &::after
+            transform: scale(.55)
+    label
+      padding-left: 35px
+      font-size: 13px
+      &::before
+        size: 20px
+      &::after
+        left: -4px
