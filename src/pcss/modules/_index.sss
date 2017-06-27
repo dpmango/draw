@@ -699,6 +699,11 @@
       overflow: hidden
       flex: 1 1 auto
 
+  &--static
+    &::after
+      display: none
+    &:hover
+      transform: translate3d(0,0,0)
 
   &__image
     border-radius: 4px
@@ -746,6 +751,10 @@
         transform: translate3d(45px,0,0)
         &::after
           transform: translate3d(30px,20px,0)
+
+    &--static
+      &:hover
+        transform: translate3d(0,0,0)
 
 @media($tablet)
   .blog-summ

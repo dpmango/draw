@@ -46,6 +46,15 @@ button
         transform: translate3d(-50%,-50%,0) scale(10)
     &::after
       background: $colorBlue
+    &.btn--outline
+      border: 2px solid $colorPrimary
+      background: transparent
+      color: $colorPrimary
+      &::after
+        background: $colorPrimary
+      &:hover
+        color: white
+
 
   &--blue
     background: $colorBlue

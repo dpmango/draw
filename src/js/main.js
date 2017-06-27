@@ -134,6 +134,37 @@ $(document).ready(function () {
     $(this).find('.icon').click();
   });
 
+  // THUMBS SLIDER
+  $('.slider-thumbs__slider').slick({
+    autoplay: false,
+    dots: false,
+    arrows: false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    slide: 'img',
+    cssEase: 'linear',
+    adaptiveHeight: true,
+    fade: true
+  });
+
+  // thumbs
+  $('.slider-thumbs__slider').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+    var thumbs = slick.$slider.parent().find('.slider-thumbs__thumb');
+    thumbs.each(function (i, val) {
+      console.log($(val).data('slide'));
+      console.log(nextSlide);
+      if ($(val).data('slide') - 1 == nextSlide) {
+        $(val).siblings().removeClass('active');
+        $(val).addClass('active');
+      }
+    });
+  });
+  // clicking thumbs
+  $('.slider-thumbs__thumb').on('click', function () {
+    $('.slider-thumbs__slider').slick('slickGoTo', $(this).data('slide') - 1);
+  });
+
   //////////
   // MODALS
   //////////
