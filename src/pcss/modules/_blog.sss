@@ -387,3 +387,90 @@
         transition: opcity $transitionSpeed $ease
         &:hover
           opacity: .7
+
+
+// COURSES
+.courses
+  max-width: 700px
+  margin-left: auto
+  margin-right: auto
+  &__bonus-head
+    text-align: center
+    padding-top: 10px
+    margin-bottom: -25px
+
+.course
+  position: relative
+  margin-top: 35px
+  margin-bottom: 60px
+  &--disabled
+    &::after
+      display: block
+      content: ''
+      position: absolute 0
+      bottom: 20px
+      z-index: 8
+      background: color(white a(70%))
+  &--bonus
+    &::after
+      display: block
+      content: ' '
+      position: absolute 0
+      background: url('../images/el/videoBonusBg@2x.png') no-repeat center
+      width: 660px
+      height: 260px
+      background-size: contain
+      top: 5px
+      left: 50%
+      transform: translateX(-50%)
+  &__video
+    position: relative
+    max-width: 410px
+    margin-left: auto
+    margin-right: auto
+    .video__content
+      padding-top: 0
+      padding-bottom: 20px
+      &::after
+        background-size: contain
+        bottom: -10px
+    .icon-circle
+      transform: translate(-50%,-50%) scale(.5)
+    .video__player
+      position: relative
+      z-index: 5
+      border-radius: 6px
+      overflow: hidden
+      &::after
+        background: color($fontColor a(40%))
+    &__status
+      position: absolute
+      right: -120px
+      top: 0
+      font-size: 12px
+      font-family: 'Core65'
+      letter-spacing: -.19px
+      text-transform: uppercase
+      background: #E5E5E5
+      border-radius: 5px
+      padding: 3px 10px
+
+  &__name
+    font-family: 'Core65'
+    font-size: 32px
+    letter-spacing: -.5px
+    line-height: 1.25
+    text-align: center
+  &__status
+    font-style: 20px
+    font-family: 'Core65'
+    letter-spacing: -.31px
+    margin-top: 10px
+    text-align: center
+    color: $fontColor50
+    &--compleated
+      color: #50E3C2
+    &--pending
+      color: #FF9000
+    &--disabled
+      color: #D7D7D7
