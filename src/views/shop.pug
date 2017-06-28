@@ -19,45 +19,35 @@ doctype html
               span назад
               
             .heading-mega НАУЧИСЬ РИСОВАТЬ КАК ПИКАССО
-
-        // VIDEO :: START
-        .video.wow.fadeIn
-          .container
-            .video__wrapper
-              .video__content
-                .video__player.video__player--dark
-                  i.icon.icon-circle
-                    i.icon.icon-play
-                  img(src='images/tmp/video2.png' srcset='images/tmp/video2@2x.png 2x')
-                  // place iframe with ?autoplay=0 param, don't forget about 100% width and height
-                  iframe(src='https://player.vimeo.com/video/72874423?autoplay=0', width='100%', height='100%', frameborder='0', webkitallowfullscreen='', mozallowfullscreen='', allowfullscreen='')
-
-
-        // BENEFITS
-        .benefits.wow.fadeIn
-          .container.container--900
-            .heading-gray.heading-gray--mega возможности
-            .benefits__wrapper.benefits__wrapper--2col
-              .benefits__card
-                .benefits__card__image
-                  img(src='images/el/icon-eye-aqua.png' srcset='images/el/icon-eye-aqua@2x.png 2x').f-aqua
-                .benefits__card__name Личный контакт
-                .benefits__card__desc В рамках любого занятия вас ждет выбор референса (примера), краткий теоретический экскурс, создание эскиза и работа с цветом.
-              .benefits__card
-                .benefits__card__image
-                  img(src='images/el/icon-chat-aqua.png' srcset='images/el/icon-chat-aqua@2x.png 2x').f-aqua
-                .benefits__card__name Закрытая FB-группа
-                .benefits__card__desc В рамках любого занятия вас ждет выбор референса (примера), краткий теоретический экскурс, создание эскиза и работа с цветом.
+        
+        .course-scope 
+          .course-scope__title Выберите тариф, пожалуйста:
+        
+          // VIDEO :: START
+          .video.video--small.wow.fadeIn
+            .container
+              .video__wrapper
+                .video__content
+                  .video__player.video__player--soft
+                    i.icon.icon-circle
+                      i.icon.icon-play
+                    img(src='images/tmp/video2.jpg' srcset='images/tmp/video2@2x.jpg 2x')
+                    // place iframe with ?autoplay=0 param, don't forget about 100% width and height
+                    iframe(src='https://player.vimeo.com/video/72874423?autoplay=0', width='100%', height='100%', frameborder='0', webkitallowfullscreen='', mozallowfullscreen='', allowfullscreen='')
+          
+          .course-scope__description
+            .course-scope__description__title Обучение
+            .course-scope__description__text В рамках любого занятия вас ждет выбор референса (примера), краткий теоретический экскурс, создание эскиза и работа с цветом. В дальнейшем, вы сможете развивать свои навыки, выбирая в качестве примеров все более и более сложные работы, сориентироваться в которых вам помогут наши преподаватели. 
+            
             .course-price
               .course-price__value.course-price__value--aqua 4 560 Р
               .course-price__cta
-                a(href='#').btn.btn--primary.btn--aqua 
-                  span добавить к заказу
-                
+                a(href='#' disabled).btn.btn--primary.btn--aqua
+                  span добавлено к заказу
+        
+        
         // SUPPLEMENTARY GOOD
         .supp.wow.fadeIn
-          .supp__arrow
-            img(src='images/el/supp_arrow.png' srcset='images/el/supp_arrow@2x.png 2x')
           .container.container--1366
             .supp__wrapper
               .supp__image.supp__image--kraski
@@ -73,10 +63,40 @@ doctype html
               .course-price__cta
                 a(href='#').btn.btn--primary.btn--aqua 
                   span добавить к заказу
-
+      
         
+        // separator line
+        .container.container--1100
+          .course-separator
+          
+          
+        // BENEFITS
+        .benefits.wow.fadeIn
+          .container.container--900
+            .heading-gray.heading-gray--mega возможности
+            .benefits__wrapper.benefits__wrapper--2col
+              .benefits__card
+                .benefits__card__image
+                  img(src='images/el/icon-eye-aqua.png' srcset='images/el/icon-eye-aqua@2x.png 2x').f-aqua
+                .benefits__card__name Личный контакт
+                .benefits__card__desc В рамках любого занятия вас ждет выбор референса (примера), краткий теоретический экскурс, создание эскиза и работа с цветом.
+              .benefits__card
+                .benefits__card__image
+                  img(src='images/el/icon-chat-aqua.png' srcset='images/el/icon-chat-aqua@2x.png 2x').f-aqua
+                .benefits__card__name Закрытая FB-группа
+                .benefits__card__desc В рамках любого занятия вас ждет выбор референса (примера), краткий теоретический экскурс, создание эскиза и работа с цветом.
+            .course-price.hidden-mobile
+              .course-price__value.course-price__value--aqua 4 560 Р
+              .course-price__cta
+                a(href='#').btn.btn--primary.btn--aqua 
+                  span добавить к заказу
+                
+        // separator line
+        .container.container--1100
+          .course-separator
+          
         // COURSE CTA
-        .course-cta.wow.fadeIn
+        .course-cta.course-cta--last-child.wow.fadeIn
           .container.container--1100
             .heading-gray.heading-gray--mega итак
             .course-cta__wrapper.course-cta__wrapper--aqua
@@ -113,6 +133,8 @@ doctype html
                     button(type='submit').btn.btn--primary.btn--aqua.btn--block 
                       span ПЕРЕЙТИ К ОПЛАТЕ      
 
+        
+                        
         
       include shared/footer.pug
       

@@ -38,6 +38,27 @@
     opacity: 0
     &.animation-end
       opacity: 1
+  &--small
+    .video__wrapper
+      max-width: 660px
+      &::after
+        background: url('../images/el/videoAquaBg@2x.png') no-repeat center
+        background-size: contain
+        width: 660px
+        height: 260px
+        left: 50%
+        transform: translateX(-50%)
+
+    .video__content
+      max-width: 300px
+      padding-top: 30px
+      padding-bottom: 45px
+      &::after
+        background-size: contain
+        bottom: 10px
+      .icon-circle
+        transform: translate(-50%,-50%) scale(.5)
+
   &__wrapper
     position: relative
     max-width: 1040px
@@ -116,6 +137,10 @@
     &--dark
       &::after
         background: color($fontColor a(80%))
+    &--soft
+      &::after
+        display: none
+
     &.playing
       img
         z-index: 1
@@ -546,7 +571,7 @@
 
 // BENEFITS
 .benefits
-  padding-top: 90px
+  margin-top: 90px
   &__wrapper
     margin-top: 30px
     display: flex
@@ -632,6 +657,7 @@
 
 @media($mobile-s)
   .benefits
+    margin-top: 70px
     &__card
       &__name
         font-size: 18px

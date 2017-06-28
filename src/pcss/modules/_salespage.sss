@@ -513,6 +513,8 @@
 // COURSE CTA
 .course-cta
   margin-top: 100px
+  &--last-child
+    margin-bottom: 80px
   &__wrapper
     margin-top: 60px
     position: relative
@@ -748,3 +750,33 @@
       > span
         margin-left: 0
         margin-right: 25px
+
+// COURSE SCOPE (SHOP PAGE)
+.course-scope
+  margin-top: 50px
+  margin-bottom: 150px
+  &__title
+    text-align: center
+    font-size: 17px
+    margin-bottom: 40px
+  &__description
+    margin-top: 10px
+    max-width: 500px
+    margin-left: auto
+    margin-right: auto
+    text-align: center
+    &__title
+      font-family: 'Core65'
+      font-size: 48px
+      letter-spacing: -.75px
+    &__text
+      font-size: 17px
+      line-height: 1.8
+      margin-top: 25px
+      margin-bottom: 5px
+
+.course-separator
+  margin: 80px auto
+  max-width: 1130px
+  height: 1px
+  background: color($fontColor a(15%))

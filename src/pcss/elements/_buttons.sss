@@ -95,3 +95,9 @@ button
     &:hover
       &::after
         transform: translate3d(-50%,-50%,0) scale(20)
+
+  &[disabled], &.disabled
+    background: #CDCDCD
+    cursor: not-allowed
+    color: white
+    pointer-events: none
