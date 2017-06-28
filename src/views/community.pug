@@ -1,0 +1,104 @@
+doctype html
+<!--[if IE 8]>         <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9 oldie"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class=""> <!--<![endif]-->
+  include shared/head.pug
+
+  body
+    include shared/header.pug
+    
+    .page
+      .page__content
+        
+        .container
+          .community
+            .community__head 
+              .community__head__name
+                .t-head Выставка работ
+                .community__head__sortable
+                  .ui-select.ui-select--dash
+                    input(type='hidden')
+                    .ui-select__visible
+                      .t-head 
+                        span Топ 100
+                    .ui-select__dropdown
+                      span(data-val='Топ 100') Топ 100
+                      span(data-val='Топ 50') Топ 50
+                      span(data-val='Топ 25') Топ 25
+                    
+                  
+              .community__head__filters
+                .ui-select
+                  input(type='hidden')
+                  .ui-select__visible
+                    span Курс
+                    .ui-select__visible__icon
+                      i.icon.icon-select
+                  .ui-select__dropdown
+                    span.ui-select__dropdown__placeholder Выберите курс
+                    span(data-val='Название курса') Название курса
+                    span(data-val='Еще название курса') Еще название курса
+                    span(data-val='Другой курс') Другой курс
+                    span(data-val='Самый лучший курс') Самый лучший курс
+                    span(data-val='Такой хороший курс, что даже едва влезает в селект') Такой хороший курс, что даже едва влезает в селект
+                .ui-select
+                  input(type='hidden')
+                  .ui-select__visible
+                    span Урок
+                    .ui-select__visible__icon
+                      i.icon.icon-select
+                  .ui-select__dropdown
+                    span.ui-select__dropdown__placeholder Выберите курс
+                    span(data-val='Обучение джедая кисти и краски') Обучение джедая кисти и краски
+                    span(data-val='Суперский курс от мастера') Суперский курс от мастера
+                    span(data-val='Как рисовать ногой') Как рисовать ногой
+                    span(data-val='100 секертов Ван-Гога') 100 секертов Ван-Гога
+
+            // CONTENT
+            .community__content
+                    
+              .projects-list
+                // next project
+                .project
+                  .project__image
+                    img(src='images/projects/projectItem_1.jpg' srcset='images/projects/projectItem_1@2x.jpg 2x')
+                  .project__bottom
+                    .project__name Сергей, Москва
+                    .project__like
+                      i.icon.icon-like
+                      span 88
+                // next project
+                .project
+                  .project__image
+                    img(src='images/projects/projectItem_2.jpg' srcset='images/projects/projectItem_2@2x.jpg 2x')
+                  .project__bottom
+                    .project__name Сергей, Москва
+                    .project__like
+                      i.icon.icon-like
+                      span 88
+                // next project
+                .project
+                  .project__image
+                    img(src='images/projects/projectItem_3.jpg' srcset='images/projects/projectItem_3@2x.jpg 2x')
+                  .project__bottom
+                    .project__name Сергей, Москва
+                    .project__like
+                      i.icon.icon-like
+                      span 88
+                // next project
+                .project
+                  .project__image
+                    img(src='images/projects/projectItem_4.jpg' srcset='images/projects/projectItem_4@2x.jpg 2x')
+                  .project__bottom
+                    .project__name Сергей, Москва
+                    .project__like
+                      i.icon.icon-like
+                      span 88
+        
+              
+              
+
+  
+      include shared/footer.pug
+      
+    include shared/scripts.pug

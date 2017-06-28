@@ -111,6 +111,11 @@
     height: 10px;
     background-image: url('../images/el/select.png');
 }
+.icon-like {
+    width: 28px;
+    height: 23px;
+    background-image: url('../images/el/like@2x.png');
+}
 @media(max-width: 768px) {
     .icon {}
     .icon-slide-prev {
@@ -1263,7 +1268,7 @@ html.mfp-helper body {
             transform: scale(0.8);
 }
 .popup-buble.mfp-bg {
-    background: #4ab68f;
+    background: $colorGreen;
     opacity: 0;
     -webkit-transition: opacity 0.3s ease-in-out;
     transition: opacity 0.3s ease-in-out;

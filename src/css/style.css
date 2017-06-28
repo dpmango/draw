@@ -195,7 +195,7 @@ body, html {
     margin-bottom: 15px;
 }
 .ui-group.has-error .ui-input {
-    border-color: #f45b63;
+    border-color: $colorRed;
 }
 @media(max-width: 568px) {
     .ui-group {
@@ -407,6 +407,8 @@ body, html {
     -webkit-box-shadow: 0px 1px 2px rgba(106, 137, 155, 0.7);
             box-shadow: 0px 1px 2px rgba(106, 137, 155, 0.7);
     cursor: pointer;
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
     -webkit-box-align: center;
         -ms-flex-align: center;
     -webkit-box-pack: justify;
@@ -414,6 +416,9 @@ body, html {
 }
 .ui-select__visible span {
     display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .ui-select__visible .icon-select {
     -webkit-transition: -webkit-transform .25s ease-in-out;
@@ -484,7 +489,7 @@ body, html {
 }
 .ui-select__dropdown__placeholder {
     margin-top: -8px;
-    color: $fontColor50;
+    color: rgba(0, 0, 0, 0.5);
     font-size: 13px;
     cursor: default !important;
 }
@@ -498,6 +503,16 @@ body, html {
     -webkit-transform: translate3d(0,0px,0);
             transform: translate3d(0,0px,0);
     pointer-events: all;
+}
+.ui-select--dash .ui-select__visible {
+    padding: 0;
+    border: 0;
+    border-bottom: 2px dashed #9B00D2;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+}
+.ui-select--dash .ui-select__visible:hover {
+    color: #9B00D2;
 }
 /* buttons */
 button {
@@ -5312,6 +5327,131 @@ button:focus {
 .comment__text {
     margin-top: 5px;
     line-height: 1.55;
+}
+/* COMMUNITY */
+.community {
+    margin-left: auto;
+    max-width: 1020px;
+}
+.community__head {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+            justify-content: space-between;
+    margin-top: 30px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+}
+.community__head__sortable {
+    position: relative;
+    margin-left: 50px;
+}
+.community__head__name {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex: 0 1 auto;
+        -ms-flex: 0 1 auto;
+            flex: 0 1 auto;
+    margin-right: 50px;
+    -webkit-box-flex: 0;
+}
+.community__head__filters {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    margin-left: auto;
+    max-width: 400px;
+    -webkit-box-flex: 1;
+}
+.community__head__filters .ui-select {
+    -webkit-flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    margin-right: 20px;
+    min-width: 120px;
+    -webkit-box-flex: 1;
+}
+.community__head__filters .ui-select:last-child {
+    -webkit-flex-grow: 5;
+            flex-grow: 5;
+    margin-right: 0;
+    -webkit-box-flex: 5;
+        -ms-flex-positive: 5;
+}
+.community__content {
+    margin-top: 25px;
+    max-width: 890px;
+}
+.projects-list {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    margin-right: -4%;
+    margin-bottom: 100px;
+    margin-left: -4%;
+}
+.projects-list .project {}
+.projects-list .project:nth-child(even) {
+    -webkit-transform: translate3d(0,60px,0);
+            transform: translate3d(0,60px,0);
+}
+.project {
+    -webkit-flex: 0 1 50%;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+    padding: 40px 4%;
+    -webkit-box-flex: 0;
+}
+.project__image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+}
+.project__image img {
+    width: 100%;
+}
+.project__bottom {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+            align-items: center;
+    -webkit-justify-content: space-between;
+            justify-content: space-between;
+    margin-top: 10px;
+    letter-spacing: -.22px;
+    font-size: 14px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+}
+.project__like {
+    cursor: pointer;
+}
+.project__like .icon {
+    margin-right: 10px;
+    -webkit-transition: opacity .25s ease-in-out;
+    transition: opacity .25s ease-in-out;
+}
+.project__like:hover .icon {
+    opacity: .7;
 }
 
 /* UI KIT */
