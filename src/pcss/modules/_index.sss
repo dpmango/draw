@@ -750,6 +750,7 @@
       position: absolute 0
       z-index: 2
       background: linear-gradient(to bottom, color(transparent a(0%)) 0%, color(black a(50%)) 100%)
+      transition: all $transitionSpeed $ease
   &__content
     position: absolute 0
     z-index: 3
@@ -777,7 +778,6 @@
         transform: translate3d(45px,0,0)
         &::after
           transform: translate3d(30px,20px,0)
-
     &--static
       &:hover
         transform: translate3d(0,0,0)
@@ -796,6 +796,16 @@
 
   .blog-card
     height: 300px
+    &--huge
+      margin: 30px 0 30px 0
+      &::after
+        display: none
+      &:hover
+        transform: translate3d(0px,0,0)
+  a.blog-card--huge
+    &:hover
+      .blog-card__image::after
+        background: linear-gradient(to bottom, color(transparent a(0%)) 0%, color(black a(75%)) 100%)
 
 @media($mobile)
   .blog-summ
@@ -817,6 +827,9 @@
   .blog-card
     height: 220px
     border-radius: 0
+    &--huge
+      margin-left: -15px
+      margin-right: -15px
     &__image
       border-radius: 0
     &__content

@@ -145,7 +145,6 @@ $(document).ready(function(){
     infinite: true,
     speed: 300,
     slidesToShow: 1,
-    slide: 'img',
     cssEase: 'linear',
     adaptiveHeight: true,
     fade: true

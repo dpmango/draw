@@ -55,9 +55,12 @@ doctype html
                 // slider
                 .blog__content__slider.slider-thumbs
                   .slider-thumbs__slider
-                    img(src='images/blog/blogContentPic.jpg' srcset='images/blog/blogContentPic@2x.jpg 2x')
-                    img(src='images/blog/blogCard_1.jpg' srcset='images/blog/blogCard_1@2x.jpg 2x')
-                    img(src='images/blog/blogContentPic.jpg' srcset='images/blog/blogContentPic@2x.jpg 2x')
+                    .slider-thumbs__slide
+                      img(src='images/blog/blogContentPic.jpg' srcset='images/blog/blogContentPic@2x.jpg 2x')
+                    .slider-thumbs__slide
+                      img(src='images/blog/blogCard_1.jpg' srcset='images/blog/blogCard_1@2x.jpg 2x')
+                    .slider-thumbs__slide
+                      img(src='images/blog/blogContentPic.jpg' srcset='images/blog/blogContentPic@2x.jpg 2x')
                   .slider-thumbs__thumbs
                     .slider-thumbs__thumb.active(data-slide='1')
                       img(src='images/blog/blogContentPic.jpg' srcset='images/blog/blogContentPic@2x.jpg 2x')

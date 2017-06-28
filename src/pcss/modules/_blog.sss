@@ -6,6 +6,7 @@
     display: flex
     justify-content: space-between
   &__content
+    min-width: 0
     flex: 0 1 680px
     max-width: 680px
     margin-right: 100px
@@ -74,10 +75,22 @@
         p
           margin-top: 0
 
-
   &__sidebar
     flex: 0 1 130px
     margin-left: auto
+    margin-top: 35px
+    &--mobile
+      padding: 20px
+      display: none
+      justify-content: center
+      margin-left: auto
+      margin-right: auto
+      .ui-select
+        margin: 10px 0
+        flex: 0 1 240px
+        margin-right: 30px
+        &:last-child
+          margin-right: 0
     &__tags
       margin-top: 40px
       &__head
@@ -104,10 +117,45 @@
             color: color($fontColor a(50%))
 
 
+@media($tablet)
+  .blog
+    &__wrapper
+      justify-content: center
+    &__content
+      flex: 0 1 100%
+      margin-right: 0
+      .profile-heading
+        margin-left: -20px
+
+    &__sidebar
+      display: none
+      &--mobile
+        display: flex
+
+@media($mobile)
+  .blog
+    &__sidebar
+      &--mobile
+        flex-direction: column
+        .ui-select
+          margin-right: 0
+          flex: 0 0 auto
+
+@media($mobile-s)
+  .blog
+    .profile-heading--smaller
+      margin-top: 60px
+
+
 // SLIDER THUMBS
 .slider-thumbs
+  width: 100%
   &__slider
     opacity: 1
+  &__slide
+    min-width: 0
+    img
+      width: 100%
   &__thumbs
     margin-top: 18px
     display: flex
@@ -146,6 +194,10 @@
     flex-wrap: wrap
     align-items: center
     justify-content: space-between
+
+@media($tablet)
+  .comments
+    margin-right: 0
 
 .comment
   display: flex
@@ -244,9 +296,6 @@
   &__content
     max-width: 890px
     margin-top: 25px
-
-
-
 
 // PROJECTS
 .projects-list
@@ -391,7 +440,6 @@
         transition: opcity $transitionSpeed $ease
         &:hover
           opacity: .7
-
 
 // COURSES
 .courses
