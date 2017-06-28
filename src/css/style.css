@@ -5426,6 +5426,10 @@ button:focus {
     margin-left: auto;
     max-width: 1020px;
 }
+.community--no-sidebar {
+    margin-right: auto;
+    max-width: 890px;
+}
 .community__head {
     display: -webkit-box;
     display: -webkit-flex;
@@ -5575,6 +5579,9 @@ button:focus {
         -ms-flex-align: center;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
+}
+.project__name {
+    line-height: 1.5;
 }
 .project__like {
     cursor: pointer;

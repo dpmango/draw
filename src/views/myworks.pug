@@ -1,0 +1,65 @@
+doctype html
+<!--[if IE 8]>         <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9 oldie"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class=""> <!--<![endif]-->
+  include shared/head.pug
+
+  body
+    include shared/header.pug
+    
+    .page
+      .page__content
+        .container
+          .community.community--no-sidebar
+            .community__head 
+              .community__head__name
+                .t-head Ваши работы                    
+
+            // CONTENT
+            .community__content
+                    
+              .projects-list
+                // next project
+                .project
+                  a(href='#').project__image
+                    img(src='images/projects/projectItem_1.jpg' srcset='images/projects/projectItem_1@2x.jpg 2x')
+                  .project__bottom
+                    .project__name Сергей, Москва <br> Урок: Как рисовать яблоки
+                    .project__like
+                      i.icon.icon-like
+                      span 88
+                // next project
+                .project
+                  a(href='#').project__image
+                    img(src='images/projects/projectItem_2.jpg' srcset='images/projects/projectItem_2@2x.jpg 2x')
+                  .project__bottom
+                    .project__name Сергей, Москва <br> Урок: Как рисовать помидоры
+                    .project__like
+                      i.icon.icon-like
+                      span 88
+                // next project
+                .project
+                  a(href='#').project__image
+                    img(src='images/projects/projectItem_3.jpg' srcset='images/projects/projectItem_3@2x.jpg 2x')
+                  .project__bottom
+                    .project__name Сергей, Москва <br> Урок: Как рисовать лица
+                    .project__like
+                      i.icon.icon-like
+                      span 88
+                // next project
+                .project
+                  a(href='#').project__image
+                    img(src='images/projects/projectItem_4.jpg' srcset='images/projects/projectItem_4@2x.jpg 2x')
+                  .project__bottom
+                    .project__name Сергей, Москва <br> Урок: Как рисовать груши
+                    .project__like
+                      i.icon.icon-like
+                      span 88
+        
+              
+              
+
+  
+      include shared/footer.pug
+      
+    include shared/scripts.pug

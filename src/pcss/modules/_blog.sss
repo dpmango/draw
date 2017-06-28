@@ -166,6 +166,7 @@
     .comment__content
       margin-left: auto
       max-width: 610px
+
     .comment__text
       &::before
         left: auto
@@ -210,6 +211,10 @@
 .community
   max-width: 1020px
   margin-left: auto
+  &--no-sidebar
+    margin-right: auto
+    max-width: 890px
+
   &__head
     margin-top: 30px
     display: flex
@@ -239,6 +244,8 @@
   &__content
     max-width: 890px
     margin-top: 25px
+
+
 
 
 // PROJECTS
@@ -297,9 +304,10 @@
     justify-content: space-between
     font-size: 14px
     letter-spacing: -.22px
+  &__name
+    line-height: 1.5
   &__like
     cursor: pointer
-
     .icon
       margin-right: 10px
       transition: opacity $transitionSpeed $ease
