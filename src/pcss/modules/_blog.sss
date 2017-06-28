@@ -209,17 +209,45 @@
   .project
     &:nth-child(even)
       transform: translate3d(0,60px,0)
+      .project__image
+        &:hover
+          transform: translate3d(20px,0px,0)
 
 
 .project
+  position: relative
+  display: block
   flex: 0 1 50%
   padding: 40px 4%
   &__image
+    display: block
+    background: transparent
     position: relative
+    z-index: 1
     border-radius: 4px
-    overflow: hidden
+    font-size: 0
+    transition: transform .35s easeOutBack
     img
+      position: relative
+      z-index: 3
       width: 100%
+    &::after
+      display: block
+      content: ' '
+      background: color($fontColor a(25%))
+      position: absolute
+      z-index: 2
+      top: 40px
+      left: 70px
+      bottom: 20px
+      right: 20px
+      filter: blur(10px)
+      transition: all $transitionSpeed $ease
+    &:hover
+      transform: translate3d(-20px,0px,0)
+      &::after
+        transform: translate3d(30px,25px,0)
+
   &__bottom
     margin-top: 10px
     display: flex

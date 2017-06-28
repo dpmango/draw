@@ -5410,7 +5410,14 @@ button:focus {
     -webkit-transform: translate3d(0,60px,0);
             transform: translate3d(0,60px,0);
 }
+.projects-list .project:nth-child(even) .project__image {}
+.projects-list .project:nth-child(even) .project__image:hover {
+    -webkit-transform: translate3d(20px,0px,0);
+            transform: translate3d(20px,0px,0);
+}
 .project {
+    position: relative;
+    display: block;
     -webkit-flex: 0 1 50%;
         -ms-flex: 0 1 50%;
             flex: 0 1 50%;
@@ -5419,11 +5426,43 @@ button:focus {
 }
 .project__image {
     position: relative;
-    overflow: hidden;
+    z-index: 1;
+    display: block;
     border-radius: 4px;
+    background: transparent;
+    font-size: 0;
+    -webkit-transition: -webkit-transform .35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: -webkit-transform .35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: transform .35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition: transform .35s cubic-bezier(0.175, 0.885, 0.32, 1.275), -webkit-transform .35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .project__image img {
+    position: relative;
+    z-index: 3;
     width: 100%;
+}
+.project__image:after {
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    bottom: 20px;
+    left: 70px;
+    z-index: 2;
+    display: block;
+    background: rgba(0, 0, 0, 0.25);
+    content: ' ';
+    -webkit-filter: blur(10px);
+            filter: blur(10px);
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+}
+.project__image:hover {
+    -webkit-transform: translate3d(-20px,0px,0);
+            transform: translate3d(-20px,0px,0);
+}
+.project__image:hover:after {
+    -webkit-transform: translate3d(30px,25px,0);
+            transform: translate3d(30px,25px,0);
 }
 .project__bottom {
     display: -webkit-box;
