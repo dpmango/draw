@@ -152,9 +152,29 @@
   font-size: 14px
   letter-spacing: -.22px
   padding: 45px 0
+  &--reply
+    display: block
+    padding: 0
+    padding-bottom: 20px
+    margin-top: -10px
+    .comment__avatar
+      position: relative
+      flex: 0 0 50px
+      size: 50px
+      border-radius: 50%
+      overflow: hidden
+    .comment__content
+      margin-left: auto
+      max-width: 610px
+    .comment__text
+      &::before
+        left: auto
+        right: -15px
+        background-image: svg-load('../../images/svg/comment-arrow-black.svg')
+
   &__content
     flex: 0 1 auto
-    padding-left: 40px
+    padding-left: 60px
   &__author
     font-weight: 600
     margin-bottom: 10px
@@ -162,8 +182,29 @@
     font-size: 12px
     color: $colorGray
   &__text
+    position: relative
     margin-top: 5px
     line-height: 1.55
+    &--muted
+      color: $colorGray
+    &::before
+      display: block
+      content: ' '
+      position: absolute
+      left: -25px
+      top: 3px
+      background: svg-load('../../images/svg/comment-arrow.svg') no-repeat center
+      size: 10px 11px
+  &__reply-head
+    display: flex
+    align-items: center
+    &__author
+      margin-left: auto
+      margin-right: 15px
+      text-align: right
+    .comment__author
+      margin-bottom: 4px
+
 
 // COMMUNITY
 .community
@@ -200,6 +241,7 @@
     margin-top: 25px
 
 
+// PROJECTS
 .projects-list
   display: flex
   margin-bottom: 100px
@@ -213,7 +255,7 @@
         &:hover
           transform: translate3d(20px,0px,0)
 
-
+// SINGLE PROJECT
 .project
   position: relative
   display: block
@@ -264,3 +306,76 @@
     &:hover
       .icon
         opacity: .7
+
+// PROJECT DETAILS
+.project-details
+  margin-left: auto
+  max-width: 960px
+  &__wrapper
+    display: flex
+    justify-content: space-between
+  &__content
+    flex: 0 1 820px
+    max-width: 820px
+    .comments
+      margin-right: 0
+  &__like
+    margin-top: 40px
+    margin-bottom: 25px
+    display: flex
+    align-items: center
+    &__counter
+      size: 67px 55px
+      background: url('../images/el/bigLike@2x.png') no-repeat center
+      background-size: contain
+      color: white
+      font-size: 14px
+      display: flex
+      align-items: center
+      justify-content: center
+      letter-spacing: -.22px
+    span
+      margin-left: 10px
+      font-size: 14px
+      font-weight: 600
+
+  &__image
+    border-radius: 4px
+    margin-top: 25px
+    margin-bottom: 30px
+    position: relative
+    z-index: 2
+    img
+      position: relative
+      z-index: 3
+      border-radius: 4px
+      width: 100%
+    &::after
+      display: block
+      content: ''
+      position: absolute
+      z-index: 1
+      left: 0px
+      right: 0px
+      bottom: -50px
+      height: 400px
+      background: url('../images/el/videoBlur2.png') no-repeat center bottom
+      background-size: contain
+      transition: all $transitionSpeed $ease
+  &__sidebar
+    flex: 0 0 135px
+    margin-top: 35px
+    margin-left: auto
+    &__head
+      font-size: 14px
+      font-family: 'Roboto'
+      letter-spacing: -.22px
+      font-weight: 600
+    &__socials
+      margin-top: 25px
+      display: flex
+      a
+        flex: 0 1 auto
+        transition: opcity $transitionSpeed $ease
+        &:hover
+          opacity: .7

@@ -501,6 +501,8 @@
   font-family: 'Core65'
   font-size: 32px
   letter-spacing: -.5px
+  &--gray
+    color: color($fontColor a(15%))
 
 .t-regular
   font-size: 17px
@@ -509,6 +511,19 @@
 
 .t-center
   text-align: center
+
+.simple-link
+  font-size: 14px
+  color: $colorPrimary
+  transition: color $transitionSpeed $ease
+  span
+    border-bottom: 1px solid $colorPrimary
+    transition: border $transitionSpeed $ease
+  &:hover
+    color: $colorBlue
+    span
+      border-color: transparent
+
 
 @media($desktop)
   .heading-gray

@@ -11,86 +11,50 @@ doctype html
       .page__content
         
         .container
-          .blog
+          .project-details
             a(href='#').profile-heading__back.profile-heading__back--blog
               img(src='images/el/backIco.png' srcset='images/el/backIco@2x.png 2x')
               span назад
-            .blog__wrapper
-              .blog__content
+            .project-details__wrapper
+              .project-details__content
                 // PROFILE HEADING::START
                 .profile-heading.profile-heading--smaller
-                  .t-head Наш блог
+                  .profile-heading__sub
+                    .t-head.t-head--gray Живопись
+                    a(href='#').simple-link 
+                      span Узнать подробнее о курсе
+                  .t-head Учимся рисовать крокодила
                 
-                // BLOG Content
-                .blog-card.blog-card--huge.blog-card--static
-                  .blog-card__image
-                    img(src='images/blog/blogCard_1.jpg' srcset='images/blog/blogCard_1@2x.jpg 2x')
-                  .blog-card__content
-                    .blog-card__name Как научиться рисовать живопись
-                    .blog-card__date 22.01.2017, 18:01
-                
-                .blog__content__text.blog__content__text--pad
-                  p Практика однозначно показывает, что перераспределение бюджета усиливает конструктивный традиционный канал. Рейтинг, в рамках сегодняшних воззрений, позиционирует охват аудитории. Фирменный стиль основательно подпорчен предыдущим опытом применения.
-                
-                h2 H2. Заголовок текстового задания
-                .blog__content__text
-                  p Рыночная ситуация оправдывает конструктивный рекламоноситель. Представляется логичным, что позиционирование на рынке раскручивает популярный фирменный стиль. Такое понимание ситуации восходит к Эл Райс, при этом маркетинговая активность все еще интересна для многих. Потребление, конечно, неверно масштабирует метод изучения рынка.
-                  
-                figure
+                .project-details__like
+                  .project-details__like__counter 32
+                  span — нажми, если нравится!
+                    
+                .project-details__image
                   img(src='images/blog/blogContentPic.jpg' srcset='images/blog/blogContentPic@2x.jpg 2x')
-                  figcaption Подпись под картинкой
-                  
-                // VIDEO :: START
-                figure
-                  .video__content
-                    .video__player.video__player--dark
-                      i.icon.icon-circle
-                        i.icon.icon-play
-                      img(src='images/tmp/video.jpg' srcset='images/tmp/video@2x.jpg 2x')
-                      // place iframe with ?autoplay=0 param, don't forget about 100% width and height
-                      iframe(src='https://player.vimeo.com/video/72874423?autoplay=0', width='100%', height='100%', frameborder='0', webkitallowfullscreen='', mozallowfullscreen='', allowfullscreen='')
-
-                  figcaption Это видео
                 
-                // slider
-                .blog__content__slider.slider-thumbs
-                  .slider-thumbs__slider
-                    img(src='images/blog/blogContentPic.jpg' srcset='images/blog/blogContentPic@2x.jpg 2x')
-                    img(src='images/blog/blogCard_1.jpg' srcset='images/blog/blogCard_1@2x.jpg 2x')
-                    img(src='images/blog/blogContentPic.jpg' srcset='images/blog/blogContentPic@2x.jpg 2x')
-                  .slider-thumbs__thumbs
-                    .slider-thumbs__thumb.active(data-slide='1')
-                      img(src='images/blog/blogContentPic.jpg' srcset='images/blog/blogContentPic@2x.jpg 2x')
-                    .slider-thumbs__thumb(data-slide='2')
-                      img(src='images/blog/blogCard_1.jpg' srcset='images/blog/blogCard_1@2x.jpg 2x')
-                    .slider-thumbs__thumb(data-slide='3')
-                      img(src='images/blog/blogContentPic.jpg' srcset='images/blog/blogContentPic@2x.jpg 2x')
-                
-                h2 H2. Картинки в 2 колонки 
-                .blog__content__text
-                  p В соответствии с законом Ципфа, искусство медиапланирования последовательно транслирует целевой сегмент рынка. CTR, конечно, абстрактен. Сегмент рынка ригиден.
-                
-                // you can stretch row with .blog__content__pics-col--stretch (if different height is not sufficient)
-                .blog__content__pics-col
-                  figure
-                    img(src='images/blog/blogContentPicRow_1.jpg' srcset='images/blog/blogContentPicRow_1@2x.jpg 2x')
-                    figcaption Подпись под картинкой
-                  figure
-                    img(src='images/blog/blogContentPicRow_2.jpg' srcset='images/blog/blogContentPicRow_2@2x.jpg 2x')
-                    figcaption Подпись под картинкой
-                
-                h2 H2. Параграфы с картинками в строку
-                .blog__content__pic-row
-                  .blog__content__pic-row__image
-                    img(src='images/blog/blogContentRow_3.jpg' srcset='images/blog/blogContentRow_3@2x.jpg 2x')
-                  .blog__content__pic-row__content
-                    p В соответствии с законом Ципфа, искусство медиапланирования последовательно транслирует целевой сегмент рынка. CTR, конечно, абстрактен. Сегмент рынка ригиден.
-                .blog__content__pic-row
-                  .blog__content__pic-row__image
-                    img(src='images/blog/blogContentRow_4.jpg' srcset='images/blog/blogContentRow_4@2x.jpg 2x')
-                  .blog__content__pic-row__content
-                    p В соответствии с законом Ципфа, искусство медиапланирования последовательно транслирует целевой сегмент рынка. CTR, конечно, абстрактен. Сегмент рынка ригиден.
-              
+                // comment
+                .comment
+                  .comment__avatar
+                    .header__user__avatar
+                      .header__user__image
+                        img(src='images/tmp/avatar.png' srcset='images/tmp/avatar@2x.png 2x')
+                  .comment__content
+                    .comment__author Автор, Владимир-Долгий-Рапопорт
+                    .comment__date 26 окт 2016, 18:21
+                    .comment__text.comment__text--muted
+                      p Практика однозначно показывает, что перераспределение бюджета усиливает конструктивный традиционный канал. Рейтинг, в рамках сегодняшних воззрений, позиционирует охват аудитории. Фирменный стиль основательно подпорчен предыдущим опытом применения.
+                .comment.comment--reply
+                  .comment__reply-head
+                    .comment__reply-head__author
+                      .comment__author куратор Сергей Арутюнов
+                      .comment__date 26 окт 2016, 18:21
+                    .comment__avatar
+                      img(src='images/tmp/commentAuthor.png' srcset='images/tmp/commentAuthor@2x.png 2x')
+                  .comment__content
+                    .comment__text
+                      p Практика однозначно показывает, что перераспределение бюджета усиливает конструктивный традиционный канал. Рейтинг, в рамках сегодняшних воззрений, позиционирует охват аудитории. Фирменный стиль основательно подпорчен предыдущим опытом применения.
+                                
+                    
                 // COMMENTS
                 .comments
                   .comments__head
@@ -124,121 +88,17 @@ doctype html
                         p Product placement абстрактен. Можно предположить, что рекламная кампания концентрирует общественный бренд. Согласно последним исследованиям, косвенная реклама масштабирует связанный стиль менеджмента.
 
               // SIDEBAR
-              .blog__sidebar
-                .ui-select
-                  input(type='hidden')
-                  .ui-select__visible
-                    span Год
-                    .ui-select__visible__icon
-                      i.icon.icon-select
-                  .ui-select__dropdown
-                    span.ui-select__dropdown__placeholder Год
-                    span(data-val='2017') 2017
-                    span(data-val='2016') 2016
-                    span(data-val='2015') 2015
-                    span(data-val='2014') 2014
-                    span(data-val='2013') 2013
-                    span(data-val='2012') 2012
-                    span(data-val='2011') 2011
-                .blog__sidebar__tags
-                  .blog__sidebar__tags__head Теги:
-                  .blog__sidebar__tag
-                    span Рисование
-                    span 81
-                  .blog__sidebar__tag
-                    span Живопись
-                    span 4
-                  .blog__sidebar__tag
-                    span Картошка
-                    span 26
-                  .blog__sidebar__tag
-                    span Баклажан
-                    span 54
-                  .blog__sidebar__tag
-                    span   Кофе
-                    span 1
-                  .blog__sidebar__tag
-                    span Ноутбук
-                    span 92
-                  .blog__sidebar__tag
-                    span Салфетка
-                    span 5
-                  .blog__sidebar__tag
-                    span Умный блок
-                    span 23
-                  .blog__sidebar__tag
-                    span Комьюптер
-                    span 99
-                  .blog__sidebar__tag
-                    span Окно
-                    span 43
-                  .blog__sidebar__tag
-                    span Натюрморт
-                    span 69
-                  .blog__sidebar__tag
-                    span Кубок
-                    span 8
-                  .blog__sidebar__tag
-                    span Погода
-                    span 8
-                  .blog__sidebar__tag
-                    span Небо
-                    span 82
-                  .blog__sidebar__tag
-                    span Солнце
-                    span 33
-                  .blog__sidebar__tag
-                    span Человек
-                    span 49
-                  .blog__sidebar__tag
-                    span Рисование
-                    span 78
-                  .blog__sidebar__tag
-                    span Живопись
-                    span 44
-                  .blog__sidebar__tag
-                    span Картошка
-                    span 52
-                  .blog__sidebar__tag
-                    span Баклажан
-                    span 66
-                  .blog__sidebar__tag
-                    span Кофе
-                    span 22
-                  .blog__sidebar__tag
-                    span Ноутбук
-                    span 222
-                  .blog__sidebar__tag
-                    span Салфетка
-                    span 23
-                  .blog__sidebar__tag
-                    span Умный блок
-                    span 2
-                  .blog__sidebar__tag
-                    span Комьюптер
-                    span 1
-                  .blog__sidebar__tag
-                    span Окно
-                    span 92
-                  .blog__sidebar__tag
-                    span Натюрморт
-                    span 9
-                  .blog__sidebar__tag
-                    span Кубок
-                    span 4
-                  .blog__sidebar__tag
-                    span Погода
-                    span 3
-                  .blog__sidebar__tag
-                    span Небо
-                    span 2
-                  .blog__sidebar__tag
-                    span Солнце
-                    span 31
-                  .blog__sidebar__tag
-                    span Человек
-                    span 82
-                    
+              .project-details__sidebar
+                .project-details__sidebar__head
+                  span Поделись:
+                .project-details__sidebar__socials
+                  a(href='#' target='_blank')
+                    i.icon.icon-facebook
+                  a(href='#' target='_blank')
+                    i.icon.icon-vk
+                  a(href='#' target='_blank')
+                    i.icon.icon-insta
+            
                 
   
       include shared/footer.pug
