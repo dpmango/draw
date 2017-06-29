@@ -37,7 +37,6 @@
       margin-bottom: 60px
       &__content
         padding: 0
-        padding: 0
         margin-top: 35px
         padding-bottom: 20px
         &::after
@@ -80,7 +79,7 @@
     margin-left: auto
     margin-top: 35px
     &--mobile
-      padding: 20px
+      padding: 20px 0
       display: none
       justify-content: center
       margin-left: auto
@@ -119,13 +118,21 @@
 
 @media($tablet)
   .blog
+    .profile-heading__back
+      left: 40px
+
     &__wrapper
       justify-content: center
     &__content
       flex: 0 1 100%
       margin-right: 0
+      padding-left: 20px
+      padding-right: 20px
       .profile-heading
         margin-left: -20px
+      &__text
+        &--pad
+          padding: 15px 0 25px 0
 
     &__sidebar
       display: none
@@ -134,17 +141,84 @@
 
 @media($mobile)
   .blog
+    &--inner
+      padding-top: 40px
+      .profile-heading__back
+        top: 30px
     &__sidebar
       &--mobile
         flex-direction: column
         .ui-select
           margin-right: 0
           flex: 0 0 auto
+    &__content
+      &__text
+        &--pad
+          padding: 0 0 20px 0
+      p
+        font-size: 13px
+      h2
+        font-size: 20px
+      figure
+        margin: 25px 0 30px 0
+      &__slider
+        margin: 40px 0 60px 0
+      &__pics-col
+        figure
+          margin: 15px 13px
+
+      &__pic-row
+        &__image
+          flex: 0 1 40%
+        &__content
+          flex: 0 1 60%
+          padding-left: 25px
+
+
 
 @media($mobile-s)
   .blog
+    .blog-card--huge
+      margin-left: -35px
+      margin-right: -35px
     .profile-heading--smaller
       margin-top: 60px
+    &__content
+      figure
+        margin: 25px -35px 30px -35px
+        figcaption
+          padding-left: 35px
+      .video
+        &__content
+          padding: 0 35px
+
+      &__slider
+        margin: 40px -35px 60px -35px
+        overflow-x: scroll
+
+      &__pics-col
+        margin-left: 0
+        margin-right: 0
+        margin-bottom: 60px
+        display: block
+        figure
+          img
+            width: 100%
+
+      &__pic-row
+        display: block
+        margin: 30px 0
+        &__image
+          margin-left: -35px
+          margin-right: -35px
+          img
+            width: 100%
+
+        &__content
+          padding-left: 0px
+          margin: 0
+          padding: 20px 0 10px 0
+
 
 
 // SLIDER THUMBS
@@ -180,6 +254,25 @@
     &:hover, &.active
       border-color: $colorPrimary
 
+@media($mobile-s)
+  .slider-thumbs
+    width: auto
+    &__slider
+      display: flex
+      overflow-x: scroll
+    &__slide
+      flex: 0 0 auto
+      display: flex
+      flex-direction: column
+      margin-right: 10px
+      img
+        flex: 1 1 auto
+        max-width: 240px
+      &:first-child
+        padding-left: 40px
+
+    &__thumbs
+      display: none
 
 // COMMENTS
 .comments
@@ -188,16 +281,28 @@
   margin-top: 70px
   margin-right: -15%
   &__head
-    margin-top: 25px
     margin-bottom: 10px
     display: flex
     flex-wrap: wrap
     align-items: center
     justify-content: space-between
+    .t-head
+      margin-top: 25px
+      margin-right: 20px
+    .btn
+      margin-top: 25px
+      padding-top: 12px
+      padding-bottom: 12px
+
 
 @media($tablet)
   .comments
     margin-right: 0
+
+@media($mobile)
+  .comments
+    &__head
+      margin-bottom: 25px
 
 .comment
   display: flex
@@ -258,6 +363,30 @@
     .comment__author
       margin-bottom: 4px
 
+@media($tablet)
+  .comment
+    padding: 35px 0
+    &__content
+      padding-left: 40px
+    &__text
+      &::before
+        left: -20px
+
+@media($mobile)
+  .comment
+    padding: 20px 0
+
+@media($mobile-s)
+  .comment
+    padding: 10px 0
+    flex-direction: column
+
+    &__content
+      flex: 0 0 auto
+      padding-left: 0
+    &__author
+      margin-top: 15px
+      margin-bottom: 5px
 
 // COMMUNITY
 .community

@@ -135,7 +135,8 @@ $(document).ready(function () {
   });
 
   // THUMBS SLIDER
-  $('.slider-thumbs__slider').slick({
+  var _thumbsSlick = $('.slider-thumbs__slider');
+  var _thumbsSlickOptions = {
     autoplay: false,
     dots: false,
     arrows: false,
@@ -144,7 +145,24 @@ $(document).ready(function () {
     slidesToShow: 1,
     cssEase: 'linear',
     adaptiveHeight: true,
-    fade: true
+    fade: true,
+    responsive: [{
+      breakpoint: 414,
+      settings: "unslick"
+    }]
+  };
+  _thumbsSlick.slick(_thumbsSlickOptions);
+
+  _window.resized(100, function (e) {
+    if (_window.width() < 414) {
+      if (_thumbsSlick.hasClass('slick-initialized')) {
+        _thumbsSlick.slick('unslick');
+      }
+      return;
+    }
+    if (!_thumbsSlick.hasClass('slick-initialized')) {
+      return _thumbsSlick.slick(_thumbsSlickOptions);
+    }
   });
 
   // thumbs
