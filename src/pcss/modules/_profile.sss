@@ -120,6 +120,9 @@
         font-size: 16px
         padding-left: 15px
         padding: 15px
+    &__progressbar
+      margin: 12px 35px
+
 
 @media($mobile)
   .profile-heading
@@ -128,6 +131,14 @@
       margin-top: 40px
     &--warning
       margin-bottom: 80px
+    &--progress
+      padding-top: 20px
+      .profile-heading__back
+        top: -30px
+      .heading-mega
+        padding-left: 0
+        padding-right: 0
+
     .heading-mega
       font-size: 30px
       letter-spacing: 5px
@@ -139,12 +150,25 @@
     &__sub
       .simple-link
         margin: 10px 0
+    &__progressbar
+      margin: 15px 10px 10px 10px
+      &__status
+        font-size: 16px
+
+
 
 @media($mobile-s)
   .profile-heading
     margin-top: 80px
     &--smaller
       margin-top: 40px
+    &--progress
+      .heading-mega
+        font-size: 18px
+    &__progressbar
+      &__status
+        font-size: 14px
+
 
 
 .profile-courses

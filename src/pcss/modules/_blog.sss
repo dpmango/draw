@@ -746,6 +746,12 @@
     padding-top: 10px
     margin-bottom: -25px
 
+@media($mobile)
+  .courses
+    &__bonus-head
+      img
+        max-width: 95px
+
 .course
   position: relative
   margin-top: 35px
@@ -772,27 +778,34 @@
       transform: translateX(-50%)
   &__video
     position: relative
-    max-width: 410px
+    max-width: 490px
     margin-left: auto
     margin-right: auto
+    padding: 0 40px
     .video__content
-      padding-top: 0
-      padding-bottom: 20px
+      padding: 0 0 20px 0
       &::after
         background-size: contain
         bottom: -10px
-    .icon-circle
-      transform: translate(-50%,-50%) scale(.5)
+        left: 0
+        right: 0
     .video__player
       position: relative
       z-index: 5
       border-radius: 6px
       overflow: hidden
+      .icon-circle
+        size: 50px
+        .icon-play
+          font-size: 16px
+        &:hover
+          .icon-play
+            font-size: 20px
       &::after
         background: color($fontColor a(40%))
     &__status
       position: absolute
-      right: -120px
+      right: -85px
       top: 0
       font-size: 12px
       font-family: 'Core65'
@@ -801,6 +814,17 @@
       background: #E5E5E5
       border-radius: 5px
       padding: 3px 10px
+    &__reply
+      position: absolute
+      right: -125px
+      top: 40px
+      .icon
+        margin-right: 10px
+      span
+        font-size: 12px
+        font-family: 'Core65'
+        letter-spacing: -.19px
+        text-transform: uppercase
 
   &__name
     font-family: 'Core65'
@@ -809,7 +833,7 @@
     line-height: 1.25
     text-align: center
   &__status
-    font-style: 20px
+    font-size: 20px
     font-family: 'Core65'
     letter-spacing: -.31px
     margin-top: 10px
@@ -821,3 +845,55 @@
       color: #FF9000
     &--disabled
       color: #D7D7D7
+
+
+@media($tablet)
+  .course
+    &__video
+      text-align: center
+      &__status
+        margin-top: 10px
+        display: inline-block
+        position: static
+      &__reply
+        display: inline-block
+        position: static
+        .icon
+          display: none
+        span
+          background: #FF9306
+          border-radius: 5px
+          padding: 3px 10px
+          color: white
+          margin-left: 15px
+    &__name
+      margin-top: 25px
+
+@media($mobile)
+  .course
+    &__name
+      position: relative
+      z-index: 1
+      font-size: 30px
+      padding: 0 20px
+    &__status
+      font-size: 16px
+    &--bonus
+      &::after
+        width: 560px
+        height: 220px
+
+
+@media($mobile-s)
+  .course
+    &__status
+      font-size: 14px
+    &__name
+      margin-top: 15px
+    &__video
+      .video__content
+        &::after
+          bottom: 0
+    &--bonus
+      &::after
+        top: -5%
