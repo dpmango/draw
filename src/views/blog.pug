@@ -50,28 +50,33 @@ doctype html
                       
                 
                 // BLOG
-                // card
-                a(href='#').blog-card.blog-card--huge.wow.transformUp(data-wow-delay='0.2s')
-                  .blog-card__image
-                    img(src='images/blog/blogCard_1.jpg' srcset='images/blog/blogCard_1@2x.jpg 2x')
-                  .blog-card__content
-                    .blog-card__name Как научиться рисовать живопись
-                    .blog-card__date 22.01.2017, 18:01
-                // card
-                a(href='#').blog-card.blog-card--huge.wow.transformUp(data-wow-delay='0.4s')
-                  .blog-card__image
-                    img(src='images/blog/blogCard_2.jpg' srcset='images/blog/blogCard_2@2x.jpg 2x')
-                  .blog-card__content
-                    .blog-card__name Что такое пейзаж
-                    .blog-card__date 22.01.2017, 18:01
-                // card
-                a(href='#').blog-card.blog-card--huge.wow.transformUp(data-wow-delay='0.2s')
-                  .blog-card__image
-                    img(src='images/blog/blogCard_1.jpg' srcset='images/blog/blogCard_1@2x.jpg 2x')
-                  .blog-card__content
-                    .blog-card__name Как научиться рисовать живопись
-                    .blog-card__date 22.01.2017, 18:01
-                        
+                .js-ajaxBlogContainer(data-offset='3')
+                  // card
+                  a(href='#').blog-card.blog-card--huge.wow.transformUp(data-wow-delay='0.2s' data-id='1')
+                    .blog-card__image
+                      img(src='images/blog/blogCard_1.jpg' srcset='images/blog/blogCard_1@2x.jpg 2x')
+                    .blog-card__content
+                      .blog-card__name Как научиться рисовать живопись
+                      .blog-card__date 22.01.2017, 18:01
+                  // card
+                  a(href='#').blog-card.blog-card--huge.wow.transformUp(data-wow-delay='0.4s' data-id='2')
+                    .blog-card__image
+                      img(src='images/blog/blogCard_2.jpg' srcset='images/blog/blogCard_2@2x.jpg 2x')
+                    .blog-card__content
+                      .blog-card__name Что такое пейзаж
+                      .blog-card__date 22.01.2017, 18:01
+                  // card
+                  a(href='#').blog-card.blog-card--huge.wow.transformUp(data-wow-delay='0.2s' data-id='3')
+                    .blog-card__image
+                      img(src='images/blog/blogCard_1.jpg' srcset='images/blog/blogCard_1@2x.jpg 2x')
+                    .blog-card__content
+                      .blog-card__name Как научиться рисовать живопись
+                      .blog-card__date 22.01.2017, 18:01
+                  
+                //- div(style='margin-top: 50px; text-align: center;')
+                //-   a(href='#' data-offset='2').btn.btn--primary.js-loadBlogPosts
+                //-     span Подгрузить
+                //-           
               
               // SIDEBAR
               .blog__sidebar

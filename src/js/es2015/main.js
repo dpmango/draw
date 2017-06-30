@@ -489,6 +489,61 @@ $(document).ready(function(){
   	});
   }
 
+
+  ////////////
+  // AJAX LOADING
+  ///////////
+
+  // $('.js-loadBlogPosts').on('click', function(){
+  //   var offset = $(this).data('offset');
+  //   loadBlogPosts(offset);
+  // });
+
+  // load posts on scroll
+  _window.scrolled(25, function(){
+    if ( $('.blog') ){
+      var lastCard = $('.blog-card:last-child')
+      var lastChildTop = lastCard.offset().top + lastCard.height();
+      var windowPos = _window.scrollTop() + _window.height();
+      var loadingOffset = 200;
+      var loadingPostion = lastChildTop - loadingOffset;
+
+      if ( windowPos > loadingPostion ){
+        loadBlogPosts( $('.js-ajaxBlogContainer').data('offset') );
+      }
+
+    }
+  });
+
+  function loadBlogPosts(offset){
+    // get the last blog card id
+    var lastPost = $('.blog-card:last-child').data('id');
+    $.ajax({
+      url: 'blog-ajax.html',
+      type: 'get',
+      data: {
+        startFrom: lastPost,
+        offset: offset
+      },
+      success : function (data) {
+        // this should return actual html to be appended
+        // dummy function to emulate offset - remove for production
+        var appendedData = [];
+        $(data).each(function(i, val){
+          var objectId = $(val).data('id');
+          if ( objectId && objectId > lastPost && objectId <= lastPost + offset ){
+            appendedData.push($(val));
+          }
+        });
+
+        // append just data object in production
+        $(".js-ajaxBlogContainer").append(appendedData);
+      }
+    });
+
+  };
+
+
 });
 
 
