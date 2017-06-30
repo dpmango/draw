@@ -27,29 +27,38 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-.icon-creatives:before {
+.icon-comment-arrow:before {
     content: "\EA01";
 }
-.icon-ico-comment:before {
+.icon-creatives:before {
     content: "\EA02";
 }
-.icon-ico-done:before {
+.icon-ico-comment:before {
     content: "\EA03";
 }
-.icon-ico-draw:before {
+.icon-ico-discount:before {
     content: "\EA04";
 }
-.icon-ico-message:before {
+.icon-ico-done:before {
     content: "\EA05";
 }
-.icon-ico-more:before {
+.icon-ico-draw:before {
     content: "\EA06";
 }
-.icon-play:before {
+.icon-ico-message:before {
     content: "\EA07";
 }
-.icon-warn:before {
+.icon-ico-more:before {
     content: "\EA08";
+}
+.icon-play:before {
+    content: "\EA09";
+}
+.icon-select:before {
+    content: "\EA0A";
+}
+.icon-warn:before {
+    content: "\EA0B";
 }
 /* ICONS */
 .icon {
@@ -99,6 +108,36 @@
     width: 36px;
     height: 63px;
     background-image: url('../images/el/slide-next@2x.png');
+}
+.icon-select {
+    width: 10px;
+    height: 10px;
+    background-image: url('../images/el/select.png');
+}
+.icon-select:before {
+    display: none;
+}
+.icon-like {
+    width: 28px;
+    height: 23px;
+    background-image: url('../images/el/like@2x.png');
+}
+.icon-facebook {
+    width: 40px;
+    height: 40px;
+    background-image: url('../images/el/facebook@2x.png');
+}
+.icon-vk {
+    margin-right: 5px;
+    margin-left: 3px;
+    width: 40px;
+    height: 40px;
+    background-image: url('../images/el/vk@2x.png');
+}
+.icon-insta {
+    width: 43px;
+    height: 40px;
+    background-image: url('../images/el/instagram@2x.png');
 }
 @media(max-width: 768px) {
     .icon {}
@@ -1252,7 +1291,7 @@ html.mfp-helper body {
             transform: scale(0.8);
 }
 .popup-buble.mfp-bg {
-    background: #4ab68f;
+    background: $colorGreen;
     opacity: 0;
     -webkit-transition: opacity 0.3s ease-in-out;
     transition: opacity 0.3s ease-in-out;
