@@ -487,7 +487,7 @@ $(document).ready(function () {
 
   // load posts on scroll
   _window.scrolled(25, function () {
-    if ($('.blog')) {
+    if ($('.blog').length > 0) {
       var lastCard = $('.blog-card:last-child');
       var lastChildTop = lastCard.offset().top + lastCard.height();
       var windowPos = _window.scrollTop() + _window.height();
