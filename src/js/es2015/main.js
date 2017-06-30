@@ -515,31 +515,40 @@ $(document).ready(function(){
     }
   });
 
+  var stopBlogPostAjaxBinding = false;
+
   function loadBlogPosts(offset){
     // get the last blog card id
     var lastPost = $('.blog-card:last-child').data('id');
-    $.ajax({
-      url: 'blog-ajax.html',
-      type: 'get',
-      data: {
-        startFrom: lastPost,
-        offset: offset
-      },
-      success : function (data) {
-        // this should return actual html to be appended
-        // dummy function to emulate offset - remove for production
-        var appendedData = [];
-        $(data).each(function(i, val){
-          var objectId = $(val).data('id');
-          if ( objectId && objectId > lastPost && objectId <= lastPost + offset ){
-            appendedData.push($(val));
+    if ( !stopBlogPostAjaxBinding ){
+      $.ajax({
+        url: 'blog-ajax.html',
+        type: 'get',
+        data: {
+          startFrom: lastPost,
+          offset: offset
+        },
+        success : function (data) {
+          // this should return actual html to be appended
+          // dummy function to emulate offset - remove for production
+          var appendedData = [];
+          var lastAjaxPost = $(data).last().data('id');
+          if (lastPost >= lastAjaxPost - offset ){
+            stopBlogPostAjaxBinding = true;
           }
-        });
 
-        // append just data object in production
-        $(".js-ajaxBlogContainer").append(appendedData);
-      }
-    });
+          $(data).each(function(i, val){
+            var objectId = $(val).data('id');
+            if ( objectId && objectId > lastPost && objectId <= lastPost + offset ){
+              appendedData.push($(val));
+            }
+          });
+
+          // append just data object in production
+          $(".js-ajaxBlogContainer").append(appendedData);
+        }
+      });
+    }
 
   };
 
