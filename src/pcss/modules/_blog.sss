@@ -174,15 +174,16 @@
           flex: 0 1 60%
           padding-left: 25px
 
-
-
 @media($mobile-s)
   .blog
+    &--inner
+      .profile-heading--smaller
+        margin-top: 20px
     .blog-card--huge
       margin-left: -35px
       margin-right: -35px
     .profile-heading--smaller
-      margin-top: 60px
+      margin-top: 40px
     &__content
       figure
         margin: 25px -35px 30px -35px
@@ -219,7 +220,12 @@
           margin: 0
           padding: 20px 0 10px 0
 
-
+@media(width <= 375px)
+  .blog
+    &--inner
+      padding-top: 50px
+      .profile-heading__back
+        top: 25px
 
 // SLIDER THUMBS
 .slider-thumbs
@@ -293,7 +299,6 @@
       margin-top: 25px
       padding-top: 12px
       padding-bottom: 12px
-
 
 @media($tablet)
   .comments
@@ -391,11 +396,11 @@
 // COMMUNITY
 .community
   max-width: 1020px
+  padding-left: 20px
   margin-left: auto
   &--no-sidebar
     margin-right: auto
     max-width: 890px
-
   &__head
     margin-top: 30px
     display: flex
@@ -408,7 +413,6 @@
       flex: 0 1 auto
       display: flex
       margin-right: 50px
-
     &__filters
       flex: 1 1 auto
       margin-left: auto
@@ -421,10 +425,42 @@
         &:last-child
           margin-right: 0
           flex-grow: 5
-
   &__content
-    max-width: 890px
+    max-width: 910px
+    padding-right: 20px
     margin-top: 25px
+
+@media($desktop)
+  .community
+    &__head
+      flex-direction: column
+      align-items: flex-start
+      &__filters
+        margin-top: 25px
+        margin-left: 0
+        flex: 0 0 auto
+        .ui-select
+          margin-bottom: 20px
+    &__content
+      margin-top: 0
+      width: 100%
+
+@media($mobile)
+  .community
+    &__head
+      display: block
+      &__name
+        display: block
+        margin-right: 0
+      &__sortable
+        display: inline-block
+        margin-left: 0
+        margin-top: 10px
+      &__filters
+        flex: 0 0 auto
+
+
+
 
 // PROJECTS
 .projects-list
@@ -439,6 +475,35 @@
       .project__image
         &:hover
           transform: translate3d(20px,0px,0)
+
+@media($desktop)
+  .projects-list
+    margin-left: -20px
+    margin-right: -20px
+
+@media($tablet)
+  .projects-list
+    margin: 20px -15px 70px -15px
+    .project
+      &:nth-child(even)
+        transform: translate3d(0,40px,0)
+        .project__image
+          &:hover
+            transform: translate3d(15px,0px,0)
+
+@media($mobile)
+  .projects-list
+    margin-bottom: 20px
+    display: block
+    margin-left: 0
+    margin-right: 0
+    .project
+      &:nth-child(even)
+        transform: translate3d(0,0px,0)
+        .project__image
+          &:hover
+            transform: translate3d(0px,0px,0)
+
 
 // SINGLE PROJECT
 .project
@@ -474,7 +539,6 @@
       transform: translate3d(-20px,0px,0)
       &::after
         transform: translate3d(30px,25px,0)
-
   &__bottom
     margin-top: 10px
     display: flex
@@ -492,6 +556,42 @@
     &:hover
       .icon
         opacity: .7
+
+@media($desktop)
+  .project
+    padding: 40px 20px
+
+@media($tablet)
+  .project
+    padding: 20px 15px
+    &__image
+      &:hover
+        transform: translate3d(-15px,0px,0)
+        &::after
+          transform: translate3d(20px,15px,0)
+
+@media($mobile)
+  .project
+    padding: 20px 0
+
+@media($mobile-s)
+  .project
+    padding: 15px 0
+    margin-left: -35px
+    margin-right: -35px
+    &__image
+      border-radius: 0
+      &::after
+        display: none
+      &:hover
+        transform: translate3d(0px,0px,0)
+    &__bottom
+      margin-top: 15px
+      padding-left: 35px
+      padding-right: 35px
+      font-size: 13px
+
+
 
 // PROJECT DETAILS
 .project-details
