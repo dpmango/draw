@@ -14,8 +14,11 @@
       padding-right: 40px
   &__sub
     display: flex
+    flex-wrap: wrap
     align-items: baseline
     margin-bottom: 10px
+    .simple-link
+      transform: translate3d(0,-3px,0)
     .t-head
       margin-right: 8px
   &__crumb
@@ -133,6 +136,9 @@
       padding-top: 120px
       &__text
         font-size: 13px
+    &__sub
+      .simple-link
+        margin: 10px 0
 
 @media($mobile-s)
   .profile-heading

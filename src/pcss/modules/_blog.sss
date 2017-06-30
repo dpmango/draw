@@ -380,11 +380,17 @@
 @media($mobile)
   .comment
     padding: 20px 0
+    &__text
+      font-size: 13px
+    &--reply
+      padding-top: 25px
 
 @media($mobile-s)
   .comment
     padding: 10px 0
     flex-direction: column
+    &--reply
+      padding-top: 25px
 
     &__content
       flex: 0 0 auto
@@ -392,6 +398,9 @@
     &__author
       margin-top: 15px
       margin-bottom: 5px
+    &__text
+      font-size: 12px
+
 
 // COMMUNITY
 .community
@@ -597,11 +606,12 @@
 .project-details
   margin-left: auto
   max-width: 960px
-  &__wrapper
+  &__head
     display: flex
-    justify-content: space-between
+    &__left
+      flex: 0 1 820px
+      max-width: 820px
   &__content
-    flex: 0 1 820px
     max-width: 820px
     .comments
       margin-right: 0
@@ -669,6 +679,62 @@
         transition: opcity $transitionSpeed $ease
         &:hover
           opacity: .7
+
+@media($tablet)
+  .project-details
+    padding-top: 20px
+    padding-left: 20px
+    padding-right: 20px
+    .profile-heading--smaller
+      margin-left: -20px
+    .profile-heading__back
+      left: 40px
+    &__image
+      &::after
+        bottom: -35px
+
+@media($mobile)
+  .project-details
+    padding-top: 40px
+    .profile-heading__back
+      top: 30px
+    .profile-heading--smaller
+      margin-right: -20px
+    &__head
+      display: block
+    &__like
+      margin-top: 30px
+      margin-bottom: 30px
+      span
+        display: none
+      &__counter
+        size: 50px 40px
+    &__sidebar
+      margin-top: -70px
+      display: flex
+      &__head
+        display: none
+      &__socials
+        margin-top: 0
+        margin-left: auto
+
+    &__image
+      margin-left: -40px
+      margin-right: -40px
+      border-radius: 0px
+      img
+        border-radius: 0
+      &::after
+        display: none
+
+
+@media($mobile-s)
+  .project-details
+    .profile-heading__back
+      left: 35px
+    &__image
+      margin-bottom: 20px
+
 
 // COURSES
 .courses
