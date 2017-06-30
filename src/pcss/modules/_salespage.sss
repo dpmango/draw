@@ -555,6 +555,9 @@
 @media($desktop)
   .course-cta
     margin-top: 80px
+    &--last-child
+      margin-bottom: 60px
+
     &__form
       margin-left: 0
     &__wrapper
@@ -598,6 +601,8 @@
 
 @media($mobile)
   .course-cta
+    &--last-child
+      margin-bottom: 30px
     &__wrapper
       padding-top: 30px
       &::before
@@ -615,6 +620,11 @@
         max-width: 400px
         margin-left: auto
         margin-right: auto
+
+@media($mobile-s)
+  .course-cta
+    &--last-child
+      margin-bottom: 10px
 
 
 // QUETIONS
@@ -759,11 +769,28 @@
     text-align: center
     font-size: 17px
     margin-bottom: 40px
+  .video__content
+    padding-left: 0
+    padding-right: 0
+    &::after
+      bottom: 20px
+      left: 0
+      right: 0
+  .video__player
+    .icon-circle
+      size: 50px
+      .icon-play
+        font-size: 16px
+      &:hover
+        .icon-play
+          font-size: 20px
+
   &__description
     margin-top: 10px
     max-width: 500px
     margin-left: auto
     margin-right: auto
+    padding: 0 25px
     text-align: center
     &__title
       font-family: 'Core65'
@@ -773,10 +800,52 @@
       font-size: 17px
       line-height: 1.8
       margin-top: 25px
-      margin-bottom: 5px
+      padding-bottom: 10px
+
+@media($tablet)
+  .course-scope
+    margin-bottom: 110px
+    &__title
+      margin-bottom: 30px
+
+
+@media($mobile)
+  .course-scope
+    margin-bottom: 90px
+    &__description
+      margin-top: 10px
+      &__title
+        text-transform: uppercase
+        letter-spacing: 3px
+        font-size: 22px
+      &__text
+        font-size: 15px
+
+@media($mobile-s)
+  .course-scope
+    &__title
+      font-size: 13px
+    &__description
+      &__title
+        font-size: 18px
+      &__text
+        font-size: 13px
+
 
 .course-separator
   margin: 80px auto
   max-width: 1130px
   height: 1px
   background: color($fontColor a(15%))
+
+@media($desktop)
+  .course-separator
+    margin: 60px auto
+
+@media($tablet)
+  .course-separator
+    background: none
+
+@media($mobile)
+  .course-separator
+    display: none
