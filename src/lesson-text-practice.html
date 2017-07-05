@@ -64,8 +64,11 @@
                 <p>Практика однозначно показывает, что перераспределение бюджета усиливает конструктивный традиционный канал. Рейтинг, в рамках сегодняшних воззрений, позиционирует охват аудитории. Фирменный стиль основательно подпорчен предыдущим опытом применения.</p>
               </div>
               <div class="upload__form">
-                <form class="dropzone" action="#">
-                  <input type="file">
+                <form class="dropzone" action="#" id="my-awesome-dropzone">
+                  <div class="fallback">
+                    <input name="file" type="file" multiple="">
+                  </div>
+                  <div class="dz-message"><img src="images/el/dropzone.png" srcset="images/el/dropzone@2x.png 2x"><span>Загрузите практическое задание</span></div>
                 </form>
                 <div class="ui-group">
                   <textarea class="ui-input" placeholder="Ваш комментарий к работе" rows="5"></textarea>

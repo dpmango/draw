@@ -476,7 +476,27 @@ $(document).ready(function(){
   // information on server side implementation
   // http://www.dropzonejs.com/#server-side-implementation
 
+  // Dropzone.autoDiscover = false;
 
+  Dropzone.options.myAwesomeDropzone = {
+    paramName: "file", // The name that will be used to transfer the file
+    maxFilesize: 2, // MB
+    accept: function(file, done) {
+      if (file.name == "justinbieber.jpg") {
+
+      } else {
+        done();
+      }
+    },
+    dictDefaultMessage: "Загрузите практическое задание",
+    dictFileTooBig: "Файл слишком большой ({{filesize}}MiB). Максимальный размер файла: {{maxFilesize}}MiB.",
+    dictInvalidFileType: "Запрещенный тип файла",
+    dictResponseError: "Ошибка сервера. Попробуйте еще раз",
+    dictCancelUpload: "Отменить загрузку",
+    dictCancelUploadConfirmation: "Действительно отментиь загрузку этого файла?",
+    dictRemoveFile: "Удалить файл?",
+    dictMaxFilesExceeded: "Лимит по количеству файлов привышен"
+  };
 
   // WOW INIT
   var wow = new WOW({
