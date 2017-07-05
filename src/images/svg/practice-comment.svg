@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45 (43475) - http://www.bohemiancoding.com/sketch -->
+    <title>practice-comment</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="cab" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="lesson-text-practice-pending" transform="translate(-1024.000000, -353.000000)">
+            <g id="Group-2" transform="translate(962.000000, 303.000000)">
+                <g id="Group-2-Copy" transform="translate(0.000000, 9.000000)">
+                    <g id="icn_practice/message" transform="translate(62.000000, 41.000000)">
+                        <circle id="Oval-4" fill="#FF9000" cx="10" cy="10" r="10"></circle>
+                        <path d="M5,7.00292933 C5,6.44902676 5.44653963,6 5.99805477,6 L14.0046024,6 C14.5543453,6 15,6.43788135 15,7.00292933 L15,11.9970707 C15,12.5509732 14.5445438,13 14.0012657,13 L10.0646865,13 L8.13044511,15.000533 L7.00201172,13 L6.00100586,13 C5.44816559,13 5,12.5621186 5,11.9970707 L5,7.00292933 Z M7,8.5 C7,8.76806641 7.21983051,9 7.49100518,9 L12.5089948,9 C12.7721195,9 13,8.77614237 13,8.5 C13,8.23193359 12.7801695,8 12.5089948,8 L7.49100518,8 C7.22788048,8 7,8.22385763 7,8.5 Z M7,10.5 C7,10.7680664 7.21983051,11 7.49100518,11 L12.5089948,11 C12.7721195,11 13,10.7761424 13,10.5 C13,10.2319336 12.7801695,10 12.5089948,10 L7.49100518,10 C7.22788048,10 7,10.2238576 7,10.5 Z" id="Combined-Shape" fill="#FFFFFF"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
