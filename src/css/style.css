@@ -811,6 +811,18 @@ button:focus {
         -ms-transform: box-shadow .25s ease-in-out;
             transform: box-shadow .25s ease-in-out;
 }
+.header--lesson {
+    background: transparent;
+}
+.header--lesson .header__user {
+    color: white;
+}
+.header--lesson .header__user__logout {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 40px;
+}
 .header__wrapper {
     display: -webkit-box;
     display: -webkit-flex;
@@ -6667,6 +6679,152 @@ button:focus {
     .course--bonus:after {
         top: -5%;
     }
+}
+/* LESSONS PAGES */
+.lesson {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+.lesson__content {
+    -webkit-flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    margin-right: 50px;
+    margin-left: auto;
+    max-width: 900px;
+    -webkit-box-flex: 1;
+}
+.lesson__sidebar {
+    position: relative;
+    -webkit-flex: 0 1 400px;
+        -ms-flex: 0 1 400px;
+            flex: 0 1 400px;
+    margin-top: -120px;
+    padding-top: 140px;
+    min-width: 400px;
+    background: url('../images/lessons/lessonsSidebarBg@2x.jpg') no-repeat center;
+    background-size: cover;
+    -webkit-box-flex: 0;
+}
+.lesson__sidebar__content {
+    min-height: 100vh;
+}
+.lesson__control {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    margin: 0;
+    margin-left: 20px;
+    padding: 0;
+    max-width: 232px;
+    list-style: none;
+    font-size: 0;
+}
+.lesson__control li {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex: 0 1 50px;
+        -ms-flex: 0 1 50px;
+            flex: 0 1 50px;
+    -webkit-align-items: center;
+            align-items: center;
+    -webkit-justify-content: center;
+            justify-content: center;
+    margin-right: 7px;
+    margin-bottom: 7px;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #FF7A00;
+    border-radius: 3px;
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 20px;
+    font-family: 'Core65';
+    cursor: pointer;
+    -webkit-box-flex: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+}
+.lesson__control li.disabled {
+    border-color: transparent;
+    background: rgba(255, 255, 255, 0.15);
+    pointer-events: none;
+}
+.lesson__control li.active {
+    border-color: transparent;
+    background: #9B00D2;
+    color: white;
+    pointer-events: none;
+}
+.lesson__roadmap {
+    margin-top: 50px;
+}
+.lesson__roadmap__item {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+            align-items: center;
+    padding: 15px;
+    min-height: 40px;
+    color: white;
+    letter-spacing: -.22px;
+    font-size: 14px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+}
+.lesson__roadmap__item--past {
+    color: rgba(255, 255, 255, 0.4);
+}
+.lesson__roadmap__item--active {
+    background: #9B00D2;
+}
+.lesson__roadmap__item__date {
+    -webkit-flex: 0 0 45px;
+        -ms-flex: 0 0 45px;
+            flex: 0 0 45px;
+    -webkit-box-flex: 0;
+}
+.lesson__roadmap__item__icon {
+    -webkit-flex: 0 0 30px;
+        -ms-flex: 0 0 30px;
+            flex: 0 0 30px;
+    -webkit-box-flex: 0;
+}
+.lesson__roadmap__item__name {
+    -webkit-flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+    -webkit-box-flex: 1;
+}
+.lesson__heading {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+            align-items: center;
+    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+}
+.lesson__heading .profile-heading__back {
+    position: static;
+}
+.lesson__heading .t-head {
+    margin-left: auto;
+    padding: 0 20px;
+    text-align: right;
 }
 
 /* UI KIT */
