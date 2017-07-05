@@ -3197,6 +3197,58 @@ button:focus {
     }
 }
 /* SOME INNER PAGES CONTENT */
+.thanks {
+    text-align: center;
+}
+.thanks__name {
+    position: relative;
+    overflow: visible;
+    margin-top: 40px;
+    padding-top: 100px;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-size: 60px;
+    font-family: 'Core65';
+}
+.thanks__name span {
+    position: relative;
+    z-index: 2;
+}
+.thanks__desc {
+    margin-top: 90px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 490px;
+    text-align: center;
+    font-size: 17px;
+    line-height: 1.8;
+}
+.thanks__image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+}
+.thanks__cta {
+    margin-top: 60px;
+    margin-bottom: 100px;
+    color: #9B00D2;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-size: 60px;
+    font-family: 'Core65';
+}
+.thanks__cta a {
+    display: inline-block;
+    border-bottom: 1px solid #9B00D2;
+    color: #9B00D2;
+}
+.thanks__cta a:hover {
+    border-color: transparent;
+}
 /* SALES PAGE */
 /* COURSE CARD */
 .course-card {
