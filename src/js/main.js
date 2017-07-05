@@ -355,6 +355,32 @@ $(document).ready(function () {
     }
   });
 
+  // toggler
+  $('.ui__toggler__box').on('click', function () {
+    var parentObj = $(this).parent();
+    if (parentObj.is('.right')) {
+      parentObj.removeClass('right').addClass('left');
+      parentObj.find('input').val('0');
+    } else if (parentObj.is('.left')) {
+      parentObj.removeClass('left').addClass('right');
+      parentObj.find('input').val('1');
+    }
+  });
+
+  // emulate click
+  $('.ui__toggler label').on('click', function () {
+    $(this).parent().find('.ui__toggler__box').click();
+  });
+
+  // toggler populate inputs
+  $('.ui__toggler').each(function (i, val) {
+    if ($(val).is('.left')) {
+      $(this).find('input').val('0');
+    } else if ($(val).is('.right')) {
+      $(this).find('input').val('1');
+    }
+  });
+
   // Masked input
   $(".js-dateMask").mask("99.99.9999", { placeholder: "__ __ ____" });
   $(".js-dateMask2").mask("99.99.99", { placeholder: "ДД.ММ.ГГ" });

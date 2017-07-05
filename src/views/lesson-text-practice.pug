@@ -17,11 +17,14 @@ doctype html
 
               .lesson__content__text
                 .t-head Практическое занятие:
+                .lesson__content__status.lesson__content__status--top
+                  span ожидает выполнения
+                  i.icon.icon-pending
                 
                 .blog__content__text
                   p Практика однозначно показывает, что перераспределение бюджета усиливает конструктивный традиционный канал. Рейтинг, в рамках сегодняшних воззрений, позиционирует охват аудитории. Фирменный стиль основательно подпорчен предыдущим опытом применения.
           
-                .upload__form
+                .upload-form
                   form(action='#').dropzone#my-awesome-dropzone
                     .fallback
                       input(name='file', type='file', multiple='')
@@ -31,6 +34,13 @@ doctype html
 
                   .ui-group
                     textarea(placeholder='Ваш комментарий к работе' rows='5').ui-input
+                  
+                  .ui-group
+                    .ui__toggler.left
+                      .ui__toggler__box
+                        input(type='hidden' value='')
+                      label Опубликовать в галерею
+                      
                   
                   .ui-form-helper Перед отправкой проверьте правильно ли вы заполнили поля выше
                   

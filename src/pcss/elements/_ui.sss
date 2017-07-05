@@ -286,3 +286,41 @@
         padding-right: 0
       &:hover
         color: $colorPrimary
+
+// TOGGLER
+.ui__toggler
+  display: flex
+  align-items: center
+  &.right
+    .ui__toggler__box
+      &::after
+        transform: translate3d(20px,0,0)
+  &.left
+    .ui__toggler__box
+      &::after
+        transform: translate3d(0,0,0)
+  label
+    font-size: 12px
+    margin-left: 10px
+    cursor: pointer
+
+  &__box
+    position: relative
+    size: 45px 20px
+    background: white
+    border-radius: 30px
+    background: #D8D8D8
+    cursor: pointer
+    &::after
+      box-sizing: border-box
+      display: block
+      content: ' '
+      position: absolute
+      top: 0px
+      left: 0px
+      size: 25px 20px
+      background: $colorPrimary
+      border: 5px solid white
+      border-radius: 50px
+      box-shadow: 0 2px 4px color($fontColor a(50%))
+      transition: all $transitionSpeed $ease

@@ -526,6 +526,59 @@ body, html {
 .ui-select--dash .ui-select__visible:hover {
     color: #9B00D2;
 }
+/* TOGGLER */
+.ui__toggler {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+            align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+}
+.ui__toggler label {
+    margin-left: 10px;
+    font-size: 12px;
+    cursor: pointer;
+}
+.ui__toggler.right .ui__toggler__box {}
+.ui__toggler.right .ui__toggler__box:after {
+    -webkit-transform: translate3d(20px,0,0);
+            transform: translate3d(20px,0,0);
+}
+.ui__toggler.left .ui__toggler__box {}
+.ui__toggler.left .ui__toggler__box:after {
+    -webkit-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+}
+.ui__toggler__box {
+    position: relative;
+    width: 45px;
+    height: 20px;
+    border-radius: 30px;
+    background: white;
+    background: #D8D8D8;
+    cursor: pointer;
+}
+.ui__toggler__box:after {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: block;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 25px;
+    height: 20px;
+    border: 5px solid white;
+    border-radius: 50px;
+    background: #9B00D2;
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    content: ' ';
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+}
 /* buttons */
 button {
     border: 0;
@@ -6787,6 +6840,10 @@ button:focus {
 .lesson__content__status .icon {
     margin-left: 7px;
 }
+.lesson__content__status--top {
+    margin-top: 5px;
+    color: #000000;
+}
 .lesson__sidebar {
     position: relative;
     -webkit-flex: 0 1 400px;
@@ -6927,7 +6984,9 @@ button:focus {
     text-align: right;
 }
 /* UPLOAD FORM */
-.upload-form {}
+.upload-form {
+    margin: 30px auto;
+}
 
 /* UI KIT */
 
