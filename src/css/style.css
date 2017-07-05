@@ -5908,6 +5908,13 @@ button:focus {
     letter-spacing: -.22px;
     font-size: 14px;
 }
+.comment--mute {
+    padding: 10px 0;
+    color: rgba(0, 0, 0, 0.35);
+}
+.comment--mute .comment__content {
+    padding-left: 0;
+}
 .comment--reply {
     display: block;
     margin-top: -10px;
@@ -6994,6 +7001,15 @@ button:focus {
 /* UPLOAD FORM */
 .upload-form {
     margin: 30px auto;
+}
+.upload-form__status {
+    text-transform: uppercase;
+    letter-spacing: -.19px;
+    font-size: 12px;
+    font-family: 'Core65';
+}
+.upload-form__status--soon {
+    color: #00CEA0;
 }
 
 /* UI KIT */
