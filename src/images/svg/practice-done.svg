@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45 (43475) - http://www.bohemiancoding.com/sketch -->
+    <title>practice-done</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="cab" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="lesson/practice" transform="translate(-1024.000000, -353.000000)">
+            <g id="Group-2" transform="translate(962.000000, 303.000000)">
+                <g id="Group-2-Copy" transform="translate(0.000000, 50.000000)">
+                    <g id="icn_practice/done" transform="translate(62.000000, 0.000000)">
+                        <circle id="Oval-4" stroke="#FFFFFF" opacity="0.35" cx="10" cy="10" r="9.5"></circle>
+                        <g id="Page-1" fill-rule="evenodd" transform="translate(3.000000, 3.000000)" stroke="#50E3C2">
+                            <polyline id="Path-2" stroke-width="3" points="0.881128042 7.13573961 6.02987207 11.3415338 15.9355762 2.37611099"></polyline>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

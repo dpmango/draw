@@ -145,6 +145,11 @@
     height: 40px;
     background-image: url('../images/el/instagram@2x.png');
 }
+.icon-pending {
+    width: 12px;
+    height: 20px;
+    background-image: url('../images/el/pending@2x.png');
+}
 @media(max-width: 768px) {
     .icon {}
     .icon-slide-prev {
@@ -197,6 +202,11 @@
     width: 20px;
     height: 20px;
     background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='UTF-8'?%3E %3Csvg width='20px' height='20px' viewBox='0 0 20 20' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E %3C!-- Generator: Sketch 45 (43475) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3Epractice%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs/%3E %3Cg id='cab' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E %3Cg id='lesson' transform='translate(-1024.000000, -515.000000)'%3E %3Cg id='Group-2' transform='translate(962.000000, 303.000000)'%3E %3Cg id='Group-2-Copy' transform='translate(0.000000, 81.000000)'%3E %3Cg id='icn_practice/0' transform='translate(62.000000, 131.000000)'%3E %3Ccircle id='Oval-4' stroke='%23FFFFFF' opacity='0.35' cx='10' cy='10' r='9.5'/%3E %3Cg id='Page-1' fill-rule='evenodd' transform='translate(3.000000, 3.000000)' fill='%23FFFFFF'%3E %3Cpath d='M9.38563478,6.37871429 C7.50911304,4.71942857 6.52824348,2.13978571 9.56824348,0.785142857 C12.3310261,-0.445571429 12.6962435,2.2305 15.8238957,0.357285714 C15.8238957,0.357285714 13.1765913,9.7305 9.38563478,6.37871429 Z M10.1678957,7.82385714 C10.1678957,7.82385714 9.6725913,8.97457143 8.77346087,10.0031429 C8.77346087,10.0031429 7.69172174,9.296 6.77937391,8.386 C5.86702609,7.476 5.03293913,6.16242857 5.03293913,6.16242857 C5.76302609,5.52242857 6.59676522,4.90671429 7.17450435,4.68242857 C7.17450435,4.68242857 7.56128696,5.70957143 8.55189565,6.67314286 C9.4538087,7.55064286 10.1678957,7.82385714 10.1678957,7.82385714 Z M0.602017391,14.5234286 C-1.2818087,12.7573571 1.60966957,9.31485714 4.3901913,6.7445 C4.3901913,6.7445 4.95506087,7.79735714 6.08758261,8.85485714 C7.22010435,9.91271429 8.2128,10.5398571 8.2128,10.5398571 C5.35332174,13.4498571 2.20097391,16.022 0.602017391,14.5234286 Z' id='Combined-Shape'/%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E");
+}
+.ico-practice-done {
+    width: 20px;
+    height: 20px;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='UTF-8'?%3E %3Csvg width='20px' height='20px' viewBox='0 0 20 20' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E %3C!-- Generator: Sketch 45 (43475) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3Epractice-done%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs/%3E %3Cg id='cab' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E %3Cg id='lesson/practice' transform='translate(-1024.000000, -353.000000)'%3E %3Cg id='Group-2' transform='translate(962.000000, 303.000000)'%3E %3Cg id='Group-2-Copy' transform='translate(0.000000, 50.000000)'%3E %3Cg id='icn_practice/done' transform='translate(62.000000, 0.000000)'%3E %3Ccircle id='Oval-4' stroke='%23FFFFFF' opacity='0.35' cx='10' cy='10' r='9.5'/%3E %3Cg id='Page-1' fill-rule='evenodd' transform='translate(3.000000, 3.000000)' stroke='%2350E3C2'%3E %3Cpolyline id='Path-2' stroke-width='3' points='0.881128042 7.13573961 6.02987207 11.3415338 15.9355762 2.37611099'/%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E");
 }
 .hamburger {
     display: inline-block;
