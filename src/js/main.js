@@ -459,6 +459,11 @@ $(document).ready(function () {
     }
   })();
 
+  // DROPZONE
+  // information on server side implementation
+  // http://www.dropzonejs.com/#server-side-implementation
+
+
   // WOW INIT
   var wow = new WOW({
     boxClass: 'wow',

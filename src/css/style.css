@@ -203,6 +203,13 @@ body, html {
         margin-bottom: 10px;
     }
 }
+.ui-form-helper {
+    margin: 10px 0;
+    color: #A1A1A1;
+    letter-spacing: -.22px;
+    font-size: 12px;
+    line-height: 1.7;
+}
 /* THIS IS REGULAR CLASS MODIFIER FOR THE INPUT IT */
 .ui-input {
     display: block;
@@ -6919,6 +6926,8 @@ button:focus {
     padding: 0 20px;
     text-align: right;
 }
+/* UPLOAD FORM */
+.upload-form {}
 
 /* UI KIT */
 
