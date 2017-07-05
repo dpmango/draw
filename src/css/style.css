@@ -652,6 +652,14 @@ button:focus {
 .btn--primary.btn--outline:hover {
     color: white;
 }
+.btn--primary.btn--outline.disabled {
+    border-color: #CDCDCD;
+    background: transparent;
+    color: #CDCDCD;
+}
+.btn--primary.btn--outline.disabled:hover {
+    color: #CDCDCD;
+}
 .btn--blue {
     background: #1264FE;
 }
