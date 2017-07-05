@@ -5371,6 +5371,7 @@ button:focus {
 }
 .blog__content h2 {
     margin: 1em 0;
+    text-transform: uppercase;
     letter-spacing: -.31px;
     font-size: 20px;
     font-family: 'Core65';
@@ -5457,6 +5458,7 @@ button:focus {
     -webkit-flex: 0 0 230px;
         -ms-flex: 0 0 230px;
             flex: 0 0 230px;
+    text-align: center;
     -webkit-box-flex: 0;
 }
 .blog__content__pic-row__image img {
@@ -6697,7 +6699,6 @@ button:focus {
     -webkit-box-flex: 1;
 }
 .lesson__content__text {
-    margin-top: -90px;
     margin-left: auto;
     max-width: 610px;
 }
@@ -6706,6 +6707,59 @@ button:focus {
     font-size: 14px;
     font-family: 'Roboto';
     line-height: 1.55;
+}
+.lesson__content__text h2 {
+    margin: 1.5em 0 1em 0;
+    text-transform: uppercase;
+    letter-spacing: -.31px;
+    font-size: 20px;
+    font-family: 'Core65';
+}
+.lesson__content__text figure img {
+    max-width: 100%;
+}
+.lesson__content__text figure figcaption {
+    margin-top: 5px;
+    color: #A1A1A1;
+    letter-spacing: -.19px;
+    font-size: 12px;
+    line-height: 2;
+}
+.lesson__content__text--after-video {
+    margin-top: -90px;
+}
+.lesson__content__inv {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.lesson__content__inv__item {
+    -webkit-flex: 0 1 33.3%;
+        -ms-flex: 0 1 33.3%;
+            flex: 0 1 33.3%;
+    padding: 0px 15px 15px 15px;
+    -webkit-box-flex: 0;
+}
+.lesson__content__inv__item span {
+    display: block;
+    margin-top: 14px;
+    text-decoration: underline;
+    letter-spacing: -.22px;
+    font-size: 14px;
+    line-height: 1.2;
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+}
+.lesson__content__inv__item:hover span {
+    color: #9B00D2;
+    text-decoration: none;
+}
+.lesson__content__section {
+    margin-top: 80px;
+    margin-bottom: 80px;
 }
 .lesson__content__status {
     display: -webkit-box;
@@ -6737,6 +6791,10 @@ button:focus {
     background: url('../images/lessons/lessonsSidebarBg@2x.jpg') no-repeat center;
     background-size: cover;
     -webkit-box-flex: 0;
+}
+.lesson__sidebar--dark {
+    background: url('../images/lessons/lessonsSidebarBgDark@2x.jpg') no-repeat center;
+    background-size: cover;
 }
 .lesson__sidebar__content {
     min-height: 100vh;

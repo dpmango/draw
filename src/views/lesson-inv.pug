@@ -14,34 +14,39 @@ doctype html
           // LESSON CONTENT
           .lesson__content
             .container
-              .lesson__heading
-                a(href='#').profile-heading__back
-                  img(src='images/el/backIco.png' srcset='images/el/backIco@2x.png 2x')
-                  span назад
 
-                // PROFILE HEADING::START
-                .t-head Учимся рисовать гранаты (натюрморт)
-              
-              // VIDEO :: START
-              .video__content
-                .video__player.video__player--dark
-                  i.icon.icon-circle
-                    i.icon.icon-play
-                  img(src='images/tmp/video.jpg' srcset='images/tmp/video@2x.jpg 2x')
-                  // place iframe with ?autoplay=0 param, don't forget about 100% width and height
-                  iframe(src='https://player.vimeo.com/video/72874423?autoplay=0', width='100%', height='100%', frameborder='0', webkitallowfullscreen='', mozallowfullscreen='', allowfullscreen='')
-              
-              .lesson__content__text.lesson__content__text--after-video
-                h2 Практическое занятие:
-                .lesson__content__status
-                  span ожидает выполнения
-                  i.icon.icon-pending
-                    
-                .blog__content__text
-                  p Практика однозначно показывает, что перераспределение бюджета усиливает конструктивный традиционный канал. Рейтинг, в рамках сегодняшних воззрений, позиционирует охват аудитории. Фирменный стиль основательно подпорчен предыдущим
+              .lesson__content__text
+                .t-head Инвентарь
+                
+                h2.ttu Вот что понадобится на уроке
+                
+                .blog__content__pic-row
+                  .blog__content__pic-row__image
+                    img(src='images/blog/blogContentRow_3.jpg' srcset='images/blog/blogContentRow_3@2x.jpg 2x')
+                  .blog__content__pic-row__content
+                    p В соответствии с законом Ципфа, искусство медиапланирования последовательно транслирует целевой сегмент рынка. CTR, конечно, абстрактен. Сегмент рынка ригиден.
+                .blog__content__pic-row
+                  .blog__content__pic-row__image
+                    img(src='images/lessons/kraskiText.png' srcset='images/lessons/kraskiText@2x.png 2x')
+                  .blog__content__pic-row__content
+                    p В соответствии с законом Ципфа, искусство медиапланирования последовательно транслирует целевой сегмент рынка. CTR, конечно, абстрактен. Сегмент рынка ригиден.
+                
+                h2.ttu Скачать файлы
+                
+                .lesson__content__inv
+                  a(href='#').lesson__content__inv__item
+                    img(src='images/el/pdf.jpg' srctset='images/el/pdf@2x.jpg 2x')
+                    span Руководство как пользоваться кистью
+                  a(href='#').lesson__content__inv__item
+                    img(src='images/el/jpg.jpg' srctset='images/el/jpg@2x.jpg 2x')
+                    span Изображение
+                  a(href='#').lesson__content__inv__item
+                    img(src='images/el/zip.jpg' srctset='images/el/zip@2x.jpg 2x')
+                    span Архив скетчей для рисования
+                  
               
           // SIDEBAR
-          .lesson__sidebar
+          .lesson__sidebar.lesson__sidebar--dark
             .lesson__sidebar__content
               ul.lesson__control
                 li(data-something='').disabled 1
