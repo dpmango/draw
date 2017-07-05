@@ -6773,6 +6773,9 @@ button:focus {
     max-width: 900px;
     -webkit-box-flex: 1;
 }
+.lesson__content .comment--reply {
+    margin-top: 30px;
+}
 .lesson__content__text {
     margin-left: auto;
     max-width: 610px;
@@ -6835,6 +6838,11 @@ button:focus {
 .lesson__content__section {
     margin-top: 80px;
     margin-bottom: 80px;
+}
+.lesson__content__hr {
+    margin: 30px 0;
+    height: 1px;
+    background: #000000;
 }
 .lesson__content__status {
     display: -webkit-box;
@@ -7001,6 +7009,9 @@ button:focus {
 /* UPLOAD FORM */
 .upload-form {
     margin: 30px auto;
+}
+.upload-form--disabled {
+    pointer-events: none;
 }
 .upload-form__status {
     text-transform: uppercase;

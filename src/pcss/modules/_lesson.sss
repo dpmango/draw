@@ -56,6 +56,12 @@
       margin-top: 80px
       margin-bottom: 80px
 
+
+    &__hr
+      background: $fontColor
+      height: 1px
+      margin: 30px 0
+
     &__status
       display: flex
       align-items: center
@@ -70,6 +76,9 @@
       &--top
         color: $fontColor
         margin-top: 5px
+
+    .comment--reply
+      margin-top: 30px
 
   &__sidebar
     position: relative
@@ -157,11 +166,13 @@
 // UPLOAD FORM
 .upload-form
   margin: 30px auto
+  &--disabled
+    pointer-events: none
   &__status
     font-family: 'Core65'
     font-size: 12px
     text-transform: uppercase
     letter-spacing: -.19px
-    
+
     &--soon
       color: #00CEA0
