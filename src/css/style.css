@@ -3243,11 +3243,60 @@ button:focus {
 }
 .thanks__cta a {
     display: inline-block;
-    border-bottom: 1px solid #9B00D2;
     color: #9B00D2;
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
 }
-.thanks__cta a:hover {
+.thanks__cta a span {
+    border-bottom: 1px solid #9B00D2;
+    line-height: 1;
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+}
+.thanks__cta a:hover span {
     border-color: transparent;
+}
+/* TESTIMONIALS */
+.reviews {
+    margin-top: 40px;
+    margin-left: auto;
+    max-width: 1020px;
+}
+.reviews__head {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+            align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+}
+.reviews__head__filter {
+    -webkit-flex: 0 0 260px;
+        -ms-flex: 0 0 260px;
+            flex: 0 0 260px;
+    margin-left: auto;
+    -webkit-box-flex: 0;
+}
+.reviews__content {
+    max-width: 680px;
+}
+.review-card {
+    margin-top: 50px;
+}
+.review-card__text p {
+    font-size: 17px;
+    line-height: 1.4;
+}
+.review-card:after {
+    display: inline-block;
+    margin-top: 55px;
+    width: 100px;
+    height: 5px;
+    background: url('../images/el/sep-line@2x.png') no-repeat center;
+    background-size: cover;
+    content: ' ';
 }
 /* SALES PAGE */
 /* COURSE CARD */

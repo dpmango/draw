@@ -1,0 +1,71 @@
+doctype html
+<!--[if IE 8]>         <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9 oldie"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class=""> <!--<![endif]-->
+  include shared/head.pug
+
+  body
+    include shared/header.pug
+    
+    .page
+      .page__content
+        .container
+          .reviews
+            // head
+            .reviews__head
+              .t-head Отзывы
+              .reviews__head__filter
+                .ui-select
+                  input(type='hidden')
+                  .ui-select__visible
+                    span Курс
+                    .ui-select__visible__icon
+                      i.icon.icon-select
+                  .ui-select__dropdown
+                    span.ui-select__dropdown__placeholder курс
+                    span(data-val='2017') 2017
+                    span(data-val='2016') 2016
+                    span(data-val='2015') 2015
+                    span(data-val='2014') 2014
+                    span(data-val='2013') 2013
+                    span(data-val='2012') 2012
+                    span(data-val='2011') 2011
+            
+            // CONTENT
+            .reviews__content
+              .review-card
+                .review-card__text
+                  p Оценка эффективности кампании позиционирует тактический имидж, полагаясь на инсайдерскую информацию. Согласно последним исследованиям, потребление вполне выполнимо. Пресс-клиппинг обуславливает типичный побочный PR-эффект. Стратегическое планирование осмысленно концентрирует портрет потребителя. Представляется логичным, что стратегический рыночный план довольно хорошо сбалансирован.
+                  p Лидерство в продажах восстанавливает культурный системный анализ. Создание приверженного покупателя позиционирует потребительский инвестиционный продукт, признавая определенные рыночные тенденции.
+
+                .testimonials__box__author
+                  .testimonials__box__author__avatar
+                    img(src='images/tmp/TestimonialsAvatar.png' srctset='images/tmp/TestimonialsAvatar@2x.png 2x')
+                  .testimonials__box__author__name Марат, 24 года <span> Архитектор</span>
+                    
+              // card
+              .review-card
+                .review-card__text
+                  p Более того, ценовая стратегия существенно отражает медиавес. Отсюда естественно следует, что селекция бренда упорядочивает социометрический рекламный блок
+                  
+                .testimonials__box__author
+                  .testimonials__box__author__avatar
+                    img(src='images/tmp/TestimonialsAvatar.png' srctset='images/tmp/TestimonialsAvatar@2x.png 2x')
+                  .testimonials__box__author__name Алекс, 24 года <span> Архитектор</span>
+              
+              // card
+              .review-card
+                .review-card__text
+                  p Оценка эффективности кампании позиционирует тактический имидж, полагаясь на инсайдерскую информацию. Согласно последним исследованиям, потребление вполне выполнимо. Пресс-клиппинг обуславливает типичный побочный PR-эффект. Стратегическое планирование осмысленно концентрирует портрет потребителя. Представляется логичным, что стратегический рыночный план довольно хорошо сбалансирован.
+                  p Лидерство в продажах восстанавливает культурный системный анализ. Создание приверженного покупателя позиционирует потребительский инвестиционный продукт, признавая определенные рыночные тенденции.
+
+                .testimonials__box__author
+                  .testimonials__box__author__avatar
+                    img(src='images/tmp/TestimonialsAvatar.png' srctset='images/tmp/TestimonialsAvatar@2x.png 2x')
+                  .testimonials__box__author__name Марат, 24 года <span> Архитектор</span>
+                    
+                                      
+  
+      include shared/footer.pug
+      
+    include shared/scripts.pug
