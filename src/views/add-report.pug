@@ -1,0 +1,45 @@
+doctype html
+<!--[if IE 8]>         <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9 oldie"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class=""> <!--<![endif]-->
+  include shared/head.pug
+
+  body
+    include shared/header.pug
+    
+    .page
+      .page__content
+        .container
+          // PAGE:: SETTINGS
+          .settings
+            .profile-heading
+              .t-head Оставить отзыв о курсе
+            
+            .settings__content
+              .ui-group
+                .ui-avatar-file
+                  input(type='file' name='file' id='file')
+                  label(for='file')
+                    .ui-avatar-file__avatar
+                      img(src='images/el/dropzone.png' srcset='images/el/dropzone@2x.png 2x')
+                    span Ваша фотография
+                    
+              .settings__narrow
+                .ui-group
+                  input(type='text' placeholder='Юрий Ветров').ui-input
+              
+              .ui-group
+                textarea(rows='5' placeholder='Дополнительные сведения').ui-input
+              
+              .ui-checkbox
+                input(type='checkbox' id='checkbox_1')
+                label(for='checkbox_1') Показывать ваш отзыв о курсе
+            
+            .settings__cta
+              a(href='#').btn.btn--primary
+                span опубликовать
+        
+        
+      include shared/footer.pug
+      
+    include shared/scripts.pug

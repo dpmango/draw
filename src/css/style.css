@@ -601,6 +601,57 @@ body, html {
     -webkit-transition: all .25s ease-in-out;
     transition: all .25s ease-in-out;
 }
+/* UI FILE */
+.ui-avatar-file {
+    position: relative;
+}
+.ui-avatar-file input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 0.1px;
+    height: 0.1px;
+}
+.ui-avatar-file label {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+            align-items: center;
+    cursor: pointer;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+}
+.ui-avatar-file label:hover .ui-avatar-file__avatar {
+    background-color: rgba(121, 35, 219, 0.1);
+}
+.ui-avatar-file__avatar {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-align-items: center;
+            align-items: center;
+    -webkit-justify-content: center;
+            justify-content: center;
+    margin-right: 15px;
+    width: 110px;
+    height: 110px;
+    border: 1px solid #7923DB;
+    border-radius: 50%;
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+}
+.ui-avatar-file__avatar img {
+    max-width: 50px;
+}
 /* buttons */
 button {
     border: 0;

@@ -18,6 +18,13 @@ doctype html
             .settings__content
               .settings__narrow
                 .ui-group
+                  .ui-avatar-file
+                    input(type='file' name='file' id='file')
+                    label(for='file')
+                      .ui-avatar-file__avatar
+                        img(src='images/el/dropzone.png' srcset='images/el/dropzone@2x.png 2x')
+                      span Ваша фотография
+                .ui-group
                   input(type='text' placeholder='E-mail').ui-input
                 .ui-group
                   input(type='text' placeholder='Юрий Ветров').ui-input

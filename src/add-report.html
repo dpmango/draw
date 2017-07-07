@@ -57,58 +57,31 @@
         <!-- PAGE:: SETTINGS-->
         <div class="settings">
           <div class="profile-heading">
-            <div class="t-head">Настройки</div>
+            <div class="t-head">Оставить отзыв о курсе</div>
           </div>
           <div class="settings__content">
+            <div class="ui-group">
+              <div class="ui-avatar-file">
+                <input type="file" name="file" id="file">
+                <label for="file">
+                  <div class="ui-avatar-file__avatar"><img src="images/el/dropzone.png" srcset="images/el/dropzone@2x.png 2x"></div><span>Ваша фотография</span>
+                </label>
+              </div>
+            </div>
             <div class="settings__narrow">
-              <div class="ui-group">
-                <div class="ui-avatar-file">
-                  <input type="file" name="file" id="file">
-                  <label for="file">
-                    <div class="ui-avatar-file__avatar"><img src="images/el/dropzone.png" srcset="images/el/dropzone@2x.png 2x"></div><span>Ваша фотография</span>
-                  </label>
-                </div>
-              </div>
-              <div class="ui-group">
-                <input class="ui-input" type="text" placeholder="E-mail">
-              </div>
               <div class="ui-group">
                 <input class="ui-input" type="text" placeholder="Юрий Ветров">
               </div>
-              <div class="ui-group">
-                <input class="ui-input" type="text" placeholder="Дата рождения">
-              </div>
-              <div class="ui-group">
-                <input class="ui-input" type="text" placeholder="Чем занимаетесь?">
-              </div>
             </div>
             <div class="ui-group">
-              <textarea class="ui-input" rows="5" placeholder="Пара слов о вас"></textarea>
+              <textarea class="ui-input" rows="5" placeholder="Дополнительные сведения"></textarea>
             </div>
-            <div class="ui__toggler left">
-              <div class="ui__toggler__box">
-                <input type="hidden" value="">
-              </div>
-              <label>Страница публична</label>
+            <div class="ui-checkbox">
+              <input type="checkbox" id="checkbox_1">
+              <label for="checkbox_1">Показывать ваш отзыв о курсе</label>
             </div>
           </div>
-          <!-- next section-->
-          <div class="profile-heading">
-            <div class="t-head">Сменить пароль:</div>
-          </div>
-          <div class="settings__warn"><i class="icon icon-warn"></i><span>Оставьте это поле незаполненным, если не хотите менять пароль</span></div>
-          <div class="settings__narrow">
-            <div class="ui-group">
-              <input class="ui-input" type="text" placeholder="Старый пароль">
-            </div>
-            <div class="ui-group">
-              <input class="ui-input" type="text" placeholder="Новый пароль">
-            </div>
-            <div class="ui-group">
-              <input class="ui-input" type="text" placeholder="Новый пароль еще раз">
-            </div>
-          </div>
-          <div class="settings__cta"><a class="btn btn--primary" href="#"><span>Сохранить</span></a></div>
+          <div class="settings__cta"><a class="btn btn--primary" href="#"><span>опубликовать</span></a></div>
         </div>
       </div>
     </div>
