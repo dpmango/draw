@@ -120,12 +120,12 @@ doctype html
                   img(src='images/el/icon-chat.png' srcset='images/el/icon-chat@2x.png 2x')
                 .benefits__card__name Закрытая FB-группа
                 .benefits__card__desc Вы получите приглашение в закрытую FB-группу,  где ученики студии делятся своим опытом,  а преподаватели в любой момент готовы помочь вам рисовать ещё лучше.
-            .course-price.course-price--disabled.hidden-mobile.wow.transformUp(data-wow-delay='.6s')
+            .course-price.course-price--disabled.wow.transformUp(data-wow-delay='.6s')
               .course-price__value 4 560 Р
               .course-price__cta
                 a(href='#').btn.btn--primary.btn--pink.disabled
                   span добавлено к заказу
-            .course-price-label Бесплатно при заказе до 15 августа
+            .course-price-label.wow.transformUp(data-wow-delay='.7s') Бесплатно при заказе до 15 августа
                 
         // SUPPLEMENTARY GOOD
         .supp
@@ -165,7 +165,13 @@ doctype html
           .container.container--1100
             .heading-gray.heading-gray--mega.wow.transformUp пришло время  <br> покупать
             .course-cta__wrapper
-              form(action='#').course-cta__form.js-form-landingCta.wow.transformUp(data-wow-delay='.2s')
+              form(action='#').course-cta__form.course-cta__form--reverse-tablet.js-form-landingCta.wow.transformUp(data-wow-delay='.2s')
+            
+                .course-cta__cta.course-cta__cta--mobile
+                  .course-price__value 28 560 Р
+                  button(type='submit').btn.btn--primary.btn--pink.btn--block 
+                    span ПЕРЕЙТИ К ОПЛАТЕ
+                
                 .course-cta__col
                   .ui-group
                     input(type='text' name='name' placeholder='Ваше имя').ui-input
@@ -213,7 +219,7 @@ doctype html
                   .course-cta__cta
                     .course-price__value 28 560 Р
                     button(type='submit').btn.btn--primary.btn--pink.btn--block 
-                      span ПЕРЕЙТИ К ОПЛАТЕ      
+                      span ПЕРЕЙТИ К ОПЛАТЕ
                     
         // GIFT
         .gift
@@ -267,17 +273,6 @@ doctype html
               a(href='#') 
                 span Верните меня обратно к покупке, пожалуйста.
                 
-        //- // FIXED CTA
-        //- .course-fixed
-        //-   .course-fixed__wrapper
-        //-     .course-fixed__name Живопись дома
-        //-       
-        //-     .course-fixed__cta
-        //-       a(href='#').btn.btn--primary.btn--pink
-        //-         span Купить
-        //-       span от 18 500 ₽
-            
-        
       include shared/footer.pug
       
     include shared/scripts.pug
