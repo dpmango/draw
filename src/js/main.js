@@ -420,7 +420,7 @@ $(document).ready(function () {
   });
 
   // Masked input
-  $(".js-dateMask").mask("99.99.9999", { placeholder: "__ __ ____" });
+  $(".js-dateMask").mask("99.99.9999");
   $(".js-dateMask2").mask("99.99.99", { placeholder: "ДД.ММ.ГГ" });
   $(".js-indexMask").mask("999 999", { placeholder: "000 000" });
   $("input[type='tel']").mask("+7 (000) 000-0000", { placeholder: "+7 (___) ___-____" });
@@ -458,6 +458,12 @@ $(document).ready(function () {
     // docs on noUiSlider
     // https://refreshless.com/nouislider/slider-read-write/
   }
+
+  // UI FILE INPUT
+  $('.ui-avatar-file input').on('change', function (e) {
+    var fileName = e.currentTarget.files[0].name;
+    $(this).parent().find('label span').text(fileName);
+  });
 
   // STICKY MAP RESULTS
   // _window.scrolled(10, function () {

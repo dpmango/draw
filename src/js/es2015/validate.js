@@ -116,4 +116,36 @@ $(document).ready(function(){
     }
   });
 
+  /////////////////////
+  // LANDING CTA FORM (LONG)
+  ////////////////////
+  $(".js-form-landingCta").validate({
+    errorPlacement: validateErrorPlacement,
+    highlight: validateHighlight,
+    unhighlight: validateUnhighlight,
+    submitHandler: validateSubmitHandler,
+    rules: {
+      name: "required",
+      phone: validatePhone,
+      email: {
+        required: true,
+        email: true
+      }
+    },
+    messages: {
+      name: "Заполните это поле",
+      phone: {
+          required: "Заполните это поле",
+          minlength: "Введите корректный телефон"
+      },
+      email: {
+          required: "Заполните это поле",
+          email: "Email содержит неправильный формат"
+      }
+    }
+  });
+
+
+
+
 });
