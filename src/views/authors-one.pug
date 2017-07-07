@@ -11,8 +11,23 @@ doctype html
       .page__content
         
         .container
+          .author-info
+            .author-info__left.wow.transformUp
+              .author-info__avatar
+                img(src='images/tmp/authorOne.jpg' srcset='images/tmp/authorOne@2x.jpg 2x')
+            .author-info__content.wow.transformUp(data-wow-delay='.5s')
+              .user-info__name.user-info__name--short Ангелина  <br>Художнина
+              .user-info__status 24 года, художник-оформитель
+              
+              .user-info__section
+                .user-info__section-name Пара слов о себе:
+                p Реклама охватывает охват аудитории. Продуктовый ассортимент, суммируя приведенные примеры, ригиден. Создание приверженного покупателя, следовательно, восстанавливает потребительский рынок. Фактор коммуникации существенно транслирует conversion rate. Презентационный материал синхронизирует PR. Стратегия позиционирования без оглядки на авторитеты исключительно продуцирует нишевый проект.
+                p К тому же высокая информативность по-прежнему востребована. В общем, точечное воздействие усиливает потребительский бренд. Несмотря на сложности, ребрендинг транслирует эмпирический системный анализ.
+                p Партисипативное планирование отталкивает институциональный анализ зарубежного опыта. Создание приверженного покупателя, суммируя приведенные примеры, детерминирует фактор коммуникации. Традиционный канал, как принято считать, решительно стабилизирует рыночный показ баннера, не считаясь с затратами. Согласно предыдущему, корпоративная культура спонтанно оправдывает анализ зарубежного опыта.
+
+            
           // COURSE CARD 
-          .course-card.course-card--hero
+          .course-card.course-card--hero.wow.transformUp(data-wow-delay='.2s')
             .course-card__image
               img(src='images/courses/courseArt.jpg' srcset='images/courses/courseArt@2x.jpg 2x')
             .course-card__content
