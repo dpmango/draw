@@ -919,6 +919,12 @@ button:focus {
     display: -ms-flexbox;
     display: flex;
 }
+.header__wrapper--center {
+    -webkit-align-items: center;
+            align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+}
 .header--have-animation {
     opacity: 0;
 }
@@ -1114,6 +1120,8 @@ button:focus {
     color: #9B00D2;
 }
 .header__phone {
+    margin-left: auto;
+    text-align: right;
     font-size: 24px;
     font-family: 'Core65';
     -webkit-transition: all .25s ease-in-out;
@@ -1223,6 +1231,13 @@ button:focus {
         display: none;
     }
 }
+@media(max-width: 480px) {
+    .header {}
+    .header__phone {
+        margin-right: -10px;
+        font-size: 18px;
+    }
+}
 @media(max-width: 414px) {
     .header {}
     .header--fixed .header__logo {
@@ -1241,16 +1256,25 @@ button:focus {
     .header__hamburger {
         margin-left: auto;
     }
+    .header__phone {
+        font-size: 16px;
+    }
 }
 @media(max-width: 375px) {
     .header {
         margin-top: 5px;
+    }
+    .header--fixed {
+        margin-top: 0;
     }
     .header__logo {
         -webkit-flex-basis: 110px;
                 flex-basis: 110px;
         margin-top: 5px;
             -ms-flex-preferred-size: 110px;
+    }
+    .header__phone {
+        font-size: 15px;
     }
 }
 /* MOBILE NAVI */
@@ -4590,6 +4614,10 @@ button:focus {
     .course-questions__item--right-tablet {
         margin-right: 0;
         margin-left: auto;
+    }
+    .course-questions__toggler {
+        margin-top: 35px;
+        margin-bottom: 75px;
     }
 }
 @media(max-width: 568px) {
