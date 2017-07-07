@@ -592,6 +592,18 @@ $(document).ready(function () {
         loadBlogPosts($('.js-ajaxBlogContainer').data('offset'));
       }
     }
+    // community
+    if ($('.projects-list').length > 0) {
+      var lastCard = $('.project:last-child');
+      var lastChildTop = lastCard.offset().top + lastCard.height();
+      var windowPos = _window.scrollTop() + _window.height();
+      var loadingOffset = 200;
+      var loadingPostion = lastChildTop - loadingOffset;
+
+      if (windowPos > loadingPostion) {
+        loadCommunityPosts($('.js-ajaxCommunityContainer').data('offset'));
+      }
+    }
   });
 
   var stopBlogPostAjaxBinding = false;
@@ -629,9 +641,46 @@ $(document).ready(function () {
       });
     }
   };
+
+  // COMMUNITY AJAX
+  var stopCommunityPostAjaxBinding = false;
+
+  function loadCommunityPosts(offset) {
+    // get the last blog card id
+    var lastPost = $('.project:last-child').data('id');
+    if (!stopCommunityPostAjaxBinding) {
+      $.ajax({
+        url: 'community-ajax.html',
+        type: 'get',
+        data: {
+          startFrom: lastPost,
+          offset: offset
+        },
+        success: function success(data) {
+          // this should return actual html to be appended
+          // dummy function to emulate offset - remove for production
+          var appendedData = [];
+          var lastAjaxPost = $(data).last().data('id');
+          if (lastPost >= lastAjaxPost - offset) {
+            stopCommunityPostAjaxBinding = true;
+          }
+
+          $(data).each(function (i, val) {
+            var objectId = $(val).data('id');
+            if (objectId && objectId > lastPost && objectId <= lastPost + offset) {
+              appendedData.push($(val));
+            }
+          });
+
+          // append just data object in production
+          $(".js-ajaxCommunityContainer").append(appendedData);
+        }
+      });
+    }
+  };
 });
 
 //SCROLL TO TOP ON PAGE REFRESH
-// $(window).on('beforeunload', function() {
-//     $(window).scrollTop(0);
-// });
+$(window).on('beforeunload', function () {
+  $(window).scrollTop(0);
+});

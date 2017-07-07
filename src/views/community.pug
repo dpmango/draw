@@ -56,10 +56,10 @@ doctype html
 
             // CONTENT
             .community__content
-                    
-              .projects-list
+                  
+              .projects-list.js-ajaxCommunityContainer(data-offset='4')
                 // next project
-                .project
+                .project(data-id='1')
                   a(href='#').project__image
                     img(src='images/projects/projectItem_1.jpg' srcset='images/projects/projectItem_1@2x.jpg 2x')
                   .project__bottom
@@ -68,7 +68,7 @@ doctype html
                       i.icon.icon-like
                       span 88
                 // next project
-                .project
+                .project(data-id='2')
                   a(href='#').project__image
                     img(src='images/projects/projectItem_2.jpg' srcset='images/projects/projectItem_2@2x.jpg 2x')
                   .project__bottom
@@ -77,7 +77,7 @@ doctype html
                       i.icon.icon-like
                       span 88
                 // next project
-                .project
+                .project(data-id='3')
                   a(href='#').project__image
                     img(src='images/projects/projectItem_3.jpg' srcset='images/projects/projectItem_3@2x.jpg 2x')
                   .project__bottom
@@ -86,7 +86,7 @@ doctype html
                       i.icon.icon-like
                       span 88
                 // next project
-                .project
+                .project(data-id='4')
                   a(href='#').project__image
                     img(src='images/projects/projectItem_4.jpg' srcset='images/projects/projectItem_4@2x.jpg 2x')
                   .project__bottom
