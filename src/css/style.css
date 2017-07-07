@@ -5939,6 +5939,46 @@ button:focus {
 .settings__cta {
     margin-top: 50px;
 }
+/* USER INFO */
+.user-info {
+    margin-top: 30px;
+}
+.user-info__name {
+    letter-spacing: -1.22px;
+    font-size: 72px;
+    font-family: 'Core65';
+}
+.user-info__status {
+    margin-top: 10px;
+    font-size: 14px;
+}
+.user-info__section p {
+    max-width: 690px;
+    font-size: 17px;
+    line-height: 1.4;
+}
+.user-info__section:before {
+    display: inline-block;
+    margin-top: 80px;
+    width: 100px;
+    height: 5px;
+    background: url('../images/el/sep-line@2x.png') no-repeat center;
+    background-size: cover;
+    content: ' ';
+}
+.user-info__section-name {
+    margin-top: 15px;
+    margin-bottom: 20px;
+    color: #6426BC;
+    font-weight: 700;
+    font-size: 14px;
+}
+.user-info__course {
+    margin-top: 10px;
+    letter-spacing: -.5px;
+    font-size: 32px;
+    font-family: 'Core65';
+}
 /* BLOG */
 .blog {
     margin-left: auto;

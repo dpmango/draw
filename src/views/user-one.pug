@@ -1,0 +1,81 @@
+doctype html
+<!--[if IE 8]>         <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9 oldie"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class=""> <!--<![endif]-->
+  include shared/head.pug
+
+  body
+    include shared/header.pug
+    
+    .page
+      .page__content
+        
+        .container
+          .community
+            // USER INFO
+            .user-info
+              .user-info__name Сергей Орехов
+              .user-info__status 24 года, художник-оформитель
+              
+              .user-info__section
+                .user-info__section-name Прошел обучение на курсах
+                .user-info__course Живопись
+                .user-info__course Графика в городе
+                .user-info__course Новые художественные навыки
+              
+              .user-info__section
+                .user-info__section-name Пара слов о себе:
+                p Оценка эффективности кампании позиционирует тактический имидж, полагаясь на инсайдерскую информацию. Согласно последним исследованиям, потребление вполне выполнимо. Создание приверженного покупателя позиционирует потребительский инвестиционный продукт, признавая определенные рыночные тенденции.
+                    
+                
+            .user-info__section
+              .user-info__section-name Работы автора:
+            
+              // CONTENT
+              .community__content
+                      
+                .projects-list
+                  // next project
+                  .project
+                    a(href='#').project__image
+                      img(src='images/projects/projectItem_1.jpg' srcset='images/projects/projectItem_1@2x.jpg 2x')
+                    .project__bottom
+                      .project__name Сергей, Москва
+                      .project__like
+                        i.icon.icon-like
+                        span 88
+                  // next project
+                  .project
+                    a(href='#').project__image
+                      img(src='images/projects/projectItem_2.jpg' srcset='images/projects/projectItem_2@2x.jpg 2x')
+                    .project__bottom
+                      .project__name Сергей, Москва
+                      .project__like
+                        i.icon.icon-like
+                        span 88
+                  // next project
+                  .project
+                    a(href='#').project__image
+                      img(src='images/projects/projectItem_3.jpg' srcset='images/projects/projectItem_3@2x.jpg 2x')
+                    .project__bottom
+                      .project__name Сергей, Москва
+                      .project__like
+                        i.icon.icon-like
+                        span 88
+                  // next project
+                  .project
+                    a(href='#').project__image
+                      img(src='images/projects/projectItem_4.jpg' srcset='images/projects/projectItem_4@2x.jpg 2x')
+                    .project__bottom
+                      .project__name Сергей, Москва
+                      .project__like
+                        i.icon.icon-like
+                        span 88
+          
+              
+              
+
+  
+      include shared/footer.pug
+      
+    include shared/scripts.pug

@@ -1,0 +1,32 @@
+doctype html
+<!--[if IE 8]>         <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9 oldie"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class=""> <!--<![endif]-->
+  include shared/head.pug
+
+  body
+    include shared/header.pug
+    
+    .page
+      .page__content
+        
+        .container
+          // COURSE CARD 
+          .course-card.course-card--hero
+            .course-card__image
+              img(src='images/courses/courseArt.jpg' srcset='images/courses/courseArt@2x.jpg 2x')
+            .course-card__content
+              .course-card__name Живопись дома
+              .course-card__desc 2 часа 45 минут  <br><span>•</span>  18 уроков  <br><span>•</span>  12 практических заданий
+              
+              .course-card__cta
+                a(href='#').btn.btn--primary.btn--pink
+                  span купить
+                .course-card__price 
+                  | от 18 500
+                  span.icon-rub ₽
+
+  
+      include shared/footer.pug
+      
+    include shared/scripts.pug
