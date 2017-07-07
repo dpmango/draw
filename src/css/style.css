@@ -330,6 +330,12 @@ body, html {
     color: rgba(0, 0, 0, 0.5);
     font-size: 12px;
 }
+.ui-checkbox__promo-val {
+    margin-top: 5px;
+    margin-bottom: 7px;
+    color: #9B00D2;
+    font-size: 12px;
+}
 .ui-checkbox:hover label {}
 .ui-checkbox:hover label:before {
     -webkit-transform: scale(1.1);
@@ -344,6 +350,22 @@ body, html {
 }
 .ui-checkbox--aqua label:after {
     background-image: url('../images/el/checkbox-checked-aqua@2x.png');
+}
+.ui-checkbox--dynamic-label label .ui-checkbox__sublabel {
+    font-size: 0;
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+}
+.ui-checkbox--dynamic-label input {}
+.ui-checkbox--dynamic-label input:checked + label .ui-checkbox__sublabel {
+    font-size: 12px;
+}
+.ui-checkbox--disabled {
+    pointer-events: none;
+}
+.ui-checkbox--disabled label {}
+.ui-checkbox--disabled label:before, .ui-checkbox--disabled label:after {
+    opacity: .5;
 }
 @media(max-width: 992px) {
     .ui-checkbox label {
@@ -1089,6 +1111,15 @@ button:focus {
     transition: color .25s ease-in-out;
 }
 .header__user__logout:hover {
+    color: #9B00D2;
+}
+.header__phone {
+    font-size: 24px;
+    font-family: 'Core65';
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+}
+.header__phone:hover {
     color: #9B00D2;
 }
 .header__hamburger {
@@ -3124,6 +3155,17 @@ button:focus {
 .gift__text .btn {
     margin-top: 20px;
 }
+.gift__text--wide {
+    -webkit-flex: 0 1 400px;
+        -ms-flex: 0 1 400px;
+            flex: 0 1 400px;
+    margin-left: -20px;
+    -webkit-box-flex: 0;
+}
+.gift__btn {
+    margin-top: 50px;
+    text-align: center;
+}
 @media(max-width: 992px) {
     .gift {}
     .gift__title {
@@ -3365,16 +3407,43 @@ button:focus {
     font-family: 'Core45';
     line-height: 2;
 }
+.course-card__special {
+    margin-top: auto;
+    color: #FFE401;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 24px;
+    font-family: 'Core65';
+}
 .course-card__price {
     margin-top: auto;
     letter-spacing: -.3px;
     font-size: 20px;
     font-family: 'Core75';
 }
+.course-card__old-price {
+    position: relative;
+    letter-spacing: -4px;
+    font-size: 48px;
+    font-family: 'Core45';
+}
+.course-card__old-price:after {
+    position: absolute;
+    top: 0;
+    right: -25px;
+    bottom: 0;
+    left: 25px;
+    display: block;
+    background: url('../images/el/old-price@2x.png') no-repeat center;
+    background-size: contain;
+    content: ' ';
+}
 .course-card__cta {
     margin-top: 30px;
 }
 .course-card--hero {
+    z-index: 2;
     margin-right: 0;
     margin-left: 0;
     min-height: 450px;
@@ -3424,6 +3493,28 @@ button:focus {
     margin-left: 25px;
     letter-spacing: -.5px;
     font-size: 32px;
+}
+.course-card--hero .course-card__price--mega {
+    margin-right: 35px;
+    margin-left: 45px;
+    letter-spacing: -5.4px;
+    font-size: 60px;
+    font-family: 'Core65';
+}
+.course-card--special .course-card {}
+.course-card--special .course-card__image {}
+.course-card--special .course-card__image:after {
+    display: block;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(0, 0, 0, 0.6)));
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.6));
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 0.6));
+}
+.course-card--special .course-card__cta {
+    margin-top: 20px;
+    margin-bottom: 70px;
+}
+.course-card--special .course-card__cta .btn {
+    min-width: 160px;
 }
 @media(max-width: 768px) {
     .course-card {
@@ -3893,6 +3984,27 @@ button:focus {
 .course-price__cta {
     margin-left: 35px;
 }
+.course-price-label {
+    margin-top: 10px;
+    color: #9B00D2;
+    text-align: center;
+    font-size: 14px;
+}
+.course-price--disabled .course-price__value {
+    position: relative;
+    color: #CBCBCB;
+}
+.course-price--disabled .course-price__value:after {
+    position: absolute;
+    top: 0;
+    right: -25px;
+    bottom: 0;
+    left: -10px;
+    display: block;
+    background: url('../images/el/price-added@2x.png') no-repeat center;
+    background-size: contain;
+    content: ' ';
+}
 @media(max-width: 568px) {
     .course-price {
         -webkit-flex-direction: column;
@@ -3957,6 +4069,63 @@ button:focus {
     right: 0;
     bottom: -40%;
     width: 29%;
+}
+.supp__card-items {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-between;
+            justify-content: space-between;
+    margin-top: 90px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+}
+.supp__card {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex: 0 1 350px;
+        -ms-flex: 0 1 350px;
+            flex: 0 1 350px;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    -webkit-box-flex: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+}
+.supp__card .course-price {
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+}
+.supp__card .course-price .course-price__cta {
+    margin-top: 10px;
+    margin-left: 0;
+}
+.supp__card__image {
+    margin-bottom: 20px;
+}
+.supp__card__image img {
+    max-width: 100%;
+}
+.supp__card__title {
+    margin-top: auto;
+    letter-spacing: -.38px;
+    font-size: 24px;
+    font-family: 'Core65';
+    line-height: 1.25;
+}
+.supp__card__text {
+    margin-top: 25px;
+    margin-bottom: 30px;
+    font-size: 14px;
+    line-height: 1.8;
 }
 @media(max-width: 992px) {
     .supp {}
@@ -4244,6 +4413,9 @@ button:focus {
     margin-bottom: 20px;
     max-width: 100%;
 }
+.course-questions__item[data-visible="0"] {
+    display: none;
+}
 .course-questions__item--left {
     margin-right: auto;
 }
@@ -4262,6 +4434,11 @@ button:focus {
 .course-questions__item__text {
     font-size: 17px;
     line-height: 1.4;
+}
+.course-questions__toggler {
+    margin-top: 50px;
+    margin-bottom: 120px;
+    text-align: center;
 }
 @media(max-width: 992px) {
     .course-questions {}

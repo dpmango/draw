@@ -147,12 +147,16 @@
   &__sublabel
     font-size: 12px
     color: color($fontColor a(50%))
+  &__promo-val
+    font-size: 12px
+    color: $colorPrimary
+    margin-top: 5px
+    margin-bottom: 7px
 
   &:hover
     label
       &::before
         transform: scale(1.1)
-
   &--aqua
     label
       span
@@ -161,6 +165,23 @@
         background-image: url('../images/el/checkbox-aqua@2x.png')
       &::after
         background-image: url('../images/el/checkbox-checked-aqua@2x.png')
+
+  &--dynamic-label
+    label
+      .ui-checkbox__sublabel
+        transition: all $transitionSpeed $ease
+        font-size: 0
+    input
+      &:checked
+        + label
+          .ui-checkbox__sublabel
+            font-size: 12px
+
+  &--disabled
+    pointer-events: none
+    label
+      &::before, &::after
+        opacity: .5
 
 @media($desktop)
   .ui-checkbox

@@ -299,6 +299,22 @@ $(document).ready(function () {
     }
   });
 
+  // UNIVERSAL TOGGLER
+  var togglerSavedText;
+  $('.js-togglerPluginTrigger').on('click', function () {
+    var toggableObjects = $(this).closest('.js-togglerPlugin').find('div[data-visible="0"]');
+    if ($(this).data('action') == "open") {
+      toggableObjects.slideDown();
+      $(this).data('action', 'close');
+      togglerSavedText = $(this).find('span').text();
+      $(this).find('span').text($(this).data('text'));
+    } else {
+      toggableObjects.slideUp();
+      $(this).data('action', 'open');
+      $(this).find('span').text(togglerSavedText);
+    }
+  });
+
   if ($('.course-fixed').length > 0) {
     _window.scrolled(10, function () {
       // scrolled is a constructor for scroll delay listener

@@ -43,11 +43,34 @@
     line-height: 2
     font-family: 'Core45'
     letter-spacing: -.22px
+  &__special
+    font-family: 'Core65'
+    color: #FFE401
+    font-size: 24px
+    letter-spacing: 1px
+    text-transform: uppercase
+    text-align: center
+    margin-top: auto
   &__price
     margin-top: auto
     font-family: 'Core75'
     font-size: 20px
     letter-spacing: -.3px
+  &__old-price
+    position: relative
+    font-size: 48px
+    font-family: 'Core45'
+    letter-spacing: -4px
+    &::after
+      display: block
+      content: ' '
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 25px
+      right: -25px
+      background: url('../images/el/old-price@2x.png') no-repeat center
+      background-size: contain
   &__cta
     margin-top: 30px
 
@@ -57,6 +80,7 @@
     height: calc(100vh - 130px)
     margin-left: 0
     margin-right: 0
+    z-index: 2
     .course-card
       &__content
         padding-bottom: 25px
@@ -84,6 +108,25 @@
         margin-left: 25px
         font-size: 32px
         letter-spacing: -.5px
+        &--mega
+          font-family: 'Core65'
+          font-size: 60px
+          letter-spacing: -5.4px
+          margin-right: 35px
+          margin-left: 45px
+
+  &--special
+    .course-card
+      &__image
+        &::after
+          display: block
+          background: linear-gradient(to bottom, color(white a(0%)), color($fontColor a(60%)))
+
+      &__cta
+        margin-top: 20px
+        margin-bottom: 70px
+        .btn
+          min-width: 160px
 
 @media($tablet)
   .course-card
@@ -396,6 +439,26 @@
       color: $colorAqua
   &__cta
     margin-left: 35px
+  &-label
+    font-size: 14px
+    color: $colorPrimary
+    margin-top: 10px
+    text-align: center
+  &--disabled
+    .course-price__value
+      position: relative
+      color: #CBCBCB
+      &::after
+        position: absolute
+        bottom: 0
+        top: 0
+        left: -10px
+        right: -25px
+        display: block
+        content: ' '
+        background: url('../images/el/price-added@2x.png') no-repeat center
+        background-size: contain
+
 
 @media($mobile)
   .course-price
@@ -446,6 +509,36 @@
       right: 0
       bottom: -40%
       width: 29%
+  &__card-items
+    margin-top: 90px
+    display: flex
+    justify-content: space-between
+  &__card
+    flex: 0 1 350px
+    display: flex
+    flex-direction: column
+    text-align: center
+    &__image
+      margin-bottom: 20px
+      img
+        max-width: 100%
+    &__title
+      margin-top: auto
+      font-size: 24px
+      letter-spacing: -.38px
+      line-height: 1.25
+      font-family: 'Core65'
+    &__text
+      margin-top: 25px
+      margin-bottom: 30px
+      font-size: 14px
+      line-height: 1.8
+    .course-price
+      flex-direction: column
+      .course-price__cta
+        margin-left: 0
+        margin-top: 10px
+
 
 @media($desktop)
   .supp
@@ -636,6 +729,8 @@
   &__item
     padding: 50px 0
     max-width: 470px
+    &[data-visible="0"]
+      display: none
     &--left
       margin-right: auto
     &--right
@@ -653,6 +748,10 @@
     &__text
       font-size: 17px
       line-height: 1.4
+  &__toggler
+    text-align: center
+    margin-top: 50px
+    margin-bottom: 120px
 
 @media($desktop)
   .course-questions
