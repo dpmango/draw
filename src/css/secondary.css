@@ -114,12 +114,10 @@
     margin-right: 30px;
     width: 36px;
     height: 63px;
-    background-image: url('../images/el/slide-prev@2x.png');
 }
 .icon-slide-next {
     width: 36px;
     height: 63px;
-    background-image: url('../images/el/slide-next@2x.png');
 }
 .icon-select {
     width: 10px;

@@ -41,13 +41,6 @@
   &--small
     .video__wrapper
       max-width: 660px
-      &::after
-        background: url('../images/el/videoAquaBg@2x.png') no-repeat center
-        background-size: contain
-        width: 660px
-        height: 260px
-        left: 50%
-        transform: translateX(-50%)
 
     .video__content
       max-width: 300px
@@ -68,7 +61,8 @@
       z-index: 1
       display: block
       content: ' '
-      background: url('../images/el/videoBlot@2x.png') no-repeat center
+      background-repeat: no-repeat
+      background-position: center center
       background-size: contain
   &__content
     position: relative

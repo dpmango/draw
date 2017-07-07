@@ -1120,8 +1120,9 @@ button:focus {
     display: block;
     width: 80px;
     height: 76px;
-    background: url('../images/el/headerBlot@2x.png') no-repeat center;
+    background-position: center center;
     background-size: cover;
+    background-repeat: no-repeat;
     content: ' ';
 }
 .header__user__image {
@@ -1931,16 +1932,6 @@ button:focus {
 .video--small .video__wrapper {
     max-width: 660px;
 }
-.video--small .video__wrapper:after {
-    left: 50%;
-    width: 660px;
-    height: 260px;
-    background: url('../images/el/videoAquaBg@2x.png') no-repeat center;
-    background-size: contain;
-    -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-            transform: translateX(-50%);
-}
 .video--small .video__content {
     padding-top: 30px;
     padding-bottom: 45px;
@@ -1964,8 +1955,9 @@ button:focus {
     left: 0;
     z-index: 1;
     display: block;
-    background: url('../images/el/videoBlot@2x.png') no-repeat center;
+    background-position: center center;
     background-size: contain;
+    background-repeat: no-repeat;
     content: ' ';
 }
 .video__content {
@@ -4426,15 +4418,11 @@ button:focus {
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 1;
     display: block;
-    background: url('../images/el/buyformRose@2x.png') no-repeat left center;
+    background-position: left center;
     background-size: contain;
+    background-repeat: no-repeat;
     content: ' ';
-}
-.course-cta__wrapper--aqua {}
-.course-cta__wrapper--aqua:before {
-    background-image: url('../images/el/buyformBlue@2x.png');
 }
 .course-cta__form {
     position: relative;
