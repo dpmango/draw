@@ -592,13 +592,8 @@ $(document).ready(function(){
   Dropzone.options.myAwesomeDropzone = {
     paramName: "file", // The name that will be used to transfer the file
     maxFilesize: 2, // MB
-    accept: function(file, done) {
-      if (file.name == "justinbieber.jpg") {
-
-      } else {
-        done();
-      }
-    },
+    thumbnailWidth: 700,
+    thumbnailHeight: 250,
     dictDefaultMessage: "Загрузите практическое задание",
     dictFileTooBig: "Файл слишком большой ({{filesize}}MiB). Максимальный размер файла: {{maxFilesize}}MiB.",
     dictInvalidFileType: "Запрещенный тип файла",
@@ -606,7 +601,14 @@ $(document).ready(function(){
     dictCancelUpload: "Отменить загрузку",
     dictCancelUploadConfirmation: "Действительно отментиь загрузку этого файла?",
     dictRemoveFile: "Удалить файл?",
-    dictMaxFilesExceeded: "Лимит по количеству файлов привышен"
+    dictMaxFilesExceeded: "Лимит по количеству файлов привышен",
+    accept: function(file, done) {
+      if (file.name == "justinbieber.jpg") {
+
+      } else {
+        done();
+      }
+    }
   };
 
   // WOW INIT

@@ -17,9 +17,9 @@ doctype html
 
               .lesson__content__text
                 .t-head Практическое занятие:
-                .lesson__content__status.lesson__content__status--top
-                  span ожидает проверки куратором
-                  i.icon.icon-pending-check
+                .lesson__content__status.lesson__content__status--top.lesson__content__status--checked
+                  span Получена оценка!
+                  i.icon.icon-checked
                 
                 .blog__content__text
                   p Практика однозначно показывает, что перераспределение бюджета усиливает конструктивный традиционный канал. Рейтинг, в рамках сегодняшних воззрений, позиционирует охват аудитории. Фирменный стиль основательно подпорчен предыдущим опытом применения.
@@ -29,7 +29,9 @@ doctype html
                     .fallback
                       input(name='file', type='file', multiple='')
                     .dz-message
-                    img(src='images/lessons/lessonUpload.jpg' srcset='images/lessons/lessonUpload@2x.jpg 2x')
+                    .dz-preview
+                      .dz-image  
+                        img(src='images/lessons/lessonUpload.jpg' srcset='images/lessons/lessonUpload@2x.jpg 2x')
                     
                     
 

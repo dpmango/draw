@@ -204,11 +204,17 @@ body, html {
     }
 }
 .ui-form-helper {
-    margin: 10px 0;
+    margin: 20px 0 10px 0;
     color: #A1A1A1;
     letter-spacing: -.22px;
     font-size: 12px;
     line-height: 1.7;
+}
+@media(max-width: 568px) {
+    .ui-form-helper {
+        margin-top: 20px;
+        color: #000000;
+    }
 }
 /* THIS IS REGULAR CLASS MODIFIER FOR THE INPUT IT */
 .ui-input {
@@ -6671,6 +6677,7 @@ button:focus {
     font-size: 14px;
 }
 .comment--mute {
+    margin-top: -20px;
     padding: 10px 0;
     color: rgba(0, 0, 0, 0.35);
 }
@@ -6755,6 +6762,12 @@ button:focus {
     margin-left: auto;
     text-align: right;
 }
+@media(max-width: 1110px) {
+    .comment {}
+    .comment--mute .comment__text:before {
+        left: -15px;
+    }
+}
 @media(max-width: 768px) {
     .comment {
         padding: 35px 0;
@@ -6764,6 +6777,12 @@ button:focus {
     }
     .comment__text {}
     .comment__text:before {
+        left: -20px;
+    }
+    .comment--mute {
+        padding: 10px 0;
+    }
+    .comment--mute .comment__text:before {
         left: -20px;
     }
 }
@@ -6776,6 +6795,11 @@ button:focus {
     }
     .comment--reply {
         padding-top: 25px;
+    }
+    .comment--mute {
+        margin-top: -10px;
+        padding-top: 0;
+        color: #000000;
     }
 }
 @media(max-width: 414px) {
@@ -6803,6 +6827,9 @@ button:focus {
     }
     .comment__text {
         font-size: 12px;
+    }
+    .comment--mute {
+        padding-top: 0;
     }
 }
 /* COMMUNITY */
@@ -7647,6 +7674,9 @@ button:focus {
     margin-top: 5px;
     color: #000000;
 }
+.lesson__content__status--checked {
+    color: #00CEA0;
+}
 .lesson__sidebar {
     position: relative;
     -webkit-flex: 0 1 400px;
@@ -7937,6 +7967,10 @@ button:focus {
     .lesson__content .video__content:after {
         bottom: -10px;
     }
+    .lesson__content .comment--reply {
+        margin-top: 0px;
+        padding-top: 0;
+    }
     .lesson__content__text h2 {
         margin-right: -20px;
     }
@@ -8018,6 +8052,12 @@ button:focus {
     }
     .lesson__content figure figcaption {
         padding-left: 35px;
+    }
+    .lesson__content__hr + .btn--outline {
+        margin-right: -10px;
+        margin-left: -10px;
+        width: -webkit-calc(100% + 20px);
+        width: calc(100% + 20px);
     }
 }
 /* UPLOAD FORM */

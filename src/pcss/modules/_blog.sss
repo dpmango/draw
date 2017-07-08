@@ -317,6 +317,7 @@
   letter-spacing: -.22px
   padding: 45px 0
   &--mute
+    margin-top: -20px
     padding: 10px 0
     color: color($fontColor a(35%))
     .comment__content
@@ -375,6 +376,13 @@
     .comment__author
       margin-bottom: 4px
 
+@media(width <= 1110px)
+  .comment
+    &--mute
+      .comment__text::before
+        left: -15px
+
+
 @media($tablet)
   .comment
     padding: 35px 0
@@ -382,6 +390,10 @@
       padding-left: 40px
     &__text
       &::before
+        left: -20px
+    &--mute
+      padding: 10px 0
+      .comment__text::before
         left: -20px
 
 @media($mobile)
@@ -391,6 +403,10 @@
       font-size: 13px
     &--reply
       padding-top: 25px
+    &--mute
+      color: $fontColor
+      padding-top: 0
+      margin-top: -10px
 
 @media($mobile-s)
   .comment
@@ -407,6 +423,8 @@
       margin-bottom: 5px
     &__text
       font-size: 12px
+    &--mute
+      padding-top: 0
 
 
 // COMMUNITY

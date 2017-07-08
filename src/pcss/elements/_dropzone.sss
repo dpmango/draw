@@ -117,15 +117,16 @@
     position: relative
     display: inline-block
     vertical-align: top
-    margin: 16px
-    min-height: 100px
+    margin: 0px
+    width: 100%
+    min-height: 235px
     &:hover
       z-index: 1000
       .dz-details
         opacity: 1
     &.dz-file-preview
       .dz-image
-        border-radius: 20px
+        border-radius: 6px
         background: #999
         background: linear-gradient(to bottom, #eee, #ddd)
       .dz-details
@@ -179,19 +180,28 @@
         padding: 0 0.4em
         border-radius: 3px
     &:hover .dz-image img
-      transform: scale(1.05, 1.05)
+      transform: translate(-50%, -50%) scale(1.05, 1.05)
       -webkit-filter: blur(8px)
       filter: blur(8px)
     .dz-image
-      border-radius: 20px
+      border-radius: 6px
       overflow: hidden
-      width: 120px
-      height: 120px
+      width: 100%
+      height: 235px
       position: relative
       display: block
       z-index: 10
       img
-        display: block
+        position: absolute
+        top: 50%
+        left: 50%
+        min-width: 100%
+        min-height: 100%
+        height: auto
+        width: auto
+        transform: translate(-50%, -50%)
+        transition: all $transitionSpeed $ease
+
     &.dz-success .dz-success-mark
       animation: passing-through 3s cubic-bezier(0.77, 0, 0.175, 1)
     &.dz-error .dz-error-mark
@@ -277,42 +287,10 @@
         border-right: 6px solid transparent
         border-bottom: 6px solid #be2626
 
-
-//
-// // CUSTOM STYLES
-// .dropzone
-//   box-sizing: border-box
-//   *
-//     box-sizing: border-box
-//   position: relative
-//   .dz-preview
-//     position: relative
-//     display: inline-block
-//     width: 120px
-//     margin: 0.5em
-//     .dz-progress
-//       display: block
-//       height: 15px
-//       border: 1px solid #aaa
-//       .dz-upload
-//         display: block
-//         height: 100%
-//         width: 0
-//         background: green
-//     .dz-error-message
-//       color: red
-//       display: none
-//     &.dz-error
-//       .dz-error-message, .dz-error-mark
-//         display: block
-//     &.dz-success .dz-success-mark
-//       display: block
-//     .dz-error-mark, .dz-success-mark
-//       position: absolute
-//       display: none
-//       left: 30px
-//       top: 30px
-//       width: 54px
-//       height: 58px
-//       left: 50%
-//       margin-left: -27px
+@media($mobile)
+  .dropzone
+    min-height: 230px
+    .dz-preview
+      min-height: 195px
+      .dz-image
+        height: 195px
