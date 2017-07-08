@@ -41,6 +41,9 @@
           line-height: 2
           margin-top: 5px
           letter-spacing: -.19px
+      .blog__content__pic-row
+        &:last-child
+          margin-bottom: 50px
 
     &__inv
       display: flex
@@ -49,6 +52,8 @@
       &__item
         flex: 0 1 33.3%
         padding: 0px 15px 15px 15px
+        img
+          max-width: 100%
         span
           display: block
           margin-top: 14px
@@ -282,8 +287,27 @@
         &::after
           bottom: -10px
       &__text
-        &--after-video
-          margin-top: -40px
+        h2
+          margin-right: -20px
+      &__inv
+        flex-direction: column
+        margin-left: 0
+        margin-right: 0
+        &__item
+          flex: 0 0 auto
+          padding: 15px 0
+          display: flex
+          align-items: center
+          img
+            flex: 0 0 46px
+            max-width: 46px
+          span
+            line-height: 1.5
+            font-size: 13px
+            margin-top: 0
+            margin-left: 10px
+
+
     &__sidebar
       min-width: 0
       &__content
@@ -308,6 +332,11 @@
       .video__content
         &::after
           bottom: 0
+      figure
+        margin: 25px -35px 30px -35px
+        figcaption
+          padding-left: 35px
+
 
 
 

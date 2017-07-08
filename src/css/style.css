@@ -7579,6 +7579,10 @@ button:focus {
     font-size: 12px;
     line-height: 2;
 }
+.lesson__content__text .blog__content__pic-row {}
+.lesson__content__text .blog__content__pic-row:last-child {
+    margin-bottom: 50px;
+}
 .lesson__content__inv {
     display: -webkit-box;
     display: -webkit-flex;
@@ -7593,6 +7597,9 @@ button:focus {
             flex: 0 1 33.3%;
     padding: 0px 15px 15px 15px;
     -webkit-box-flex: 0;
+}
+.lesson__content__inv__item img {
+    max-width: 100%;
 }
 .lesson__content__inv__item span {
     display: block;
@@ -7930,9 +7937,45 @@ button:focus {
     .lesson__content .video__content:after {
         bottom: -10px;
     }
-    .lesson__content__text {}
-    .lesson__content__text--after-video {
-        margin-top: -40px;
+    .lesson__content__text h2 {
+        margin-right: -20px;
+    }
+    .lesson__content__inv {
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        margin-right: 0;
+        margin-left: 0;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+    }
+    .lesson__content__inv__item {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-flex: 0 0 auto;
+            -ms-flex: 0 0 auto;
+                flex: 0 0 auto;
+        -webkit-align-items: center;
+                align-items: center;
+        padding: 15px 0;
+        -webkit-box-flex: 0;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+    }
+    .lesson__content__inv__item img {
+        -webkit-flex: 0 0 46px;
+            -ms-flex: 0 0 46px;
+                flex: 0 0 46px;
+        max-width: 46px;
+        -webkit-box-flex: 0;
+    }
+    .lesson__content__inv__item span {
+        margin-top: 0;
+        margin-left: 10px;
+        font-size: 13px;
+        line-height: 1.5;
     }
     .lesson__sidebar {
         min-width: 0;
@@ -7969,6 +8012,12 @@ button:focus {
     .lesson__content .video__content {}
     .lesson__content .video__content:after {
         bottom: 0;
+    }
+    .lesson__content figure {
+        margin: 25px -35px 30px -35px;
+    }
+    .lesson__content figure figcaption {
+        padding-left: 35px;
     }
 }
 /* UPLOAD FORM */
