@@ -7525,14 +7525,29 @@ button:focus {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1366px;
 }
 .lesson__content {
     -webkit-flex: 1 1 auto;
         -ms-flex: 1 1 auto;
             flex: 1 1 auto;
     margin-right: 50px;
-    max-width: 900px;
+    margin-left: auto;
+    max-width: 860px;
     -webkit-box-flex: 1;
+}
+.lesson__content .video__content {
+    margin-top: 45px;
+    margin-bottom: 80px;
+    padding: 0 0 20px 0;
+}
+.lesson__content .video__content:after {
+    right: 0;
+    bottom: -50px;
+    left: 0;
+    height: 200px;
 }
 .lesson__content .comment--reply {
     margin-top: 30px;
@@ -7563,9 +7578,6 @@ button:focus {
     letter-spacing: -.19px;
     font-size: 12px;
     line-height: 2;
-}
-.lesson__content__text--after-video {
-    margin-top: -90px;
 }
 .lesson__content__inv {
     display: -webkit-box;
@@ -7636,6 +7648,7 @@ button:focus {
     margin-top: -120px;
     margin-bottom: -120px;
     min-width: 400px;
+    min-height: 100vh;
     background: url('../images/lessons/lessonsSidebarBg@2x.jpg') no-repeat center;
     background-size: cover;
     -webkit-box-flex: 0;
@@ -7647,7 +7660,6 @@ button:focus {
 .lesson__sidebar__content {
     position: fixed;
     top: 0;
-    right: 0;
     bottom: 0;
     overflow-y: scroll;
     min-width: 400px;
@@ -7812,6 +7824,15 @@ button:focus {
     padding: 0 20px;
     text-align: right;
 }
+@media(max-width: 1200px) {
+    .lesson {}
+    .lesson__content .video__content {
+        margin-bottom: 75px;
+    }
+    .lesson__content .video__content:after {
+        bottom: -35px;
+    }
+}
 @media(max-width: 992px) {
     .lesson {}
     .lesson__sidebar {
@@ -7824,6 +7845,23 @@ button:focus {
     }
     .lesson__sidebar__content {
         min-width: 350px;
+    }
+    .lesson__content {
+        margin-right: 20px;
+    }
+    .lesson__content .video__content {
+        margin-bottom: 50px;
+    }
+    .lesson__content .video__content:after {
+        bottom: -20px;
+        background-size: contain;
+    }
+}
+@media(min-width: 768px) {
+    .lesson {}
+    .lesson__sidebar {}
+    .lesson__sidebar__content {
+        display: block !important;
     }
 }
 @media(max-width: 768px) {
@@ -7839,7 +7877,6 @@ button:focus {
             -ms-flex: 0 0 auto;
                 flex: 0 0 auto;
         margin-top: 30px;
-        margin-right: 20px;
         margin-left: 20px;
         -webkit-box-flex: 0;
     }
@@ -7852,6 +7889,7 @@ button:focus {
                 flex: 0 0 auto;
         margin-top: 0;
         margin-bottom: 0;
+        min-height: 0;
         -webkit-box-flex: 0;
     }
     .lesson__sidebar__content {
@@ -7885,7 +7923,13 @@ button:focus {
         padding-bottom: 13px;
         font-size: 13px;
     }
-    .lesson__content {}
+    .lesson__content .video__content {
+        margin-top: 30px;
+        margin-bottom: 40px;
+    }
+    .lesson__content .video__content:after {
+        bottom: -10px;
+    }
     .lesson__content__text {}
     .lesson__content__text--after-video {
         margin-top: -40px;
@@ -7921,6 +7965,10 @@ button:focus {
     .lesson__roadmap {}
     .lesson__roadmap__item {
         font-size: 12px;
+    }
+    .lesson__content .video__content {}
+    .lesson__content .video__content:after {
+        bottom: 0;
     }
 }
 /* UPLOAD FORM */
