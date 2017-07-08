@@ -67,8 +67,8 @@ $(document).ready(function(){
   });
 
   // SCROLLBARS
-  $('.scrollbar-dynamic').scrollbar();
-  $('.scrollbar-macosx').scrollbar();
+  // $('.scrollbar-dynamic').scrollbar();
+  // $('.scrollbar-macosx').scrollbar();
 
 
   // HAMBURGER TOGGLER
@@ -208,89 +208,6 @@ $(document).ready(function(){
     $('.slider-thumbs__slider').slick('slickGoTo', $(this).data('slide') - 1);
   });
 
-
-
-
-
-  //////////
-  // MODALS
-  //////////
-  // Custom modals
-  // $('*[data-modal]').on('click', function(){
-  //   // remove all active first
-  //   $('.modal').removeClass('opened');
-  //
-  //   // find by id
-  //   var target = $(this).data('modal');
-  //   $('#'+target).addClass('opened');
-  //
-  //   window.location.hash = target;
-  // });
-  //
-  // $('.modal__close').on('click', function(){
-  //   $(this).closest('.modal').removeClass('opened');
-  //   window.location.hash = "";
-  // });
-  //
-  // // CHECK SAVED STATE
-  // if(window.location.hash) {
-  //   var hash = window.location.hash.substring(1);
-  //   $('#'+hash).addClass('opened');
-  // }
-  //
-
-
-  // Magnific Popup
-  // var startWindowScroll = 0;
-  $('.js-popup').magnificPopup({
-    type: 'inline',
-    fixedContentPos: true,
-    fixedBgPos: true,
-    overflowY: 'auto',
-    closeBtnInside: true,
-    preloader: false,
-    midClick: true,
-    removalDelay: 300,
-    mainClass: 'popup-buble',
-    callbacks: {
-      beforeOpen: function() {
-        // startWindowScroll = _window.scrollTop();
-        // $('html').addClass('mfp-helper');
-      },
-      close: function() {
-        // $('html').removeClass('mfp-helper');
-        // _window.scrollTop(startWindowScroll);
-      }
-    }
-  });
-
-
-  // $('.popup-with-move-anim').magnificPopup({
-  //   type: 'inline',
-  //   fixedContentPos: false,
-  //   fixedBgPos: true,
-  //   overflowY: 'auto',
-  //   closeBtnInside: true,
-  //   preloader: false,
-  //   midClick: true,
-  //   removalDelay: 300,
-  //   mainClass: 'my-mfp-slide-bottom'
-  // });
-  //
-  // $('.popup-gallery').magnificPopup({
-	// 	delegate: 'a',
-	// 	type: 'image',
-	// 	tLoading: 'Loading image #%curr%...',
-	// 	mainClass: 'mfp-img-mobile',
-	// 	gallery: {
-	// 		enabled: true,
-	// 		navigateByImgClick: true,
-	// 		preload: [0,1]
-	// 	},
-	// 	image: {
-	// 		tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
-	// 	}
-	// });
 
   ////////////
   // SALES PAGE
@@ -477,40 +394,6 @@ $(document).ready(function(){
   $(".js-indexMask").mask("999 999",{placeholder:"000 000"});
   $("input[type='tel']").mask("+7 (000) 000-0000", {placeholder: "+7 (___) ___-____"});
 
-  // DATEPICKER
-  $('.js-datepicker').datepicker({
-    language: 'en',
-    range: true,
-    multipleDatesSeparator: " - "
-  });
-
-  // RANGESLIDER
-  var rangeSlider = document.querySelector('.js-rangeslider');
-
-  if ( $('.js-rangeslider').length > 0 ){
-    noUiSlider.create( rangeSlider, {
-    	start: [ 90, 120 ],
-      connect: true,
-      tooltips: true,
-      step: 1,
-      // pips: { // Show a scale with the slider
-    	// 	mode: 'steps',
-    	// 	stepped: true,
-    	// 	density: 4
-    	// },
-    	range: {
-    		'min': [  80 ],
-    		'max': [ 120 ]
-    	}
-    });
-
-    // method to get current value
-    // rangeSlider.noUiSlider.get();
-
-    // docs on noUiSlider
-    // https://refreshless.com/nouislider/slider-read-write/
-
-  }
 
 
   // UI FILE INPUT
@@ -518,33 +401,6 @@ $(document).ready(function(){
     var fileName = e.currentTarget.files[0].name
     $(this).parent().find('label span').text(fileName)
   });
-
-  // STICKY MAP RESULTS
-  // _window.scrolled(10, function () {
-  //   var stickyEl = $('.results__map');
-  //   var windowBottomScroll = _window.scrollTop() + _window.height();
-  //   var stopPoint = _document.height() - $('footer').outerHeight();
-  //
-  //   if (windowBottomScroll >= stopPoint) {
-  //     stickyEl.addClass('results__map--stop');
-  //   } else if (windowBottomScroll < stopPoint) {
-  //     stickyEl.removeClass('results__map--stop');
-  //   }
-  // });
-
-  // OPTIONAL
-  // hero parallax on mousemove
-
-  // var movementStrength = 50;
-  // var height = movementStrength / _window.height();
-  // var width = movementStrength / _window.width();
-  // $(".hero").mousemove(function(e){
-  //   var pageX = e.pageX - (_window.width() / 2);
-  //   var pageY = e.pageY - (_window.height() / 2);
-  //   var newvalueX = width * pageX * -1 - 25;
-  //   var newvalueY = height * pageY * -1 - 50;
-  //   $('.hero-bg').css("background-position", newvalueX+"px     "+newvalueY+"px");
-  // });
 
   // INPUTS FOCUS
 
@@ -632,11 +488,6 @@ $(document).ready(function(){
   ////////////
   // AJAX LOADING
   ///////////
-
-  // $('.js-loadBlogPosts').on('click', function(){
-  //   var offset = $(this).data('offset');
-  //   loadBlogPosts(offset);
-  // });
 
   // load posts on scroll
   _window.scrolled(25, function(){

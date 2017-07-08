@@ -55,7 +55,7 @@
           <div class="container">
             <div class="lesson__content__text">
               <div class="t-head">Практическое занятие:</div>
-              <div class="lesson__content__status lesson__content__status--top"><span>ожидает проверки куратором</span><i class="icon icon-pending-check"></i></div>
+              <div class="lesson__content__status lesson__content__status--top lesson__content__status--checked"><span>Получена оценка!</span><i class="icon icon-checked"></i></div>
               <div class="blog__content__text">
                 <p>Практика однозначно показывает, что перераспределение бюджета усиливает конструктивный традиционный канал. Рейтинг, в рамках сегодняшних воззрений, позиционирует охват аудитории. Фирменный стиль основательно подпорчен предыдущим опытом применения.</p>
               </div>
@@ -64,7 +64,10 @@
                   <div class="fallback">
                     <input name="file" type="file" multiple="">
                   </div>
-                  <div class="dz-message"></div><img src="images/lessons/lessonUpload.jpg" srcset="images/lessons/lessonUpload@2x.jpg 2x">
+                  <div class="dz-message"></div>
+                  <div class="dz-preview">
+                    <div class="dz-image"> <img src="images/lessons/lessonUpload.jpg" srcset="images/lessons/lessonUpload@2x.jpg 2x"></div>
+                  </div>
                 </form>
                 <div class="ui-group">
                   <div class="ui__toggler left">
@@ -105,6 +108,7 @@
         </div>
         <!-- SIDEBAR-->
         <div class="lesson__sidebar lesson__sidebar--dark">
+          <div class="lesson__sidebar__toggler" data-text-hidden="Свернуть" data-action="show"><span>Смотреть оглавление</span></div>
           <div class="lesson__sidebar__content">
             <ul class="lesson__control">
               <li class="disabled" data-something="">1</li>
@@ -131,7 +135,7 @@
                 <div class="lesson__roadmap__item__name">Учимся рисовать рукой</div>
               </div>
               <!-- item-->
-              <div class="lesson__roadmap__item lesson__roadmap__item--active">
+              <div class="lesson__roadmap__item active">
                 <div class="lesson__roadmap__item__date">04:21</div>
                 <div class="lesson__roadmap__item__icon"><i class="icon ico-practice-pending"></i></div>
                 <div class="lesson__roadmap__item__name">Начинаем делать папье-маше</div>
@@ -192,6 +196,7 @@
   </div>
   <!-- SECONDARY STYLES-->
   <link rel="stylesheet" href="css/secondary.css">
+  <link rel="stylesheet" href="css/extra.css">
   <!-- SCRIPTS-->
   <script src="js/scripts.min.js"></script>
 </body>
