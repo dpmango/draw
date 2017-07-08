@@ -3380,10 +3380,72 @@ button:focus {
 .thanks__cta a:hover span {
     border-color: transparent;
 }
+.thanks__cta--mobile {
+    display: none;
+}
+@media(max-width: 992px) {
+    .thanks {}
+    .thanks__cta {
+        letter-spacing: 6px;
+        font-size: 40px;
+    }
+}
+@media(max-width: 768px) {
+    .thanks {}
+    .thanks__cta {
+        display: none;
+    }
+    .thanks__cta--mobile {
+        display: block;
+    }
+}
+@media(max-width: 568px) {
+    .thanks {}
+    .thanks__name {
+        padding-top: 80px;
+        letter-spacing: 6px;
+        font-size: 40px;
+    }
+    .thanks__desc {
+        margin-top: 50px;
+        padding-right: 20px;
+        padding-left: 20px;
+        font-size: 15px;
+        line-height: 1.5;
+    }
+    .thanks__image {
+        -webkit-transform: translate(-50%,-50%) scale(.7);
+            -ms-transform: translate(-50%,-50%) scale(.7);
+                transform: translate(-50%,-50%) scale(.7);
+    }
+}
+@media(max-width: 414px) {
+    .thanks {}
+    .thanks__name {
+        padding-top: 60px;
+        letter-spacing: 5px;
+        font-size: 30px;
+    }
+    .thanks__desc {
+        font-size: 13px;
+    }
+    .thanks__cta {
+        margin-bottom: 70px;
+        letter-spacing: 5px;
+        font-size: 30px;
+    }
+    .thanks__image {
+        -webkit-transform: translate(-50%,-50%) scale(.5);
+            -ms-transform: translate(-50%,-50%) scale(.5);
+                transform: translate(-50%,-50%) scale(.5);
+    }
+}
 /* TESTIMONIALS */
 .reviews {
     margin-top: 40px;
     margin-left: auto;
+    padding-right: 0px;
+    padding-left: 20px;
     max-width: 1020px;
 }
 .reviews__head {
@@ -3421,6 +3483,49 @@ button:focus {
     background: url('../images/el/sep-line@2x.png') no-repeat center;
     background-size: cover;
     content: ' ';
+}
+@media(max-width: 568px) {
+    .reviews {
+        padding-right: 20px;
+    }
+    .reviews__head {
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-align-items: flex-start;
+                align-items: flex-start;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+    }
+    .reviews__head__filter {
+        -webkit-flex: 0 0 auto;
+            -ms-flex: 0 0 auto;
+                flex: 0 0 auto;
+        margin-top: 25px;
+        margin-left: 0;
+        min-width: 240px;
+        -webkit-box-flex: 0;
+    }
+}
+@media(max-width: 768px) {
+    .review-card {
+        margin-top: 40px;
+    }
+    .review-card__text p {
+        font-size: 15px;
+    }
+}
+@media(max-width: 414px) {
+    .review-card {}
+    .review-card__text p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+    .review-card:after {
+        margin-top: 40px;
+    }
 }
 /* SALES PAGE */
 /* COURSE CARD */
@@ -6059,6 +6164,9 @@ button:focus {
     .user-info__section:before {
         margin-top: 40px;
     }
+    .user-info__course {
+        font-size: 25px;
+    }
 }
 @media(max-width: 568px) {
     .user-info {}
@@ -6075,6 +6183,9 @@ button:focus {
     .user-info__section-name {
         font-size: 13px;
     }
+    .user-info__course {
+        font-size: 22px;
+    }
 }
 @media(max-width: 414px) {
     .user-info {}
@@ -6087,6 +6198,9 @@ button:focus {
     }
     .user-info__section p {
         font-size: 13px;
+    }
+    .user-info__course {
+        font-size: 18px;
     }
 }
 /* AUTHOR */
