@@ -104,25 +104,35 @@ $(document).ready(function () {
 
   // HOMEPAGE INSTAGRAM FEED
 
-  $('.instagram__wrapper').socialfeed({
-    // INSTAGRAM
-    instagram: {
-      accounts: ['#khmelevskoy_s'], //Array: Specify a list of accounts from which to pull posts
-      limit: 3, //Integer: max number of posts to load
-      client_id: 'd3e33bddb97d4f15ac8988b8179f407a', //String: Instagram client id (optional if using access token)
-      access_token: '2d4d0ad2bc4c4166b0661486fa190ea7' //String: Instagram access token
-    },
-
-    // GENERAL SETTINGS
-    length: 400, //Integer: For posts with text longer than this length, show an ellipsis.
-    template: "components/social-feed/template.html"
-    // template_html:                                  //String: HTML used for each post. This overrides the 'template' filename option
-    //   '<article class="twitter-post"> \
-    //   <h4>{{=it.author_name}}</h4><p>{{=it.text}}  \
-    //   <a href="{{=it.link}}" target="_blank">read more</a> \
-    //   </p> \
-    //   </article>',
+  // $('.instagram__wrapper').socialfeed({
+  //   // INSTAGRAM
+  //   instagram: {
+  //     accounts: ['@khmelevskoy_s, #khmelevskoy_s'], //Array: Specify a list of accounts from which to pull posts
+  //     limit: 3, //Integer: max number of posts to load
+  //     client_id: '2d4d0ad2bc4c4166b0661486fa190ea7', //String: Instagram client id (optional if using access token)
+  //     access_token: '5695707324.1677ed0.863a579f85214493b66bfbe5cb0ad123' //String: Instagram access token
+  //   },
+  //
+  //   // GENERAL SETTINGS
+  //   length: 400, //Integer: For posts with text longer than this length, show an ellipsis.
+  //   template: "components/social-feed/template.html"
+  //   // template_html:                                  //String: HTML used for each post. This overrides the 'template' filename option
+  //   //   '<article class="twitter-post"> \
+  //   //   <h4>{{=it.author_name}}</h4><p>{{=it.text}}  \
+  //   //   <a href="{{=it.link}}" target="_blank">read more</a> \
+  //   //   </p> \
+  //   //   </article>',
+  // });
+  //
+  var feed = new Instafeed({
+    target: 'instaFeed',
+    clientId: '7ca6e17df5dc4f8ebdc020c8102e94db',
+    access_token: '5695707324.7ca6e17.cc5d8301165f4922829c0a7f4e9cc395',
+    get: 'user',
+    userId: '5695707324'
   });
+  feed.run();
+
 
   //////////
   // SLIDERS
