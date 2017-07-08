@@ -97,7 +97,7 @@
       bottom: 0
       min-width: 400px
       height: 100vh
-      overflow-x: scroll
+      overflow-y: scroll
     &__toggler
       display: none
       font-family: 'Core65'
@@ -196,6 +196,15 @@
       text-align: right
       padding: 0 20px
 
+@media($desktop)
+  .lesson
+    &__sidebar
+      flex: 0 1 350px
+      min-width: 350px
+      margin-bottom: -180px
+      &__content
+        min-width: 350px
+
 @media($tablet)
   .lesson
     flex-direction: column-reverse
@@ -204,6 +213,8 @@
       margin-right: 20px
       margin-left: 20px
       margin-top: 30px
+      &__text
+        max-width: 100%
     &__sidebar
       flex: 0 0 auto
       margin-top: 0
@@ -216,7 +227,7 @@
       &__toggler
         display: block
     &__control
-      margin-top: 15px !important
+      margin-top: 20px !important
       margin-left: 40px
     &__roadmap
       margin-top: 30px
@@ -226,9 +237,30 @@
 
 @media($mobile)
   .lesson
+    margin-top: 10px
     &__roadmap
       &__item
         font-size: 13px
+        padding-top: 13px
+        padding-bottom: 13px
+    &__content
+      &__text
+        &--after-video
+          margin-top: -40px
+    &__sidebar
+      min-width: 0
+      &__content
+        min-width: 0
+    &__heading
+      flex-direction: column
+      align-items: flex-start
+      .t-head
+        font-size: 30px
+        margin-top: 25px
+        margin-right: -20px
+        margin-left: 0
+        padding: 0
+        text-align: left
 
 @media($mobile-s)
   .lesson

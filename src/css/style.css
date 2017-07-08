@@ -7649,7 +7649,7 @@ button:focus {
     top: 0;
     right: 0;
     bottom: 0;
-    overflow-x: scroll;
+    overflow-y: scroll;
     min-width: 400px;
     height: 100vh;
 }
@@ -7812,6 +7812,20 @@ button:focus {
     padding: 0 20px;
     text-align: right;
 }
+@media(max-width: 992px) {
+    .lesson {}
+    .lesson__sidebar {
+        -webkit-flex: 0 1 350px;
+            -ms-flex: 0 1 350px;
+                flex: 0 1 350px;
+        margin-bottom: -180px;
+        min-width: 350px;
+        -webkit-box-flex: 0;
+    }
+    .lesson__sidebar__content {
+        min-width: 350px;
+    }
+}
 @media(max-width: 768px) {
     .lesson {
         -webkit-flex-direction: column-reverse;
@@ -7828,6 +7842,9 @@ button:focus {
         margin-right: 20px;
         margin-left: 20px;
         -webkit-box-flex: 0;
+    }
+    .lesson__content__text {
+        max-width: 100%;
     }
     .lesson__sidebar {
         -webkit-flex: 0 0 auto;
@@ -7847,7 +7864,7 @@ button:focus {
         display: block;
     }
     .lesson__control {
-        margin-top: 15px !important;
+        margin-top: 20px !important;
         margin-left: 40px;
     }
     .lesson__roadmap {
@@ -7859,10 +7876,44 @@ button:focus {
     }
 }
 @media(max-width: 568px) {
-    .lesson {}
+    .lesson {
+        margin-top: 10px;
+    }
     .lesson__roadmap {}
     .lesson__roadmap__item {
+        padding-top: 13px;
+        padding-bottom: 13px;
         font-size: 13px;
+    }
+    .lesson__content {}
+    .lesson__content__text {}
+    .lesson__content__text--after-video {
+        margin-top: -40px;
+    }
+    .lesson__sidebar {
+        min-width: 0;
+    }
+    .lesson__sidebar__content {
+        min-width: 0;
+    }
+    .lesson__heading {
+        -webkit-flex-direction: column;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-align-items: flex-start;
+                align-items: flex-start;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-box-align: start;
+            -ms-flex-align: start;
+    }
+    .lesson__heading .t-head {
+        margin-top: 25px;
+        margin-right: -20px;
+        margin-left: 0;
+        padding: 0;
+        text-align: left;
+        font-size: 30px;
     }
 }
 @media(max-width: 414px) {
