@@ -7531,7 +7531,6 @@ button:focus {
         -ms-flex: 1 1 auto;
             flex: 1 1 auto;
     margin-right: 50px;
-    margin-left: auto;
     max-width: 900px;
     -webkit-box-flex: 1;
 }
@@ -7635,7 +7634,7 @@ button:focus {
         -ms-flex: 0 1 400px;
             flex: 0 1 400px;
     margin-top: -120px;
-    padding-top: 140px;
+    margin-bottom: -120px;
     min-width: 400px;
     background: url('../images/lessons/lessonsSidebarBg@2x.jpg') no-repeat center;
     background-size: cover;
@@ -7646,7 +7645,35 @@ button:focus {
     background-size: cover;
 }
 .lesson__sidebar__content {
-    min-height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow-x: scroll;
+    min-width: 400px;
+    height: 100vh;
+}
+.lesson__sidebar__toggler {
+    display: none;
+    padding: 15px 40px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-family: 'Core65';
+    cursor: pointer;
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+}
+.lesson__sidebar__toggler span {
+    border-bottom: 1px solid white;
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+}
+.lesson__sidebar__toggler:hover {
+    color: rgba(255, 255, 255, 0.7);
+}
+.lesson__sidebar__toggler:hover span {
+    border-color: transparent;
 }
 .lesson__control {
     display: -webkit-box;
@@ -7657,11 +7684,14 @@ button:focus {
         -ms-flex-wrap: wrap;
             flex-wrap: wrap;
     margin: 0;
+    margin-top: 140px;
     margin-left: 20px;
     padding: 0;
     max-width: 232px;
     list-style: none;
     font-size: 0;
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
 }
 .lesson__control li {
     display: -webkit-box;
@@ -7710,6 +7740,7 @@ button:focus {
 }
 .lesson__roadmap {
     margin-top: 50px;
+    margin-bottom: 30px;
 }
 .lesson__roadmap__item {
     display: -webkit-box;
@@ -7723,13 +7754,26 @@ button:focus {
     color: white;
     letter-spacing: -.22px;
     font-size: 14px;
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
     -webkit-box-align: center;
         -ms-flex-align: center;
 }
+.lesson__roadmap__item:hover {
+    background: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+}
 .lesson__roadmap__item--past {
     color: rgba(255, 255, 255, 0.4);
+    pointer-events: none;
 }
-.lesson__roadmap__item--active {
+.lesson__roadmap__item--past:hover {
+    background: transparent;
+}
+.lesson__roadmap__item.active {
+    background: #9B00D2;
+}
+.lesson__roadmap__item.active:hover {
     background: #9B00D2;
 }
 .lesson__roadmap__item__date {
@@ -7767,6 +7811,66 @@ button:focus {
     margin-left: auto;
     padding: 0 20px;
     text-align: right;
+}
+@media(max-width: 768px) {
+    .lesson {
+        -webkit-flex-direction: column-reverse;
+            -ms-flex-direction: column-reverse;
+                flex-direction: column-reverse;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+    }
+    .lesson__content {
+        -webkit-flex: 0 0 auto;
+            -ms-flex: 0 0 auto;
+                flex: 0 0 auto;
+        margin-top: 30px;
+        margin-right: 20px;
+        margin-left: 20px;
+        -webkit-box-flex: 0;
+    }
+    .lesson__sidebar {
+        -webkit-flex: 0 0 auto;
+            -ms-flex: 0 0 auto;
+                flex: 0 0 auto;
+        margin-top: 0;
+        margin-bottom: 0;
+        -webkit-box-flex: 0;
+    }
+    .lesson__sidebar__content {
+        position: static;
+        display: none;
+        overflow: auto;
+        height: auto;
+    }
+    .lesson__sidebar__toggler {
+        display: block;
+    }
+    .lesson__control {
+        margin-top: 15px !important;
+        margin-left: 40px;
+    }
+    .lesson__roadmap {
+        margin-top: 30px;
+    }
+    .lesson__roadmap__item {
+        padding-right: 20px;
+        padding-left: 40px;
+    }
+}
+@media(max-width: 568px) {
+    .lesson {}
+    .lesson__roadmap {}
+    .lesson__roadmap__item {
+        font-size: 13px;
+    }
+}
+@media(max-width: 414px) {
+    .lesson {}
+    .lesson__roadmap {}
+    .lesson__roadmap__item {
+        font-size: 12px;
+    }
 }
 /* UPLOAD FORM */
 .upload-form {

@@ -51,6 +51,8 @@ doctype html
               
           // SIDEBAR
           .lesson__sidebar.lesson__sidebar--dark
+            .lesson__sidebar__toggler(data-text-hidden='Свернуть' data-action='show')
+              span Смотреть оглавление
             .lesson__sidebar__content
               ul.lesson__control
                 li(data-something='').disabled 1
@@ -77,7 +79,7 @@ doctype html
                     i.icon.ico-practice-comment
                   .lesson__roadmap__item__name Учимся рисовать рукой
                 // item
-                .lesson__roadmap__item.lesson__roadmap__item--active
+                .lesson__roadmap__item.active
                   .lesson__roadmap__item__date 04:21
                   .lesson__roadmap__item__icon
                     i.icon.ico-practice-pending

@@ -330,6 +330,44 @@ $(document).ready(function () {
   }
 
   ////////////
+  // LESSON
+  ////////////
+
+  // sidebar scroll
+  if ($('.lesson__sidebar').length > 0) {
+    _window.scrolled(20, function () {
+      var vScroll = _window.scrollTop();
+
+      if (_window.width() > 768 && vScroll > $('.header').height()) {
+        $('.lesson__control').css('margin-top', '20px');
+      } else {
+        $('.lesson__control').css('margin-top', '140px');
+      }
+    });
+  }
+
+  // set active class - should be removed in production
+  $('.lesson__roadmap__item').on('click', function () {
+    $(this).siblings().removeClass('active');
+    $(this).addClass('active');
+  });
+
+  // toggler
+  var savedSidebarTogglerText;
+  $('.lesson__sidebar__toggler').on('click', function () {
+    $(this).parent().find('.lesson__sidebar__content').slideToggle();
+
+    if ($(this).data('action') == 'show') {
+      savedSidebarTogglerText = $(this).find('span').text();
+      $(this).find('span').text($(this).data('text-hidden'));
+      $(this).data('action', 'hide');
+    } else {
+      $(this).find('span').text(savedSidebarTogglerText);
+      $(this).data('action', 'show');
+    }
+  });
+
+  ////////////
   // UI
   ////////////
 

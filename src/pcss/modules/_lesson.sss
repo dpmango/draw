@@ -3,7 +3,6 @@
   display: flex
   &__content
     max-width: 900px
-    margin-left: auto
     flex: 1 1 auto
     margin-right: 50px
     &__text
@@ -83,7 +82,7 @@
   &__sidebar
     position: relative
     margin-top: -120px
-    padding-top: 140px
+    margin-bottom: -120px
     flex: 0 1 400px
     min-width: 400px
     background: url('../images/lessons/lessonsSidebarBg@2x.jpg') no-repeat center
@@ -92,16 +91,41 @@
       background: url('../images/lessons/lessonsSidebarBgDark@2x.jpg') no-repeat center
       background-size: cover
     &__content
-      min-height: 100vh
+      position: fixed
+      top: 0
+      right: 0
+      bottom: 0
+      min-width: 400px
+      height: 100vh
+      overflow-x: scroll
+    &__toggler
+      display: none
+      font-family: 'Core65'
+      font-size: 18px
+      text-transform: uppercase
+      color: white
+      padding: 15px 40px
+      cursor: pointer
+      transition: all $transitionSpeed $ease
+      span
+        transition: all $transitionSpeed $ease
+        border-bottom: 1px solid white
+      &:hover
+        color: color(white a(70%))
+        span
+          border-color: transparent
+
   &__control
     list-style: none
     max-width: 232px
     margin: 0
     padding: 0
+    margin-top: 140px
     display: flex
     flex-wrap: wrap
     font-size: 0
     margin-left: 20px
+    transition: all $transitionSpeed $ease
     li
       flex: 0 1 50px
       size: 50px
@@ -132,6 +156,7 @@
 
   &__roadmap
     margin-top: 50px
+    margin-bottom: 30px
     &__item
       display: flex
       align-items: center
@@ -140,10 +165,19 @@
       font-size: 14px
       color: white
       letter-spacing: -.22px
+      transition: all $transitionSpeed $ease
+      &:hover
+        background: color(white a(20%))
+        cursor: pointer
       &--past
         color: color(white a(40%))
-      &--active
+        pointer-events: none
+        &:hover
+          background: transparent
+      &.active
         background: $colorPrimary
+        &:hover
+          background: $colorPrimary
       &__date
         flex: 0 0 45px
       &__icon
@@ -161,6 +195,47 @@
       margin-left: auto
       text-align: right
       padding: 0 20px
+
+@media($tablet)
+  .lesson
+    flex-direction: column-reverse
+    &__content
+      flex: 0 0 auto
+      margin-right: 20px
+      margin-left: 20px
+      margin-top: 30px
+    &__sidebar
+      flex: 0 0 auto
+      margin-top: 0
+      margin-bottom: 0
+      &__content
+        display: none
+        position: static
+        overflow: auto
+        height: auto
+      &__toggler
+        display: block
+    &__control
+      margin-top: 15px !important
+      margin-left: 40px
+    &__roadmap
+      margin-top: 30px
+      &__item
+        padding-left: 40px
+        padding-right: 20px
+
+@media($mobile)
+  .lesson
+    &__roadmap
+      &__item
+        font-size: 13px
+
+@media($mobile-s)
+  .lesson
+    &__roadmap
+      &__item
+        font-size: 12px
+
 
 
 // UPLOAD FORM
