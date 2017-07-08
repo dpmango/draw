@@ -14,13 +14,8 @@
   &--lesson
     background: transparent
     .header__user
-      color: white
-      &__logout
-        border: 1px solid color(white a(30%))
-        border-radius: 40px
-        padding: 5px 10px
-        margin-left: 10px
-
+      flex: 0 1 300px
+      opacity: 0
   &__wrapper
     display: flex
     &--center
@@ -64,6 +59,7 @@
     margin: 20px 0 0 0
     flex: 1 1 auto
     font-size: 14px
+    max-width: 710px
     padding: 0 8% 0 30px
     letter-spacing: -.22px
     display: flex
@@ -186,6 +182,10 @@
 
 @media($desktop)
   .header
+    &--lesson
+      .header__user
+        flex: 0 1 auto
+        opacity: 1
     &__menu
       flex-grow: 0
       padding: 0 20px 0 25px

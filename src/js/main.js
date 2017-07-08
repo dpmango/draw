@@ -260,10 +260,10 @@ $(document).ready(function () {
     _window.scrolled(20, function () {
       var vScroll = _window.scrollTop();
 
-      if (_window.width() > 768 && vScroll > $('.header').height()) {
-        $('.lesson__control').css('margin-top', '20px');
+      if (_window.width() > 768 && _window.width() < 992 && vScroll > $('.header').height()) {
+        $('.lesson__sidebar__content').css('top', '0px')
       } else {
-        $('.lesson__control').css('margin-top', '140px');
+        $('.lesson__sidebar__content').css('top', '120px')
       }
     });
   }

@@ -70,8 +70,6 @@
     &__section
       margin-top: 80px
       margin-bottom: 80px
-
-
     &__hr
       background: $fontColor
       height: 1px
@@ -104,17 +102,32 @@
     flex: 0 1 400px
     min-width: 400px
     min-height: 100vh
-    background: url('../images/lessons/lessonsSidebarBg@2x.jpg') no-repeat center
-    background-size: cover
+    .header__user
+      position: fixed
+      top: 12px
+      right: 10px
+      z-index: 9
+      color: white
+      width: 400px
+      &__logout
+        border: 1px solid color(white a(30%))
+        border-radius: 40px
+        padding: 5px 10px
+        margin-left: 10px
+
     &--dark
-      background: url('../images/lessons/lessonsSidebarBgDark@2x.jpg') no-repeat center
-      background-size: cover
+      .sidebar__content
+        background: url('../images/lessons/lessonsSidebarBgDark@2x.jpg') no-repeat center
+        background-size: cover
     &__content
       position: fixed
       top: 0
       bottom: 0
+      right: 0
       min-width: 400px
       height: 100vh
+      background: url('../images/lessons/lessonsSidebarBg@2x.jpg') no-repeat center
+      background-size: cover
       overflow-y: scroll
     &__toggler
       display: none
@@ -222,14 +235,24 @@
         &::after
           bottom: -35px
 
+@media($desktop-from)
+  .lesson
+    &__sidebar
+      &__content
+        top: 0 !important
+
 @media($desktop)
   .lesson
     &__sidebar
       flex: 0 1 350px
       min-width: 350px
-      margin-bottom: -180px
+      margin-bottom: 0
+      margin-top: 0
+      .header__user
+        display: none
       &__content
         min-width: 350px
+        top: 120px
     &__content
       margin-right: 20px
       .video__content
@@ -237,12 +260,15 @@
         &::after
           background-size: contain
           bottom: -20px
+    &__control
+      margin-top: 20px
 
 @media($tablet-from)
   .lesson
     &__sidebar
       &__content
         display: block !important
+        transition: all $transitionSpeed $ease
 
 @media($tablet)
   .lesson
@@ -258,7 +284,13 @@
       margin-top: 0
       margin-bottom: 0
       min-height: 0
+      background: url('../images/lessons/lessonsSidebarBg@2x.jpg') no-repeat center
+      background-size: cover
+      &--dark
+        background: url('../images/lessons/lessonsSidebarBgDark@2x.jpg') no-repeat center
+        background-size: cover
       &__content
+        background: none
         display: none
         position: static
         overflow: auto
