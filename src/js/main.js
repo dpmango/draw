@@ -103,35 +103,33 @@ $(document).ready(function () {
   }, 1700);
 
   // HOMEPAGE INSTAGRAM FEED
-
-  // $('.instagram__wrapper').socialfeed({
-  //   // INSTAGRAM
-  //   instagram: {
-  //     accounts: ['@khmelevskoy_s, #khmelevskoy_s'], //Array: Specify a list of accounts from which to pull posts
-  //     limit: 3, //Integer: max number of posts to load
-  //     client_id: '2d4d0ad2bc4c4166b0661486fa190ea7', //String: Instagram client id (optional if using access token)
-  //     access_token: '5695707324.1677ed0.863a579f85214493b66bfbe5cb0ad123' //String: Instagram access token
-  //   },
-  //
-  //   // GENERAL SETTINGS
-  //   length: 400, //Integer: For posts with text longer than this length, show an ellipsis.
-  //   template: "components/social-feed/template.html"
-  //   // template_html:                                  //String: HTML used for each post. This overrides the 'template' filename option
-  //   //   '<article class="twitter-post"> \
-  //   //   <h4>{{=it.author_name}}</h4><p>{{=it.text}}  \
-  //   //   <a href="{{=it.link}}" target="_blank">read more</a> \
-  //   //   </p> \
-  //   //   </article>',
-  // });
-  //
-  var feed = new Instafeed({
-    target: 'instaFeed',
-    clientId: '7ca6e17df5dc4f8ebdc020c8102e94db',
-    access_token: '5695707324.7ca6e17.cc5d8301165f4922829c0a7f4e9cc395',
-    get: 'user',
-    userId: '5695707324'
+  $('.instagram__wrapper').socialfeed({
+    // INSTAGRAM
+    instagram: {
+      limit: 3,
+      accounts: ['@rngc_golf'],
+      client_id: '692fe9f9219d41c49870ad1265f00766',
+      access_token: '5465603138.692fe9f.7387354608cc4a0c8747675104ac1830'
+      // accounts: ['@khmelevskoy_s'], //Array: Specify a list of accounts from which to pull posts
+      // limit: 3, //Integer: max number of posts to load
+      // client_id: '2d4d0ad2bc4c4166b0661486fa190ea7', //String: Instagram client id (optional if using access token)
+      // access_token: '5695707324.1677ed0.863a579f85214493b66bfbe5cb0ad123' //String: Instagram access token
+    },
+    template_html: '<div data-wow-delay="0.2s" class="instagram__image wow transformUp {{? !it.moderation_passed}}hidden{{?}}" data-social="{{=it.social_network}}"  dt-create="{{=it.dt_create}}" social-feed-id = "{{=it.id}}">\
+				<a href="{{=it.link}}" target="_blank" class="news_{{=it.social_network}}">\
+					<img src="{{=it.attachment}}">\
+				</a>\
+			</div>'
   });
-  feed.run();
+
+  // var feed = new Instafeed({
+  //   target: 'instaFeed',
+  //   clientId: '7ca6e17df5dc4f8ebdc020c8102e94db',
+  //   access_token: '5695707324.7ca6e17.cc5d8301165f4922829c0a7f4e9cc395',
+  //   get: 'user',
+  //   userId: '5695707324'
+  // });
+  // feed.run();
 
 
   //////////
@@ -271,9 +269,9 @@ $(document).ready(function () {
       var vScroll = _window.scrollTop();
 
       if (_window.width() > 768 && _window.width() < 992 && vScroll > $('.header').height()) {
-        $('.lesson__sidebar__content').css('top', '0px')
+        $('.lesson__sidebar__content').css('top', '0px');
       } else {
-        $('.lesson__sidebar__content').css('top', '120px')
+        $('.lesson__sidebar__content').css('top', '120px');
       }
     });
   }
