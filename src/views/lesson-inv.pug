@@ -18,7 +18,7 @@ doctype html
               .lesson__content__text
                 .t-head Инвентарь
                 
-                h2.ttu Вот что понадобится на уроке
+                h2 Вот что понадобится на уроке
                 
                 .blog__content__pic-row
                   .blog__content__pic-row__image
@@ -31,7 +31,7 @@ doctype html
                   .blog__content__pic-row__content
                     p В соответствии с законом Ципфа, искусство медиапланирования последовательно транслирует целевой сегмент рынка. CTR, конечно, абстрактен. Сегмент рынка ригиден.
                 
-                h2.ttu Скачать файлы
+                h2 Скачать файлы
                 
                 .lesson__content__inv
                   a(href='#').lesson__content__inv__item
@@ -47,6 +47,13 @@ doctype html
               
           // SIDEBAR
           .lesson__sidebar.lesson__sidebar--dark
+            
+            .header__user
+              a(href='#').header__user__avatar
+                .header__user__image
+                  img(src='images/tmp/avatar.png' srcset='images/tmp/avatar@2x.png 2x')
+              a(href='#').header__user__name Владимир-Долгий-Рапопорт
+              a(href='#').header__user__logout выйти
             .lesson__sidebar__toggler(data-text-hidden='Свернуть' data-action='show')
               span Смотреть оглавление
             .lesson__sidebar__content

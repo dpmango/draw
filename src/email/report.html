@@ -166,10 +166,18 @@
             }
 
             /* What it does: Adjust typography on small screens to improve readability */
-			.email-container p {
-				font-size: 17px !important;
-				line-height: 22px !important;
-			}
+            .email-container p {
+              font-size: 13px !important;
+              line-height: 20px !important;
+            }
+
+            .mobile-pad{
+              padding-left: 40px !important;
+            }
+            .mobile-image{
+              width: 120px !important;
+              right: 10px !important;
+            }
         }
 
     </style>
@@ -210,11 +218,11 @@
             <!-- Email Header : BEGIN -->
             <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="left" width="100%" style="max-width: 600px;">
                 <tr>
-                    <td style="padding: 20px 0; text-align: left">
-                        <img src="assets/logo.jpg" width="180" height="62" alt="alt_text" border="0" style="height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
+                    <td style="padding: 20px 40px; text-align: left" class='mobile-pad'>
+                        <img src="assets/logo.png" srcset='assets/logo@2x.png 2x' width="180" height="62" alt="alt_text" border="0" style="height: auto; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
                     </td>
-                    <td bgcolor="#ffffff" align='right' style='position: relative; top: 60px'>
-                        <img src="assets/star.jpg" width="240" height="" alt="alt_text" border="0" align="center" class="fluid" style="width: 100%; max-width: 240px; height: auto; background: #dddddd; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;" class="g-img">
+                    <td align='right' style='position: relative; top: 60px; padidng-right: 70px; right: 10px;' class='mobile-pad mobile-image'>
+                        <img src="assets/star.png" srcset='assets/star@2x.png 2x' width="240" height="" alt="alt_text" border="0" align="center" class="fluid" style="width: 100%; max-width: 240px; height: auto; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;" class="g-img">
                     </td>
                 </tr>
             </table>
@@ -228,17 +236,17 @@
                     <td style='position: relative; top: -20px;'>
                         <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                             <tr>
-                                <td style="padding: 40px 40px 20px; text-align: left;">
+                                <td style="padding: 35px 70px 20px 100px; text-align: left;" class='mobile-pad'>
                                     <h1 style="margin: 0; font-family: sans-serif; font-size: 24px; line-height: 27px; color: #000; font-weight: bold;">Оставьте отзыв, <br> пожалуйста</h1>
                                 </td>
                             </tr>
                             <tr>
-                                <td style="padding: 0 40px 40px; font-family: sans-serif; font-size: 17px; line-height: 31px; color: #000; text-align: left;">
+                                <td style="padding: 0 70px 20px 100px; font-family: sans-serif; font-size: 17px; line-height: 31px; color: #000; text-align: left;" class='mobile-pad'>
                                     <p style="margin: 0;">Охват аудитории традиционно экономит анализ рыночных цен, учитывая современные тенденции. Привлечение аудитории, согласно Ф.Котлеру, допускает SWOT-анализ. Конкурент создает эмпирический комплексный анализ ситуации.</p>
                                 </td>
                             </tr>
                             <tr>
-                                <td style="padding: 0 40px 40px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;">
+                                <td style="padding: 0 70px 40px 100px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555;" class='mobile-pad'>
                                     <!-- Button : BEGIN -->
                                     <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="left" style="margin: auto;">
                                         <tr>
@@ -261,7 +269,7 @@
             <!-- Email Body : END -->
 
             <!-- Email Footer : BEGIN -->
-            <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 600px;">
+            <!-- <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="100%" style="max-width: 600px;">
                 <tr>
                     <td style="padding: 40px 10px;width: 100%;font-size: 12px; font-family: sans-serif; line-height:18px; text-align: center; color: #888888;" class="x-gmail-data-detectors">
                         <webversion style="color:#cccccc; text-decoration:underline; font-weight: bold;">Проблемы с отображением? </webversion>
@@ -271,7 +279,7 @@
                         <unsubscribe style="color:#888888; text-decoration:underline;">отписаться</unsubscribe>
                     </td>
                 </tr>
-            </table>
+            </table> -->
             <!-- Email Footer : END -->
 
             <!--[if mso]>

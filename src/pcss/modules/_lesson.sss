@@ -1,15 +1,26 @@
 // LESSONS PAGES
 .lesson
   display: flex
+  max-width: 1366px
+  margin-left: auto
+  margin-right: auto
   &__content
-    max-width: 900px
+    margin-left: auto
+    max-width: 860px
     flex: 1 1 auto
     margin-right: 50px
+    .video__content
+      margin-top: 45px
+      margin-bottom: 80px
+      padding: 0 0 20px 0
+      &::after
+        bottom: -50px
+        left: 0
+        right: 0
+        height: 200px
     &__text
       max-width: 610px
       margin-left: auto
-      &--after-video
-        margin-top: -90px
       p
         font-size: 14px
         line-height: 1.55
@@ -30,6 +41,9 @@
           line-height: 2
           margin-top: 5px
           letter-spacing: -.19px
+      .blog__content__pic-row
+        &:last-child
+          margin-bottom: 50px
 
     &__inv
       display: flex
@@ -38,6 +52,8 @@
       &__item
         flex: 0 1 33.3%
         padding: 0px 15px 15px 15px
+        img
+          max-width: 100%
         span
           display: block
           margin-top: 14px
@@ -54,8 +70,6 @@
     &__section
       margin-top: 80px
       margin-bottom: 80px
-
-
     &__hr
       background: $fontColor
       height: 1px
@@ -75,6 +89,8 @@
       &--top
         color: $fontColor
         margin-top: 5px
+      &--checked
+        color: #00CEA0
 
     .comment--reply
       margin-top: 30px
@@ -85,18 +101,33 @@
     margin-bottom: -120px
     flex: 0 1 400px
     min-width: 400px
-    background: url('../images/lessons/lessonsSidebarBg@2x.jpg') no-repeat center
-    background-size: cover
+    min-height: 100vh
+    .header__user
+      position: fixed
+      top: 12px
+      right: 10px
+      z-index: 9
+      color: white
+      width: 400px
+      &__logout
+        border: 1px solid color(white a(30%))
+        border-radius: 40px
+        padding: 5px 10px
+        margin-left: 10px
+
     &--dark
-      background: url('../images/lessons/lessonsSidebarBgDark@2x.jpg') no-repeat center
-      background-size: cover
+      .sidebar__content
+        background: url('../images/lessons/lessonsSidebarBgDark@2x.jpg') no-repeat center
+        background-size: cover
     &__content
       position: fixed
       top: 0
-      right: 0
       bottom: 0
+      right: 0
       min-width: 400px
       height: 100vh
+      background: url('../images/lessons/lessonsSidebarBg@2x.jpg') no-repeat center
+      background-size: cover
       overflow-y: scroll
     &__toggler
       display: none
@@ -196,21 +227,54 @@
       text-align: right
       padding: 0 20px
 
+@media($wide)
+  .lesson
+    &__content
+      .video__content
+        margin-bottom: 75px
+        &::after
+          bottom: -35px
+
+@media($desktop-from)
+  .lesson
+    &__sidebar
+      &__content
+        top: 0 !important
+
 @media($desktop)
   .lesson
     &__sidebar
       flex: 0 1 350px
       min-width: 350px
-      margin-bottom: -180px
+      margin-bottom: 0
+      margin-top: 0
+      .header__user
+        display: none
       &__content
         min-width: 350px
+        top: 120px
+    &__content
+      margin-right: 20px
+      .video__content
+        margin-bottom: 50px
+        &::after
+          background-size: contain
+          bottom: -20px
+    &__control
+      margin-top: 20px
+
+@media($tablet-from)
+  .lesson
+    &__sidebar
+      &__content
+        display: block !important
+        transition: all $transitionSpeed $ease
 
 @media($tablet)
   .lesson
     flex-direction: column-reverse
     &__content
       flex: 0 0 auto
-      margin-right: 20px
       margin-left: 20px
       margin-top: 30px
       &__text
@@ -219,7 +283,14 @@
       flex: 0 0 auto
       margin-top: 0
       margin-bottom: 0
+      min-height: 0
+      background: url('../images/lessons/lessonsSidebarBg@2x.jpg') no-repeat center
+      background-size: cover
+      &--dark
+        background: url('../images/lessons/lessonsSidebarBgDark@2x.jpg') no-repeat center
+        background-size: cover
       &__content
+        background: none
         display: none
         position: static
         overflow: auto
@@ -244,9 +315,36 @@
         padding-top: 13px
         padding-bottom: 13px
     &__content
+      .video__content
+        margin-top: 30px
+        margin-bottom: 40px
+        &::after
+          bottom: -10px
       &__text
-        &--after-video
-          margin-top: -40px
+        h2
+          margin-right: -20px
+      &__inv
+        flex-direction: column
+        margin-left: 0
+        margin-right: 0
+        &__item
+          flex: 0 0 auto
+          padding: 15px 0
+          display: flex
+          align-items: center
+          img
+            flex: 0 0 46px
+            max-width: 46px
+          span
+            line-height: 1.5
+            font-size: 13px
+            margin-top: 0
+            margin-left: 10px
+
+      .comment--reply
+        margin-top: 0px
+        padding-top: 0
+
     &__sidebar
       min-width: 0
       &__content
@@ -267,6 +365,20 @@
     &__roadmap
       &__item
         font-size: 12px
+    &__content
+      .video__content
+        &::after
+          bottom: 0
+      figure
+        margin: 25px -35px 30px -35px
+        figcaption
+          padding-left: 35px
+      &__hr
+        + .btn--outline
+          margin-left: -10px
+          margin-right: -10px
+          width: calc(100% + 20px)
+
 
 
 

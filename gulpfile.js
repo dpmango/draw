@@ -218,7 +218,7 @@ gulp.task('useref', function(){
 });
 
 gulp.task('cssnano', function () {
-  return gulp.src('./dist/css/*.css')
+  return gulp.src('./dist/css/styles.css')
     .pipe( postcss([cssnano({
       autoprefixer: false,
       reduceIdents: {

@@ -1,0 +1,48 @@
+/* 0. VARS */
+/* LAYOUT */
+/* COLORS */
+/* OPTIONS */
+/* SOCIALS */
+
+/* 2. Elements */
+/* LOADED FROM ADMIN */
+.header {}
+.header__user {}
+.header__user__avatar {}
+.header__user__avatar:before {
+    background-image: url('../images/el/headerBlot@2x.png')
+}
+.course-cta {}
+.course-cta__wrapper {}
+.course-cta__wrapper:before {
+    background-image: url('../images/el/buyformRose@2x.png')
+}
+.course-cta__wrapper--aqua {}
+.course-cta__wrapper--aqua:before {
+    background-image: url('../images/el/buyformBlue@2x.png')
+}
+.video {}
+.video__wrapper {}
+.video__wrapper:after {
+    background-image: url('../images/el/videoBlot@2x.png')
+}
+.video--small .video__wrapper {}
+.video--small .video__wrapper:after {
+    left: 50%;
+    width: 660px;
+    height: 260px;
+    background: url('../images/el/videoAquaBg@2x.png') no-repeat center;
+    background-size: contain;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%)
+}
+.icon {}
+.icon-slide-prev {
+    background-image: url('../images/el/slide-prev@2x.png')
+}
+.icon-slide-next {
+    background-image: url('../images/el/slide-next@2x.png')
+}
+
+/*# sourceMappingURL=extra.css.map */

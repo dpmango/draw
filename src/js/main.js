@@ -70,8 +70,9 @@ $(document).ready(function () {
   });
 
   // SCROLLBARS
-  $('.scrollbar-dynamic').scrollbar();
-  $('.scrollbar-macosx').scrollbar();
+  // $('.scrollbar-dynamic').scrollbar();
+  // $('.scrollbar-macosx').scrollbar();
+
 
   // HAMBURGER TOGGLER
   $('.hamburger').on('click', function () {
@@ -102,26 +103,34 @@ $(document).ready(function () {
   }, 1700);
 
   // HOMEPAGE INSTAGRAM FEED
-
   $('.instagram__wrapper').socialfeed({
     // INSTAGRAM
     instagram: {
-      accounts: ['#khmelevskoy_s'], //Array: Specify a list of accounts from which to pull posts
-      limit: 3, //Integer: max number of posts to load
-      client_id: 'd3e33bddb97d4f15ac8988b8179f407a', //String: Instagram client id (optional if using access token)
-      access_token: '2d4d0ad2bc4c4166b0661486fa190ea7' //String: Instagram access token
+      limit: 3,
+      accounts: ['@rngc_golf'],
+      client_id: '692fe9f9219d41c49870ad1265f00766',
+      access_token: '5465603138.692fe9f.7387354608cc4a0c8747675104ac1830'
+      // accounts: ['@khmelevskoy_s'], //Array: Specify a list of accounts from which to pull posts
+      // limit: 3, //Integer: max number of posts to load
+      // client_id: '2d4d0ad2bc4c4166b0661486fa190ea7', //String: Instagram client id (optional if using access token)
+      // access_token: '5695707324.1677ed0.863a579f85214493b66bfbe5cb0ad123' //String: Instagram access token
     },
-
-    // GENERAL SETTINGS
-    length: 400, //Integer: For posts with text longer than this length, show an ellipsis.
-    template: "components/social-feed/template.html"
-    // template_html:                                  //String: HTML used for each post. This overrides the 'template' filename option
-    //   '<article class="twitter-post"> \
-    //   <h4>{{=it.author_name}}</h4><p>{{=it.text}}  \
-    //   <a href="{{=it.link}}" target="_blank">read more</a> \
-    //   </p> \
-    //   </article>',
+    template_html: '<div data-wow-delay="0.2s" class="instagram__image wow transformUp {{? !it.moderation_passed}}hidden{{?}}" data-social="{{=it.social_network}}"  dt-create="{{=it.dt_create}}" social-feed-id = "{{=it.id}}">\
+				<a href="{{=it.link}}" target="_blank" class="news_{{=it.social_network}}">\
+					<img src="{{=it.attachment}}">\
+				</a>\
+			</div>'
   });
+
+  // var feed = new Instafeed({
+  //   target: 'instaFeed',
+  //   clientId: '7ca6e17df5dc4f8ebdc020c8102e94db',
+  //   access_token: '5695707324.7ca6e17.cc5d8301165f4922829c0a7f4e9cc395',
+  //   get: 'user',
+  //   userId: '5695707324'
+  // });
+  // feed.run();
+
 
   //////////
   // SLIDERS
@@ -204,85 +213,6 @@ $(document).ready(function () {
     $('.slider-thumbs__slider').slick('slickGoTo', $(this).data('slide') - 1);
   });
 
-  //////////
-  // MODALS
-  //////////
-  // Custom modals
-  // $('*[data-modal]').on('click', function(){
-  //   // remove all active first
-  //   $('.modal').removeClass('opened');
-  //
-  //   // find by id
-  //   var target = $(this).data('modal');
-  //   $('#'+target).addClass('opened');
-  //
-  //   window.location.hash = target;
-  // });
-  //
-  // $('.modal__close').on('click', function(){
-  //   $(this).closest('.modal').removeClass('opened');
-  //   window.location.hash = "";
-  // });
-  //
-  // // CHECK SAVED STATE
-  // if(window.location.hash) {
-  //   var hash = window.location.hash.substring(1);
-  //   $('#'+hash).addClass('opened');
-  // }
-  //
-
-
-  // Magnific Popup
-  // var startWindowScroll = 0;
-  $('.js-popup').magnificPopup({
-    type: 'inline',
-    fixedContentPos: true,
-    fixedBgPos: true,
-    overflowY: 'auto',
-    closeBtnInside: true,
-    preloader: false,
-    midClick: true,
-    removalDelay: 300,
-    mainClass: 'popup-buble',
-    callbacks: {
-      beforeOpen: function beforeOpen() {
-        // startWindowScroll = _window.scrollTop();
-        // $('html').addClass('mfp-helper');
-      },
-      close: function close() {
-        // $('html').removeClass('mfp-helper');
-        // _window.scrollTop(startWindowScroll);
-      }
-    }
-  });
-
-  // $('.popup-with-move-anim').magnificPopup({
-  //   type: 'inline',
-  //   fixedContentPos: false,
-  //   fixedBgPos: true,
-  //   overflowY: 'auto',
-  //   closeBtnInside: true,
-  //   preloader: false,
-  //   midClick: true,
-  //   removalDelay: 300,
-  //   mainClass: 'my-mfp-slide-bottom'
-  // });
-  //
-  // $('.popup-gallery').magnificPopup({
-  // 	delegate: 'a',
-  // 	type: 'image',
-  // 	tLoading: 'Loading image #%curr%...',
-  // 	mainClass: 'mfp-img-mobile',
-  // 	gallery: {
-  // 		enabled: true,
-  // 		navigateByImgClick: true,
-  // 		preload: [0,1]
-  // 	},
-  // 	image: {
-  // 		tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
-  // 	}
-  // });
-
   ////////////
   // SALES PAGE
   ////////////
@@ -353,10 +283,10 @@ $(document).ready(function () {
     _window.scrolled(20, function () {
       var vScroll = _window.scrollTop();
 
-      if (_window.width() > 768 && vScroll > $('.header').height()) {
-        $('.lesson__control').css('margin-top', '20px');
+      if (_window.width() > 768 && _window.width() < 992 && vScroll > $('.header').height()) {
+        $('.lesson__sidebar__content').css('top', '0px');
       } else {
-        $('.lesson__control').css('margin-top', '140px');
+        $('.lesson__sidebar__content').css('top', '120px');
       }
     });
   }
@@ -478,59 +408,11 @@ $(document).ready(function () {
   $(".js-indexMask").mask("999 999", { placeholder: "000 000" });
   $("input[type='tel']").mask("+7 (000) 000-0000", { placeholder: "+7 (___) ___-____" });
 
-  // DATEPICKER
-  $('.js-datepicker').datepicker({
-    language: 'en',
-    range: true,
-    multipleDatesSeparator: " - "
-  });
-
-  // RANGESLIDER
-  var rangeSlider = document.querySelector('.js-rangeslider');
-
-  if ($('.js-rangeslider').length > 0) {
-    noUiSlider.create(rangeSlider, {
-      start: [90, 120],
-      connect: true,
-      tooltips: true,
-      step: 1,
-      // pips: { // Show a scale with the slider
-      // 	mode: 'steps',
-      // 	stepped: true,
-      // 	density: 4
-      // },
-      range: {
-        'min': [80],
-        'max': [120]
-      }
-    });
-
-    // method to get current value
-    // rangeSlider.noUiSlider.get();
-
-    // docs on noUiSlider
-    // https://refreshless.com/nouislider/slider-read-write/
-  }
-
   // UI FILE INPUT
   $('.ui-avatar-file input').on('change', function (e) {
     var fileName = e.currentTarget.files[0].name;
     $(this).parent().find('label span').text(fileName);
   });
-
-  // OPTIONAL
-  // hero parallax on mousemove
-
-  // var movementStrength = 50;
-  // var height = movementStrength / _window.height();
-  // var width = movementStrength / _window.width();
-  // $(".hero").mousemove(function(e){
-  //   var pageX = e.pageX - (_window.width() / 2);
-  //   var pageY = e.pageY - (_window.height() / 2);
-  //   var newvalueX = width * pageX * -1 - 25;
-  //   var newvalueY = height * pageY * -1 - 50;
-  //   $('.hero-bg').css("background-position", newvalueX+"px     "+newvalueY+"px");
-  // });
 
   // INPUTS FOCUS
 
@@ -578,11 +460,8 @@ $(document).ready(function () {
   Dropzone.options.myAwesomeDropzone = {
     paramName: "file", // The name that will be used to transfer the file
     maxFilesize: 2, // MB
-    accept: function accept(file, done) {
-      if (file.name == "justinbieber.jpg") {} else {
-        done();
-      }
-    },
+    thumbnailWidth: 700,
+    thumbnailHeight: 250,
     dictDefaultMessage: "Загрузите практическое задание",
     dictFileTooBig: "Файл слишком большой ({{filesize}}MiB). Максимальный размер файла: {{maxFilesize}}MiB.",
     dictInvalidFileType: "Запрещенный тип файла",
@@ -590,7 +469,12 @@ $(document).ready(function () {
     dictCancelUpload: "Отменить загрузку",
     dictCancelUploadConfirmation: "Действительно отментиь загрузку этого файла?",
     dictRemoveFile: "Удалить файл?",
-    dictMaxFilesExceeded: "Лимит по количеству файлов привышен"
+    dictMaxFilesExceeded: "Лимит по количеству файлов привышен",
+    accept: function accept(file, done) {
+      if (file.name == "justinbieber.jpg") {} else {
+        done();
+      }
+    }
   };
 
   // WOW INIT
@@ -613,11 +497,6 @@ $(document).ready(function () {
   ////////////
   // AJAX LOADING
   ///////////
-
-  // $('.js-loadBlogPosts').on('click', function(){
-  //   var offset = $(this).data('offset');
-  //   loadBlogPosts(offset);
-  // });
 
   // load posts on scroll
   _window.scrolled(25, function () {

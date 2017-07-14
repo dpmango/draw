@@ -24,14 +24,14 @@ doctype html
               
               // VIDEO :: START
               .video__content
-                .video__player.video__player--dark
+                .video__player
                   i.icon.icon-circle
                     i.icon.icon-play
                   img(src='images/tmp/video.jpg' srcset='images/tmp/video@2x.jpg 2x')
                   // place iframe with ?autoplay=0 param, don't forget about 100% width and height
                   iframe(src='https://player.vimeo.com/video/72874423?autoplay=0', width='100%', height='100%', frameborder='0', webkitallowfullscreen='', mozallowfullscreen='', allowfullscreen='')
               
-              .lesson__content__text.lesson__content__text--after-video
+              .lesson__content__text
                 h2 Практическое занятие:
                 .lesson__content__status
                   span ожидает выполнения
@@ -42,6 +42,12 @@ doctype html
               
           // SIDEBAR
           .lesson__sidebar
+            .header__user
+              a(href='#').header__user__avatar
+                .header__user__image
+                  img(src='images/tmp/avatar.png' srcset='images/tmp/avatar@2x.png 2x')
+              a(href='#').header__user__name Владимир-Долгий-Рапопорт
+              a(href='#').header__user__logout выйти
             .lesson__sidebar__toggler(data-text-hidden='Свернуть' data-action='show')
               span Смотреть оглавление
             .lesson__sidebar__content
