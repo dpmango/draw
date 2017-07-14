@@ -154,16 +154,11 @@ $(document).ready(function(){
   });
 
   // slick pagination
-  $('.testimonials__slide__nav .icon-slide-next').on('click', function(){
+  $('.testimonials__slide__nav .icon-slide-next, .testimonials__slide__nav--single').on('click', function(){
     $('.testimonials__slider').slick('slickNext');
   });
   $('.testimonials__slide__nav .icon-slide-prev').on('click', function(){
     $('.testimonials__slider').slick('slickPrev');
-  });
-
-  // simulate click
-  $('.testimonials__slide__nav--single').on('click', function(){
-    $(this).find('.icon').click();
   });
 
   // THUMBS SLIDER

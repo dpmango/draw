@@ -2518,6 +2518,9 @@ button:focus {
 .testimonials__slide__nav--single:hover span {
     color: #1264FE;
 }
+.testimonials__slide__nav--single:hover .icon {
+    opacity: .7;
+}
 @media(max-width: 1030px) {
     .testimonials {}
     .testimonials__slide {}
