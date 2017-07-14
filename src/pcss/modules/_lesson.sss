@@ -110,10 +110,14 @@
       color: white
       width: 400px
       &__logout
+        margin-top: 2px
         border: 1px solid color(white a(30%))
         border-radius: 40px
         padding: 5px 10px
-        margin-left: 10px
+        margin-left: 15px
+        transition: all $transitionSpeed $ease
+        &:hover
+          background: white
 
     &--dark
       .sidebar__content

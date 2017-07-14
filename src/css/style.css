@@ -7822,10 +7822,16 @@ button:focus {
     color: white;
 }
 .lesson__sidebar .header__user__logout {
-    margin-left: 10px;
+    margin-top: 2px;
+    margin-left: 15px;
     padding: 5px 10px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 40px;
+    -webkit-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+}
+.lesson__sidebar .header__user__logout:hover {
+    background: white;
 }
 .lesson__sidebar--dark .sidebar__content {
     background: url('../images/lessons/lessonsSidebarBgDark@2x.jpg') no-repeat center;
