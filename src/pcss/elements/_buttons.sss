@@ -18,7 +18,7 @@ button
     position: absolute
     display: block
     content: ' '
-    size: 25px
+    size: 26px
     border-radius: 50%
     left: 50%
     top: 50%
@@ -32,7 +32,7 @@ button
   &:focus, &:active
     outline: none
   &--primary
-    font-size: 12px
+    font-size: 0px
     letter-spacing: -.19px
     border-radius: 6px
     padding: 17px 30px
@@ -40,6 +40,8 @@ button
     background: $colorPrimary
     font-family: 'Core65'
     text-transform: uppercase
+    span
+      font-size: 12px
     &:hover
       &::after
         opacity: 1

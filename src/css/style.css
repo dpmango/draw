@@ -682,8 +682,8 @@ button:focus {
     left: 50%;
     z-index: 1;
     display: block;
-    width: 25px;
-    height: 25px;
+    width: 26px;
+    height: 26px;
     border-radius: 50%;
     content: ' ';
     opacity: 0;
@@ -702,8 +702,11 @@ button:focus {
     color: white;
     text-transform: uppercase;
     letter-spacing: -.19px;
-    font-size: 12px;
+    font-size: 0px;
     font-family: 'Core65';
+}
+.btn--primary span {
+    font-size: 12px;
 }
 .btn--primary:hover {}
 .btn--primary:hover:after {
