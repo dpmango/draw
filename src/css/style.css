@@ -227,6 +227,7 @@ body, html {
     color: #000000;
     font-size: 17px;
     font-family: 'Roboto', sans-serif;
+    resize: vertical;
     -webkit-transition: all .25s ease-in-out;
     transition: all .25s ease-in-out;
     -webkit-appearance: none;
@@ -4570,6 +4571,8 @@ button:focus {
         -ms-flex-direction: column;
             flex-direction: column;
     margin: 0 30px;
+    min-width: 0;
+    max-width: 50%;
     -webkit-box-flex: 0;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -4647,6 +4650,7 @@ button:focus {
             -ms-flex: 0 0 auto;
                 flex: 0 0 auto;
         margin: 15px 0;
+        max-width: 100%;
         -webkit-box-flex: 0;
     }
     .course-cta__col:first-child {
