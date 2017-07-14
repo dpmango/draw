@@ -573,6 +573,7 @@ body, html {
 }
 .ui__toggler.right .ui__toggler__box {}
 .ui__toggler.right .ui__toggler__box:after {
+    background: #9B00D2;
     -webkit-transform: translate3d(20px,0,0);
             transform: translate3d(20px,0,0);
 }
@@ -601,7 +602,7 @@ body, html {
     height: 20px;
     border: 5px solid white;
     border-radius: 50px;
-    background: #9B00D2;
+    background: rgba(0, 0, 0, 0.5);
     -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     content: ' ';
