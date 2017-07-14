@@ -338,6 +338,21 @@ $(document).ready(function(){
     });
   }
 
+  // scroll CTA behaviour
+  _window.scrolled(10, function () {
+    if ( _window.width() < 768 ){
+      var stickyEl = $('.course-fixed');
+      var windowBottomScroll = _window.scrollTop() + _window.height();
+      var stopPoint = _document.height() - $('.footer').outerHeight() + 60;
+
+      if (windowBottomScroll >= stopPoint) {
+        stickyEl.addClass('course-fixed--stop');
+      } else if (windowBottomScroll < stopPoint) {
+        stickyEl.removeClass('course-fixed--stop');
+      }
+    }
+  });
+
   ////////////
   // LESSON
   ////////////
@@ -519,18 +534,6 @@ $(document).ready(function(){
     $(this).parent().find('label span').text(fileName)
   });
 
-  // STICKY MAP RESULTS
-  // _window.scrolled(10, function () {
-  //   var stickyEl = $('.results__map');
-  //   var windowBottomScroll = _window.scrollTop() + _window.height();
-  //   var stopPoint = _document.height() - $('footer').outerHeight();
-  //
-  //   if (windowBottomScroll >= stopPoint) {
-  //     stickyEl.addClass('results__map--stop');
-  //   } else if (windowBottomScroll < stopPoint) {
-  //     stickyEl.removeClass('results__map--stop');
-  //   }
-  // });
 
   // OPTIONAL
   // hero parallax on mousemove

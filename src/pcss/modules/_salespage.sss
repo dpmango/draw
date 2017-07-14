@@ -888,7 +888,7 @@
   left: 0
   right: 0
   z-index: 9
-  transition: transform $transitionSpeed $ease
+  transition: all $transitionSpeed $ease
   transform: translate3d(0,-100%,0)
   opacity: 0
   &.visible
@@ -929,6 +929,9 @@
     top: auto
     bottom: 0
     transform: translate3d(0,100%,0)
+    &--stop
+      position: absolute
+      bottom: -60px
     &__name
       font-size: 32px
     &__cta
