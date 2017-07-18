@@ -327,6 +327,10 @@ $(document).ready(function () {
   $('.ui-select__dropdown span').on('click', function () {
     // parse value and toggle active
     var value = $(this).data('val');
+    var targetHref = $(this).data('href');
+    if (targetHref) {
+      window.location.href = targetHref;
+    }
     if (value) {
       $(this).siblings().removeClass('active');
       $(this).addClass('active');

@@ -50,6 +50,8 @@
     "sugarss": "^1.0.0"
   },
   "dependencies": {
+    "gulp-notify": "^3.0.0",
+    "gulp-plumber": "^1.1.0",
     "postcss-easings": "^1.0.0",
     "postcss-use": "^2.3.0"
   }

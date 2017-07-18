@@ -38,7 +38,8 @@ var cache         = require('gulp-cache');
 var del           = require('del');
 var runSequence   = require('run-sequence');
 var browserSync   = require('browser-sync').create();
-
+var notify        = require('gulp-notify');
+var plumber       = require('gulp-plumber');
 
 // Default task
 gulp.task('default', function (callback) {
@@ -91,6 +92,9 @@ var processors = [
 
 gulp.task('postcss', function() {
   return gulp.src('./src/pcss/*.sss')
+      .pipe(plumber({
+        errorHandler: errorHandler
+      }))
       .pipe( sourcemaps.init() )
       .pipe( postcss(processors, { parser: sugarss }) )
       .pipe(rename({ extname: '.css' }))
@@ -101,32 +105,11 @@ gulp.task('postcss', function() {
       }));
 });
 
-gulp.task('sass', function() {
-  return gulp.src('./src/sass/style.+(scss|sass)')
-      .pipe( sourcemaps.init() )
-      .pipe( sass({ includePaths : ['./src/sass'] }) )
-      .pipe( postcss(processors) )
-      .pipe( sourcemaps.write('.') )
-      .pipe( gulp.dest('./src/css') )
-      .pipe(browserSync.reload({
-        stream: true
-      }));
-});
-
-gulp.task('bootstrap', function() {
-  return gulp.src('./src/sass/bootstrap.+(scss|sass)')
-      .pipe( sourcemaps.init() )
-      .pipe( sass({ includePaths : ['./src/sass'] }) )
-      .pipe( postcss(processors) )
-      .pipe( sourcemaps.write('.') )
-      .pipe( gulp.dest('./src/css') )
-      .pipe(browserSync.reload({
-        stream: true
-      }));
-});
-
 gulp.task('pug', function buildHTML() {
   return gulp.src('./src/views/*.pug')
+      .pipe(plumber({
+        errorHandler: errorHandler
+      }))
       .pipe(pug({
         pretty: true
       }))
@@ -140,6 +123,9 @@ gulp.task('pug-watch', ['pug'], function (done) {
 
 gulp.task('babel', function() {
   return gulp.src('./src/js/es2015/*.js')
+      .pipe(plumber({
+        errorHandler: errorHandler
+      }))
       .pipe(babel({
           presets: ['es2015']
       }))
@@ -261,3 +247,15 @@ gulp.task('browserSync', function() {
     },
   })
 })
+
+
+
+var errorHandler = function() {
+  var args = Array.prototype.slice.call(arguments);
+  notify.onError({
+      title: 'Compile Error',
+      message: '<%= error.message %>',
+      sound: 'Submarine'
+  }).apply(this, args);
+  this.emit('end');
+};
