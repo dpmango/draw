@@ -14,7 +14,8 @@ $(document).ready(function () {
 
   var validateErrorPlacement = function validateErrorPlacement(error, element) {
     error.addClass('ui-input__validation');
-    error.appendTo(element.parent("div"));
+    console.log(element);
+    error.appendTo(element.filter(':not(:checkbox)').parent("div"));
   };
   var validateHighlight = function validateHighlight(element) {
     $(element).parent('div').addClass("has-error");
@@ -105,21 +106,9 @@ $(document).ready(function () {
     unhighlight: validateUnhighlight,
     submitHandler: validateSubmitHandler,
     rules: {
-      agreed: {
-        required: true,
-        normalizer: function normalizer(value) {
-          console.log(value);
-          if (value == 0) {
-            return value;
-          } else {
-            return value.replace(/[^\d]/g, '');
-          }
-        },
-        minlength: 11,
-        digits: true
-      },
       name: "required",
-      phone: validatePhone
+      phone: validatePhone,
+      agree: "required"
     },
     messages: {
       name: "Заполните это поле",
@@ -127,9 +116,11 @@ $(document).ready(function () {
         required: "Заполните это поле",
         minlength: "Введите корректный телефон"
       },
-      agreed: ""
+      agree: ""
     }
   });
+
+  jQuery.validator.messages.required = "";
 
   /////////////////////
   // LANDING CTA FORM (LONG)
@@ -158,5 +149,9 @@ $(document).ready(function () {
         email: "Email содержит неправильный формат"
       }
     }
+  });
+
+  $.validator.setDefaults({
+    ignore: [] // DON'T IGNORE PLUGIN HIDDEN SELECTS, CHECKBOXES AND RADIOS!!!
   });
 });
