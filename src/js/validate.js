@@ -24,6 +24,7 @@ $(document).ready(function () {
   };
   var validateSubmitHandler = function validateSubmitHandler(form) {
     $(form).addClass('loading');
+    console.log($(form).serialize());
     $.ajax({
       type: "POST",
       url: $(form).attr('action'),
@@ -104,6 +105,19 @@ $(document).ready(function () {
     unhighlight: validateUnhighlight,
     submitHandler: validateSubmitHandler,
     rules: {
+      agreed: {
+        required: true,
+        normalizer: function normalizer(value) {
+          console.log(value);
+          if (value == 0) {
+            return value;
+          } else {
+            return value.replace(/[^\d]/g, '');
+          }
+        },
+        minlength: 11,
+        digits: true
+      },
       name: "required",
       phone: validatePhone
     },
@@ -112,7 +126,8 @@ $(document).ready(function () {
       phone: {
         required: "Заполните это поле",
         minlength: "Введите корректный телефон"
-      }
+      },
+      agreed: ""
     }
   });
 
