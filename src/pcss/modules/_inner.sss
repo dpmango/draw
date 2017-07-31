@@ -199,3 +199,108 @@
         line-height: 1.5
     &::after
       margin-top: 40px
+
+
+.contact
+  &__wrapper
+    display: flex
+
+  &__left
+    position: relative
+    flex: 0 1 490px
+    margin-right: 20px
+    img
+      max-width: 100%
+  &__right
+    position: relative
+    flex: 0 0 300px
+    max-width: 300px
+    margin-left: auto
+  &__title
+    position: absolute
+    top: 40px
+    left: 20px
+    letter-spacing: -.5px
+    font-size: 32px
+    color: #D8D8D8
+  &__ya-map-anchor
+    color: $colorPrimary
+    font-size: 14px
+    position: absolute
+    left: 20px
+    top: 115px
+    transition: color $transitionSpeed $ease
+    &:hover
+      color: $colorBlue
+  &__group
+    padding-top: 15px
+    &::after
+      margin-top: 15px
+      width: 175px
+      height: 1px
+      display: inline-block
+      content: ' '
+      background: #E3E3E3
+    &:last-child
+      &::after
+        display: none
+    span
+      display: block
+      font-size: 14px
+      margin-bottom: 3px
+      letter-spacing: -.22px
+  &__phone
+    font-family: 'Core65'
+    letter-spacing: -.5px
+    font-size: 32px
+    line-height: 1
+    transition: all $transitionSpeed $ease
+    &:hover
+      color: $colorPrimary
+  &__socials
+    display: -webkit-flex
+    display: -ms-flex
+    display: flex
+    a
+      flex: 0 1 auto
+      transition: opcity $transitionSpeed $ease
+      &:hover
+        opacity: .7
+  &__mail
+    color: $colorPrimary
+    transition: all $transitionSpeed $ease
+    &:hover
+      color: $colorBlue
+
+
+@media($tablet)
+  .contact
+    padding-top: 20px
+    &__wrapper
+      flex-direction: column
+    &__left
+      flex: 0 0 auto
+    &__right
+      margin-left: auto
+      margin-right: auto
+      flex: 0 0 auto
+      margin-top: 40px
+
+
+@media($mobile)
+  .contact
+    &__left
+      padding-left: 20px
+
+@media($mobile-s)
+  .contact
+    &__title
+      font-size: 28px
+      top: 20px
+    &__ya-map-anchor
+      top: 80px
+    &__phone
+      font-size: 28px
+    &__right
+      margin-left: 20px
+      margin-right: 20px

@@ -1,0 +1,46 @@
+doctype html
+<!--[if IE 8]>         <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9 oldie"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class=""> <!--<![endif]-->
+  include shared/head.pug
+
+  body
+    include shared/header.pug
+    
+    .page
+      .page__content
+        
+        .container.container--900
+          // PROFILE NULL::START
+          .contact
+            .contact__wrapper
+              .contact__left
+                .contact__title Контакты
+                a(href='#').contact__ya-map-anchor Открыть на <br>  Яндекс.Картах
+                img(src='images/el/contact.png' srcset='images/el/contact@2x.png 2x')
+              .contact__right
+                .contact__group
+                  span Звоните нам с 12:00 до 22:00
+                  a(href='tel:+79850924509').contact__phone +7 (985) 092-45-09
+                .contact__group
+                  span Пишите на почту: 
+                    a(href='mailto:hello@drawandgo.ru').contact__mail hello@drawandgo.ru
+                .contact__group
+                  span Москва, Сытинский тупик, 3 <br> вход со двора
+                .contact__group
+                  span Подписывайтесь в соцсетях:
+                  .contact__socials
+                    a(href='#' target='_blank')
+                      i.icon.icon-facebook
+                    a(href='#' target='_blank')
+                      i.icon.icon-vk
+                    a(href='#' target='_blank')
+                      i.icon.icon-insta
+                .contact__group
+                  span График работы: <br>  12:00 – 22:00, без выходных
+                  
+                  
+                  
+      include shared/footer.pug
+      
+    include shared/scripts.pug
