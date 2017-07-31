@@ -49,6 +49,9 @@ html.mfp-helper
 
   &__form
     padding: 70px 70px 45px 70px
+    .ui-checkbox
+      margin-top: 45px
+
   &__bottom
     a
       display: block
@@ -60,7 +63,24 @@ html.mfp-helper
         background: #F4F4F4
         color: $colorPrimary
 
+@media($mobile)
+  .modal
+    &__form
+      padding: 50px 30px 35px 30px
+    &__bottom
+      a
+        font-size: 16px
+        padding: 20px 30px
 
+
+
+@media($mobile-s)
+  .modal
+    &__form
+      padding: 40px 20px 30px 20px
+    &__bottom
+      a
+        padding: 20px 20px
 
 
 // Fade-zoom animation for first dialog

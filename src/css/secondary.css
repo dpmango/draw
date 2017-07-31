@@ -297,6 +297,9 @@ html.mfp-helper body {
 .modal__form {
     padding: 70px 70px 45px 70px;
 }
+.modal__form .ui-checkbox {
+      margin-top: 45px;
+}
 .modal__bottom a {
       display: block;
       background: #F1F1F1;
@@ -309,6 +312,23 @@ html.mfp-helper body {
 .modal__bottom a:hover {
   background: #F4F4F4;
   color: #9B00D2;
+}
+@media(max-width: 568px) {
+    .modal__form {
+      padding: 50px 30px 35px 30px;
+  }
+      .modal__bottom a {
+        font-size: 16px;
+        padding: 20px 30px;
+  }
+}
+@media(max-width: 414px) {
+    .modal__form {
+      padding: 40px 20px 30px 20px;
+  }
+      .modal__bottom a {
+        padding: 20px 20px;
+  }
 }
 /* Fade-zoom animation for first dialog */
 .popup-buble .popup-dialog {

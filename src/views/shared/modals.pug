@@ -1,5 +1,6 @@
 // MODALS 
 
+// modal login
 .modal.popup-dialog.mfp-hide#modalLogin
   .modal__wrapper
     .modal__content
@@ -12,3 +13,33 @@
           span Войти
       .modal__bottom
         a(href='#modalRegistration').js-popup Регистрация нового пользователя
+
+// modal register
+.modal.popup-dialog.mfp-hide#modalRegistration
+  .modal__wrapper
+    .modal__content
+      form(action='#').modal__form.js-RegisterForm
+        .ui-group
+          input(type='email' placeholder='E-mail').ui-input
+        .ui-group
+          input(type='password' placeholder='Придумайте пароль').ui-input
+        .ui-group
+          input(type='password' placeholder='Повторите пароль').ui-input
+        .ui-group
+          input(type='text' placeholder='Ваше имя').ui-input
+        a(href='#').btn.btn--primary
+          span Войти
+        .ui-checkbox
+          input(type='checkbox' name="option" id='checkbox_1')
+          label(for='checkbox_1') Я даю согласие на обработку своих персональных  данных и принимаю пользовательское соглашение
+          
+          
+// modal recover
+.modal.popup-dialog.mfp-hide#modalRecover
+  .modal__wrapper
+    .modal__content
+      form(action='#').modal__form.js-RecoverForm
+        .ui-group
+          input(type='email' placeholder='E-mail').ui-input
+        a(href='#').btn.btn--primary
+          span Выслать пароль на почту

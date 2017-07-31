@@ -29,8 +29,12 @@ doctype html
                   iframe(src='https://player.vimeo.com/video/72874423?autoplay=0', width='100%', height='100%', frameborder='0', webkitallowfullscreen='', mozallowfullscreen='', allowfullscreen='')
         
         div(style='padding: 50px 0; text-align: center;')
-          a(href='#modalLogin').btn.btn--primary.js-popup
+          a(href='#modalLogin' style='margin-right: 20px').btn.btn--primary.js-popup
             span Логин
+          a(href='#modalRegistration' style='margin-right: 20px').btn.btn--primary.js-popup
+            span Регистрация
+          a(href='#modalRecover').btn.btn--primary.js-popup
+            span Восстановить пароль
 
       include shared/footer.pug
       include shared/modals.pug
