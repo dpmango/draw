@@ -1,0 +1,33 @@
+doctype html
+<!--[if IE 8]>         <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9 oldie"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class=""> <!--<![endif]-->
+  include shared/head.pug
+
+  body
+    include shared/header.pug
+    
+    .page
+      .page__content
+        
+        .container.container--1366
+          // PAGE:: TAHNKS
+          .thanks
+            .thanks__name 
+              span Спасибо!
+              .thanks__image
+                img(src='images/el/thanksCheck.png' srctset='images/el/thanksCheck@2x.png 2x')
+          
+            .thanks__desc В рамках любого занятия вас ждет выбор референса (примера), краткий теоретический экскурс, создание эскиза и работа с цветом. В дальнейшем, вы сможете развивать свои навыки, выбирая в качестве примеров все более и более сложные работы, сориентироваться в которых вам помогут наши преподаватели. 
+            
+            .thanks__cta
+              a(href='#')
+                span вперед, к обучению!
+            .thanks__cta.thanks__cta--mobile
+              a(href='#')
+                span вернуться
+                
+        
+      include shared/footer.pug
+      
+    include shared/scripts.pug

@@ -51,7 +51,45 @@
     &--mobile
       display: none
 
+.not-found
+  text-align: center
+  display: flex
+  flex-direction: column
+  &__wrapper
+    padding: 50px 0
+    position: relative
+    margin-top: auto
+    margin-bottom: auto
+  &__name
+    padding-top: 100px
+    padding-bottom: 30px
+    font-family: 'Core65'
+    font-size: 60px
+    letter-spacing: 10px
+    text-transform: uppercase
+    overflow: visible
+    span
+      position: relative
+      z-index: 2
+  &__image
+    position: absolute
+    top: 50%
+    width: 100%
+    left: 50%
+    z-index: 1
+    transform: translate(-50%,-50%)
+    img
+      max-width: 100%
+  .btn
+    margin-bottom: 80px
+
+
+
 @media($desktop)
+  .not-found
+    &__name
+      font-size: 50px
+
   .thanks
     &__cta
       font-size: 40px
@@ -66,6 +104,13 @@
 
 
 @media($mobile)
+  .not-found
+    &__name
+      font-size: 40px
+      letter-spacing: 6px
+      padding-top: 80px
+      padding-bottom: 20px
+
   .thanks
     &__name
       padding-top: 80px

@@ -1,0 +1,29 @@
+doctype html
+<!--[if IE 8]>         <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9 oldie"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class=""> <!--<![endif]-->
+  include shared/head.pug
+
+  body
+    include shared/header.pug
+    
+    .page
+      .page__content
+        
+        .container.container--1366
+          // PAGE:: TAHNKS
+          .not-found
+            .not-found__wrapper
+              .not-found__name 
+                span Страница не найдена
+              .not-found__image
+                img(src='images/el/404.png' srcset='images/el/404@2x.png 2x')
+    
+              a(href='#').btn.btn--primary
+                span Перейти на главную
+ 
+                
+        
+      include shared/footer.pug
+      
+    include shared/scripts.pug

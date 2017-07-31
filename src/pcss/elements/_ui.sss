@@ -39,10 +39,25 @@
 
 // GROUPP
 .ui-group
+  position: relative
   margin-bottom: 15px
   &.has-error
     .ui-input
       border-color: $colorRed
+  &__sucess
+    display: none
+    position: absolute
+    left: 420px
+    top: 10px
+    width: 280px
+    font-size: 12px
+    line-height: 1.1
+
+@media($tablet)
+  .ui-group
+    &__sucess
+      position: static
+      margin-top: 10px
 
 @media($mobile)
   .ui-group
@@ -78,6 +93,25 @@
     border-color: $colorPrimary
   &::placeholder
     color: $fontColor
+  &--editable
+    color: color($fontColor a(50%))
+    pointer-events: none
+    padding-right: 50px
+    +.icon-edit
+      position: absolute
+      top: 14px
+      right: 20px
+      cursor: pointer
+      transition: all $transitionSpeed $ease
+      &:hover
+        opacity: .7
+    &.allow-input
+      color: $fontColor
+      pointer-events: all
+      +.icon-edit
+        background-image: url('../images/el/edit-save@2x.png')
+        width: 33px
+        height: 20px
 
 @media($mobile)
   .ui-input

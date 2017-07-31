@@ -409,6 +409,21 @@ $(document).ready(function(){
     }
   });
 
+  // UI EDITABLE
+  $('.ui-input--editable + .icon-edit').on('click', function(){
+    if ( $(this).prev().is('.allow-input') ){
+      // kind of save ajax request ?
+      $(this).prev().removeClass('allow-input');
+      // show sucess message
+      $(this).parent().find('.ui-group__sucess').fadeIn();
+    } else {
+      $(this).prev().focus().addClass('allow-input');
+      // remove sucess message
+      $(this).parent().find('.ui-group__sucess').fadeOut();
+    }
+
+  });
+
 
   // Masked input
   $(".js-dateMask").mask("99.99.9999");

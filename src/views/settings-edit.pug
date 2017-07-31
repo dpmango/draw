@@ -1,0 +1,70 @@
+doctype html
+<!--[if IE 8]>         <html class="ie8 oldie"> <![endif]-->
+<!--[if IE 9]>         <html class="ie9 oldie"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class=""> <!--<![endif]-->
+  include shared/head.pug
+
+  body
+    include shared/header.pug
+    
+    .page
+      .page__content
+        .container
+          // PAGE:: SETTINGS
+          .settings
+            .profile-heading
+              .t-head Настройки
+            
+            .settings__content
+              .settings__narrow
+                .ui-group
+                  .ui-avatar-file
+                    input(type='file' name='file' id='file')
+                    label(for='file')
+                      .ui-avatar-file__avatar
+                        img(src='images/el/dropzone.png' srcset='images/el/dropzone@2x.png 2x')
+                      span Ваша фотография
+                .ui-group
+                  input(type='text' placeholder='E-mail' value='vetrov@gmail.com').ui-input.ui-input--editable
+                  i.icon.icon-edit
+                  .ui-group__sucess Чтобы завершить изменение e-mail’a, перейдите  по ссылке в письме, которое мы вам отправили
+                  
+                .ui-group
+                  input(type='text' placeholder='Юрий Ветров').ui-input
+                .ui-group
+                  input(type='text' placeholder='Дата рождения').ui-input.js-dateMask
+                .ui-group
+                  input(type='text' placeholder='Чем занимаетесь?').ui-input
+              
+              .ui-group
+                textarea(rows='5' placeholder='Пара слов о вас').ui-input
+              
+              .ui__toggler.left
+                .ui__toggler__box
+                  input(type='hidden' value='')
+                label Страница публична
+            
+            // next section
+            .profile-heading
+              .t-head Сменить пароль:
+              
+            .settings__warn
+              i.icon.icon-warn
+              span Оставьте это поле незаполненным, если не хотите менять пароль
+            
+            .settings__narrow
+              .ui-group
+                input(type='text' placeholder='Старый пароль').ui-input
+              .ui-group
+                input(type='text' placeholder='Новый пароль').ui-input
+              .ui-group
+                input(type='text' placeholder='Новый пароль еще раз').ui-input  
+            
+            .settings__cta
+              a(href='#').btn.btn--primary
+                span Сохранить
+        
+        
+      include shared/footer.pug
+      
+    include shared/scripts.pug
