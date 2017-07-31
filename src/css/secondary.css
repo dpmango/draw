@@ -245,13 +245,70 @@ html.mfp-helper body {
     height: 100%;
     -webkit-transform: translateZ(0);
 }
-#small-dialog {
-  background: white;
-  padding: 20px 30px;
+.modal {
   text-align: left;
-  max-width: 600px;
-  margin: 40px auto;
+  max-width: 640px;
+  margin: 20px auto;
   position: relative;
+}
+.modal .mfp-close {
+    font-size: 0;
+    background: url('../images/el/modal-close@2x.png') no-repeat center;
+    width: 34px;
+    height: 29px;
+    background-size: contain;
+    opacity: 1;
+    -webkit-transition: all .25s ease-in-out;
+    -o-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+}
+.modal .mfp-close:hover {
+  opacity: .7;
+}
+.modal__wrapper {
+    max-width: 600px;
+    position: relative;
+    padding-top: 45px;
+    padding-left: 60px;
+    padding-bottom: 75px;
+}
+.modal__wrapper:before {
+  background-image: url('../images/el/buyformRose@2x.png');
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  z-index: 1;
+  display: block;
+  content: ' ';
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: contain;
+}
+.modal__content {
+    position: relative;
+    z-index: 2;
+    background: white;
+    -webkit-box-shadow: 0px 12px 15px rgba(0, 0, 0, 0.25);
+            box-shadow: 0px 12px 15px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+}
+.modal__form {
+    padding: 70px 70px 45px 70px;
+}
+.modal__bottom a {
+      display: block;
+      background: #F1F1F1;
+      font-size: 17px;
+      padding: 22px 60px;
+      -webkit-transition: all .25s ease-in-out;
+      -o-transition: all .25s ease-in-out;
+      transition: all .25s ease-in-out;
+}
+.modal__bottom a:hover {
+  background: #F4F4F4;
+  color: #9B00D2;
 }
 /* Fade-zoom animation for first dialog */
 .popup-buble .popup-dialog {
@@ -276,14 +333,14 @@ html.mfp-helper body {
   opacity: 0;
 }
 .popup-buble.mfp-bg {
-  background: $colorGreen;
+  background: white;
   opacity: 0;
   -webkit-transition: opacity 0.3s ease-in-out;
   -o-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
 }
 .popup-buble.mfp-ready.mfp-bg {
-  opacity: 1;
+  opacity: .9;
 }
 .popup-buble.mfp-removing.mfp-bg {
   opacity: 0;

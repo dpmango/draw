@@ -1,0 +1,14 @@
+// MODALS 
+
+.modal.popup-dialog.mfp-hide#modalLogin
+  .modal__wrapper
+    .modal__content
+      form(action='#').modal__form.js-RegisterForm
+        .ui-group
+          input(type='email' placeholder='E-mail').ui-input
+        .ui-group
+          input(type='password' placeholder='Пароль').ui-input
+        a(href='#').btn.btn--primary
+          span Войти
+      .modal__bottom
+        a(href='#modalRegistration').js-popup Регистрация нового пользователя

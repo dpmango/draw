@@ -308,6 +308,33 @@ $(document).ready(function () {
   });
 
   ////////////
+  // Magnific Popup
+  ////////////
+
+  // var startWindowScroll = 0;
+  $('.js-popup').magnificPopup({
+    type: 'inline',
+    fixedContentPos: true,
+    fixedBgPos: true,
+    overflowY: 'auto',
+    closeBtnInside: true,
+    preloader: false,
+    midClick: true,
+    removalDelay: 300,
+    mainClass: 'popup-buble',
+    callbacks: {
+      beforeOpen: function beforeOpen() {
+        // startWindowScroll = _window.scrollTop();
+        // $('html').addClass('mfp-helper');
+      },
+      close: function close() {
+        // $('html').removeClass('mfp-helper');
+        // _window.scrollTop(startWindowScroll);
+      }
+    }
+  });
+
+  ////////////
   // UI
   ////////////
 
