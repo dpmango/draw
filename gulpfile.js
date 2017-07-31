@@ -231,6 +231,11 @@ gulp.task('fonts', function() {
   .pipe(gulp.dest('dist/fonts'))
 })
 
+gulp.task('favicon', function() {
+  return gulp.src('./src/favicon/**/*')
+  .pipe(gulp.dest('dist/favicon'))
+})
+
 gulp.task('clean:dist', function() {
   return del.sync(['dist/**/*', '!dist/images', '!dist/images/**/*']);
 })
