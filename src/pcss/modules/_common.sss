@@ -143,12 +143,22 @@
   &__phone
     margin-left: auto
     font-family: 'Core65'
-    font-size: 24px
     text-align: right
-    transition: all $transitionSpeed $ease
-    &:hover
-      color: $colorPrimary
-
+    &__main
+      display: block
+      font-size: 24px
+      transition: all $transitionSpeed $ease
+      &:hover
+        color: $colorPrimary
+    span
+      margin-top: 3px
+      font-size: 12px
+      letter-spacing: -.19px
+      color: color(black a(30%))
+      a
+        transition: all $transitionSpeed $ease
+        &:hover
+          color: $colorPrimary
   &__hamburger
     position: relative
     display: none
@@ -233,8 +243,12 @@
 @media(width <= 480px)
   .header
     &__phone
-      font-size: 18px
-      margin-right: -10px
+      &__main
+        font-size: 18px
+      span span
+        display: none
+      span a
+        margin-top: 5px
 
 @media($mobile-s)
   .header
@@ -251,7 +265,9 @@
     &__hamburger
       margin-left: auto
     &__phone
-      font-size: 16px
+      &__main
+        font-size: 16px
+      margin-right: -10px
 
 @media(width <= 375px)
   .header
