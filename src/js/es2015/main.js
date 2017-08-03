@@ -315,7 +315,7 @@ $(document).ready(function(){
   ////////////
   // Magnific Popup
   ////////////
-  
+
   // var startWindowScroll = 0;
   $('.js-popup').magnificPopup({
     type: 'inline',
@@ -654,6 +654,45 @@ $(document).ready(function(){
     }
 
   };
+
+  // LANDING CTA
+  $.fn.digits = function(){
+    return this.each(function(){
+        $(this).text( $(this).text().replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,") );
+    })
+  }
+
+  // .prop('Counter',0).animate({
+  //     Counter: $(this).text()
+  // }, {
+  //     duration: 2000,
+  //     easing: 'swing',
+  //     step: function (now) {
+  //         $(this).text(Math.ceil(now)).digits();
+  //     }
+  // });
+
+  var ctaPriceObj = $('.js-form-landingCta').closest('form').find('.course-price__value')
+  var savedPriceOnLoad = parseInt( ctaPriceObj.text().replace(' ',''));
+  $('.js-form-landingCta').on('change', function(e){
+
+    var priceAdded = 0
+    var pricedCheckboxes = $('input[type="checkbox"]:checked');
+
+    pricedCheckboxes.each(function(i,val){
+      var price = $(val).parent().data('price')
+      if ( price ){
+        priceAdded = priceAdded + price
+      }
+    });
+
+    ctaPriceObj.text(savedPriceOnLoad + priceAdded + ' Р')
+
+    e.stopPropagation()
+    e.preventDefault()
+    return
+
+  });
 
 
 });
