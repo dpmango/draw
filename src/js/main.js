@@ -195,8 +195,7 @@ $(document).ready(function () {
   $('.slider-thumbs__slider').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
     var thumbs = slick.$slider.parent().find('.slider-thumbs__thumb');
     thumbs.each(function (i, val) {
-      console.log($(val).data('slide'));
-      console.log(nextSlide);
+
       if ($(val).data('slide') - 1 == nextSlide) {
         $(val).siblings().removeClass('active');
         $(val).addClass('active');
@@ -445,7 +444,7 @@ $(document).ready(function () {
   // Masked input
   $(".js-dateMask").mask("99.99.9999");
   $(".js-dateMask2").mask("99.99.99", { placeholder: "ДД.ММ.ГГ" });
-  $(".js-indexMask").mask("999 999", { placeholder: "000 000" });
+  $(".js-indexMask").mask("999 999");
   $("input[type='tel']").mask("+7 (000) 000-0000", { placeholder: "+7 (___) ___-____" });
 
   // UI FILE INPUT
@@ -660,7 +659,7 @@ $(document).ready(function () {
   $('.js-form-landingCta').on('change', function (e) {
 
     var priceAdded = 0;
-    var pricedCheckboxes = $('input[type="checkbox"]:checked');
+    var pricedCheckboxes = $(this).find('input[type="checkbox"]:checked');
 
     pricedCheckboxes.each(function (i, val) {
       var price = $(val).parent().data('price');
@@ -671,13 +670,28 @@ $(document).ready(function () {
 
     ctaPriceObj.text(savedPriceOnLoad + priceAdded + ' Р');
 
+    // set opt fields depending in options
+    var toggaleChecboxes = $(this).find('[data-type]');
+    if (toggaleChecboxes) {
+      // check each checkbox
+      toggaleChecboxes.each(function (i, val) {
+        var checkboxData = $(val).find('input:checked').parent().data('type');
+        $('.js-form-landingCta').find('.ui-group').each(function (ind, value) {
+          if ($(value).data('for') == checkboxData) {
+            $(value).fadeIn();
+          } else if ($(value).data('for') && !$(val).find('input:checked')) {
+            $(value).fadeOut();
+          }
+        });
+      });
+    }
+
     e.stopPropagation();
     e.preventDefault();
-    return;
   });
 });
 
 //SCROLL TO TOP ON PAGE REFRESH
-$(window).on('beforeunload', function () {
-  $(window).scrollTop(0);
-});
+// $(window).on('beforeunload', function() {
+//     $(window).scrollTop(0);
+// });

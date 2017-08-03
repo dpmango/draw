@@ -15,6 +15,7 @@ doctype html
             .course-card__image
               img(src='images/courses/courseArt.jpg' srcset='images/courses/courseArt@2x.jpg 2x')
             .course-card__content
+              .course-card__top на специальных условиях
               .course-card__name Живопись дома
               .course-card__desc 2 часа 45 минут  <br><span>•</span>  18 уроков  <br><span>•</span>  12 практических заданий
               .course-card__special Ограниченный набор на специальных условиях (до 15 августа)
@@ -179,20 +180,25 @@ doctype html
                     input(type='email' name='email' placeholder='E-mail').ui-input
                   .ui-group
                     input(type='tel' name='phone' placeholder='+7 (___) ___-__-__').ui-input
-                  .ui-group
+                  .ui-group(data-for='delivery')
                     input(type='text' name='country' placeholder='Страна').ui-input
-                  .ui-group
+                  .ui-group(data-for='delivery')
                     input(type='text' name='city' placeholder='Город').ui-input
-                  .ui-group
+                  .ui-group(data-for='delivery')
                     input(type='text' name='index' placeholder='Индекс').ui-input.js-indexMask
-                  .ui-group
-                    input(type='text' name='adress' placeholder='Улица и номер дома').ui-input  
+                  .ui-group(data-for='delivery')
+                    input(type='text' name='adress' placeholder='Улица и номер дома').ui-input
+                  .ui-group(data-for='present')
+                    input(type='text' name='date' placeholder='Дата отправки товара').ui-input.js-dateMask
                   .ui-group
                     textarea(placeholder='Комментарий' rows='5').ui-input  
-                
+                  .ui-checkbox
+                    input(type='checkbox' name='agree' id='agree')
+                    label(for='agree') Я согласен с условиями
+                    
                 .course-cta__col
                   .course-cta__checkboxes
-                    .ui-checkbox.ui-checkbox--dynamic-label
+                    .ui-checkbox.ui-checkbox--dynamic-label(data-type='present')
                       input(type='checkbox' id='checkbox_1')
                       label(for='checkbox_1') 
                         | Я покупаю в подарок
@@ -215,7 +221,13 @@ doctype html
                         | Люблю всё самое лучшее, хочу Draw-бокс Premium
                         .ui-checkbox__promo-val   +8 600 ₽
                         .ui-checkbox__sublabel Доставка считается отдельно  и оплачивается получателем
-                                
+                    .ui-checkbox.ui-checkbox--dynamic-label(data-price='300' data-type='delivery')
+                      input(type='checkbox' id='checkbox_5')
+                      label(for='checkbox_5') 
+                        | Нужна доставка
+                        .ui-checkbox__promo-val   +300 ₽
+                        .ui-checkbox__sublabel Доставка оплачивается получателем
+                                          
                   .course-cta__cta
                     .course-price__value 28 560 Р
                     button(type='submit').btn.btn--primary.btn--pink.btn--block 

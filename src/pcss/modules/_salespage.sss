@@ -32,6 +32,11 @@
     flex-direction: column
     color: white
     padding: 30px 20px
+  &__top
+    font-size: 12px
+    margin-bottom: 5px
+    text-transform: uppercase
+    letter-spacing: .5px
   &__name
     margin-top: 45px
     font-size: 30px
@@ -84,8 +89,10 @@
     .course-card
       &__content
         padding-bottom: 25px
-      &__name
+      &__top
         margin-top: auto
+      &__name
+        margin-top: 0
         font-size: 48px
         letter-spacing: -.75px
       &__desc
@@ -695,6 +702,8 @@
       background-repeat: no-repeat
       background-position: left center
       background-size: contain
+  .ui-group[data-for='delivery'], .ui-group[data-for='present']
+    display: none
 
   &__form
     position: relative

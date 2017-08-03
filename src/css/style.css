@@ -3851,6 +3851,12 @@ button:focus {
     color: white;
     padding: 30px 20px;
 }
+.course-card__top {
+    font-size: 12px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+}
 .course-card__name {
     margin-top: 45px;
     font-size: 30px;
@@ -3911,8 +3917,11 @@ button:focus {
 .course-card--hero .course-card__content {
         padding-bottom: 25px;
 }
-.course-card--hero .course-card__name {
+.course-card--hero .course-card__top {
         margin-top: auto;
+}
+.course-card--hero .course-card__name {
+        margin-top: 0;
         font-size: 48px;
         letter-spacing: -.75px;
 }
@@ -4786,6 +4795,9 @@ button:focus {
   background-repeat: no-repeat;
   background-position: left center;
   background-size: contain;
+}
+.course-cta .ui-group[data-for='delivery'], .course-cta .ui-group[data-for='present'] {
+    display: none;
 }
 .course-cta__form {
     position: relative;
