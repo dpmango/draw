@@ -691,16 +691,27 @@ $(document).ready(function(){
     var toggaleChecboxes = $(this).find('[data-type]')
     if ( toggaleChecboxes) {
       // check each checkbox
+      var checkboxData
       toggaleChecboxes.each(function(i,val){
-        var checkboxData = $(val).find('input:checked').parent().data('type');
-        $('.js-form-landingCta').find('.ui-group').each(function(ind,value){
-          if ( $(value).data('for') == checkboxData ){
+        if ( $(val).find('input:checked').parent().data('type') ){
+          checkboxData = $(val).find('input:checked').parent().data('type');  
+        }
+
+      });
+
+      console.log(checkboxData)
+
+      $('.js-form-landingCta').find('.ui-group').each(function(ind,value){
+
+        if ( $(value).data('for') ) {
+          if ( $(value).data('for') == checkboxData) {
             $(value).fadeIn();
-          } else if ( $(value).data('for') && !$(val).find('input:checked') ){
+          } else {
             $(value).fadeOut();
           }
-        });
+        }
       });
+
     }
 
     e.stopPropagation()

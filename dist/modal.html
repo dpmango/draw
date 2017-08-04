@@ -40,8 +40,7 @@
           <li><a href="myworks.html">мои работы</a></li>
           <li><a href="community.html">коммьюнити</a></li>
         </ul>
-        <div class="header__user"><a class="header__user__avatar" href="#">
-            <div class="header__user__image"><img src="images/tmp/avatar.png" srcset="images/tmp/avatar@2x.png 2x"></div></a><a class="header__user__name" href="#">Владимир-Долгий-Рапопорт</a><a class="header__user__logout" href="#">выйти</a></div>
+        <div class="header__user"><a class="header__login" href="#">вход/регистрация</a></div>
         <div class="header__hamburger">
           <div class="header__hamburger__opened"><img src="images/el/hamburger.png" srctset="images/el/hamburger@2x.png 2x"></div>
           <div class="header__hamburger__closed"><img src="images/el/hamburgerClosed.png" srctset="images/el/hamburgerClosed@2x.png 2x"></div>
@@ -65,80 +64,29 @@
   </div>
   <div class="page">
     <div class="page__content">
-      <!-- PROFILE HEADING::START-->
-      <div class="profile-heading profile-heading--back profile-heading--progress">
-        <div class="container"><a class="profile-heading__back" href="#"><img src="images/el/backIco.png" srcset="images/el/backIco@2x.png 2x"><span>назад</span></a>
-          <div class="heading-mega">ЖИВОПИСЬ ДОМА</div>
-          <div class="profile-heading__progressbar">
-            <div class="profile-heading__progressbar__fill" style="width: 20%;"></div>
+      <!-- WELCOME::START-->
+      <div class="welcome wow fadeIn">
+        <div class="container">
+          <div class="welcome__wrapper">
+            <div class="welcome__title">Мы не онлайн-обучение. <br> Мы помогаем привнести творчество в вашу жизнь</div>
           </div>
-          <div class="profile-heading__progressbar__status">Пройдено 8/24 уроков</div>
         </div>
       </div>
-      <!-- COURSES-->
-      <div class="courses">
-        <!-- single course - disabled-->
-        <div class="course course--disabled">
-          <div class="course__video">
-            <!-- VIDEO-->
-            <div class="video__content">
-              <div class="video__player"><i class="icon icon-circle"><i class="icon icon-play"></i></i><img src="images/tmp/video_3.jpg" srcset="images/tmp/video_3@2x.jpg 2x"></div>
-            </div>
-            <div class="course__video__status">просмотрен</div>
-          </div>
-          <div class="course__name">Учимся рисовать гранаты (натюрморт)</div>
-          <div class="course__status course__status--compleated">Выполнены все домашние задания</div>
-        </div>
-        <!-- single course - regular-->
-        <div class="course"><a class="course__video" href="lesson-text-practice-answered.html">
-            <!-- VIDEO-->
-            <div class="video__content">
-              <div class="video__player"><i class="icon icon-circle"><i class="icon icon-play"></i></i><img src="images/tmp/video_4.jpg" srcset="images/tmp/video_4@2x.jpg 2x"></div>
-            </div>
-            <div class="course__video__status">просмотрен</div>
-            <div class="course__video__reply"><i class="icon ico-message"> </i><span>получен ответ</span></div></a>
-          <div class="course__name">Рисуем груши</div>
-          <div class="course__status course__status--pending">Осталось 1 домашнее задание</div>
-        </div>
-        <!-- single course - regular-->
-        <div class="course"><a class="course__video" href="lesson-text-practice-answered.html">
-            <!-- VIDEO-->
-            <div class="video__content">
-              <div class="video__player"><i class="icon icon-circle"><i class="icon icon-play"></i></i><img src="images/tmp/video_2.jpg" srcset="images/tmp/video_2@2x.jpg 2x"></div>
-            </div>
-            <div class="course__video__status">просмотрен</div></a>
-          <div class="course__name">Натюрморт как он есть, чтобы посмотреть как быть с длинным названием</div>
-          <div class="course__status">Ждет выполнения</div>
-        </div>
-        <!-- single course - disabled-->
-        <div class="course course--disabled"><a class="course__video" href="lesson-text-practice-answered.html">
-            <!-- VIDEO-->
-            <div class="video__content">
-              <div class="video__player"><i class="icon icon-circle"><i class="icon icon-play"></i></i><img src="images/tmp/video_3.jpg" srcset="images/tmp/video_3@2x.jpg 2x"></div>
-            </div>
-            <div class="course__video__status">просмотрен</div></a>
-          <div class="course__name">Учимся рисовать гранаты (натюрморт)</div>
-          <div class="course__status course__status--disabled">Ждет выполнения предидущего урока</div>
-        </div>
-      </div>
-      <!-- BONUS COURSE-->
-      <div class="courses courses--bonus">
-        <div class="courses__bonus-head"><img src="images/el/diamond.png" srcset="images/el/diamond@2x.png 2x"></div>
-        <!-- single course - regular-->
-        <div class="course course--bonus">
-          <div class="course__video">
-            <!-- VIDEO-->
-            <div class="video__content">
-              <div class="video__player"><i class="icon icon-circle"><i class="icon icon-play"></i></i><img src="images/tmp/video_2.jpg" srcset="images/tmp/video_2@2x.jpg 2x">
+      <!-- VIDEO :: START-->
+      <div class="video video--have-animation">
+        <div class="container">
+          <div class="heading-gray wow transformUp" data-wow-delay="2s">это видео стоит посмотреть</div>
+          <div class="video__wrapper">
+            <div class="video__content wow transformUp" data-wow-delay="2.2s">
+              <div class="video__player"><i class="icon icon-circle"><i class="icon icon-play"></i></i><img src="images/tmp/video.jpg" srcset="images/tmp/video@2x.jpg 2x">
                 <!-- place iframe with ?autoplay=0 param, don't forget about 100% width and height-->
                 <iframe src="https://player.vimeo.com/video/72874423?autoplay=0" width="100%" height="100%" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""></iframe>
               </div>
             </div>
           </div>
-          <div class="course__name">Бонус-Урок</div>
-          <div class="course__status">Будет доступен после выполнения всех практик</div>
         </div>
       </div>
+      <div style="padding: 50px 0; text-align: center;"><a class="btn btn--primary js-popup" href="#modalLogin" style="margin-right: 20px;"><span>Логин</span></a><a class="btn btn--primary js-popup" href="#modalRegistration" style="margin-right: 20px;"><span>Регистрация</span></a><a class="btn btn--primary js-popup" href="#modalRecover"><span>Восстановить пароль</span></a></div>
     </div>
     <!-- FOOTER::START-->
     <footer class="footer">
@@ -152,6 +100,60 @@
         </div>
       </div>
     </footer>
+    <!-- MODALS -->
+    <!-- modal login-->
+    <div class="modal popup-dialog mfp-hide" id="modalLogin">
+      <div class="modal__wrapper">
+        <div class="modal__content">
+          <form class="modal__form js-RegisterForm" action="#">
+            <div class="ui-group">
+              <input class="ui-input" type="email" placeholder="E-mail">
+            </div>
+            <div class="ui-group">
+              <input class="ui-input" type="password" placeholder="Пароль">
+            </div><a class="btn btn--primary" href="#"><span>Войти</span></a>
+          </form>
+          <div class="modal__bottom"><a class="js-popup" href="#modalRegistration">Регистрация нового пользователя</a></div>
+        </div>
+      </div>
+    </div>
+    <!-- modal register-->
+    <div class="modal popup-dialog mfp-hide" id="modalRegistration">
+      <div class="modal__wrapper">
+        <div class="modal__content">
+          <form class="modal__form js-RegisterForm" action="#">
+            <div class="ui-group">
+              <input class="ui-input" type="email" placeholder="E-mail">
+            </div>
+            <div class="ui-group">
+              <input class="ui-input" type="password" placeholder="Придумайте пароль">
+            </div>
+            <div class="ui-group">
+              <input class="ui-input" type="password" placeholder="Повторите пароль">
+            </div>
+            <div class="ui-group">
+              <input class="ui-input" type="text" placeholder="Ваше имя">
+            </div><a class="btn btn--primary" href="#"><span>Войти</span></a>
+            <div class="ui-checkbox">
+              <input type="checkbox" name="option" id="checkbox_1">
+              <label for="checkbox_1">Я даю согласие на обработку своих персональных  данных и принимаю пользовательское соглашение</label>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- modal recover-->
+    <div class="modal popup-dialog mfp-hide" id="modalRecover">
+      <div class="modal__wrapper">
+        <div class="modal__content">
+          <form class="modal__form js-RecoverForm" action="#">
+            <div class="ui-group">
+              <input class="ui-input" type="email" placeholder="E-mail">
+            </div><a class="btn btn--primary" href="#"><span>Выслать пароль на почту</span></a>
+          </form>
+        </div>
+      </div>
+    </div>
   </div>
   <!-- SECONDARY STYLES-->
   <link rel="stylesheet" href="css/secondary.css">

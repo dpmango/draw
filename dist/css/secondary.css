@@ -299,6 +299,11 @@
     width: 19px;
     height: 16px;
 }
+.icon-edit {
+    background-image: url('../images/el/edit@2x.png');
+    width: 22px;
+    height: 22px;
+}
 @media(max-width: 768px) {
     .icon-slide-prev {
       width: 23px;
@@ -362,6 +367,170 @@
     background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='UTF-8'?%3E %3Csvg width='20px' height='20px' viewBox='0 0 20 20' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E %3C!-- Generator: Sketch 45 (43475) - http://www.bohemiancoding.com/sketch --%3E %3Ctitle%3Epractice-comment%3C/title%3E %3Cdesc%3ECreated with Sketch.%3C/desc%3E %3Cdefs/%3E %3Cg id='cab' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E %3Cg id='lesson-text-practice-pending' transform='translate(-1024.000000, -353.000000)'%3E %3Cg id='Group-2' transform='translate(962.000000, 303.000000)'%3E %3Cg id='Group-2-Copy' transform='translate(0.000000, 9.000000)'%3E %3Cg id='icn_practice/message' transform='translate(62.000000, 41.000000)'%3E %3Ccircle id='Oval-4' fill='%23FF9000' cx='10' cy='10' r='10'/%3E %3Cpath d='M5,7.00292933 C5,6.44902676 5.44653963,6 5.99805477,6 L14.0046024,6 C14.5543453,6 15,6.43788135 15,7.00292933 L15,11.9970707 C15,12.5509732 14.5445438,13 14.0012657,13 L10.0646865,13 L8.13044511,15.000533 L7.00201172,13 L6.00100586,13 C5.44816559,13 5,12.5621186 5,11.9970707 L5,7.00292933 Z M7,8.5 C7,8.76806641 7.21983051,9 7.49100518,9 L12.5089948,9 C12.7721195,9 13,8.77614237 13,8.5 C13,8.23193359 12.7801695,8 12.5089948,8 L7.49100518,8 C7.22788048,8 7,8.22385763 7,8.5 Z M7,10.5 C7,10.7680664 7.21983051,11 7.49100518,11 L12.5089948,11 C12.7721195,11 13,10.7761424 13,10.5 C13,10.2319336 12.7801695,10 12.5089948,10 L7.49100518,10 C7.22788048,10 7,10.2238576 7,10.5 Z' id='Combined-Shape' fill='%23FFFFFF'/%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/g%3E %3C/svg%3E");
     width: 20px;
     height: 20px;
+}
+/* Styles for dialog window */
+.mfp-wrap {
+  -webkit-overflow-scrolling: touch;
+  -webkit-transform: translateZ(0);
+}
+html.mfp-helper {
+  height: 100%;
+}
+html.mfp-helper body {
+    overflow: hidden;
+    height: 100%;
+    -webkit-transform: translateZ(0);
+}
+.modal {
+  text-align: left;
+  max-width: 640px;
+  margin: 20px auto;
+  position: relative;
+}
+.modal .mfp-close {
+    font-size: 0;
+    background: url('../images/el/modal-close@2x.png') no-repeat center;
+    width: 34px;
+    height: 29px;
+    background-size: contain;
+    opacity: 1;
+    -webkit-transition: all .25s ease-in-out;
+    -o-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+}
+.modal .mfp-close:hover {
+  opacity: .7;
+}
+.modal__wrapper {
+    max-width: 600px;
+    position: relative;
+    padding-top: 45px;
+    padding-left: 60px;
+    padding-bottom: 75px;
+}
+.modal__wrapper:before {
+  background-image: url('../images/el/buyformRose@2x.png');
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  z-index: 1;
+  display: block;
+  content: ' ';
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: contain;
+}
+.modal__content {
+    position: relative;
+    z-index: 2;
+    background: white;
+    -webkit-box-shadow: 0px 12px 15px rgba(0, 0, 0, 0.25);
+            box-shadow: 0px 12px 15px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+}
+.modal__form {
+    padding: 70px 70px 45px 70px;
+}
+.modal__form .ui-checkbox {
+      margin-top: 45px;
+}
+.modal__bottom a {
+      display: block;
+      background: #F1F1F1;
+      font-size: 17px;
+      padding: 22px 60px;
+      -webkit-transition: all .25s ease-in-out;
+      -o-transition: all .25s ease-in-out;
+      transition: all .25s ease-in-out;
+}
+.modal__bottom a:hover {
+  background: #F4F4F4;
+  color: #9B00D2;
+}
+@media(max-width: 568px) {
+    .modal__form {
+      padding: 50px 30px 35px 30px;
+  }
+      .modal__bottom a {
+        font-size: 16px;
+        padding: 20px 30px;
+  }
+}
+@media(max-width: 414px) {
+    .modal__form {
+      padding: 40px 20px 30px 20px;
+  }
+      .modal__bottom a {
+        padding: 20px 20px;
+  }
+}
+/* Fade-zoom animation for first dialog */
+.popup-buble .popup-dialog {
+    opacity: 0;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    -webkit-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+            transform: scale(0.8);
+}
+.popup-buble.mfp-ready .popup-dialog {
+  opacity: 1;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+.popup-buble.mfp-removing .popup-dialog {
+  -webkit-transform: scale(0.8);
+      -ms-transform: scale(0.8);
+          transform: scale(0.8);
+  opacity: 0;
+}
+.popup-buble.mfp-bg {
+  background: white;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+.popup-buble.mfp-ready.mfp-bg {
+  opacity: .9;
+}
+.popup-buble.mfp-removing.mfp-bg {
+  opacity: 0;
+}
+/* Fade-move animation */
+.my-mfp-slide-bottom .zoom-anim-dialog {
+    opacity: 0;
+    -webkit-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    -webkit-transform: translateY(-20px) perspective(600px) rotateX(10deg);
+            transform: translateY(-20px) perspective(600px) rotateX(10deg);
+}
+.my-mfp-slide-bottom.mfp-ready .zoom-anim-dialog {
+  opacity: 1;
+  -webkit-transform: translateY(0) perspective(600px) rotateX(0);
+          transform: translateY(0) perspective(600px) rotateX(0);
+}
+.my-mfp-slide-bottom.mfp-removing .zoom-anim-dialog {
+  opacity: 0;
+  -webkit-transform: translateY(-10px) perspective(600px) rotateX(10deg);
+          transform: translateY(-10px) perspective(600px) rotateX(10deg);
+}
+.my-mfp-slide-bottom.mfp-bg {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-out;
+  -o-transition: opacity 0.3s ease-out;
+  transition: opacity 0.3s ease-out;
+}
+.my-mfp-slide-bottom.mfp-ready.mfp-bg {
+  opacity: 0.8;
+}
+.my-mfp-slide-bottom.mfp-removing.mfp-bg {
+  opacity: 0;
 }
 @-webkit-keyframes passing-through {
   0% {

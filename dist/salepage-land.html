@@ -33,7 +33,8 @@
   <header class="header">
     <div class="container">
       <div class="header__wrapper header__wrapper--center">
-        <div class="header__logo"><img src="images/el/logo.png" srcset="images/el/logo@2x.png 2x"></div><a class="header__phone" href="tel:88005504676">8-800-550-46-76</a>
+        <div class="header__logo"><img src="images/el/logo.png" srcset="images/el/logo@2x.png 2x"></div>
+        <div class="header__phone"> <a class="header__phone__main" href="tel:89255952440">8 925 595 2440</a><span> <span>бесплатно по всему миру – </span><a href="tel:88005504676">8 800 301 7285</a></span></div>
       </div>
     </div>
   </header>
@@ -44,6 +45,7 @@
         <div class="course-card course-card--hero course-card--special">
           <div class="course-card__image"><img src="images/courses/courseArt.jpg" srcset="images/courses/courseArt@2x.jpg 2x"></div>
           <div class="course-card__content">
+            <div class="course-card__top">на специальных условиях</div>
             <div class="course-card__name">Живопись дома</div>
             <div class="course-card__desc">2 часа 45 минут  <br><span>•</span>  18 уроков  <br><span>•</span>  12 практических заданий</div>
             <div class="course-card__special">Ограниченный набор на специальных условиях (до 15 августа)</div>
@@ -213,25 +215,32 @@
                 <div class="ui-group">
                   <input class="ui-input" type="tel" name="phone" placeholder="+7 (___) ___-__-__">
                 </div>
-                <div class="ui-group">
+                <div class="ui-group" data-for="delivery">
                   <input class="ui-input" type="text" name="country" placeholder="Страна">
                 </div>
-                <div class="ui-group">
+                <div class="ui-group" data-for="delivery">
                   <input class="ui-input" type="text" name="city" placeholder="Город">
                 </div>
-                <div class="ui-group">
+                <div class="ui-group" data-for="delivery">
                   <input class="ui-input js-indexMask" type="text" name="index" placeholder="Индекс">
                 </div>
-                <div class="ui-group">
+                <div class="ui-group" data-for="delivery">
                   <input class="ui-input" type="text" name="adress" placeholder="Улица и номер дома">
+                </div>
+                <div class="ui-group" data-for="present">
+                  <input class="ui-input js-dateMask" type="text" name="date" placeholder="Дата отправки товара">
                 </div>
                 <div class="ui-group">
                   <textarea class="ui-input" placeholder="Комментарий" rows="5"> </textarea>
                 </div>
+                <div class="ui-checkbox">
+                  <input type="checkbox" name="agree" id="agree">
+                  <label for="agree">Я согласен с условиями</label>
+                </div>
               </div>
               <div class="course-cta__col">
                 <div class="course-cta__checkboxes">
-                  <div class="ui-checkbox ui-checkbox--dynamic-label">
+                  <div class="ui-checkbox ui-checkbox--dynamic-label" data-type="present">
                     <input type="checkbox" id="checkbox_1">
                     <label for="checkbox_1">
                        Я покупаю в подарок
@@ -246,7 +255,7 @@
                       <div class="ui-checkbox__sublabel">Личный контакт + закрытая группа</div>
                     </label>
                   </div>
-                  <div class="ui-checkbox ui-checkbox--dynamic-label">
+                  <div class="ui-checkbox ui-checkbox--dynamic-label" data-price="2500">
                     <input type="checkbox" id="checkbox_3">
                     <label for="checkbox_3">
                        Да, привезите мне Draw-бокс Basic
@@ -254,12 +263,20 @@
                       <div class="ui-checkbox__sublabel">Доставка считается отдельно  и оплачивается получателем</div>
                     </label>
                   </div>
-                  <div class="ui-checkbox ui-checkbox--dynamic-label">
+                  <div class="ui-checkbox ui-checkbox--dynamic-label" data-price="8600">
                     <input type="checkbox" id="checkbox_4">
                     <label for="checkbox_4">
                        Люблю всё самое лучшее, хочу Draw-бокс Premium
                       <div class="ui-checkbox__promo-val">  +8 600 ₽</div>
                       <div class="ui-checkbox__sublabel">Доставка считается отдельно  и оплачивается получателем</div>
+                    </label>
+                  </div>
+                  <div class="ui-checkbox ui-checkbox--dynamic-label" data-price="300" data-type="delivery">
+                    <input type="checkbox" id="checkbox_5">
+                    <label for="checkbox_5">
+                       Нужна доставка
+                      <div class="ui-checkbox__promo-val">  +300 ₽</div>
+                      <div class="ui-checkbox__sublabel">Доставка оплачивается получателем</div>
                     </label>
                   </div>
                 </div>
@@ -285,9 +302,9 @@
               <div class="gift__title__text">купи курс и мы подарим <br> еще один тому, кто не <br> может его себе позволить</div>
             </div>
             <div class="gift__text gift__text--wide">
-              <p>На главная миссия – нести творчество людям, не зависимо от их возможностей и достатка. Мы знаем, какими волшебными свойствами обладает рисование, как оно преображает вашу жизнь и хотим дарить это благо тем, кто в этом нуждается. </p>
-              <p>По этому при покупке каждого курса, совместно с нашими партнерами мы открываем доступ к материалам и отправляем базовый художественный набор тем, кто не может физически попасть в нашу студию в Москве или не может себе позволить обучение.</p>
-              <p>Приобретая онлайн курс в Draw&Go вы становитесь частью этого большого доброго дела и сможете следить за успехами того, кто учиться рисовать благодаря Вам.</p>
+              <p>Наша главная миссия – нести творчество людям, не зависимо от их возможностей и достатка. Мы знаем, какими волшебными свойствами обладает рисование, как оно преображает вашу жизнь, и хотим дарить это благо тем, кто в этом нуждается.</p>
+              <p>Поэтому при покупке каждого курса, совместно с нашими партнерами мы открываем доступ к материалам и отправляем базовый художественный набор тем, кто не может физически попасть в нашу студию в Москве или не может позволить себе обучение.</p>
+              <p>Приобретая онлайн курс в Draw&Go вы становитесь частью этого большого доброго дела и сможете следить за успехами того, кто учится рисовать благодаря Вам.</p>
             </div>
           </div>
           <div class="gift__btn"><a class="btn btn--primary btn--pink" href="#"> <span>Выбрать курс</span></a></div>
