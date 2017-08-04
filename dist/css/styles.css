@@ -1582,6 +1582,9 @@ body, html {
         background-color: rgba(121, 35, 219, 0.1);
 }
 .ui-avatar-file__avatar {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1605,6 +1608,26 @@ body, html {
 }
 .ui-avatar-file__avatar img {
       max-width: 50px;
+}
+.ui-avatar-file__avatar .js-pasteSelected {
+      max-width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 2;
+      -webkit-transform: translate(-50%,-150%);
+          -ms-transform: translate(-50%,-150%);
+              transform: translate(-50%,-150%);
+      opacity: 0;
+      -webkit-transition: all .25s ease-in-out;
+      -o-transition: all .25s ease-in-out;
+      transition: all .25s ease-in-out;
+}
+.ui-avatar-file__avatar .js-pasteSelected.showing {
+  opacity: 1;
+  -webkit-transform: translate(-50%,-50%);
+      -ms-transform: translate(-50%,-50%);
+          transform: translate(-50%,-50%);
 }
 /* buttons */
 button {

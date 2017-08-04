@@ -19,9 +19,10 @@ doctype html
               .settings__narrow
                 .ui-group
                   .ui-avatar-file
-                    input(type='file' name='file' id='file')
+                    input(type='file' name='file' id='file' class='js-showSelectedImage')
                     label(for='file')
                       .ui-avatar-file__avatar
+                        img(src='').js-pasteSelected
                         img(src='images/el/dropzone.png' srcset='images/el/dropzone@2x.png 2x')
                       span Ваша фотография
                 .ui-group

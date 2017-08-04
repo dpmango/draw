@@ -694,7 +694,7 @@ $(document).ready(function(){
       var checkboxData
       toggaleChecboxes.each(function(i,val){
         if ( $(val).find('input:checked').parent().data('type') ){
-          checkboxData = $(val).find('input:checked').parent().data('type');  
+          checkboxData = $(val).find('input:checked').parent().data('type');
         }
 
       });
@@ -719,6 +719,24 @@ $(document).ready(function(){
 
   });
 
+  // SHOW SELECTED IMAGE
+  function readURL(input) {
+    if (input.files && input.files[0]) {
+      var reader = new FileReader();
+
+      reader.onload = function (e) {
+        $('.js-pasteSelected').attr('src', e.target.result);
+        $('.js-pasteSelected').addClass('showing')
+      }
+
+      reader.readAsDataURL(input.files[0]);
+    }
+  }
+
+
+  $('.js-showSelectedImage').on('change', function(){
+    readURL(this);
+  });
 
 });
 
