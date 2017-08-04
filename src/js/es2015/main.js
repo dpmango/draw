@@ -738,6 +738,11 @@ $(document).ready(function(){
     readURL(this);
   });
 
+  $('.js-uploadImage').on('change', function(){
+    readURL( this );
+  });
+
+
 });
 
 

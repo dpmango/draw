@@ -62,7 +62,7 @@
     -o-transform: scale(1)
     transform: scale(1)
 
-.dropzone
+.dropzone, .image-upload
   position: relative
   min-height: 280px
   border: 1px dashed #979797
@@ -288,9 +288,29 @@
         border-bottom: 6px solid #be2626
 
 @media($mobile)
-  .dropzone
+  .dropzone, .image-upload
     min-height: 230px
     .dz-preview
       min-height: 195px
       .dz-image
         height: 195px
+
+
+.image-upload
+  &__cover
+    position: absolute 0
+    padding: 20px 20px
+  input
+    position: absolute 0
+    opacity: 0
+    z-index: 5
+  .js-pasteSelected
+    max-width: 100%
+    opacity: 0
+    transition: all $transitionSpeed $ease
+    &.showing
+      opacity: 1
+  .dz-preview
+    &:hover .dz-image img
+      transform: translate(-50%, -50%) scale(1.05, 1.05)
+      filter: none

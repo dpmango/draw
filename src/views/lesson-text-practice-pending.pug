@@ -25,13 +25,21 @@ doctype html
                   p Практика однозначно показывает, что перераспределение бюджета усиливает конструктивный традиционный канал. Рейтинг, в рамках сегодняшних воззрений, позиционирует охват аудитории. Фирменный стиль основательно подпорчен предыдущим опытом применения.
           
                 .upload-form
-                  form(action='#').dropzone#my-awesome-dropzone
-                    .fallback
-                      input(name='file', type='file', multiple='')
-                    .dz-message
-                      img(src='images/el/dropzone.png' srcset='images/el/dropzone@2x.png 2x')
-                      span Загрузите практическое задание
-
+                  //- form(action='#').dropzone#my-awesome-dropzone
+                  //-   .fallback
+                  //-     input(name='file', type='file', multiple='')
+                  //-   .dz-message
+                  //-     img(src='images/el/dropzone.png' srcset='images/el/dropzone@2x.png 2x')
+                  //-     span Загрузите практическое задание
+                  form(action='#').image-upload.dz-clickable
+                    input(name='file', type='file', multiple='' id='file').js-uploadImage
+                    label(for='file').image-upload__cover
+                      .dz-message
+                        img(src='images/el/dropzone.png' srcset='images/el/dropzone@2x.png 2x')
+                        span Загрузите практическое задание
+                      .dz-preview
+                        .dz-image
+                          img(src='').js-pasteSelected
                   .ui-group
                     textarea(placeholder='Ваш комментарий к работе' rows='5').ui-input
                   

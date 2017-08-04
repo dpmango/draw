@@ -716,6 +716,10 @@ $(document).ready(function () {
   $('.js-showSelectedImage').on('change', function () {
     readURL(this);
   });
+
+  $('.js-uploadImage').on('change', function () {
+    readURL(this);
+  });
 });
 
 //SCROLL TO TOP ON PAGE REFRESH
