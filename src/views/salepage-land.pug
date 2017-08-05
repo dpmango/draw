@@ -198,7 +198,7 @@ doctype html
                     
                 .course-cta__col
                   .course-cta__checkboxes
-                    .ui-checkbox.ui-checkbox--dynamic-label(data-type='present')
+                    .ui-checkbox.ui-checkbox--dynamic-label(data-type='present delivery')
                       input(type='checkbox' id='checkbox_1')
                       label(for='checkbox_1') 
                         | Я покупаю в подарок
@@ -209,7 +209,7 @@ doctype html
                         | Активируйте VIP-пакет
                         .ui-checkbox__promo-val Бесплатно до 15 августа
                         .ui-checkbox__sublabel Личный контакт + закрытая группа
-                    .ui-checkbox.ui-checkbox--dynamic-label(data-price='2500')
+                    .ui-checkbox.ui-checkbox--dynamic-label(data-price='2500' data-type='delivery')
                       input(type='checkbox' id='checkbox_3')
                       label(for='checkbox_3') 
                         | Да, привезите мне Draw-бокс Basic
@@ -222,12 +222,7 @@ doctype html
                         .ui-checkbox__promo-val   +8 600 ₽
                         .ui-checkbox__sublabel Доставка считается отдельно  и оплачивается получателем
                     .ui-checkbox.ui-checkbox--dynamic-label(data-price='300' data-type='delivery')
-                      input(type='checkbox' id='checkbox_5')
-                      label(for='checkbox_5') 
-                        | Нужна доставка
-                        .ui-checkbox__promo-val   +300 ₽
-                        .ui-checkbox__sublabel Доставка оплачивается получателем
-                                          
+              
                   .course-cta__cta
                     .course-price__value 28 560 Р
                     button(type='submit').btn.btn--primary.btn--pink.btn--block 

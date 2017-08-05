@@ -657,6 +657,7 @@ $(document).ready(function () {
   var ctaPriceObj = $('.js-form-landingCta').closest('form').find('.course-price__value');
   var savedPriceOnLoad = parseInt(ctaPriceObj.text().replace(' ', ''));
   $('.js-form-landingCta').on('change', function (e) {
+    console.clear();
 
     var priceAdded = 0;
     var pricedCheckboxes = $(this).find('input[type="checkbox"]:checked');
@@ -670,26 +671,45 @@ $(document).ready(function () {
 
     ctaPriceObj.text(savedPriceOnLoad + priceAdded + ' Р');
 
-    // set opt fields depending in options
+    // set opt fields depending on options
     var toggaleChecboxes = $(this).find('[data-type]');
     if (toggaleChecboxes) {
+      var covertArr = function covertArr(arr) {
+        $.each(arr, function (ind, value) {
+          checkboxData.push(value);
+        });
+      };
+
+      // sort Array for doubles
+
+
       // check each checkbox
-      var checkboxData;
+      var rawData = [];
+      var checkboxData = [];
       toggaleChecboxes.each(function (i, val) {
+        // if checked, parse array of all options
         if ($(val).find('input:checked').parent().data('type')) {
-          checkboxData = $(val).find('input:checked').parent().data('type');
+          rawData.push($(val).data('type').split(' '));
         }
       });
 
-      console.log(checkboxData);
+      // convert to single arr
+      $.each(rawData, function (i, val) {
+        covertArr(val);
+      });
 
+      var checkboxDataSorted = [];
+      $.each(checkboxData, function (i, e) {
+        if ($.inArray(e, checkboxDataSorted) == -1) checkboxDataSorted.push(e);
+      });
+
+      // set visibility
       $('.js-form-landingCta').find('.ui-group').each(function (ind, value) {
-
         if ($(value).data('for')) {
-          if ($(value).data('for') == checkboxData) {
-            $(value).fadeIn();
-          } else {
+          if ($.inArray($(value).data('for'), checkboxDataSorted) == -1) {
             $(value).fadeOut();
+          } else {
+            $(value).fadeIn();
           }
         }
       });
