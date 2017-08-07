@@ -736,6 +736,26 @@ $(document).ready(function(){
 
   });
 
+  // CHECK CHECKBOX ON BTN CLICK
+  $('.js-btnAddForm').on('click', function(){
+    var getCheckox = $(this).data('checkbox');
+
+    if (getCheckox){
+      if ( $(this).is('.disabled') ){
+        $(this).removeClass('disabled');
+        $(this).find('span').text('добавить к заказу');
+        $('.course-cta input#'+ getCheckox +'').prop('checked', false);
+      } else {
+        $(this).addClass('disabled')
+        $(this).find('span').text('добавлено к заказу');
+        $('.course-cta input#'+ getCheckox +'').prop('checked', true)
+      }
+
+      $('.course-cta').find('form').change();
+
+    }
+  });
+
   // SHOW SELECTED IMAGE
   function readURL(input) {
     if (input.files && input.files[0]) {

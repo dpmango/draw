@@ -930,6 +930,10 @@ button:focus {
   color: white;
   pointer-events: none;
 }
+.btn[disabled].js-btnAddForm, .btn.disabled.js-btnAddForm {
+  pointer-events: all;
+  cursor: pointer;
+}
 .fadeIn.animated {
   -webkit-animation-name: simpleFadeIn;
           animation-name: simpleFadeIn;
