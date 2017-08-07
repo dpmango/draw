@@ -42,8 +42,8 @@
   position: relative
   margin-bottom: 15px
   &.has-error
-    .ui-input
-      border-color: $colorRed
+    .ui-input[required]
+      border-color: tomato
   &__sucess
     display: none
     position: absolute
@@ -52,6 +52,36 @@
     width: 280px
     font-size: 12px
     line-height: 1.1
+  &--hidden
+    position: absolute
+    width: 0.1px
+    height: 0.1px
+    opacity: 0
+    transition: opacity $transitionSpeed $ease
+    &.active
+      opacity: 1
+      width: auto
+      height: auto
+      position: relative
+  &--two-row
+    display: flex
+    .ui-input
+      &:first-child
+        flex: 0 1 60%
+        margin-right: 15px
+      &:last-child
+        flex: 0 1 40%
+  &--three-row
+    display: flex
+    .ui-input
+      &:first-child
+        flex: 0 1 50%
+        margin-right: 15px
+      &:nth-child(2)
+        flex: 0 1 25%
+        margin-right: 15px
+      &:last-child
+        flex: 0 1 25%
 
 @media($tablet)
   .ui-group
@@ -138,7 +168,7 @@
     label
       color: tomato
       &::before
-        box-shadow: 0px 2px 6px color($colorRed, .2)
+        box-shadow: 0px 2px 6px color(tomato, .2)
   input
     // width: 0.1px
     // height: 0.1px

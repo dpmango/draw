@@ -175,21 +175,24 @@ doctype html
                 
                 .course-cta__col
                   .ui-group
-                    input(type='text' name='name' placeholder='Ваше имя').ui-input
+                    input(type='text' name='name' placeholder='Ваше имя*' required).ui-input
                   .ui-group
-                    input(type='email' name='email' placeholder='E-mail').ui-input
+                    input(type='email' name='email' placeholder='E-mail*' required).ui-input
                   .ui-group
                     input(type='tel' name='phone' placeholder='+7 (___) ___-__-__').ui-input
-                  .ui-group(data-for='delivery')
-                    input(type='text' name='country' placeholder='Страна').ui-input
-                  .ui-group(data-for='delivery')
-                    input(type='text' name='city' placeholder='Город').ui-input
-                  .ui-group(data-for='delivery')
+                  .ui-group.ui-group--hidden(data-for='present')
+                    input(type='text' name='present_fio' placeholder='Имя получателя*' required).ui-input
+                  .ui-group.ui-group--hidden(data-for='present')
+                    input(type='email' name='present_email' placeholder='E-mail получателя*' required).ui-input
+                  .ui-group.ui-group--hidden.ui-group--two-row(data-for='delivery')
+                    input(type='text' name='country' placeholder='Страна *' required).ui-input
                     input(type='text' name='index' placeholder='Индекс').ui-input.js-indexMask
-                  .ui-group(data-for='delivery')
-                    input(type='text' name='adress' placeholder='Улица и номер дома').ui-input
-                  .ui-group(data-for='present')
-                    input(type='text' name='date' placeholder='Дата отправки товара').ui-input.js-dateMask
+                  .ui-group.ui-group--hidden(data-for='delivery')
+                    input(type='text' name='city' placeholder='Город*' required).ui-input
+                  .ui-group.ui-group--hidden.ui-group--three-row(data-for='delivery')
+                    input(type='text' name='adress' placeholder='Улица*' required).ui-input
+                    input(type='text' name='adress_h' placeholder='Дом*' required).ui-input
+                    input(type='text' name='adress_k' placeholder='Кв*' required).ui-input
                   .ui-group
                     textarea(placeholder='Комментарий' rows='5').ui-input  
                   .ui-checkbox
@@ -198,7 +201,9 @@ doctype html
                     
                 .course-cta__col
                   .course-cta__checkboxes
-                    .ui-checkbox.ui-checkbox--dynamic-label(data-type='present delivery')
+                    // ui-checkbox--dynamic-label
+                    // hide label description prior check
+                    .ui-checkbox(data-type='present')
                       input(type='checkbox' id='checkbox_1')
                       label(for='checkbox_1') 
                         | Я покупаю в подарок
@@ -209,20 +214,19 @@ doctype html
                         | Активируйте VIP-пакет
                         .ui-checkbox__promo-val Бесплатно до 15 августа
                         .ui-checkbox__sublabel Личный контакт + закрытая группа
-                    .ui-checkbox.ui-checkbox--dynamic-label(data-price='2500' data-type='delivery')
+                    .ui-checkbox(data-price='2500' data-type='delivery')
                       input(type='checkbox' id='checkbox_3')
                       label(for='checkbox_3') 
                         | Да, привезите мне Draw-бокс Basic
                         .ui-checkbox__promo-val +2 500 ₽
                         .ui-checkbox__sublabel Доставка считается отдельно  и оплачивается получателем
-                    .ui-checkbox.ui-checkbox--dynamic-label(data-price='8600')
+                    .ui-checkbox(data-price='8600' data-type='present delivery')
                       input(type='checkbox' id='checkbox_4')
                       label(for='checkbox_4') 
                         | Люблю всё самое лучшее, хочу Draw-бокс Premium
                         .ui-checkbox__promo-val   +8 600 ₽
                         .ui-checkbox__sublabel Доставка считается отдельно  и оплачивается получателем
-                    .ui-checkbox.ui-checkbox--dynamic-label(data-price='300' data-type='delivery')
-              
+
                   .course-cta__cta
                     .course-price__value 28 560 Р
                     button(type='submit').btn.btn--primary.btn--pink.btn--block 

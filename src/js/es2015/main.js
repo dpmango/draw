@@ -722,9 +722,9 @@ $(document).ready(function(){
       $('.js-form-landingCta').find('.ui-group').each(function(ind,value){
         if ( $(value).data('for') ) {
           if ( $.inArray($(value).data('for'), checkboxDataSorted) == -1 ) {
-            $(value).fadeOut();
+            $(value).removeClass('active');
           } else {
-            $(value).fadeIn();
+            $(value).addClass('active');
           }
         }
       });

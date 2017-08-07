@@ -212,28 +212,31 @@
               </div>
               <div class="course-cta__col">
                 <div class="ui-group">
-                  <input class="ui-input" type="text" name="name" placeholder="Ваше имя">
+                  <input class="ui-input" type="text" name="name" placeholder="Ваше имя*" required>
                 </div>
                 <div class="ui-group">
-                  <input class="ui-input" type="email" name="email" placeholder="E-mail">
+                  <input class="ui-input" type="email" name="email" placeholder="E-mail*" required>
                 </div>
                 <div class="ui-group">
                   <input class="ui-input" type="tel" name="phone" placeholder="+7 (___) ___-__-__">
                 </div>
-                <div class="ui-group" data-for="delivery">
-                  <input class="ui-input" type="text" name="country" placeholder="Страна">
+                <div class="ui-group ui-group--hidden" data-for="present">
+                  <input class="ui-input" type="text" name="present_fio" placeholder="Имя получателя*" required>
                 </div>
-                <div class="ui-group" data-for="delivery">
-                  <input class="ui-input" type="text" name="city" placeholder="Город">
+                <div class="ui-group ui-group--hidden" data-for="present">
+                  <input class="ui-input" type="email" name="present_email" placeholder="E-mail получателя*" required>
                 </div>
-                <div class="ui-group" data-for="delivery">
+                <div class="ui-group ui-group--hidden ui-group--two-row" data-for="delivery">
+                  <input class="ui-input" type="text" name="country" placeholder="Страна *" required>
                   <input class="ui-input js-indexMask" type="text" name="index" placeholder="Индекс">
                 </div>
-                <div class="ui-group" data-for="delivery">
-                  <input class="ui-input" type="text" name="adress" placeholder="Улица и номер дома">
+                <div class="ui-group ui-group--hidden" data-for="delivery">
+                  <input class="ui-input" type="text" name="city" placeholder="Город*" required>
                 </div>
-                <div class="ui-group" data-for="present">
-                  <input class="ui-input js-dateMask" type="text" name="date" placeholder="Дата отправки товара">
+                <div class="ui-group ui-group--hidden ui-group--three-row" data-for="delivery">
+                  <input class="ui-input" type="text" name="adress" placeholder="Улица*" required>
+                  <input class="ui-input" type="text" name="adress_h" placeholder="Дом*" required>
+                  <input class="ui-input" type="text" name="adress_k" placeholder="Кв*" required>
                 </div>
                 <div class="ui-group">
                   <textarea class="ui-input" placeholder="Комментарий" rows="5"> </textarea>
@@ -245,7 +248,9 @@
               </div>
               <div class="course-cta__col">
                 <div class="course-cta__checkboxes">
-                  <div class="ui-checkbox ui-checkbox--dynamic-label" data-type="present delivery">
+                  <!-- ui-checkbox--dynamic-label-->
+                  <!-- hide label description prior check-->
+                  <div class="ui-checkbox" data-type="present">
                     <input type="checkbox" id="checkbox_1">
                     <label for="checkbox_1">
                        Я покупаю в подарок
@@ -260,7 +265,7 @@
                       <div class="ui-checkbox__sublabel">Личный контакт + закрытая группа</div>
                     </label>
                   </div>
-                  <div class="ui-checkbox ui-checkbox--dynamic-label" data-price="2500" data-type="delivery">
+                  <div class="ui-checkbox" data-price="2500" data-type="delivery">
                     <input type="checkbox" id="checkbox_3">
                     <label for="checkbox_3">
                        Да, привезите мне Draw-бокс Basic
@@ -268,7 +273,7 @@
                       <div class="ui-checkbox__sublabel">Доставка считается отдельно  и оплачивается получателем</div>
                     </label>
                   </div>
-                  <div class="ui-checkbox ui-checkbox--dynamic-label" data-price="8600">
+                  <div class="ui-checkbox" data-price="8600" data-type="present delivery">
                     <input type="checkbox" id="checkbox_4">
                     <label for="checkbox_4">
                        Люблю всё самое лучшее, хочу Draw-бокс Premium
@@ -276,7 +281,6 @@
                       <div class="ui-checkbox__sublabel">Доставка считается отдельно  и оплачивается получателем</div>
                     </label>
                   </div>
-                  <div class="ui-checkbox ui-checkbox--dynamic-label" data-price="300" data-type="delivery"></div>
                 </div>
                 <div class="course-cta__cta">
                   <div class="course-price__value">28 560 Р</div>
