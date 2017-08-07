@@ -669,7 +669,9 @@ $(document).ready(function () {
       }
     });
 
-    ctaPriceObj.text(savedPriceOnLoad + priceAdded + ' Р');
+    var priceAddedObj = savedPriceOnLoad + priceAdded;
+
+    ctaPriceObj.text(priceAddedObj.toLocaleString() + ' Р');
 
     // set opt fields depending on options
     var toggaleChecboxes = $(this).find('[data-type]');
