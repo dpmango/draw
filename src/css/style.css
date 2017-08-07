@@ -4126,6 +4126,13 @@ button:focus {
           .course-card--hero .course-card__desc br {
             display: block;
   }
+          .course-card--hero .course-card__image img {
+            top: 0%;
+            left: 50%;
+            -webkit-transform: translate(-50%,0%);
+                -ms-transform: translate(-50%,0%);
+                    transform: translate(-50%,0%);
+  }
         .course-card--special .course-card__name {
           margin-top: 15px;
   }
