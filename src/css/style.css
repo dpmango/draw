@@ -2246,6 +2246,7 @@ button:focus {
 }
 .video__player.playing .icon {
         opacity: 0;
+        pointer-events: none;
 }
 .video__player.playing:after {
   z-index: 2;

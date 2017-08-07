@@ -16,7 +16,19 @@ $(document).ready(function () {
     }
   }
   // isRetinaDisplay()
+  var mobileDevice = isMobile();
+  // detect mobile devices
+  function isMobile() {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 
+  if (mobileDevice) {
+    $('body').addClass('is-mobile');
+  }
 
   //////////
   // COMMON
@@ -93,8 +105,10 @@ $(document).ready(function () {
 
   // VIDEO PLAY
   $('.video__player .icon-circle').on('click', function () {
-    $(this).closest('.video__player').toggleClass('playing');
-    $(this).closest('.video__player').find('iframe').attr("src", $("iframe").attr("src").replace("autoplay=0", "autoplay=1"));
+    $(this).closest('.video__player').addClass('playing');
+    if (!mobileDevice) {
+      $(this).closest('.video__player').find('iframe').attr("src", $("iframe").attr("src").replace("autoplay=0", "autoplay=1"));
+    }
   });
 
   // video reveal
