@@ -236,23 +236,39 @@ body, html {
             -ms-flex: 0 1 100%;
                 flex: 0 1 100%;
 }
+.ui-group--hidden label {
+      display: none !important;
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 0 0px;
+          -ms-flex: 0 0 0px;
+              flex: 0 0 0%;
+}
 .ui-group--two-row {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
 }
-.ui-group--two-row .ui-input:first-child {
+.ui-group--two-row.active {
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+}
+.ui-group--two-row label {
+      display: none !important;
+      -webkit-box-flex: 0;
+      -webkit-flex: 0 0 0px;
+          -ms-flex: 0 0 0px;
+              flex: 0 0 0%;
+}
+.ui-group--two-row .ui-input:nth-child(1) {
   -webkit-box-flex: 0;
   -webkit-flex: 0 1 60%;
       -ms-flex: 0 1 60%;
           flex: 0 1 60%;
   margin-right: 15px;
 }
-.ui-group--two-row .ui-input:last-child {
+.ui-group--two-row .ui-input:nth-child(2) {
   -webkit-box-flex: 0;
   -webkit-flex: 0 1 40%;
       -ms-flex: 0 1 40%;
@@ -263,11 +279,13 @@ body, html {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
 }
-.ui-group--three-row .ui-input:first-child {
+.ui-group--three-row.active {
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+}
+.ui-group--three-row .ui-input:nth-child(1) {
   -webkit-box-flex: 0;
   -webkit-flex: 0 1 50%;
       -ms-flex: 0 1 50%;
@@ -281,7 +299,7 @@ body, html {
           flex: 0 1 25%;
   margin-right: 15px;
 }
-.ui-group--three-row .ui-input:last-child {
+.ui-group--three-row .ui-input:nth-child(3) {
   -webkit-box-flex: 0;
   -webkit-flex: 0 1 25%;
       -ms-flex: 0 1 25%;
@@ -343,6 +361,9 @@ body, html {
 }
 .ui-input::placeholder {
   color: #000000;
+}
+.ui-input.has-error {
+  border-color: tomato;
 }
 .ui-input--editable {
     color: rgba(0, 0, 0, 0.5);

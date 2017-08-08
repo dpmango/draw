@@ -22,6 +22,12 @@ $(document).ready(function () {
   var validateUnhighlight = function validateUnhighlight(element) {
     $(element).parent('div').removeClass("has-error");
   };
+  var validateHighlight2 = function validateHighlight2(element) {
+    $(element).addClass("has-error");
+  };
+  var validateUnhighlight2 = function validateUnhighlight2(element) {
+    $(element).removeClass("has-error");
+  };
   var validateSubmitHandler = function validateSubmitHandler(form) {
     $(form).addClass('loading');
     console.log($(form).serialize());
@@ -126,8 +132,8 @@ $(document).ready(function () {
   ////////////////////
   $(".js-form-landingCta").validate({
     errorPlacement: validateErrorPlacement,
-    highlight: validateHighlight,
-    unhighlight: validateUnhighlight,
+    highlight: validateHighlight2,
+    unhighlight: validateUnhighlight2,
     submitHandler: validateSubmitHandler,
     rules: {
       name: "required",

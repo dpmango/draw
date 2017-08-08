@@ -68,26 +68,34 @@
       position: relative
       label
         flex: 0 1 100%
+    label
+      display: none !important
+      flex: 0 0 0px
   &--two-row
     display: flex
-    flex-wrap: wrap
+    &.active
+      flex-wrap: nowrap
+    label
+      display: none !important
+      flex: 0 0 0px
     .ui-input
-      &:first-child
+      &:nth-child(1)
         flex: 0 1 60%
         margin-right: 15px
-      &:last-child
+      &:nth-child(2)
         flex: 0 1 40%
   &--three-row
     display: flex
-    flex-wrap: wrap
+    &.active
+      flex-wrap: nowrap
     .ui-input
-      &:first-child
+      &:nth-child(1)
         flex: 0 1 50%
         margin-right: 15px
       &:nth-child(2)
         flex: 0 1 25%
         margin-right: 15px
-      &:last-child
+      &:nth-child(3)
         flex: 0 1 25%
 
 @media($tablet)
@@ -130,6 +138,8 @@
     border-color: $colorPrimary
   &::placeholder
     color: $fontColor
+  &.has-error
+    border-color: tomato
   &--editable
     color: color($fontColor a(50%))
     pointer-events: none
