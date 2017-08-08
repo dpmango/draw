@@ -433,6 +433,13 @@ body, html {
       -ms-transform: scale(1);
           transform: scale(1);
 }
+.ui-checkbox input.has-error + label {
+        color: tomato;
+}
+.ui-checkbox input.has-error + label:before {
+  -webkit-box-shadow: 0px 2px 6px color(tomato, .2);
+          box-shadow: 0px 2px 6px color(tomato, .2);
+}
 .ui-checkbox label {
     display: block;
     width: 100%;

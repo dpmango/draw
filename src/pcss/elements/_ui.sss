@@ -197,6 +197,11 @@
       + label
         &::after
           transform: scale(1)
+    &.has-error
+      + label
+        color: tomato
+        &::before
+          box-shadow: 0px 2px 6px color(tomato, .2)
   label
     display: block
     width: 100%
