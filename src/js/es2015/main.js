@@ -105,7 +105,7 @@ $(document).ready(function(){
   $('.video__player .icon-circle').on('click', function(){
     $(this).closest('.video__player').addClass('playing');
     if ( !mobileDevice ){
-      $(this).closest('.video__player').find('iframe').attr("src", $("iframe").attr("src").replace("autoplay=0", "autoplay=1"));  
+      $(this).closest('.video__player').find('iframe').attr("src", $("iframe").attr("src").replace("autoplay=0", "autoplay=1"));
     }
   });
 
@@ -362,7 +362,7 @@ $(document).ready(function(){
     var that = this
     // hide parents
     $(this).parent().parent().parent().find('.ui-select__visible').each(function(i,val){
-      if ( !$(val).is($(that)) ){
+      if ( !$(val).is(that) ){
         $(val).parent().removeClass('active')
       }
     });
@@ -688,8 +688,8 @@ $(document).ready(function(){
   var ctaPriceObj = $('.js-form-landingCta').closest('form').find('.course-price__value')
   var savedPriceOnLoad = parseInt( ctaPriceObj.text().replace(' ',''));
   $('.js-form-landingCta').on('change', function(e){
-    console.clear()
 
+    // change price
     var priceAdded = 0
     var pricedCheckboxes = $(this).find('input[type="checkbox"]:checked');
 
@@ -702,7 +702,7 @@ $(document).ready(function(){
 
     var priceAddedObj = savedPriceOnLoad + priceAdded
 
-    ctaPriceObj.text(priceAddedObj.toLocaleString() + ' Р')
+    ctaPriceObj.text(priceAddedObj + ' Р')
 
     // set opt fields depending on options
     var toggaleChecboxes = $(this).find('[data-type]')
@@ -735,7 +735,7 @@ $(document).ready(function(){
       });
 
       // set visibility
-      $('.js-form-landingCta').find('.ui-group').each(function(ind,value){
+      $(this).find('.ui-group').each(function(ind,value){
         if ( $(value).data('for') ) {
           if ( $.inArray($(value).data('for'), checkboxDataSorted) == -1 ) {
             $(value).removeClass('active');
@@ -752,25 +752,45 @@ $(document).ready(function(){
 
   });
 
+  $('.js-form-landingCta input[type="checkbox"]').on('change', function(){
+    // Change button status
+
+    var _that = $(this)
+    // find attached checkbox
+    var attachedBtn
+    $('.js-btnAddForm').each(function(i,val){
+      if ( $(val).data('checkbox') == _that.attr("id") ){
+        attachedBtn = $(val);
+        toggleButton( $(val) )
+      }
+    });
+
+  });
+
+
   // CHECK CHECKBOX ON BTN CLICK
   $('.js-btnAddForm').on('click', function(){
-    var getCheckox = $(this).data('checkbox');
 
-    if (getCheckox){
-      if ( $(this).is('.disabled') ){
-        $(this).removeClass('disabled');
-        $(this).find('span').text('добавить к заказу');
-        $('.course-cta input#'+ getCheckox +'').prop('checked', false);
-      } else {
-        $(this).addClass('disabled')
-        $(this).find('span').text('добавлено к заказу');
-        $('.course-cta input#'+ getCheckox +'').prop('checked', true)
-      }
-
+    if ($(this).data('checkbox')){
+      toggleButton( $(this) )
       $('.course-cta').find('form').change();
 
     }
   });
+
+  function toggleButton(that){
+    var getCheckox = that.data('checkbox');
+
+    if ( that.is('.disabled') ){
+      that.removeClass('disabled');
+      that.find('span').text('добавить к заказу');
+      $('.course-cta input#'+ getCheckox +'').prop('checked', false);
+    } else {
+      that.addClass('disabled')
+      that.find('span').text('добавлено к заказу');
+      $('.course-cta input#'+ getCheckox +'').prop('checked', true)
+    }
+  }
 
   // SHOW SELECTED IMAGE
   function readURL(input) {
