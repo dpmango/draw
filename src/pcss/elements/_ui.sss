@@ -53,18 +53,24 @@
     font-size: 12px
     line-height: 1.1
   &--hidden
+    display: none
     position: absolute
     width: 0.1px
     height: 0.1px
     opacity: 0
     transition: opacity $transitionSpeed $ease
     &.active
+      display: flex
+      flex-wrap: wrap
       opacity: 1
       width: auto
       height: auto
       position: relative
+      label
+        flex: 0 1 100%
   &--two-row
     display: flex
+    flex-wrap: wrap
     .ui-input
       &:first-child
         flex: 0 1 60%
@@ -73,6 +79,7 @@
         flex: 0 1 40%
   &--three-row
     display: flex
+    flex-wrap: wrap
     .ui-input
       &:first-child
         flex: 0 1 50%

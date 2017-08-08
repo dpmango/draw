@@ -208,6 +208,7 @@ body, html {
     line-height: 1.1;
 }
 .ui-group--hidden {
+    display: none;
     position: absolute;
     width: 0.1px;
     height: 0.1px;
@@ -217,16 +218,32 @@ body, html {
     transition: opacity .25s ease-in-out;
 }
 .ui-group--hidden.active {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
   opacity: 1;
   width: auto;
   height: auto;
   position: relative;
+}
+.ui-group--hidden.active label {
+        -webkit-box-flex: 0;
+        -webkit-flex: 0 1 100%;
+            -ms-flex: 0 1 100%;
+                flex: 0 1 100%;
 }
 .ui-group--two-row {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
 }
 .ui-group--two-row .ui-input:first-child {
   -webkit-box-flex: 0;
@@ -246,6 +263,9 @@ body, html {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
 }
 .ui-group--three-row .ui-input:first-child {
   -webkit-box-flex: 0;

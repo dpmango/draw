@@ -12,7 +12,6 @@ $(document).ready(function(){
 
   var validateErrorPlacement = function(error, element) {
     error.addClass('ui-input__validation');
-    console.log(element)
     error.appendTo(element.filter(':not(:checkbox)').parent("div"));
   }
   var validateHighlight = function(element) {
@@ -136,7 +135,18 @@ $(document).ready(function(){
       email: {
         required: true,
         email: true
-      }
+      },
+      agree: "required",
+      present_fio: "required",
+      present_email: {
+        required: true,
+        email: true
+      },
+      country: "required",
+      city: "required",
+      adress: "required",
+      adress_h: "required",
+      adress_k: "required"
     },
     messages: {
       name: "Заполните это поле",
@@ -147,7 +157,18 @@ $(document).ready(function(){
       email: {
           required: "Заполните это поле",
           email: "Email содержит неправильный формат"
-      }
+      },
+      agree: "",
+      present_fio: "Заполните это поле",
+      present_email: {
+          required: "Заполните это поле",
+          email: "Email содержит неправильный формат"
+      },
+      country: "",
+      city: "Заполните это поле",
+      adress: "",
+      adress_h: "",
+      adress_k: ""
     }
   });
 
