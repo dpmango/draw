@@ -48,7 +48,7 @@
       <!-- SALEPAGE :: START-->
       <div class="container wow fadeIn">
         <div class="course-card course-card--hero course-card--special">
-          <div class="course-card__image"><img src="images/courses/courseArt.jpg" srcset="images/courses/courseArt@2x.jpg 568w"></div>
+          <div class="course-card__image"><img class="course-card__image__desktop" src="images/courses/courseArt.jpg" srcset="images/courses/courseArt@2x.jpg 2x"><img class="course-card__image__mobile" src="images/courses/compare_1.jpg" srcset="images/courses/compare_1@2x.jpg 2x"></div>
           <div class="course-card__content">
             <div class="course-card__top">на специальных условиях</div>
             <div class="course-card__name">Живопись дома</div>
@@ -212,31 +212,31 @@
               </div>
               <div class="course-cta__col">
                 <div class="ui-group">
-                  <input class="ui-input" type="text" name="name" placeholder="Ваше имя*" required>
+                  <input class="ui-input" type="text" name="name" placeholder="Ваше имя*">
                 </div>
                 <div class="ui-group">
-                  <input class="ui-input" type="email" name="email" placeholder="E-mail*" required>
+                  <input class="ui-input" type="email" name="email" placeholder="E-mail*">
                 </div>
                 <div class="ui-group">
                   <input class="ui-input" type="tel" name="phone" placeholder="+7 (___) ___-__-__">
                 </div>
                 <div class="ui-group ui-group--hidden" data-for="present">
-                  <input class="ui-input" type="text" name="present_fio" placeholder="Имя получателя*" required>
+                  <input class="ui-input" type="text" name="present_fio" placeholder="Имя получателя*">
                 </div>
                 <div class="ui-group ui-group--hidden" data-for="present">
-                  <input class="ui-input" type="email" name="present_email" placeholder="E-mail получателя*" required>
+                  <input class="ui-input" type="email" name="present_email" placeholder="E-mail получателя*">
                 </div>
                 <div class="ui-group ui-group--hidden ui-group--two-row" data-for="delivery">
-                  <input class="ui-input" type="text" name="country" placeholder="Страна *" required>
+                  <input class="ui-input" type="text" name="country" placeholder="Страна *">
                   <input class="ui-input js-indexMask" type="text" name="index" placeholder="Индекс">
                 </div>
                 <div class="ui-group ui-group--hidden" data-for="delivery">
-                  <input class="ui-input" type="text" name="city" placeholder="Город*" required>
+                  <input class="ui-input" type="text" name="city" placeholder="Город*">
                 </div>
                 <div class="ui-group ui-group--hidden ui-group--three-row" data-for="delivery">
-                  <input class="ui-input" type="text" name="adress" placeholder="Улица*" required>
-                  <input class="ui-input" type="text" name="adress_h" placeholder="Дом*" required>
-                  <input class="ui-input" type="text" name="adress_k" placeholder="Кв*" required>
+                  <input class="ui-input" type="text" name="adress" placeholder="Улица*">
+                  <input class="ui-input" type="text" name="adress_h" placeholder="Дом*">
+                  <input class="ui-input" type="text" name="adress_k" placeholder="Кв*">
                 </div>
                 <div class="ui-group">
                   <textarea class="ui-input" placeholder="Комментарий" rows="5"> </textarea>
